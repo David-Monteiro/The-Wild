@@ -10,27 +10,28 @@ public class Player : MonoBehaviour {
     public Transform sightStart2, sightEnd2;
 
     public bool spotted = false;
-    int i = 0;
+    int? anglePos = null;
+    public bool rotCompleted = false;
     void Update()
     {
 
-        movement();
-        rotation();
+        //movement();
+       // rotation();
         RayCasting();
 
         //if (Input.GetKey(KeyCode.W)){ smallMoveForward(); }
         //if (Input.GetKey(KeyCode.UpArrow)) { bigMoveForward(); }
         //if (Input.GetKey(KeyCode.U)) { uTurnMove(); }
         //if (Input.GetKey(KeyCode.LeftArrow)) { lookLeft(); }
-        //if (i==0) lookRight(); 
-        //        i++;
-        
         //if (Input.GetKey(KeyCode.O)) { lookAround(); }
 
-        //bool cond = (int)transform.rotation.eulerAngles.z == (int)((0 + 450) % 360);
-        //Debug.Log((int)((0 + 450) % 360));
-        //Debug.Log((int)transform.rotation.eulerAngles.z);
-        //Debug.Log(cond);
+        if (!anglePos.HasValue){
+            anglePos = (int)transform.eulerAngles.z;
+            Debug.Log(anglePos.Value);
+        }
+        lookRight(anglePos.Value);
+        Debug.Log(rotCompleted);
+
     }
 
     void movement() {
@@ -79,48 +80,44 @@ public class Player : MonoBehaviour {
 
         transform.Rotate(new Vector3(X, Y, 360) * Time.deltaTime * rotationSpeed);
     }
-    void lookLeft() {
-        var X = 0f;
-        var Y = 0f;
-        float angle = 180;
-
-        transform.Rotate(new Vector3(X, Y, angle) * Time.deltaTime * rotationSpeed);
-    }
-
-    bool lookRight() {
-        lookRight0(transform.rotation.eulerAngles.z, (transform.rotation.eulerAngles.z + 90) % 360);
+    bool lookLeft(float initialPos) {
+        int myTarget = (int)((transform.eulerAngles.z + 270) % 360);
+        lookLeft0(myTarget);
         return true;
     }
-    void lookRight0(float fromZ, float toZ) {
+    void lookLeft0(float target){
+        float finalAngle = Mathf.MoveTowardsAngle(transform.eulerAngles.z, target, rotationSpeed * Time.deltaTime);
+        transform.eulerAngles = new Vector3(0, 0, finalAngle);
+    }
 
-        float X = transform.position.x;
-        float Y = transform.position.y;
-        float Z = transform.position.z;
+    bool lookRight(float initialPos) {
+        //lookRight0(transform.rotation.eulerAngles.z, (transform.rotation.eulerAngles.z + 90) % 360);
 
-        //Try to add recursion to terminate this method
-        
-    
-        if (transform.rotation.eulerAngles.z == toZ) {
-            transform.RotateAround(new Vector3(X, Y, Z), new Vector3(0, 0, -1), 90 * Time.deltaTime);
-        }
-        else if(transform.rotation.eulerAngles.z == fromZ)
-        {
-            transform.RotateAround(new Vector3(X, Y, Z), new Vector3(0, 0, 1), 90 * Time.deltaTime);
-            lookRight0(fromZ, toZ); Debug.Log(toZ);
-            //if (transform.rotation.eulerAngles.z != fromZ)
-            //    transform.RotateAround(new Vector3(X, Y, Z), new Vector3(0, 0, -1), 90 * Time.deltaTime);
-        }
+        int myTarget = (int)((initialPos + 90) % 360);
+        //if (rotCompleted)
+        //    lookLeft0(initialPos);
+        //else{
+           lookRight0(myTarget);
+            rotCompleted = transform.rotation.eulerAngles.z == myTarget;
+        //}
+            return true;
+    }
+    void lookRight0(float target) {
+        float finalAngle = Mathf.MoveTowardsAngle(transform.eulerAngles.z, target, rotationSpeed * Time.deltaTime);
+        transform.eulerAngles = new Vector3(0, 0, finalAngle);
+        Debug.Log(finalAngle);
 
-        //transform.Rotate(new Vector3(X, Y, -angle) * Time.deltaTime * rotationSpeed);
-        // transform.Rotate(new Vector3(X, Y, angle) * Time.deltaTime * rotationSpeed);
-
-
-
-
+       // if (transform.rotation.eulerAngles.z == toZ) {
+       //     transform.RotateAround(new Vector3(X, Y, Z), new Vector3(0, 0, -1), rotationSpeed * Time.deltaTime);
+       // }
+       // else if(transform.rotation.eulerAngles.z == fromZ) {
+       //     transform.RotateAround(new Vector3(X, Y, Z), new Vector3(0, 0, 1), rotationSpeed * Time.deltaTime);
+       //     lookRight0(fromZ, toZ); Debug.Log(toZ);
+       // } 
     }
     void lookAround() {
-        lookRight();
-        lookLeft();
+        //lookRight();
+        //lookLeft();
     }
     void goToLocation(Vector3 loc) { }
 
