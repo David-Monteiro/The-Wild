@@ -10,29 +10,41 @@ public class Player : MonoBehaviour {
     public Transform sightStart2, sightEnd2;
 
     public bool spotted = false;
-    int? anglePos = null;
+    //int? anglePos = null;
+    float anglePos;
+    bool isRotating = false;
     public bool leftRot = false;
     public bool rightRot = false;
     void Update()
     {
-
-        //movement();
-       // rotation();
+     
         RayCasting();
-
+        //controlledMov();
         //if (Input.GetKey(KeyCode.W)){ smallMoveForward(); }
         //if (Input.GetKey(KeyCode.UpArrow)) { bigMoveForward(); }
-        if (Input.GetKey(KeyCode.U)) { uTurnMove(anglePos.Value); }
+        //if (Input.GetKey(KeyCode.U)) { uTurnMove(anglePos.Value); }
         //if (Input.GetKey(KeyCode.LeftArrow)) { lookLeft(); }
         //if (Input.GetKey(KeyCode.O)) { lookAround(); }
 
-        if (!anglePos.HasValue){
+        /*if (!anglePos.HasValue){
             anglePos = (int)transform.eulerAngles.z;
             Debug.Log(anglePos.Value);
-        }
-        //lookLeft(anglePos.Value);
+        }*/
+        getAnglePos();
+        //lookAround(anglePos);
+        isRotating = lookRight(anglePos);
         //uTurnMove(anglePos.Value);
 
+        Debug.Log(Random.Range(0, 2));
+    }
+
+    void randomMov() {
+        //Here I will create random generated actions
+        //I will probabily do it in turns of moving forward/ backwards and rotating left/right
+    }
+    void controlledMov() {
+        movement();
+        rotation();
     }
 
     void movement() {
@@ -74,55 +86,57 @@ public class Player : MonoBehaviour {
             i++;
         }
     }
-    void uTurnMove(float initialPos) {
-        int myTarget = (int)((initialPos + 180) % 360);
-        rotZAnglesRight(myTarget);
+    bool uTurnMove(float initialPos) {
+        //if (Random.Range(0, 2) == 1) {
+        //    int myTarget = (int)((initialPos + (360 - 90)) % 360);
+        //    rotZAnglesRight(myTarget);
+        //}
+        //else{
+            int myTarget = (int)((initialPos + 180) % 360);
+            rotZAnglesLeft(myTarget);
+        //}
+        return true;
     }
+
     bool lookLeft(float initialPos) {
         int myTarget = (int)((initialPos + 90) % 360);
+
+
+        //need to change implementation to know if the player is rotating
+        //and to check whether the player has finished rotating
         if (leftRot == false)
             rotZAnglesLeft(myTarget);
         else if (rightRot == false && leftRot == true)
             rotZAnglesRight(initialPos);
-        
         return true;
     }
     void rotZAnglesLeft(float target){
         float finalAngle = Mathf.MoveTowardsAngle(transform.eulerAngles.z, target, rotationSpeed * Time.deltaTime);
 
         transform.eulerAngles = new Vector3(0, 0, finalAngle);
+        //while player is rotating, it will keep setting leftRot true
+        //need to update his part
         leftRot = transform.rotation.eulerAngles.z == target;
     }
 
     bool lookRight(float initialPos) {
-        //lookRight0(transform.rotation.eulerAngles.z, (transform.rotation.eulerAngles.z + 90) % 360);
-
         int myTarget = (int)((initialPos + (360 - 90)) % 360);
-        Debug.Log(myTarget);
 
         if (rightRot == false) {
             rotZAnglesRight(myTarget);
-        }
-        else if (rightRot == true && leftRot == false) {
+        } else if (rightRot == true && leftRot == false) {
             rotZAnglesLeft(initialPos);
         }
         return true;
     }
     void rotZAnglesRight(float target) {
-
-        
+   
         float finalAngle;
-
         finalAngle = Mathf.MoveTowardsAngle(transform.eulerAngles.z, target, rotationSpeed * Time.deltaTime);
 
         transform.eulerAngles = new Vector3(0, 0, finalAngle);
         rightRot = (int)transform.rotation.eulerAngles.z == (int)target;
-        Debug.Log(finalAngle);
-        Debug.Log(rightRot);
-
         //add a second float with the initial position minus final angle 
-        //
-        //
         //
         // if (transform.rotation.eulerAngles.z == toZ) {
         //     transform.RotateAround(new Vector3(X, Y, Z), new Vector3(0, 0, -1), rotationSpeed * Time.deltaTime);
@@ -133,11 +147,13 @@ public class Player : MonoBehaviour {
         // } 
     }
     
-    void lookAround() {
-        //lookRight();
-        //lookLeft();
-        int myTarget = (int)((transform.eulerAngles.z + 180) % 360);
-        rotZAnglesRight(myTarget);
+    bool lookAround(float initialPos) {
+        int myTarget = (int)((initialPos + 90) % 360);
+        if (leftRot == false)
+            rotZAnglesRight(myTarget);
+        else if (rightRot == false && leftRot == true)
+            rotZAnglesLeft((int)((initialPos + (360 - 90)) % 360));
+        return true;
     }
     void goToLocation(Vector3 loc) { }
 
@@ -148,9 +164,16 @@ public class Player : MonoBehaviour {
             || Physics2D.Linecast(sightStart0.position, sightEnd2.position, 1 << LayerMask.NameToLayer("Block")))
             spotted = true;
         else spotted = false;
+        //Need to add line tof code to recognise the end_world blocks
+        //either a bool variable or a float representing the distance between gameObject and wall
         Debug.DrawLine(sightStart0.position, sightEnd0.position, Color.green);
         Debug.DrawLine(sightStart0.position, sightEnd1.position, Color.green);
         Debug.DrawLine(sightStart0.position, sightEnd2.position, Color.green);
+    }
+
+    float getAnglePos() {
+        if (isRotating == false) { anglePos = transform.eulerAngles.z;}
+        return anglePos;
     }
 
 }
