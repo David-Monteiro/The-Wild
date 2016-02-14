@@ -12,35 +12,39 @@ public class Player : MonoBehaviour {
     public bool spotted = false;
     //int? anglePos = null;
     float anglePos;
+    int decisionNo = 0;
     bool isRotating = false;
-    public bool leftRot = false;
-    public bool rightRot = false;
+    public bool leftRotDone = false;
+    public bool rightRotDone = false;
     void Update()
     {
      
         RayCasting();
         //controlledMov();
-        //if (Input.GetKey(KeyCode.W)){ smallMoveForward(); }
-        //if (Input.GetKey(KeyCode.UpArrow)) { bigMoveForward(); }
-        //if (Input.GetKey(KeyCode.U)) { uTurnMove(anglePos.Value); }
-        //if (Input.GetKey(KeyCode.LeftArrow)) { lookLeft(); }
-        //if (Input.GetKey(KeyCode.O)) { lookAround(); }
-
+        randomMov();
         /*if (!anglePos.HasValue){
             anglePos = (int)transform.eulerAngles.z;
             Debug.Log(anglePos.Value);
         }*/
-        getAnglePos();
-        //lookAround(anglePos);
-        isRotating = lookRight(anglePos);
-        //uTurnMove(anglePos.Value);
-
-        Debug.Log(Random.Range(0, 2));
+        //if(decisionNo < 10) bigMoveForward();
+        //decisionNo++;
+        
     }
 
     void randomMov() {
         //Here I will create random generated actions
         //I will probabily do it in turns of moving forward/ backwards and rotating left/right
+        if (!isRotating) {
+            if (decisionNo > 4) decisionNo = Random.Range(0, 4);
+            else {
+                decisionNo = Random.Range(4, 10);
+                getAnglePos();
+            }
+            makeDecision();
+        }
+        else if (isRotating){
+            makeDecision();
+        }
     }
     void controlledMov() {
         movement();
@@ -79,35 +83,39 @@ public class Player : MonoBehaviour {
             i++;
         }
     }
-    void bigMoveForward() {
+    void smallMoveBackward() {
         int i = 0;
-        while (i < 8) {
-            transform.Translate(Vector2.up * movementSpeed * Time.deltaTime);
+        while (i < 4)
+        {
+            transform.Translate(Vector2.down * movementSpeed * Time.deltaTime);
             i++;
         }
     }
-    bool uTurnMove(float initialPos) {
-        //if (Random.Range(0, 2) == 1) {
-        //    int myTarget = (int)((initialPos + (360 - 90)) % 360);
-        //    rotZAnglesRight(myTarget);
+
+    void bigMoveForward() {
+        //int i = 0;
+        //while (i < 8) {
+            transform.Translate(Vector2.up * movementSpeed * Time.deltaTime);
+        //    i++;
         //}
-        //else{
-            int myTarget = (int)((initialPos + 180) % 360);
-            rotZAnglesLeft(myTarget);
-        //}
-        return true;
+    }
+    void bigMoveBackward() {
+        int i = 0;
+        while (i < 8)
+        {
+            transform.Translate(Vector2.down * movementSpeed * Time.deltaTime);
+            i++;
+        }
     }
 
     bool lookLeft(float initialPos) {
         int myTarget = (int)((initialPos + 90) % 360);
 
-
-        //need to change implementation to know if the player is rotating
-        //and to check whether the player has finished rotating
-        if (leftRot == false)
+        if (leftRotDone == false)
             rotZAnglesLeft(myTarget);
-        else if (rightRot == false && leftRot == true)
+        else if (rightRotDone == false && leftRotDone == true)
             rotZAnglesRight(initialPos);
+        isRotating = (rightRotDone && leftRotDone);
         return true;
     }
     void rotZAnglesLeft(float target){
@@ -116,17 +124,18 @@ public class Player : MonoBehaviour {
         transform.eulerAngles = new Vector3(0, 0, finalAngle);
         //while player is rotating, it will keep setting leftRot true
         //need to update his part
-        leftRot = transform.rotation.eulerAngles.z == target;
+        leftRotDone = transform.rotation.eulerAngles.z == target;
     }
 
     bool lookRight(float initialPos) {
         int myTarget = (int)((initialPos + (360 - 90)) % 360);
 
-        if (rightRot == false) {
+        if (rightRotDone == false) {
             rotZAnglesRight(myTarget);
-        } else if (rightRot == true && leftRot == false) {
+        } else if (rightRotDone == true && leftRotDone == false) {
             rotZAnglesLeft(initialPos);
         }
+        isRotating = (rightRotDone && leftRotDone);
         return true;
     }
     void rotZAnglesRight(float target) {
@@ -135,7 +144,7 @@ public class Player : MonoBehaviour {
         finalAngle = Mathf.MoveTowardsAngle(transform.eulerAngles.z, target, rotationSpeed * Time.deltaTime);
 
         transform.eulerAngles = new Vector3(0, 0, finalAngle);
-        rightRot = (int)transform.rotation.eulerAngles.z == (int)target;
+        rightRotDone = (int)transform.rotation.eulerAngles.z == (int)target;
         //add a second float with the initial position minus final angle 
         //
         // if (transform.rotation.eulerAngles.z == toZ) {
@@ -149,14 +158,26 @@ public class Player : MonoBehaviour {
     
     bool lookAround(float initialPos) {
         int myTarget = (int)((initialPos + 90) % 360);
-        if (leftRot == false)
+        if (leftRotDone == false)
             rotZAnglesRight(myTarget);
-        else if (rightRot == false && leftRot == true)
+        else if (rightRotDone == false && leftRotDone == true)
             rotZAnglesLeft((int)((initialPos + (360 - 90)) % 360));
         return true;
     }
-    void goToLocation(Vector3 loc) { }
+    bool uTurnMove(float initialPos)
+    {
+        //if (Random.Range(0, 2) == 1) {
+        //    int myTarget = (int)((initialPos + (360 - 90)) % 360);
+        //    rotZAnglesRight(myTarget);
+        //}
+        //else{
+        int myTarget = (int)((initialPos + 180) % 360);
+        rotZAnglesLeft(myTarget);
+        //}
+        return true;
+    }
 
+    void goToLocation(Vector3 loc) { }
 
     void RayCasting() {
         if (Physics2D.Linecast(sightStart0.position, sightEnd0.position, 1 << LayerMask.NameToLayer("Block"))
@@ -176,4 +197,49 @@ public class Player : MonoBehaviour {
         return anglePos;
     }
 
+    void makeDecision(){
+        if (decisionNo == 0) {
+            for (int i = 0; i < 10; i++){
+                smallMoveForward();
+            }
+            Debug.Log("smallMoveForward");
+        }
+        else if (decisionNo == 1) {
+            for (int i = 0; i < 10; i++){
+                smallMoveBackward();
+            }
+            Debug.Log("smallMoveBackward");
+        }
+        else if (decisionNo == 2) {
+            for (int i = 0; i < 25; i++){
+                bigMoveForward();
+            }
+            Debug.Log("bigMoveForward");
+        }
+        else if (decisionNo == 3) {
+            for (int i = 0; i < 25; i++){
+                bigMoveBackward();
+            }
+            Debug.Log("bigMoveBackward");
+        }
+        else if (decisionNo == 4) {
+            lookLeft(anglePos);
+            Debug.Log("lookLeft");
+        }
+        else if (decisionNo == 5) {
+            lookRight(anglePos);
+            Debug.Log("lookRight");
+        }
+        else if (decisionNo == 6) {
+            lookAround(anglePos);
+            Debug.Log("lookAround");
+        }
+        else if (decisionNo == 7) {
+            uTurnMove(anglePos);
+            Debug.Log("uTurnMove");
+        }
+        else if (decisionNo == 8) { }
+        else if (decisionNo == 9) { }
+        else { }
+    }
 }
