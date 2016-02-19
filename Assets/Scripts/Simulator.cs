@@ -7,6 +7,6 @@ public class Simulator : MonoBehaviour {
         animal = GameObject.Find("animal");
     }
 	void Update () {
-        transform.position = new Vector3(animal.transform.position.x, animal.transform.position.y, -1);
+        transform.position = new Vector3(animal.transform.position.x, animal.transform.position.y, -2);
     }
 }
