@@ -11,12 +11,22 @@ public class Player : MonoBehaviour {
 
     public bool spotted = false;
     //int? anglePos = null;
-    float anglePos;
-    int decisionNo = 0;
-    float target = 0;
-    bool isRotating = false;
-    public bool leftRotDone = false;
-    public bool rightRotDone = false;
+    private float anglePos;
+    private int decisionNo = 0;
+    private float target = 0;
+
+
+    public bool isRotating;
+    private bool leftRotDone;
+    private bool rightRotDone;
+
+    void Start() {
+        isRotating = false;
+        leftRotDone = false;
+        rightRotDone = false;
+    }
+
+
     void Update()
     {
      
@@ -268,12 +278,12 @@ public class Player : MonoBehaviour {
             }
             Debug.Log("smallMoveForward");
         }
-        /*else if (decisionNo == 1) {
+        else if (decisionNo == 1) {
             for (int i = 0; i < 10; i++){
                 smallMoveBackward();
             }
             Debug.Log("smallMoveBackward");
-        }*/
+        }
         else if (decisionNo == 2) {
             for (int i = 0; i < 25; i++){
                 bigMoveForward();
@@ -285,37 +295,39 @@ public class Player : MonoBehaviour {
                 bigMoveBackward();
             }
             Debug.Log("bigMoveBackward");
-        }
+        }*/
         else if (decisionNo == 4) {
             lookLeft(anglePos);
             Debug.Log("lookLeft");
-        }*/
-        /*else if (decisionNo == 5) {
+        }
+        else if (decisionNo == 5) {
             lookRight(anglePos);
             Debug.Log("lookRight");
-        }*/
-        /*else if (decisionNo == 6) {
+        }
+        else if (decisionNo == 6) {
             lookAround(anglePos);
             Debug.Log("lookAround");
-        }*/
-        /*else if (decisionNo == 7) {
+        }
+        else if (decisionNo == 7) {
             uTurnMove(anglePos);
             Debug.Log("uTurnMove");
-        }*/
+        }
         else if (decisionNo == 8) {
             if (!isRotating) {
                 target = Random.Range(4, 45);
             }
             turnLeft(target);
             Debug.Log("turn left");
+            Debug.Log(anglePos + " > " + target);
         }
-        /*else if (decisionNo == 9) {
+        else if (decisionNo == 9) {
             if (!isRotating) {
                 target = Random.Range(4, 45);
             }
             turnRight(target);
             Debug.Log("turn right");
-        }*/
+            Debug.Log(anglePos + " > " + target);
+        }
         else { }
     }
 }
