@@ -48,5 +48,6 @@ public class Attributes
         float value;
         if (values.TryGetValue(attr_name, out value)) return value;
         else return -1;
+        //-1 stands for null value
     }
 }

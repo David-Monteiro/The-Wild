@@ -29,7 +29,7 @@ public class Player : MonoBehaviour
     public bool leftRotDone_flag;
     public bool rightRotDone_flag;
 
-    //GameObject enemy;
+    GameObject enemy;
 
 
 
@@ -40,24 +40,29 @@ public class Player : MonoBehaviour
         leftRotDone_flag = false;
         rightRotDone_flag = false;
 
-        //enemy = GameObject.Find("animal (1)");
+        enemy = GameObject.Find("animal (1)");
 
         //Debug.Log(enemy.transform.position.x + "" + enemy.transform.position.y);
     }
-
+    private bool cond = false;
     void Update()
     {
         RayCasting();
         //controlledMov();
         randomMov1();
+        
 
+       /*
+       if(cond == false)
+            goToLocation(enemy.transform.position);
+        */
 
-        //goToLocation(new Vector2(enemy.transform.position.x, enemy.transform.position.y));
-
-        /*getAnglePos();
+        /*
+        getAnglePos();
         if(transform.eulerAngles.z != 9) {
             turnLeft(25);
-        }*/
+        }
+        */
 
     }
 
@@ -90,23 +95,17 @@ public class Player : MonoBehaviour
     {
         //Here I will create random generated actions
         //I will probabily do it in turns of moving forward/ backwards and rotating left/right
-        if (!isRotating_flag || !isMoving_flag)
+        if (!isRotating_flag && !isMoving_flag)
         {
             if (decisionNo > 4) decisionNo = Random.Range(0, 2);
             else
             {
                 decisionNo = Random.Range(8, 10);
-                getAnglePos();
             }
             Debug.Log("ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ");
             makeDecision();
-
         }
-        else if (isRotating_flag)
-        {
-            makeDecision();
-        }
-        else if (isMoving_flag)
+        else if (isRotating_flag || isMoving_flag)
         {
             makeDecision();
         }
@@ -145,62 +144,76 @@ public class Player : MonoBehaviour
         }
     }
 
-    void smallMoveForward()
+    bool smallMoveForward()
     {
         if (!isMoving_flag)
         {
             locationTarget = frontPointA.position;
         }
+        isMoving_flag = true;
         moveTowardsPoint(locationTarget);
 
         if (locationTarget == transform.position) isMoving_flag = false;
         else if (checkForObstacle("inFront"))   isMoving_flag = false;
-        else isMoving_flag = true;
+
+        return !isMoving_flag;
     }
-    void smallMoveBackward()
+    bool smallMoveBackward()
     {
         if (!isMoving_flag)
         {
             locationTarget = backPointA.position;
         }
+        isMoving_flag = true;
         moveTowardsPoint(locationTarget);
 
         if (locationTarget == transform.position) isMoving_flag = false;
         else if (checkForObstacle("behind")) isMoving_flag = false;
-        else isMoving_flag = true;
+        return !isMoving_flag;
     }
 
-    void bigMoveForward()
+    bool bigMoveForward()
     {
         if (!isMoving_flag)
         {
             locationTarget = frontPointB.position;
             //Debug.Log("From: " + transform.position + " , To: " + locationTarget);
         }
+        isMoving_flag = true;
         moveTowardsPoint(locationTarget);
 
         if (locationTarget == transform.position) isMoving_flag = false;
         else if (checkForObstacle("inFront")) isMoving_flag = false;
-        else isMoving_flag = true;
+        return !isMoving_flag; 
     }
-    void bigMoveBackward()
+    bool bigMoveBackward()
     {
         if (!isMoving_flag)
         {
             locationTarget = backPointB.position;
             //Debug.Log("From: " + transform.position + " , To: " + locationTarget);
         }
+        isMoving_flag = true;
         moveTowardsPoint(locationTarget);
 
         if (locationTarget == transform.position) isMoving_flag = false;
         else if (checkForObstacle("behind")) isMoving_flag = false;
-        else isMoving_flag = true;
+        return !isMoving_flag;
     }
 
+    void moveToPoint(Vector3 point) {
 
-    //
+        moveTowardsPoint(point);
+
+        if (point == transform.position) isMoving_flag = false;
+        else if (checkForObstacle("inFront")) isMoving_flag = false;
+        else isMoving_flag = true;
+    }
+    
     bool turnLeft(float angleTurn)
     {
+        getAnglePos();
+        isRotating_flag = true;
         float angle = ((anglePos + angleTurn) % 360);
 
         if (leftRotDone_flag == false)
@@ -208,8 +221,8 @@ public class Player : MonoBehaviour
 
         //Here we finish this method and release the rotating flag if target as been met
         isRotating_flag = !((int)transform.rotation.eulerAngles.z == (int)angle);
-        Debug.Log(isRotating_flag);
-        Debug.Log("Angle " + (int)transform.eulerAngles.z);
+        //Debug.Log(isRotating_flag);
+        //Debug.Log("Angle " + (int)transform.eulerAngles.z);
         if (!isRotating_flag)
         {
             leftRotDone_flag = false;
@@ -219,14 +232,16 @@ public class Player : MonoBehaviour
     }
     bool turnRight(float angleTurn)
     {
+        getAnglePos();
+        isRotating_flag = true;
         int angle = (int)((anglePos + (360 - angleTurn)) % 360);
 
         if (rightRotDone_flag == false)
             rotZAngles(angle);
 
         isRotating_flag = !((int)transform.rotation.eulerAngles.z == (int)angle);
-        Debug.Log(isRotating_flag);
-        Debug.Log("Angle " + (int)transform.eulerAngles.z);
+        //Debug.Log(isRotating_flag);
+        //Debug.Log("Angle " + (int)transform.eulerAngles.z);
 
         if (!isRotating_flag)
         {
@@ -234,10 +249,11 @@ public class Player : MonoBehaviour
         }
         return !isRotating_flag;
     }
-    bool uTurnMove(float initialPos)
+    bool uTurnMove()
     {
-        //xxxxxxxx
-        float myTarget = (int)((initialPos + 180) % 360);
+        getAnglePos();
+        isRotating_flag = true;
+        float myTarget = (int)((anglePos + 180) % 360);
 
         rotZAngles(myTarget);
 
@@ -246,14 +262,16 @@ public class Player : MonoBehaviour
         {
             return true;
         }
-        return false;
+        else return false;
     }
 
 
     //Scout Movements
-    bool lookLeft(float initialPos)
+    bool lookLeft()
     {
-        float myTarget = (int)((initialPos + 60) % 360);
+        getAnglePos();
+        isRotating_flag = true;
+        float myTarget = (int)((anglePos + 60) % 360);
 
         if (leftRotDone_flag == false)
         {
@@ -262,8 +280,8 @@ public class Player : MonoBehaviour
         }
         else if (rightRotDone_flag == false && leftRotDone_flag == true)
         {
-            rotZAngles(initialPos);
-            rightRotDone_flag = (int)transform.rotation.eulerAngles.z == (int)initialPos;
+            rotZAngles(anglePos);
+            rightRotDone_flag = (int)transform.rotation.eulerAngles.z == (int)anglePos;
         }
         isRotating_flag = !(rightRotDone_flag && leftRotDone_flag);
 
@@ -273,11 +291,13 @@ public class Player : MonoBehaviour
             leftRotDone_flag = false;
             return true;
         }
-        return false;
+        else return false;
     }
-    bool lookRight(float initialPos)
+    bool lookRight()
     {
-        float myTarget = (int)((initialPos + (360 - 60)) % 360);
+        getAnglePos();
+        isRotating_flag = true;
+        float myTarget = (int)((anglePos + (360 - 60)) % 360);
 
         if (rightRotDone_flag == false)
         {
@@ -286,8 +306,8 @@ public class Player : MonoBehaviour
         }
         else if (rightRotDone_flag == true && leftRotDone_flag == false)
         {
-            rotZAngles(initialPos);
-            leftRotDone_flag = (int)transform.rotation.eulerAngles.z == (int)initialPos;
+            rotZAngles(anglePos);
+            leftRotDone_flag = (int)transform.rotation.eulerAngles.z == (int)anglePos;
         }
 
         isRotating_flag = !(rightRotDone_flag && leftRotDone_flag);
@@ -297,35 +317,36 @@ public class Player : MonoBehaviour
             leftRotDone_flag = false;
             return true;
         }
-        return false;
+        else return false;
     }
-    bool lookAround(float initialPos)
+    bool lookAround()
     {
+        getAnglePos();
+        isRotating_flag = true;
         float myTarget;
         if (leftRotDone_flag == false)
         {
-            myTarget = (int)((initialPos + 20) % 360);
+            myTarget = (int)((anglePos + 20) % 360);
             rotZAngles(myTarget);
             leftRotDone_flag = (int)transform.rotation.eulerAngles.z == (int)myTarget;
         }
         else if (rightRotDone_flag == false && leftRotDone_flag == true)
         {
-            myTarget = (int)((initialPos + (360 - 20)) % 360);
+            myTarget = (int)((anglePos + (360 - 20)) % 360);
             rotZAngles(myTarget);
             rightRotDone_flag = (int)transform.rotation.eulerAngles.z == (int)myTarget;
         }
-        else rotZAngles(initialPos);
+        else rotZAngles(anglePos);
 
-        isRotating_flag = !(rightRotDone_flag && leftRotDone_flag) && (transform.eulerAngles.z == initialPos);
+        isRotating_flag = !(rightRotDone_flag && leftRotDone_flag) && (transform.eulerAngles.z == anglePos);
         if (!isRotating_flag)
         {
             rightRotDone_flag = false;
             leftRotDone_flag = false;
             return true;
         }
-        return false;
+        else return false;
     }
-
 
     //Core of my movements and rotations
     void rotZAngles(float t0)
@@ -334,17 +355,16 @@ public class Player : MonoBehaviour
         if (transform.eulerAngles.z - t0 == 1 || t0 - transform.eulerAngles.z == 1)
         {
             transform.eulerAngles = new Vector3(0, 0, t0);
+            Debug.Log("BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB");
         }
         else
         {
             //t0 stands for target
             float finalAngle = Mathf.MoveTowardsAngle(transform.eulerAngles.z, t0, rotationSpeed * Time.deltaTime);
 
-            if (!isRotating_flag)
-                Debug.Log("Final Angle " + finalAngle + " angle " + transform.eulerAngles.z);
 
             transform.eulerAngles = new Vector3(0, 0, finalAngle);
-
+            Debug.Log("AAAAAAAAAAAAAAAAAAAAAAAAAA " + finalAngle);
 
             //once in a while it will break 1/10
             Debug.Log("diff : " + (int)angleDiff(transform.eulerAngles.z, t0));
@@ -363,24 +383,30 @@ public class Player : MonoBehaviour
         transform.position = Vector3.MoveTowards(transform.position, new Vector3(target.x, target.y, target.z), movementSpeed * Time.deltaTime);
     }
 
-    void goToLocation(Vector2 target_pos)
+    bool goToLocation(Vector3 target_pos)
     {
-        target_pos.x = target_pos.x - transform.position.x;
-        target_pos.y = target_pos.y - transform.position.y;
+        getAnglePos();
+        target_pos.x = (target_pos.x - transform.position.x)%360;
+        target_pos.y = (target_pos.y - transform.position.y)%360;
         float angle = Mathf.Atan2(target_pos.y, target_pos.x) * Mathf.Rad2Deg;
-        angle = angle - 90;
+        Debug.Log("Angle: " + angle);
+        //angle = (angle -90);
+        Debug.Log("Angle: "+ angle);
         if (angle > 180) turnRight(angle);
         else turnLeft(angle);
-        if (angle == 0)
-        {
-            locationTarget = new Vector3(target_pos.x, target_pos.y, 0);
-            moveTowardsPoint(locationTarget);
+        Debug.Log("anglepos: " + ((anglePos + angle) % 360));
+        Debug.Log("Angle: " + transform.rotation.eulerAngles.z);
+        if (((anglePos + angle) % 360) == transform.rotation.eulerAngles.z) {
+            if (!isMoving_flag) {
+                locationTarget = target_pos;
+                //Debug.Log("From: " + transform.position + " , To: " + locationTarget);
+            }
+            moveToPoint(locationTarget);
         }
 
         //I need to improve this function
         //Here the 
-
-        Debug.Log(angle);
+        return target_pos == transform.position;
     }
 
     void RayCasting()
@@ -445,24 +471,24 @@ public class Player : MonoBehaviour
         }
         else if (decisionNo == 4)
         {
-            lookLeft(anglePos);
+            lookLeft();
             Debug.Log("lookLeft");
             Debug.Log(transform.rotation.eulerAngles.z);
         }
         else if (decisionNo == 5)
         {
-            lookRight(anglePos);
+            lookRight();
             Debug.Log("lookRight");
             Debug.Log(transform.rotation.eulerAngles.z);
         }
         else if (decisionNo == 6)
         {
-            lookAround(anglePos);
+            lookAround();
             Debug.Log("lookAround");
         }
         else if (decisionNo == 7)
         {
-            uTurnMove(anglePos);
+            uTurnMove();
             Debug.Log("uTurnMove");
         }
         else if (decisionNo == 8)
@@ -473,7 +499,7 @@ public class Player : MonoBehaviour
                 Debug.Log("turn left");
                 Debug.Log(anglePos + " > " + (anglePos + target) %360 + " XXXXXXXXXXXXXXXXXXXXX");
             }
-            turnLeft(45);
+            turnLeft(target);
         }
         else if (decisionNo == 9) {
             if (!isRotating_flag)   
@@ -482,7 +508,7 @@ public class Player : MonoBehaviour
                 Debug.Log("turn right");
                 Debug.Log(anglePos + " > " + (anglePos- target) %360 + " XXXXXXXXXXXXXXXXXXXXX");
             }
-            turnRight(45);    
+            turnRight(target);    
         }
         else { }
     }
