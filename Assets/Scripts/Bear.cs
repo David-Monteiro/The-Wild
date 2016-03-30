@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Herbivorous : Animal{
+public class Bear : Carnivorous
+{
 
 }

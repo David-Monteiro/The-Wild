@@ -17,7 +17,7 @@ public class Player : MonoBehaviour
     public Transform backPointA, backPointB;
 
     public bool spotted = false;
-    //int? anglePos = null;
+
     private Vector3 locationTarget;
 
     private float anglePos;
@@ -31,8 +31,6 @@ public class Player : MonoBehaviour
 
     GameObject enemy;
 
-
-
     void Start()
     {
         isMoving_flag = false;
@@ -42,7 +40,6 @@ public class Player : MonoBehaviour
 
         enemy = GameObject.Find("animal (1)");
 
-        //Debug.Log(enemy.transform.position.x + "" + enemy.transform.position.y);
     }
     private bool cond = false;
     void Update()
@@ -77,7 +74,7 @@ public class Player : MonoBehaviour
                 decisionNo = Random.Range(4, 10);
                 getAnglePos();
             }
-            Debug.Log("ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ");
+            //Debug.Log("ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ");
             makeDecision();
 
         }
@@ -102,7 +99,7 @@ public class Player : MonoBehaviour
             {
                 decisionNo = Random.Range(8, 10);
             }
-            Debug.Log("ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ");
+            //Debug.Log("ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ");
             makeDecision();
         }
         else if (isRotating_flag || isMoving_flag)
@@ -177,7 +174,6 @@ public class Player : MonoBehaviour
         if (!isMoving_flag)
         {
             locationTarget = frontPointB.position;
-            //Debug.Log("From: " + transform.position + " , To: " + locationTarget);
         }
         isMoving_flag = true;
         moveTowardsPoint(locationTarget);
@@ -191,7 +187,6 @@ public class Player : MonoBehaviour
         if (!isMoving_flag)
         {
             locationTarget = backPointB.position;
-            //Debug.Log("From: " + transform.position + " , To: " + locationTarget);
         }
         isMoving_flag = true;
         moveTowardsPoint(locationTarget);
@@ -221,8 +216,6 @@ public class Player : MonoBehaviour
 
         //Here we finish this method and release the rotating flag if target as been met
         isRotating_flag = !((int)transform.rotation.eulerAngles.z == (int)angle);
-        //Debug.Log(isRotating_flag);
-        //Debug.Log("Angle " + (int)transform.eulerAngles.z);
         if (!isRotating_flag)
         {
             leftRotDone_flag = false;
@@ -240,8 +233,6 @@ public class Player : MonoBehaviour
             rotZAngles(angle);
 
         isRotating_flag = !((int)transform.rotation.eulerAngles.z == (int)angle);
-        //Debug.Log(isRotating_flag);
-        //Debug.Log("Angle " + (int)transform.eulerAngles.z);
 
         if (!isRotating_flag)
         {
@@ -355,27 +346,18 @@ public class Player : MonoBehaviour
         if (transform.eulerAngles.z - t0 == 1 || t0 - transform.eulerAngles.z == 1)
         {
             transform.eulerAngles = new Vector3(0, 0, t0);
-            Debug.Log("BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB");
         }
         else
         {
             //t0 stands for target
             float finalAngle = Mathf.MoveTowardsAngle(transform.eulerAngles.z, t0, rotationSpeed * Time.deltaTime);
-
-
             transform.eulerAngles = new Vector3(0, 0, finalAngle);
-            Debug.Log("AAAAAAAAAAAAAAAAAAAAAAAAAA " + finalAngle);
-
             //once in a while it will break 1/10
             Debug.Log("diff : " + (int)angleDiff(transform.eulerAngles.z, t0));
             if (-3 <= (int)(angleDiff(transform.eulerAngles.z, t0)) && (int)(angleDiff(transform.eulerAngles.z, t0)) <= 3)
             {
-                Debug.Log("AAAAAAAAAAAAAAAAAAAAAAAAAA");
                 transform.eulerAngles = new Vector3(0, 0, t0);
             }
-
-            //while player is rotating, it will keep setting leftRot true
-            //need to update his part????
         }
     }
     void moveTowardsPoint(Vector3 target)
@@ -389,23 +371,17 @@ public class Player : MonoBehaviour
         target_pos.x = (target_pos.x - transform.position.x)%360;
         target_pos.y = (target_pos.y - transform.position.y)%360;
         float angle = Mathf.Atan2(target_pos.y, target_pos.x) * Mathf.Rad2Deg;
-        Debug.Log("Angle: " + angle);
-        //angle = (angle -90);
-        Debug.Log("Angle: "+ angle);
+        //Debug.Log("Angle: " + angle);
         if (angle > 180) turnRight(angle);
         else turnLeft(angle);
-        Debug.Log("anglepos: " + ((anglePos + angle) % 360));
-        Debug.Log("Angle: " + transform.rotation.eulerAngles.z);
+       // Debug.Log("anglepos: " + ((anglePos + angle) % 360));
+        //Debug.Log("Angle: " + transform.rotation.eulerAngles.z);
         if (((anglePos + angle) % 360) == transform.rotation.eulerAngles.z) {
             if (!isMoving_flag) {
                 locationTarget = target_pos;
-                //Debug.Log("From: " + transform.position + " , To: " + locationTarget);
             }
             moveToPoint(locationTarget);
         }
-
-        //I need to improve this function
-        //Here the 
         return target_pos == transform.position;
     }
 
@@ -416,8 +392,6 @@ public class Player : MonoBehaviour
             || Physics2D.Linecast(sightStart0.position, sightEnd2.position, 1 << LayerMask.NameToLayer("Block")))
             spotted = true;
         else spotted = false;
-        //Need to add line tof code to recognise the end_world blocks
-        //either a bool variable or a float representing the distance between gameObject and wall
         Debug.DrawLine(sightStart0.position, sightEnd0.position, Color.green);
         Debug.DrawLine(sightStart0.position, sightEnd1.position, Color.green);
         Debug.DrawLine(sightStart0.position, sightEnd2.position, Color.green);
@@ -454,50 +428,48 @@ public class Player : MonoBehaviour
     {
         if (decisionNo == 0) {
             smallMoveForward();
-            Debug.Log("smallMoveForward");
+            //Debug.Log("smallMoveForward");
         }
         else if (decisionNo == 1) {
             bigMoveForward();
-            Debug.Log("bigMoveForward");
+            //Debug.Log("bigMoveForward");
         }
         else if (decisionNo == 2)
         {
             smallMoveBackward();
-            Debug.Log("smallMoveBackward");
+            //Debug.Log("smallMoveBackward");
         }
         else if (decisionNo == 3) {
             bigMoveBackward();
-            Debug.Log("bigMoveBackward");
+            //Debug.Log("bigMoveBackward");
         }
         else if (decisionNo == 4)
         {
             lookLeft();
-            Debug.Log("lookLeft");
-            Debug.Log(transform.rotation.eulerAngles.z);
+            //Debug.Log("lookLeft");
         }
         else if (decisionNo == 5)
         {
             lookRight();
-            Debug.Log("lookRight");
-            Debug.Log(transform.rotation.eulerAngles.z);
+            //Debug.Log("lookRight");
         }
         else if (decisionNo == 6)
         {
             lookAround();
-            Debug.Log("lookAround");
+            //Debug.Log("lookAround");
         }
         else if (decisionNo == 7)
         {
             uTurnMove();
-            Debug.Log("uTurnMove");
+            //Debug.Log("uTurnMove");
         }
         else if (decisionNo == 8)
         {
             if (!isRotating_flag)
             {
                 target = Random.Range(4, 45);
-                Debug.Log("turn left");
-                Debug.Log(anglePos + " > " + (anglePos + target) %360 + " XXXXXXXXXXXXXXXXXXXXX");
+                //Debug.Log("turn left");
+                //Debug.Log(anglePos + " > " + (anglePos + target) %360 + " XXXXXXXXXXXXXXXXXXXXX");
             }
             turnLeft(target);
         }
@@ -505,8 +477,8 @@ public class Player : MonoBehaviour
             if (!isRotating_flag)   
             {
                 target = Random.Range(4, 45);
-                Debug.Log("turn right");
-                Debug.Log(anglePos + " > " + (anglePos- target) %360 + " XXXXXXXXXXXXXXXXXXXXX");
+                //Debug.Log("turn right");
+                //Debug.Log(anglePos + " > " + (anglePos- target) %360 + " XXXXXXXXXXXXXXXXXXXXX");
             }
             turnRight(target);    
         }
