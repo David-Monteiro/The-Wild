@@ -8,9 +8,7 @@ public class Player : MonoBehaviour
     public float movementSpeed;
     public float rotationSpeed;
 
-    public Transform sightStart0, sightEnd0;
-    public Transform sightStart1, sightEnd1;
-    public Transform sightStart2, sightEnd2;
+    public Transform sightEnd0, sightEnd1, sightEnd2, sightEnd3, sightEnd4, sightEnd5, sightEnd6, sightEnd7, sightEnd8;
 
     public Transform head, tail;
     public Transform frontPointA, frontPointB;
@@ -31,6 +29,8 @@ public class Player : MonoBehaviour
 
     GameObject enemy;
 
+    private Animator animator;
+
     void Start()
     {
         isMoving_flag = false;
@@ -39,6 +39,7 @@ public class Player : MonoBehaviour
         rightRotDone_flag = false;
 
         enemy = GameObject.Find("animal (1)");
+        //animator = GetComponent<Animator>();
 
     }
     private bool cond = false;
@@ -47,8 +48,9 @@ public class Player : MonoBehaviour
         RayCasting();
         //controlledMov();
         randomMov1();
-        
 
+        //animator.SetInteger("Animation_Rotation_State", (int)transform.rotation.eulerAngles.z);
+        //animator.SetBool("Animation_Mov_State", isMoving_flag);
        /*
        if(cond == false)
             goToLocation(enemy.transform.position);
@@ -65,7 +67,6 @@ public class Player : MonoBehaviour
 
     void randomMov()
     {
-
         if (!isRotating_flag || !isMoving_flag)
         {
             if (decisionNo > 4) decisionNo = Random.Range(0, 4);
@@ -76,7 +77,6 @@ public class Player : MonoBehaviour
             }
             //Debug.Log("ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ");
             makeDecision();
-
         }
         else if (isRotating_flag)
         {
@@ -387,14 +387,27 @@ public class Player : MonoBehaviour
 
     void RayCasting()
     {
-        if (Physics2D.Linecast(sightStart0.position, sightEnd0.position, 1 << LayerMask.NameToLayer("Block"))
-            || Physics2D.Linecast(sightStart0.position, sightEnd1.position, 1 << LayerMask.NameToLayer("Block"))
-            || Physics2D.Linecast(sightStart0.position, sightEnd2.position, 1 << LayerMask.NameToLayer("Block")))
+        if (Physics2D.Linecast(head.position, sightEnd0.position, 1 << LayerMask.NameToLayer("Block"))
+            || Physics2D.Linecast(head.position, sightEnd1.position, 1 << LayerMask.NameToLayer("Block"))
+            || Physics2D.Linecast(head.position, sightEnd2.position, 1 << LayerMask.NameToLayer("Block"))
+            || Physics2D.Linecast(head.position, sightEnd3.position, 1 << LayerMask.NameToLayer("Block"))
+            || Physics2D.Linecast(head.position, sightEnd4.position, 1 << LayerMask.NameToLayer("Block"))
+            || Physics2D.Linecast(head.position, sightEnd5.position, 1 << LayerMask.NameToLayer("Block"))
+            || Physics2D.Linecast(head.position, sightEnd6.position, 1 << LayerMask.NameToLayer("Block"))
+            || Physics2D.Linecast(head.position, sightEnd7.position, 1 << LayerMask.NameToLayer("Block"))
+            || Physics2D.Linecast(head.position, sightEnd8.position, 1 << LayerMask.NameToLayer("Block")))
             spotted = true;
         else spotted = false;
-        Debug.DrawLine(sightStart0.position, sightEnd0.position, Color.green);
-        Debug.DrawLine(sightStart0.position, sightEnd1.position, Color.green);
-        Debug.DrawLine(sightStart0.position, sightEnd2.position, Color.green);
+        Debug.DrawLine(head.position, sightEnd0.position, Color.green);
+        Debug.DrawLine(head.position, sightEnd1.position, Color.green);
+        Debug.DrawLine(head.position, sightEnd2.position, Color.green);
+        Debug.DrawLine(head.position, sightEnd3.position, Color.green);
+        Debug.DrawLine(head.position, sightEnd4.position, Color.green);
+        Debug.DrawLine(head.position, sightEnd5.position, Color.green);
+        Debug.DrawLine(head.position, sightEnd6.position, Color.green);
+        Debug.DrawLine(head.position, sightEnd7.position, Color.green);
+        Debug.DrawLine(head.position, sightEnd7.position, Color.green);
+        Debug.DrawLine(head.position, sightEnd8.position, Color.green);
     }
 
     bool checkForObstacle(string str) {
