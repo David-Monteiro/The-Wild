@@ -8,5 +8,6 @@ public class Simulator : MonoBehaviour {
     }
 	void Update () {
         transform.position = new Vector3(animal.transform.position.x, animal.transform.position.y, -1);
+        //GetComponent<Pack>().Update();
     }
 }
