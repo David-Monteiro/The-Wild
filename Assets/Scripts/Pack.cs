@@ -10,11 +10,26 @@ public class Pack : MonoBehaviour {
     // public Vector3 vector3;
     //public Vector3 vector4;
 
+    private GameObject Alpha;
+    private GameObject Beta;
+    private GameObject Gamma;
+    private GameObject Delta1;
+    private GameObject Delta2;
+    private GameObject Delta3;
 
-    private int _huntingSteps;
+    private GameObject Prey;
+
+    //Instead of an array of gameObjects, make a list of wolfs and their status in the pack.
+
+    private int _searchAgent;
+    //this int will tell which wolf is the one that fount the prey
+
+
+    public int _huntingSteps;
     private GameObject [] _pack;
-    public void Start () {
-
+    public void Start ()
+    {
+        _huntingSteps = 0;
         _pack = GameObject.FindGameObjectsWithTag("Wolf");
         /*  foreach(GameObject wolf in pack) {
 
@@ -72,11 +87,7 @@ public class Pack : MonoBehaviour {
             if (_pack.Length - i == 1)
             {
                 _pack[i].GetComponent<Wolf>().RayCasting();
-                if (!_pack[i].GetComponent<Wolf>().PreySpotted)
-                    _pack[i].GetComponent<Wolf>().SearchPrey();
-                
-                /*else
-                    _pack[i].GetComponent<Wolf>().GoToLocation(_pack[i].GetComponent<Wolf>().prey.transform.position);*/
+                Hunt(_pack[i]);
             }
             
         }
@@ -85,10 +96,11 @@ public class Pack : MonoBehaviour {
     public void Hunt(GameObject wolf){
         //First hunt
 
-        switch (_huntingSteps) {
+        switch (_huntingSteps) {    
             case 1:
-                //scout();
-                if (wolf.GetComponent<Wolf>().PreySpotted) _huntingSteps = 1;
+                //Set the position the first wolf who spotted a prey
+                if(wolf.GetComponent<Wolf>().GoToLocation(Prey.transform.position))
+                    _huntingSteps++;
                 break;
             case 2:
                 //call pack seniors
@@ -110,9 +122,16 @@ public class Pack : MonoBehaviour {
             case 7:
                 //hunt the prey
                 break;
-            /*default:
-                //set huntingSteps to 1 if prey position is lost
-                break;*/
+            default:
+                //Search for prey
+                wolf.GetComponent<Wolf>().SearchPrey();
+                if (wolf.GetComponent<Wolf>().PreySpotted)
+                {
+                    Prey = wolf.GetComponent<Wolf>().Prey;
+                    wolf.GetComponent<Wolf>().StopAction();
+                    _huntingSteps++;
+                }
+                break;
         }
     }
 }

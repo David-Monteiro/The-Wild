@@ -9,7 +9,7 @@ public class Carnivorous : Animal
 
     public GameObject Prey;
 
-    protected new void Start() {
+    public new void Start() {
         base.Start();
         Herbivorous = new[] { "deer", "moose", "elk" };
         PreySpotted = false;
@@ -46,36 +46,55 @@ public class Carnivorous : Animal
             || Physics2D.Linecast(head.position, sightEnd7.position, 1 << LayerMask.NameToLayer(animal))
             || Physics2D.Linecast(head.position, sightEnd8.position, 1 << LayerMask.NameToLayer(animal)))
         {
-            if (Physics2D.Linecast(head.position, sightEnd0.position, LayerMask.NameToLayer(animal)).collider != null)
-                Prey = Physics2D.Linecast(head.position, sightEnd0.position, LayerMask.NameToLayer(animal)).collider.gameObject;
-            else if (Physics2D.Linecast(head.position, sightEnd0.position, LayerMask.NameToLayer(animal)).collider != null)
-                Prey = Physics2D.Linecast(head.position, sightEnd1.position, LayerMask.NameToLayer(animal)).collider.gameObject;
-            else if (Physics2D.Linecast(head.position, sightEnd0.position, LayerMask.NameToLayer(animal)).collider != null)
-                Prey = Physics2D.Linecast(head.position, sightEnd2.position, LayerMask.NameToLayer(animal)).collider.gameObject;
-            else if (Physics2D.Linecast(head.position, sightEnd0.position, LayerMask.NameToLayer(animal)).collider != null)
-                Prey = Physics2D.Linecast(head.position, sightEnd3.position, LayerMask.NameToLayer(animal)).collider.gameObject;
-            else if (Physics2D.Linecast(head.position, sightEnd0.position, LayerMask.NameToLayer(animal)).collider != null)
-                Prey = Physics2D.Linecast(head.position, sightEnd4.position, LayerMask.NameToLayer(animal)).collider.gameObject;
-            else if (Physics2D.Linecast(head.position, sightEnd0.position, LayerMask.NameToLayer(animal)).collider != null)
-                Prey = Physics2D.Linecast(head.position, sightEnd5.position, LayerMask.NameToLayer(animal)).collider.gameObject;
-            else if (Physics2D.Linecast(head.position, sightEnd0.position, LayerMask.NameToLayer(animal)).collider != null)
-                Prey = Physics2D.Linecast(head.position, sightEnd6.position, LayerMask.NameToLayer(animal)).collider.gameObject;
-            else if (Physics2D.Linecast(head.position, sightEnd0.position, LayerMask.NameToLayer(animal)).collider != null)
-                Prey = Physics2D.Linecast(head.position, sightEnd7.position, LayerMask.NameToLayer(animal)).collider.gameObject;
-            else if (Physics2D.Linecast(head.position, sightEnd0.position, LayerMask.NameToLayer(animal)).collider != null)
-                Prey = Physics2D.Linecast(head.position, sightEnd8.position, LayerMask.NameToLayer(animal)).collider.gameObject;
-            Debug.Log(Prey.name);
+            if (Physics2D.Linecast(head.position, sightEnd0.position, 1 << LayerMask.NameToLayer(animal)).collider != null) {
+                if (Prey == null)
+                    Prey = Physics2D.Linecast(head.position, sightEnd0.position, LayerMask.NameToLayer(animal)).collider.gameObject;
+                Debug.Log("XXXXXXXXXXXXX");
+            }
+            else if (Physics2D.Linecast(head.position, sightEnd1.position, 1 << LayerMask.NameToLayer(animal)).collider != null) {
+                if (Prey == null)
+                    Prey = Physics2D.Linecast(head.position, sightEnd1.position, LayerMask.NameToLayer(animal)).collider.gameObject;
+                Debug.Log("XXXXXXXXXXXXX");
+            }
+            else if (Physics2D.Linecast(head.position, sightEnd2.position, 1 << LayerMask.NameToLayer(animal)).collider != null) {
+                if (Prey == null)
+                    Prey = Physics2D.Linecast(head.position, sightEnd2.position, 1 << LayerMask.NameToLayer(animal)).collider.gameObject;
+                Debug.Log("XXXXXXXXXXXXX");
+            }
+            else if (Physics2D.Linecast(head.position, sightEnd3.position, 1 << LayerMask.NameToLayer(animal)).collider != null) {
+                if(Prey == null)
+                    Prey = Physics2D.Linecast(head.position, sightEnd3.position, LayerMask.NameToLayer(animal)).collider.gameObject;
+                Debug.Log("XXXXXXXXXXXXX");
+            }
+            else if (Physics2D.Linecast(head.position, sightEnd4.position, 1 << LayerMask.NameToLayer(animal)).collider != null) {
+                if (Prey == null)
+                    Prey = Physics2D.Linecast(head.position, sightEnd4.position, LayerMask.NameToLayer(animal)).collider.gameObject;
+                Debug.Log("XXXXXXXXXXXXX");
+            }
+            else if (Physics2D.Linecast(head.position, sightEnd5.position, 1 << LayerMask.NameToLayer(animal)).collider != null) {
+                if (Prey == null)
+                    Prey = Physics2D.Linecast(head.position, sightEnd5.position, LayerMask.NameToLayer(animal)).collider.gameObject;
+                Debug.Log("XXXXXXXXXXXXX");
+            }
+            else if (Physics2D.Linecast(head.position, sightEnd6.position, 1 << LayerMask.NameToLayer(animal)).collider != null) {
+                if (Prey == null)
+                    Prey = Physics2D.Linecast(head.position, sightEnd6.position, LayerMask.NameToLayer(animal)).collider.gameObject;
+                Debug.Log("XXXXXXXXXXXXX");
+            }
+            else if (Physics2D.Linecast(head.position, sightEnd7.position, 1 << LayerMask.NameToLayer(animal)).collider != null) {
+                if (Prey == null)
+                    Prey = Physics2D.Linecast(head.position, sightEnd7.position, LayerMask.NameToLayer(animal)).collider.gameObject;
+                Debug.Log("XXXXXXXXXXXXX");
+            }
+            else if (Physics2D.Linecast(head.position, sightEnd8.position, 1 << LayerMask.NameToLayer(animal)).collider != null) {
+                if (Prey == null)
+                    Prey = Physics2D.Linecast(head.position, sightEnd8.position, LayerMask.NameToLayer(animal)).collider.gameObject;
+                Debug.Log("XXXXXXXXXXXXX");
+            }
+            
             return true;
         }
        return false;
-    }
-
-    public void StopAction()
-    {
-        isMoving_flag = false;
-        isRotating_flag = false;
-        leftRotDone_flag = false;
-        rightRotDone_flag = false;
     }
 
     public void SearchPrey() {
