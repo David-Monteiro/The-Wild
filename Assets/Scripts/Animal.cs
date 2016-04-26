@@ -21,6 +21,7 @@ public class Animal : MonoBehaviour
 
     private float _anglePos;
     private int _decisionNo = -1;
+    private int _goingToLocationSteps = -1;
     private float _target = 0;
 
     public bool isMoving_flag;
@@ -28,39 +29,36 @@ public class Animal : MonoBehaviour
     public bool leftRotDone_flag;
     public bool rightRotDone_flag;
 
-    GameObject enemy;
+    public GameObject enemy;
     protected Animator Animator;
     public GameObject Smell;
-
+ private bool cond;
     protected void Start()
     {
         isMoving_flag = false;
         isRotating_flag = false;
         leftRotDone_flag = false;
         rightRotDone_flag = false;
-
-        enemy = GameObject.Find("animal (1)");
+        cond = false;
+        enemy = GameObject.Find("Turtle").gameObject;
         Animator = GetComponent<Animator>();
-        transform.eulerAngles = new Vector3(0, 0, 180);
+        transform.eulerAngles = new Vector3(0, 0, 0);
         //Smell = GameObject.Find("smell_mechanism");
-
-
     }
 
-    private bool cond = false;
+   
 
     protected void Update()
     {
         RayCasting();
         //controlledMov();
-        RandomMov1();
+        //RandomMov1();
 
-
-        /*
+       // Debug.Log(enemy.GetComponent<Animal>().backPointC.position);
         if(cond == false)
-             goToLocation(enemy.transform.position);
-         */
-
+            cond = LookAtTarget(enemy.GetComponent<Animal>().transform.position);
+        //cond = LookAtTarget(enemy.GetComponent<Animal>().backPointC.position);
+        // LookAtTarget(enemy.GetComponent<Animal>().backPointC.position);
         /*
         getAnglePos();
         if(transform.eulerAngles.z != 9) {
@@ -221,13 +219,20 @@ public class Animal : MonoBehaviour
         return !isMoving_flag;
     }
 
-    void MoveToPoint(Vector3 point)
+    protected bool MoveToPoint(Vector3 point)
     {
+
+        isMoving_flag = true;
         MoveTowardsPoint(point);
 
-        if (point == transform.position) isMoving_flag = false;
-        else if (CheckForNearObstacle("inFront")) isMoving_flag = false;
-        else isMoving_flag = true;
+        if (point == transform.position)
+        {
+            isMoving_flag = false;
+            //need to leave smell particle behind
+        }
+        else if (CheckForNearObstacle("behind")) isMoving_flag = false;
+        return !isMoving_flag;
+
     }
 
     protected bool TurnLeft(float angleTurn)
@@ -297,7 +302,7 @@ public class Animal : MonoBehaviour
             RotateTowardsAngleZ(myTarget);
             leftRotDone_flag = (int) transform.rotation.eulerAngles.z == (int) myTarget;
         }
-        else if (rightRotDone_flag == false && leftRotDone_flag == true)
+        else if (rightRotDone_flag == false && leftRotDone_flag)
         {
             RotateTowardsAngleZ(_anglePos);
             rightRotDone_flag = (int) transform.rotation.eulerAngles.z == (int) _anglePos;
@@ -324,7 +329,7 @@ public class Animal : MonoBehaviour
             RotateTowardsAngleZ(myTarget);
             rightRotDone_flag = (int) transform.rotation.eulerAngles.z == (int) myTarget;
         }
-        else if (rightRotDone_flag == true && leftRotDone_flag == false)
+        else if (rightRotDone_flag && leftRotDone_flag == false)
         {
             RotateTowardsAngleZ(_anglePos);
             leftRotDone_flag = (int) transform.rotation.eulerAngles.z == (int) _anglePos;
@@ -337,7 +342,7 @@ public class Animal : MonoBehaviour
             leftRotDone_flag = false;
             return true;
         }
-        else return false;
+        return false;
     }
 
     protected bool LookAround()
@@ -369,10 +374,118 @@ public class Animal : MonoBehaviour
         else return false;
     }
 
+    protected bool LookAtTarget(Vector3 targetPos)
+    {
+
+        /*
+        GetAnglePos();
+
+        if (!isRotating_flag)
+        {
+            double a = Vector3.Distance(sightEnd4.position, targetPos);
+            double b = Vector3.Distance(transform.position, targetPos);
+            double c = Vector3.Distance(transform.position, sightEnd4.position);
+            double temp = ((b * b) + (c * c) - (a * a)) / (2 * b * c);
+
+            //(b^2+c^2*a^2)/2bc
+            float angle = Mathf.Sqrt(Mathf.Abs((float)temp));
+            Debug.Log("angle before cos : " + angle);
+            angle = Mathf.Acos(angle);
+            Debug.Log("radions: " + angle);
+            angle = angle*Mathf.Rad2Deg;
+            Debug.Log("Angle: " + angle);
+            if (targetPos.x > transform.position.x && targetPos.y > transform.position.y) //++
+            {
+                _target = 360 - angle;
+            }
+            else if (targetPos.x > transform.position.x && targetPos.y < transform.position.y)//-+
+            {
+                _target = 360 - (angle + 90);
+            }
+            else if (targetPos.x < transform.position.x && targetPos.y > transform.position.y)//+-
+            {
+                _target = angle;
+            }
+            else if (targetPos.x < transform.position.x && targetPos.y < transform.position.y)//--
+            {
+                _target = angle + 90;
+            }
+            else if ((targetPos.y < transform.position.y) && (targetPos.x == transform.position.x))
+            {
+                _target = 180;
+            }
+            else if ((targetPos.y == transform.position.y) && (targetPos.x > transform.position.x))
+            {
+                _target = 270;
+            }
+            else if ((targetPos.y == transform.position.y) && (targetPos.x < transform.position.x))
+            {
+                _target = 90;
+            }
+            else
+            {
+                _target = 0;
+            }
+        }
+
+        isRotating_flag = true;
+
+        Debug.Log("Rotation towards: " + _target);
+
+        RotateTowardsAngleZ(_target);
+
+        isRotating_flag = (int)transform.rotation.eulerAngles.z != (int)_target;
+
+        Debug.Log(isRotating_flag);
+        
+        return !isRotating_flag;
+        */
+        GetAnglePos();
+        if (!isRotating_flag)
+        {
+            double angle;
+
+            if (targetPos.x == transform.position.x)
+            {
+                angle = (targetPos.y < transform.position.y) ? 180 : 0;
+            }
+            else if (targetPos.y == transform.position.y)
+            {
+                angle = (targetPos.x < transform.position.x) ? 90 : 270;
+            }
+            else
+            {
+                float tangent = (targetPos.x - transform.position.x)/(targetPos.y - transform.position.y);
+
+                angle = Mathf.Atan(tangent)*57.2958;
+
+                if (targetPos.y - transform.position.y < 0) angle -= 180;
+                
+                angle = (transform.position.x < targetPos.x && transform.position.y > targetPos.y) ? angle*-1 : 360 - angle;
+
+            }
+
+            _target = (float)angle;
+        }
+
+        isRotating_flag = true;
+
+        Debug.Log("Rotation towards: " + _target);
+
+        RotateTowardsAngleZ(_target);
+
+        isRotating_flag = (int)transform.rotation.eulerAngles.z != (int)_target%360;
+
+        Debug.Log(isRotating_flag);
+
+        return !isRotating_flag;
+
+    }
+
     //Core of my movements and rotations
     void RotateTowardsAngleZ(float t0)
     {
-
+       
         if (transform.eulerAngles.z - t0 == 1 || t0 - transform.eulerAngles.z == 1)
         {
             transform.eulerAngles = new Vector3(0, 0, t0);
@@ -398,39 +511,35 @@ public class Animal : MonoBehaviour
             movementSpeed*Time.deltaTime);
     }
 
+    //----------------------------------
     public bool GoToLocation(Vector3 targetPos)
     {
-
-        /*
-        switch (SearchSteps)
+        //Rotation is not working properly
+        switch (_goingToLocationSteps)
         {
             case 1:
-                if (LookAround()) SearchSteps++;
+                if(MoveToPoint(_locationTarget))
+                _goingToLocationSteps++;
+                Debug.Log("step 2");
                 break;
-            case 2:
-                if (BigMoveForward()) SearchSteps++;
+            default:
+                if(LookAtTarget(targetPos))
+                    _goingToLocationSteps = 1;
+                Debug.Log("step 1");
                 break;
-            //Go to location using switch might be a better solution    
-        */
-
-        GetAnglePos();
-        targetPos.x = (targetPos.x - transform.position.x)%360;
-        targetPos.y = (targetPos.y - transform.position.y)%360;
-        float angle = Mathf.Atan2(targetPos.y, targetPos.x)*Mathf.Rad2Deg;
-        //Debug.Log("Angle: " + angle);
-        if (angle > 180) TurnRight(angle);
-        else TurnLeft(angle);
-        // Debug.Log("anglepos: " + ((anglePos + angle) % 360));
-        //Debug.Log("Angle: " + transform.rotation.eulerAngles.z);
-        if (((_anglePos + angle)%360) == transform.rotation.eulerAngles.z)
-        {
-            if (!isMoving_flag)
-            {
-                _locationTarget = targetPos;
-            }
-            MoveToPoint(_locationTarget);
         }
-        return targetPos == transform.position;
+        if (_goingToLocationSteps <= 1) return false;
+        _goingToLocationSteps = -1;
+        Debug.Log("final step");
+        return true;
+    }
+
+    public void StopAction()
+    {
+        isMoving_flag = false;
+        isRotating_flag = false;
+        leftRotDone_flag = false;
+        rightRotDone_flag = false;
     }
 
     public void RayCasting()
