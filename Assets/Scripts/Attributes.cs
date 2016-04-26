@@ -5,25 +5,22 @@ using System;
 
 public class Attributes 
 {
-    private Dictionary<string, float> values = new Dictionary<string, float>();
+    private readonly Dictionary<string, float> values = new Dictionary<string, float>();
 
     public Attributes()
     {
-        values.Add("strenght", 1111111);
-        values.Add("agility", 1111111);
-        values.Add("stamina", 1111111);
-        values.Add("speed", 1111111);
-        values.Add("attackSpeed", 1111111);
-        values.Add("defenceSpeed", 1111111);
-        values.Add("regeneration", 1111111);
-        values.Add("aggresion", 1111111);
-        values.Add("bravery", 1111111);
-        values.Add("vision", 1111111);
-        values.Add("height", 1111111);
-        values.Add("weight", 1111111);
+        values.Add("strenght", UnityEngine.Random.Range(1, 11));
+        values.Add("agility", UnityEngine.Random.Range(1, 11));//rotation from 25 to 35
+        values.Add("speed", UnityEngine.Random.Range(2f, 4f));//movement from 2 to 4
+        values.Add("attackSpeed", UnityEngine.Random.Range(1, 11));
+        values.Add("defenceSpeed", UnityEngine.Random.Range(1, 11));
+        values.Add("aggresion", UnityEngine.Random.Range(1, 11));
+        values.Add("vision", UnityEngine.Random.Range(0.5f, 1f));//raycast, from 0.5 to 1
+        values.Add("height", UnityEngine.Random.Range(1500, 300));
+        values.Add("weight", UnityEngine.Random.Range(20, 40));
     }
 
-    public void printAttributes()
+    public void PrintAttributes()
     {
         Console.WriteLine("strenght" + values["strenght"]);
         Console.WriteLine("agility" + values["agility"]);
@@ -38,16 +35,16 @@ public class Attributes
         Console.WriteLine("height" + values["height"]);
         Console.WriteLine("weight" + values["weight"]);
     }
-    public void setAttributes(string key, float value)
+    public void SetAttributes(string key, float value)
     {
         values[key] = value;
     }
 
-    public float getAttribute(string attr_name)
+    public float GetAttribute(string attr_name)
     {
         float value;
         if (values.TryGetValue(attr_name, out value)) return value;
-        else return -1;
+        return -1;
         //-1 stands for null value
     }
 }
