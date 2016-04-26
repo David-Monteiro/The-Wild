@@ -56,8 +56,7 @@ public class Animal : MonoBehaviour
 
        // Debug.Log(enemy.GetComponent<Animal>().backPointC.position);
         if(cond == false)
-            cond = LookAtTarget(enemy.GetComponent<Animal>().transform.position);
-        //cond = LookAtTarget(enemy.GetComponent<Animal>().backPointC.position);
+            cond = GoToLocation(enemy.GetComponent<Animal>().backPointC.position);
         // LookAtTarget(enemy.GetComponent<Animal>().backPointC.position);
         /*
         getAnglePos();
@@ -222,15 +221,21 @@ public class Animal : MonoBehaviour
     protected bool MoveToPoint(Vector3 point)
     {
 
+        if (!isMoving_flag)
+        {
+            _locationTarget = point;
+        }
         isMoving_flag = true;
-        MoveTowardsPoint(point);
+        MoveTowardsPoint(_locationTarget);
 
-        if (point == transform.position)
+        if (_locationTarget == transform.position)
         {
             isMoving_flag = false;
-            //need to leave smell particle behind
+
+            Instantiate(Smell, new Vector3(backPointB.position.x, backPointB.position.y, -0.5f), Quaternion.identity);
+            //Instantiate(Smell, new Vector3(backPointB.position.x, backPointB.position.y, -0.5f), Quaternion.identity);
         }
-        else if (CheckForNearObstacle("behind")) isMoving_flag = false;
+        else if (CheckForNearObstacle("inFront")) isMoving_flag = false;
         return !isMoving_flag;
 
     }
@@ -376,71 +381,8 @@ public class Animal : MonoBehaviour
 
     protected bool LookAtTarget(Vector3 targetPos)
     {
-
-        /*
         GetAnglePos();
 
-        if (!isRotating_flag)
-        {
-            double a = Vector3.Distance(sightEnd4.position, targetPos);
-            double b = Vector3.Distance(transform.position, targetPos);
-            double c = Vector3.Distance(transform.position, sightEnd4.position);
-            double temp = ((b * b) + (c * c) - (a * a)) / (2 * b * c);
-
-            //(b^2+c^2*a^2)/2bc
-            float angle = Mathf.Sqrt(Mathf.Abs((float)temp));
-            Debug.Log("angle before cos : " + angle);
-            angle = Mathf.Acos(angle);
-            Debug.Log("radions: " + angle);
-            angle = angle*Mathf.Rad2Deg;
-            Debug.Log("Angle: " + angle);
-            if (targetPos.x > transform.position.x && targetPos.y > transform.position.y) //++
-            {
-                _target = 360 - angle;
-            }
-            else if (targetPos.x > transform.position.x && targetPos.y < transform.position.y)//-+
-            {
-                _target = 360 - (angle + 90);
-            }
-            else if (targetPos.x < transform.position.x && targetPos.y > transform.position.y)//+-
-            {
-                _target = angle;
-            }
-            else if (targetPos.x < transform.position.x && targetPos.y < transform.position.y)//--
-            {
-                _target = angle + 90;
-            }
-            else if ((targetPos.y < transform.position.y) && (targetPos.x == transform.position.x))
-            {
-                _target = 180;
-            }
-            else if ((targetPos.y == transform.position.y) && (targetPos.x > transform.position.x))
-            {
-                _target = 270;
-            }
-            else if ((targetPos.y == transform.position.y) && (targetPos.x < transform.position.x))
-            {
-                _target = 90;
-            }
-            else
-            {
-                _target = 0;
-            }
-        }
-
-        isRotating_flag = true;
-
-        Debug.Log("Rotation towards: " + _target);
-
-        RotateTowardsAngleZ(_target);
-
-        isRotating_flag = (int)transform.rotation.eulerAngles.z != (int)_target;
-
-        Debug.Log(isRotating_flag);
-        
-        return !isRotating_flag;
-        */
-        GetAnglePos();
         if (!isRotating_flag)
         {
             double angle;
@@ -518,7 +460,7 @@ public class Animal : MonoBehaviour
         switch (_goingToLocationSteps)
         {
             case 1:
-                if(MoveToPoint(_locationTarget))
+                if(MoveToPoint(targetPos))
                 _goingToLocationSteps++;
                 Debug.Log("step 2");
                 break;
