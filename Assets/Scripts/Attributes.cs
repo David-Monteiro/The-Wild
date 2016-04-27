@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System;
+using Random = UnityEngine.Random;
 
 public class Attributes 
 {
@@ -9,15 +10,15 @@ public class Attributes
 
     public Attributes()
     {
-        values.Add("strenght", UnityEngine.Random.Range(1, 11));
-        values.Add("agility", UnityEngine.Random.Range(1, 11));//rotation from 25 to 35
-        values.Add("speed", UnityEngine.Random.Range(2f, 4f));//movement from 2 to 4
-        values.Add("attackSpeed", UnityEngine.Random.Range(1, 11));
-        values.Add("defenceSpeed", UnityEngine.Random.Range(1, 11));
-        values.Add("aggresion", UnityEngine.Random.Range(1, 11));
-        values.Add("vision", UnityEngine.Random.Range(0.5f, 1f));//raycast, from 0.5 to 1
-        values.Add("height", UnityEngine.Random.Range(1500, 300));
-        values.Add("weight", UnityEngine.Random.Range(20, 40));
+        values.Add("strenght", 0);
+        values.Add("agility", 0);//rotation from 25 to 35
+        values.Add("speed", 0);//movement from 2 to 4
+        values.Add("attackSpeed", 0);
+        values.Add("defenceSpeed", 0);
+        values.Add("aggresion", 0);
+        values.Add("vision", 0);//raycast, from 0.5 to 1
+        values.Add("height", 0);
+        values.Add("weight", 0);
     }
 
     public void PrintAttributes()
@@ -38,6 +39,19 @@ public class Attributes
     public void SetAttributes(string key, float value)
     {
         values[key] = value;
+    }
+
+    public void SetAttributes()
+    {
+        values["strenght"] = Random.Range(1, 11);
+        values["agility"] = Random.Range(25, 35);//rotation from 25 to 35
+        values["speed"] = Random.Range(2f, 4f);//movement from 2 to 4
+        values["attackSpeed"] = Random.Range(1, 11);
+        values["defenceSpeed"] = Random.Range(1, 11);
+        values["aggresion"] = Random.Range(1, 11);
+        values["vision"] = Random.Range(0.5f, 1f);//raycast, from 0.5 to 1
+        values["height"] = Random.Range(1500, 300);
+        values["weight"] = Random.Range(20, 40);
     }
 
     public float GetAttribute(string attr_name)
