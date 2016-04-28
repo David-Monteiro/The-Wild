@@ -1,7 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Pack : MonoBehaviour {
+public class Pack : MonoBehaviour
+{
 
     //This class serves as the controller of all my deployed wolves
 
@@ -10,12 +11,13 @@ public class Pack : MonoBehaviour {
     // public Vector3 vector3;
     //public Vector3 vector4;
 
-    private GameObject Alpha;
-    private GameObject Beta;
-    private GameObject Gamma;
-    private GameObject Delta1;
-    private GameObject Delta2;
-    private GameObject Delta3;
+    private Vector3 AlphaPos = new Vector3(0, -2, 0);
+    private Vector3 BetaPos = new Vector3(1, -1.75f, 0);
+    private Vector3 GammaPos = new Vector3(-1, -1.75f, 0);
+    private Vector3 Delta1Pos = new Vector3(1, -1.25f, 0);
+    private Vector3 Delta2Pos = new Vector3(-1, -1.25f, 0);
+    private Vector3 Delta3Pos = new Vector3(2, -0.75f, 0);
+    private Vector3 Delta43Pos = new Vector3(-2, -0.75f, 0);
 
     private GameObject Prey;
 
@@ -26,8 +28,9 @@ public class Pack : MonoBehaviour {
 
 
     public int _huntingSteps;
-    private GameObject [] _pack;
-    public void Start ()
+    private GameObject[] _pack;
+
+    public void Start()
     {
         _huntingSteps = 0;
         _pack = GameObject.FindGameObjectsWithTag("Wolf");
@@ -37,7 +40,7 @@ public class Pack : MonoBehaviour {
 
           }*/
 
-        for (int i = 0; i < _pack.Length; i++)
+        for (var i = 0; i < _pack.Length; i++)
         {
             if (_pack.Length - i == 1)
             {
@@ -77,61 +80,149 @@ public class Pack : MonoBehaviour {
 
 
     */
-    public void Update () {
-     /*   foreach(GameObject wolf in pack) {
 
-        }*/
-   
-         
-        for (int i = 0; i < _pack.Length; i++) {
-            if (_pack.Length - i == 1)
-            {
-                _pack[i].GetComponent<Wolf>().RayCasting();
-                Hunt(_pack[i]);
-            }
-            
+    public void Update()
+    {
+        RayCast();
+        Hunt();
+    }
+
+    public void RayCast()
+    {
+        foreach (var animal in _pack)
+        {
+            animal.GetComponent<Wolf>().RayCasting();
         }
     }
 
-    public void Hunt(GameObject wolf){
+    public void Hunt()
+    {
+        //A STEP TO STOP ALL WOLVES MOVEMENTS
         //First hunt
-
-        switch (_huntingSteps) {    
-            case 1:
-                //Set the position the first wolf who spotted a prey
-                if(wolf.GetComponent<Wolf>().GoToLocation(Prey.transform.position))
-                    _huntingSteps++;
-                break;
-            case 2:
-                //call pack seniors
-                // Lock first wolf to angle 180 of prey while maintaining a minimum distance of 2f
-                break;
-            case 3:
-                //adjust position for senior wolves so they also stalk the prey in the rear area of the prey line of sight
-                break;
-            case 4:
-                //alpha wolf analyses the prey and decides whether or not to produce the hunt
-                break;
-            case 5:
-                //if alpha decides to hunt
-                //call the junior members of the pack and keep stalking until the rest of the members arrive
-                break;
-            case 8:
-                //has they arrive adjust positions so all members can surround the prey without being noticed by the prey
-                break;
-            case 7:
-                //hunt the prey
-                break;
-            default:
-                //Search for prey
-                wolf.GetComponent<Wolf>().SearchPrey();
-                if (wolf.GetComponent<Wolf>().PreySpotted)
+        for (int i = 0; i < _pack.Length; i++)
+        {
+            if (_pack.Length - i == 1)
+            {
+                switch (_huntingSteps)
                 {
-                    Prey = wolf.GetComponent<Wolf>().Prey;
-                    wolf.GetComponent<Wolf>().StopAction();
-                    _huntingSteps++;
+                    case 1:
+                        //Set the position the first wolf who spotted a prey
+                        if (StalkPrey())
+                            _huntingSteps=7;
+                        break;
+                    case 3:
+                        //call pack seniors 
+                        // Lock first wolf to angle 180 of prey while maintaining a minimum distance of 2f
+                        break;
+                    case 4:
+                        //adjust position for senior wolves so they also stalk the prey in the rear area of the prey line of sight
+                        break;
+                    case 5:
+                        //alpha wolf analyses the prey and decides whether or not to produce the hunt
+                        break;
+                    case 6:
+                        //if alpha decides to hunt
+                        //call the junior members of the pack and keep stalking until the rest of the members arrive
+                        break;
+                    case 7:
+                        //has they arrive adjust positions so all members can surround the prey without being noticed by the prey
+                        if(EnCircle(_pack[i]))
+                            _huntingSteps++;
+                        break;
+                    case 8:
+                        //besiese behaviour
+                        break;
+                    default:
+                        //Search for prey
+
+                        //Here each wolf will look for a prey
+                        if(SearchPrey(_pack[i]))
+                        {
+                            _huntingSteps++;
+                            _searchAgent = i;
+                            StopActions();
+                        }
+                            
+                        break;
                 }
-                break;
+            }
         }
+    }
+
+    public bool StalkPrey()
+    {
+        //Set the position of the first wolf who spotted a prey
+        if (_pack[_searchAgent].GetComponent<Wolf>().GoToLocation(Prey.transform.TransformPoint(AlphaPos)))
+            if (_pack[_searchAgent].GetComponent<Wolf>().LookAtTarget(Prey.transform.position))
+                return true;
+        
+        return false;
+    }
+
+    public void StopActions()
+    {
+        foreach (var animal in _pack)
+        {
+            animal.GetComponent<Wolf>().StopAction();
+        }
+    }
+
+    public bool SearchPrey(GameObject wolf) {
+        wolf.GetComponent<Wolf>().SearchPrey();
+
+        if (wolf.GetComponent<Wolf>().PreySpotted)
+        {
+            Prey = wolf.GetComponent<Wolf>().Prey;
+            return true;
+        }
+        return false;
+    }
+
+    public bool EnCircle(GameObject wolf)
+    {
+        var temp = 0;
+        for (var i = 0; i < _pack.Length; i++)
+        {
+            switch (i)
+            {
+                case 1:
+                    if (wolf.GetComponent<Wolf>().GoToLocation(Prey.transform.TransformPoint(BetaPos)))
+                        temp++;
+                    break;
+                case 2:
+                    if (wolf.GetComponent<Wolf>().GoToLocation(Prey.transform.TransformPoint(GammaPos)))
+                        temp++;
+                    break;
+                case 3:
+                    if (wolf.GetComponent<Wolf>().GoToLocation(Prey.transform.TransformPoint(Delta1Pos)))
+                        temp++;
+                    break;
+                case 4:
+                    if (wolf.GetComponent<Wolf>().GoToLocation(Prey.transform.TransformPoint(Delta2Pos)))
+                        temp++;
+                    break;
+                case 5:
+                    if (wolf.GetComponent<Wolf>().GoToLocation(Prey.transform.TransformPoint(Delta3Pos)))
+                        temp++;
+                    break;
+                case 6:
+                    if (wolf.GetComponent<Wolf>().GoToLocation(Prey.transform.TransformPoint(Delta43Pos)))
+                        temp++;
+                    break;
+                default:
+                    if (wolf.GetComponent<Wolf>().GoToLocation(Prey.transform.TransformPoint(AlphaPos)))
+                        temp++;
+                    break;
+            }
+
+        }
+        return temp == _pack.Length;
+    }
+
+    public float GetDistance(Vector3 origin, Vector3 rayDir, Vector3 avoidanceArea)
+    {
+        float distance = Vector3.Distance(origin, avoidanceArea);
+        float angle = Vector3.Angle(rayDir, avoidanceArea - origin);
+        return (distance * Mathf.Sin(angle * Mathf.Deg2Rad));
     }
 }

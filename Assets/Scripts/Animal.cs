@@ -39,11 +39,15 @@ public class Animal : MonoBehaviour
         isRotating_flag = false;
         leftRotDone_flag = false;
         rightRotDone_flag = false;
+
+        attributes.SetAttributes();
         cond = false;
         enemy = GameObject.Find("Turtle").gameObject;
         Animator = GetComponent<Animator>();
         transform.eulerAngles = new Vector3(0, 0, 0);
         //Smell = GameObject.Find("smell_mechanism");
+        rotationSpeed = attributes.GetAttribute("agility");
+        movementSpeed = attributes.GetAttribute("speed");
     }
 
    
@@ -55,8 +59,8 @@ public class Animal : MonoBehaviour
         //RandomMov1();
 
        // Debug.Log(enemy.GetComponent<Animal>().backPointC.position);
-        if(cond == false)
-            cond = GoToLocation(enemy.GetComponent<Animal>().backPointC.position);
+        //if(cond == false)
+         //   cond = GoToLocation(enemy.GetComponent<Animal>().backPointC.position);
         // LookAtTarget(enemy.GetComponent<Animal>().backPointC.position);
         /*
         getAnglePos();
@@ -379,7 +383,7 @@ public class Animal : MonoBehaviour
         else return false;
     }
 
-    protected bool LookAtTarget(Vector3 targetPos)
+    public bool LookAtTarget(Vector3 targetPos)
     {
         GetAnglePos();
 
@@ -412,13 +416,13 @@ public class Animal : MonoBehaviour
 
         isRotating_flag = true;
 
-        Debug.Log("Rotation towards: " + _target);
+        //Debug.Log("Rotation towards: " + _target);
 
         RotateTowardsAngleZ(_target);
 
         isRotating_flag = (int)transform.rotation.eulerAngles.z != (int)_target%360;
 
-        Debug.Log(isRotating_flag);
+        //Debug.Log(isRotating_flag);
 
         return !isRotating_flag;
 
@@ -461,7 +465,7 @@ public class Animal : MonoBehaviour
         {
             case 1:
                 if(MoveToPoint(targetPos))
-                _goingToLocationSteps++;
+                    _goingToLocationSteps++;
                 Debug.Log("step 2");
                 break;
             default:
@@ -617,6 +621,11 @@ public class Animal : MonoBehaviour
                 break;
         }
 
+
+    }
+
+    void setAttributes()
+    {
 
     }
 }
