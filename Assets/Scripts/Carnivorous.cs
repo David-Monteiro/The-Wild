@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using System.Collections;
 
 public class Carnivorous : Animal
@@ -6,6 +7,8 @@ public class Carnivorous : Animal
     protected string[] Herbivorous;
     public bool PreySpotted;
     protected int SearchSteps;
+
+    public Vector3 LocationTarget = Vector3.zero;
 
     public GameObject Prey;
 
@@ -28,8 +31,10 @@ public class Carnivorous : Animal
         {
             Debug.Log(hit.collider.name);
         }
-            
+
+
     }
+
 
     public bool IsPreySpotted(string animal)
     {
@@ -125,6 +130,128 @@ public class Carnivorous : Animal
                 break;
         }
 
+    }
+    
+    public bool GoToUnseen(Vector3 targetPos)
+    {
+
+        bool unseenPath = !inPreyVisionArea(targetPos);
+        
+        if(!unseenPath) { 
+            if (LocationTarget == Vector3.zero)
+            {
+                var i = 1;
+                Vector3 intersection1 = Vector3.one;
+                Vector3 intersection2 = Vector3.one;
+                while (i < 92 && !unseenPath)
+                {
+
+                    double b = Vector3.Distance(head.position, targetPos);
+                    double c = b;
+
+                    //double cosA = Mathf.Cos((float)(2 * (Mathf.PI / 180.0))) ;
+                    double cosA = Mathf.Cos(i*Mathf.Deg2Rad);
+                    double a = Mathf.Sqrt((float) (b*b + c*c - 2*b*c*cosA));
+
+                    // Find e and h.
+                    double e = b == 0 ? 0 : (c*c - a*a + b*b)/(2*b);
+                    double h = Math.Sqrt(c*c - e*e);
+
+                    // Find point between AB > D.
+                    double cx2 = transform.position.x + a*(targetPos.x - transform.position.x)/b;
+                    double cy2 = transform.position.y + a*(targetPos.y - transform.position.y)/b;
+
+                    // Get the points P3.
+                    intersection1 = new Vector3(
+                        (float) (cx2 + h*(transform.position.y - targetPos.y)/b),
+                        (float) (cy2 - h*(transform.position.x - targetPos.x)/b));
+                    intersection2 = new Vector3(
+                        (float) (cx2 - h*(transform.position.y - targetPos.y)/b),
+                        (float) (cy2 + h*(transform.position.x - targetPos.x)/b));
+
+                    intersection1 = intersection1 + (targetPos - transform.position);
+                    intersection2 = intersection2 + (targetPos - transform.position);
+
+                    if (!inPreyVisionArea(intersection1))
+                    {
+                        unseenPath = true;
+                        LocationTarget = intersection1;
+                    }
+                    if (!inPreyVisionArea(intersection2))
+                    {
+                        unseenPath = true;
+                        LocationTarget = intersection2;
+                    }
+                    i += 10;
+                }
+                    /*
+                        if direct path is through prey field of vision
+                        Need to find an unseen path 
+                        Then move towards unseen path 
+                        Check again
+                        if unseen go to target location
+                    */
+                if (!unseenPath)
+                {
+                    var temp = new Vector3(1 , 0, 0 );
+                    if (ObstacleBetweenTarget(temp))
+                        temp.x = -temp.x;
+                    LocationTarget = transform.TransformPoint(temp);
+                   
+                }
+
+            }
+
+        }
+
+        else if (LocationTarget != targetPos)
+        {
+            StopAction();
+            LocationTarget = targetPos;
+        }
+
+        if (GoToLocation(LocationTarget))
+        {
+
+            if (LocationTarget != targetPos) {
+                StopAction();
+                LocationTarget = Vector3.zero;
+            }
+            else
+            {
+                StopAction();
+                LocationTarget = Vector3.zero;
+                return true;
+            }
+        }
+        
+        return false;
+    }
+
+    public bool inPreyVisionArea(Vector3 point)
+    {
+
+        RaycastHit2D[] hits = Physics2D.LinecastAll(transform.position, point, 1 << LayerMask.NameToLayer("field_of_vision"));
+
+        var Collided = new GameObject[hits.Length];
+        for (var i = 0; i < hits.Length; i++)
+        {
+            Collided[i] = hits[i].collider.gameObject;
+        }
+
+        foreach( var obj in Collided) { 
+            if (obj.transform.parent.gameObject != null)
+                if (obj.transform.parent.gameObject.Equals(Prey))
+                    return true;
+        }
+
+        return false;
+    }
+
+    bool ObstacleBetweenTarget(Vector3 target)
+    {
+        return Physics2D.Linecast(transform.position, target, 1 << LayerMask.NameToLayer("Block"))
+            || Physics2D.Linecast(transform.position, target, 1 << LayerMask.NameToLayer("wall_block"));
     }
 
 }

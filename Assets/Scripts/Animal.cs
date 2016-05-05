@@ -1,5 +1,7 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using System.Collections;
+using Random = UnityEngine.Random;
 
 public class Animal : MonoBehaviour
 {
@@ -32,7 +34,7 @@ public class Animal : MonoBehaviour
     public GameObject enemy;
     protected Animator Animator;
     public GameObject Smell;
- private bool cond;
+ public bool cond;
     protected void Start()
     {
         isMoving_flag = false;
@@ -58,10 +60,12 @@ public class Animal : MonoBehaviour
         //controlledMov();
         //RandomMov1();
 
-       // Debug.Log(enemy.GetComponent<Animal>().backPointC.position);
+        // Debug.Log(enemy.GetComponent<Animal>().backPointC.position);
         //if(cond == false)
-         //   cond = GoToLocation(enemy.GetComponent<Animal>().backPointC.position);
-        // LookAtTarget(enemy.GetComponent<Animal>().backPointC.position);
+        //   cond = GoToLocation(enemy.GetComponent<Animal>().backPointC.position);
+         //GoToLocationTemp(enemy.GetComponent<Animal>().backPointC.position);
+        
+        //Debug.Log(enemy.GetComponent<Animal>().backPointC.position - transform.position);
         /*
         getAnglePos();
         if(transform.eulerAngles.z != 9) {
@@ -96,7 +100,7 @@ public class Animal : MonoBehaviour
         }
     }
 
-    void RandomMov1()
+    public void RandomMov1()
     {
         //Here I will create random generated actions
         //I will probabily do it in turns of moving forward/ backwards and rotating left/right
@@ -466,18 +470,30 @@ public class Animal : MonoBehaviour
             case 1:
                 if(MoveToPoint(targetPos))
                     _goingToLocationSteps++;
-                Debug.Log("step 2");
+                //Debug.Log("step 2");
                 break;
             default:
                 if(LookAtTarget(targetPos))
                     _goingToLocationSteps = 1;
-                Debug.Log("step 1");
+                //Debug.Log("step 1");
                 break;
         }
         if (_goingToLocationSteps <= 1) return false;
         _goingToLocationSteps = -1;
-        Debug.Log("final step");
+        //Debug.Log("final step");
         return true;
+
+    }
+    
+    private int TriangleType(int a, int b, int c)
+    {
+        /*equilateral==0
+        *isosceles=1
+        *scalene=2
+        */
+        if (a == b && a == c && b == c) return 0;
+        if (a == b || a == c || c == b) return 1;
+        return 2;
     }
 
     public void StopAction()
@@ -486,6 +502,7 @@ public class Animal : MonoBehaviour
         isRotating_flag = false;
         leftRotDone_flag = false;
         rightRotDone_flag = false;
+        _goingToLocationSteps = -1;
     }
 
     public void RayCasting()
@@ -571,41 +588,41 @@ public class Animal : MonoBehaviour
         {
             case 0:
                 SmallMoveForward();
-                Debug.Log("smallMoveForward");
+                //Debug.Log("smallMoveForward");
                 break;
             case 1:
                 BigMoveForward();
-                Debug.Log("bigMoveForward");
+                //Debug.Log("bigMoveForward");
                 break;
             case 2:
                 SmallMoveBackward();
-                Debug.Log("smallMoveBackward");
+                //Debug.Log("smallMoveBackward");
                 break;
             case 3:
                 BigMoveBackward();
-                Debug.Log("bigMoveBackward");
+                //Debug.Log("bigMoveBackward");
                 break;
             case 4:
                 LookLeft();
-                Debug.Log("lookLeft");
+                //Debug.Log("lookLeft");
                 break;
             case 5:
                 LookRight();
-                Debug.Log("lookRight");
+                //Debug.Log("lookRight");
                 break;
             case 6:
                 LookAround();
-                Debug.Log("lookAround");
+                //Debug.Log("lookAround");
                 break;
             case 7:
                 UTurnMove();
-                Debug.Log("uTurnMove");
+                //Debug.Log("uTurnMove");
                 break;
             case 8:
                 if (!isRotating_flag)
                 {
                     _target = Random.Range(4, 45);
-                    Debug.Log("turn left");
+                    //Debug.Log("turn left");
                     //Debug.Log(anglePos + " > " + (anglePos + targetPoint) %360 + " XXXXXXXXXXXXXXXXXXXXX");
                 }
                 TurnLeft(_target);
@@ -614,7 +631,7 @@ public class Animal : MonoBehaviour
                 if (!isRotating_flag)
                 {
                     _target = Random.Range(4, 45);
-                    Debug.Log("turn right");
+                    //Debug.Log("turn right");
                     //Debug.Log(anglePos + " > " + (anglePos- targetPoint) %360 + " XXXXXXXXXXXXXXXXXXXXX");
                 }
                 TurnRight(_target);
@@ -628,4 +645,5 @@ public class Animal : MonoBehaviour
     {
 
     }
+
 }

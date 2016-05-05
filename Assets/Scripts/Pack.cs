@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Linq;
 
 public class Pack : MonoBehaviour
 {
@@ -11,13 +12,26 @@ public class Pack : MonoBehaviour
     // public Vector3 vector3;
     //public Vector3 vector4;
 
-    private Vector3 AlphaPos = new Vector3(0, -2, 0);
-    private Vector3 BetaPos = new Vector3(1, -1.75f, 0);
-    private Vector3 GammaPos = new Vector3(-1, -1.75f, 0);
-    private Vector3 Delta1Pos = new Vector3(1, -1.25f, 0);
-    private Vector3 Delta2Pos = new Vector3(-1, -1.25f, 0);
-    private Vector3 Delta3Pos = new Vector3(2, -0.75f, 0);
-    private Vector3 Delta43Pos = new Vector3(-2, -0.75f, 0);
+    /*
+        private Vector3 AlphaPos = new Vector3(0, -2, 0);
+        private Vector3 BetaPos = new Vector3(1, -1.75f, 0);
+        private Vector3 GammaPos = new Vector3(-1, -1.75f, 0);
+        private Vector3 Delta1Pos = new Vector3(1, -1.25f, 0);
+        private Vector3 Delta2Pos = new Vector3(-1, -1.25f, 0);
+        private Vector3 Delta3Pos = new Vector3(2, -0.75f, 0);
+        private Vector3 Delta4Pos = new Vector3(-2, -0.75f, 0);
+    */
+    Vector3[] StalkPos =
+    {
+        new Vector3(2, -0.75f, 0),
+        new Vector3(1, -1.25f, 0),
+        new Vector3(-1, -1.25f, 0),
+        new Vector3(1, -1.75f, 0),
+        new Vector3(-1, -1.75f, 0),
+        new Vector3(0, -2, 0)
+        
+        
+    };
 
     private GameObject Prey;
 
@@ -99,64 +113,119 @@ public class Pack : MonoBehaviour
     {
         //A STEP TO STOP ALL WOLVES MOVEMENTS
         //First hunt
-        for (int i = 0; i < _pack.Length; i++)
+        switch (_huntingSteps)
         {
-            if (_pack.Length - i == 1)
-            {
-                switch (_huntingSteps)
-                {
-                    case 1:
-                        //Set the position the first wolf who spotted a prey
-                        if (StalkPrey())
-                            _huntingSteps=7;
-                        break;
-                    case 3:
-                        //call pack seniors 
-                        // Lock first wolf to angle 180 of prey while maintaining a minimum distance of 2f
-                        break;
-                    case 4:
-                        //adjust position for senior wolves so they also stalk the prey in the rear area of the prey line of sight
-                        break;
-                    case 5:
-                        //alpha wolf analyses the prey and decides whether or not to produce the hunt
-                        break;
-                    case 6:
-                        //if alpha decides to hunt
-                        //call the junior members of the pack and keep stalking until the rest of the members arrive
-                        break;
-                    case 7:
-                        //has they arrive adjust positions so all members can surround the prey without being noticed by the prey
-                        if(EnCircle(_pack[i]))
-                            _huntingSteps++;
-                        break;
-                    case 8:
-                        //besiese behaviour
-                        break;
-                    default:
-                        //Search for prey
-
-                        //Here each wolf will look for a prey
-                        if(SearchPrey(_pack[i]))
-                        {
-                            _huntingSteps++;
-                            _searchAgent = i;
-                            StopActions();
-                        }
-                            
-                        break;
+            case 1:
+                //Set the position the first wolf who spotted a prey
+                if (StalkPrey()) {
+                    _huntingSteps++;
                 }
-            }
+                break;
+            case 2:
+                //call pack seniors 
+                // Lock first wolf to angle 180 of prey while maintaining a minimum distance of 2f
+                Debug.Log("Calling Seniors");
+                if (CallSeniors()) {
+                    _huntingSteps++;
+                    StopActions();
+                    Debug.Log("Call Seniors");
+                }
+                break;
+            case 3:
+                if (LookAtPrey2(2))
+                {
+                    _huntingSteps = 5;
+                    Debug.Log("Seniors looking at prey");
+                }
+                //adjust position for senior wolves so they also stalk the prey in the rear area of the prey line of sight
+                break;
+            case 4:
+                //alpha wolf analyses the prey and decides whether or not to produce the hunt
+                break;
+            case 5:
+                //if alpha decides to hunt
+                //call the junior members of the pack and keep stalking until the rest of the members arrive
+                Debug.Log("Calling Juniors");
+                if (CallJuniors())
+                {
+                    _huntingSteps++;
+                    StopActions();
+                    Debug.Log("CallJuniors");
+                }
+                break;
+            case 6:
+                //has they arrive adjust positions so all members can surround the prey without being noticed by the prey
+                if (LookAtPrey2(1))
+                {
+                    _huntingSteps++;
+                    StopActions();
+                    Debug.Log("Looking at target");
+                }
+                break;
+            case 7:
+                //besiese behaviour
+                break;
+            default:
+                //Search for prey
+
+                //Here each wolf will look for a prey
+                if(SearchPrey())
+                {
+                    _huntingSteps++;
+                    StopActions();
+                    Debug.Log("Prey found");
+                }          
+                break;
         }
     }
 
     public bool StalkPrey()
     {
-        //Set the position of the first wolf who spotted a prey
-        if (_pack[_searchAgent].GetComponent<Wolf>().GoToLocation(Prey.transform.TransformPoint(AlphaPos)))
-            if (_pack[_searchAgent].GetComponent<Wolf>().LookAtTarget(Prey.transform.position))
-                return true;
-        
+        foreach (var animal in _pack)
+        {
+            //Set the position of the first wolf who spotted a prey
+            if(!animal.Equals(_pack[_searchAgent]))
+                animal.GetComponent<Wolf>().RandomMov1();
+            else
+                if (_pack[_searchAgent].GetComponent<Wolf>().GoToLocation(Prey.transform.TransformPoint(StalkPos[0])))
+                    if (_pack[_searchAgent].GetComponent<Wolf>().LookAtTarget(Prey.transform.position))
+                        return true;
+        }
         return false;
+    }
+
+    public bool LookAtPrey2(int type)
+    {
+        
+        var count = type == 1 ? new int[_pack.Length] : new int[3];
+
+        for (var i = 0; i < count.Length; i++)
+        {
+            if (_pack[i].GetComponent<Wolf>().LookAtTarget(Prey.transform.position))
+                count[i] = 1;
+        }
+        return count.All(i => i != 0);
+    }
+
+    public bool CallSeniors()
+    {
+        /*var count = type == 1 ? new int[3] : new int[_pack.Length];
+      
+        for (var i = 0; i < count.Length; i++)
+        {
+            if (_pack[i].GetComponent<Wolf>().LookAtTarget(Prey.transform.position))
+                count[i] = 1;
+        }
+        return count.All(i => i != 0);*/
+
+
+        var count = 0;
+        for (var i = 1; i < 4; i++)
+        {
+            if (_pack[i].GetComponent<Wolf>().GoToUnseen(Prey.transform.TransformPoint(StalkPos[_pack.Length - i])))
+                count++;
+        }
+        return count == 3;
     }
 
     public void StopActions()
@@ -167,54 +236,34 @@ public class Pack : MonoBehaviour
         }
     }
 
-    public bool SearchPrey(GameObject wolf) {
-        wolf.GetComponent<Wolf>().SearchPrey();
-
-        if (wolf.GetComponent<Wolf>().PreySpotted)
+    public bool SearchPrey() {
+        //for (int i = 0; i < _pack.Length; i++)
+        for (int i = 0; i < 3; i++)
         {
-            Prey = wolf.GetComponent<Wolf>().Prey;
-            return true;
+            _pack[i].GetComponent<Wolf>().SearchPrey();
+
+            if (_pack[i].GetComponent<Wolf>().PreySpotted)
+            {
+                Prey = _pack[i].GetComponent<Wolf>().Prey;
+                foreach (var animal in _pack)
+                {
+                    animal.GetComponent<Wolf>().Prey = Prey;
+                }
+                _searchAgent = i;
+                return true;
+            }
         }
         return false;
+
     }
 
-    public bool EnCircle(GameObject wolf)
+    public bool CallJuniors()
     {
         var temp = 0;
         for (var i = 0; i < _pack.Length; i++)
         {
-            switch (i)
-            {
-                case 1:
-                    if (wolf.GetComponent<Wolf>().GoToLocation(Prey.transform.TransformPoint(BetaPos)))
-                        temp++;
-                    break;
-                case 2:
-                    if (wolf.GetComponent<Wolf>().GoToLocation(Prey.transform.TransformPoint(GammaPos)))
-                        temp++;
-                    break;
-                case 3:
-                    if (wolf.GetComponent<Wolf>().GoToLocation(Prey.transform.TransformPoint(Delta1Pos)))
-                        temp++;
-                    break;
-                case 4:
-                    if (wolf.GetComponent<Wolf>().GoToLocation(Prey.transform.TransformPoint(Delta2Pos)))
-                        temp++;
-                    break;
-                case 5:
-                    if (wolf.GetComponent<Wolf>().GoToLocation(Prey.transform.TransformPoint(Delta3Pos)))
-                        temp++;
-                    break;
-                case 6:
-                    if (wolf.GetComponent<Wolf>().GoToLocation(Prey.transform.TransformPoint(Delta43Pos)))
-                        temp++;
-                    break;
-                default:
-                    if (wolf.GetComponent<Wolf>().GoToLocation(Prey.transform.TransformPoint(AlphaPos)))
-                        temp++;
-                    break;
-            }
-
+            if (_pack[i].GetComponent<Wolf>().GoToUnseen(Prey.transform.TransformPoint(StalkPos[i])))
+                temp++;
         }
         return temp == _pack.Length;
     }
