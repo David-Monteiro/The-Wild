@@ -6,7 +6,7 @@ using Random = UnityEngine.Random;
 
 public class Attributes 
 {
-    private readonly Dictionary<string, float> values = new Dictionary<string, float>();
+    private Dictionary<string, float> values = new Dictionary<string, float>();
 
     public Attributes()
     {
@@ -19,6 +19,10 @@ public class Attributes
         values.Add("vision", 0);//raycast, from 0.5 to 1
         values.Add("height", 0);
         values.Add("weight", 0);
+
+        values.Add("health", 100);
+        values.Add("hunger", 0);
+        values.Add("thirst", 0);
     }
 
     public void PrintAttributes()
@@ -35,6 +39,10 @@ public class Attributes
         Console.WriteLine("vision" + values["vision"]);
         Console.WriteLine("height" + values["height"]);
         Console.WriteLine("weight" + values["weight"]);
+
+        Console.WriteLine("health" + values["health"]);
+        Console.WriteLine("hunger" + values["hunger"]);
+        Console.WriteLine("thirst" + values["thirst"]);
     }
     public void SetAttributes(string key, float value)
     {
@@ -52,6 +60,10 @@ public class Attributes
         values["vision"] = Random.Range(0.5f, 1f);//raycast, from 0.5 to 1
         values["height"] = Random.Range(1500, 300);
         values["weight"] = Random.Range(20, 40);
+
+        values["health"] = 100;
+        values["hunger"] = 0;
+        values["thirst"] = 0;
     }
 
     public float GetAttribute(string attr_name)

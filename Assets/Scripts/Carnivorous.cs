@@ -12,17 +12,20 @@ public class Carnivorous : Animal
 
     public GameObject Prey;
 
-    public new void Start() {
+    public new void Start()
+    {
         base.Start();
-        Herbivorous = new[] { "deer", "moose", "elk" };
+        Herbivorous = new[] {"deer", "moose", "elk"};
         PreySpotted = false;
         SearchSteps = 1;
     }
-    public new void RayCasting() {
+
+    public new void RayCasting()
+    {
         base.RayCasting();
 
         PreySpotted = IsPreySpotted("herbivorous");
-        
+
 
         // prey = RaycastHit.transform.gameObject : GameObject;
 
@@ -51,59 +54,109 @@ public class Carnivorous : Animal
             || Physics2D.Linecast(head.position, sightEnd7.position, 1 << LayerMask.NameToLayer(animal))
             || Physics2D.Linecast(head.position, sightEnd8.position, 1 << LayerMask.NameToLayer(animal)))
         {
-            if (Physics2D.Linecast(head.position, sightEnd0.position, 1 << LayerMask.NameToLayer(animal)).collider != null) {
+            if (Physics2D.Linecast(head.position, sightEnd0.position, 1 << LayerMask.NameToLayer(animal)).collider !=
+                null)
+            {
                 if (Prey == null)
-                    Prey = Physics2D.Linecast(head.position, sightEnd0.position, 1 << LayerMask.NameToLayer(animal)).collider.gameObject;
+                    Prey =
+                        Physics2D.Linecast(head.position, sightEnd0.position, 1 << LayerMask.NameToLayer(animal))
+                            .collider.gameObject;
                 Debug.Log("XXXXXXXXXXXXX");
             }
-            else if (Physics2D.Linecast(head.position, sightEnd1.position, 1 << LayerMask.NameToLayer(animal)).collider != null) {
+            else if (
+                Physics2D.Linecast(head.position, sightEnd1.position, 1 << LayerMask.NameToLayer(animal)).collider !=
+                null)
+            {
                 if (Prey == null)
-                    Prey = Physics2D.Linecast(head.position, sightEnd1.position, 1 << LayerMask.NameToLayer(animal)).collider.gameObject;
+                    Prey =
+                        Physics2D.Linecast(head.position, sightEnd1.position, 1 << LayerMask.NameToLayer(animal))
+                            .collider.gameObject;
                 Debug.Log("XXXXXXXXXXXXX");
             }
-            else if (Physics2D.Linecast(head.position, sightEnd2.position, 1 << LayerMask.NameToLayer(animal)).collider != null) {
+            else if (
+                Physics2D.Linecast(head.position, sightEnd2.position, 1 << LayerMask.NameToLayer(animal))
+                    .collider != null)
+            {
                 if (Prey == null)
-                    Prey = Physics2D.Linecast(head.position, sightEnd2.position, 1 << LayerMask.NameToLayer(animal)).collider.gameObject;
+                    Prey =
+                        Physics2D.Linecast(head.position, sightEnd2.position, 1 << LayerMask.NameToLayer(animal))
+                            .collider.gameObject;
                 Debug.Log("XXXXXXXXXXXXX");
             }
-            else if (Physics2D.Linecast(head.position, sightEnd3.position, 1 << LayerMask.NameToLayer(animal)).collider != null) {
-                if(Prey == null)
-                    Prey = Physics2D.Linecast(head.position, sightEnd3.position, 1 << LayerMask.NameToLayer(animal)).collider.gameObject;
-                Debug.Log("XXXXXXXXXXXXX");
-            }
-            else if (Physics2D.Linecast(head.position, sightEnd4.position, 1 << LayerMask.NameToLayer(animal)).collider != null) {
+            else if (
+                Physics2D.Linecast(head.position, sightEnd3.position, 1 << LayerMask.NameToLayer(animal))
+                    .collider != null)
+            {
                 if (Prey == null)
-                    Prey = Physics2D.Linecast(head.position, sightEnd4.position, 1 << LayerMask.NameToLayer(animal)).collider.gameObject;
+                    Prey =
+                        Physics2D.Linecast(head.position, sightEnd3.position,
+                            1 << LayerMask.NameToLayer(animal)).collider.gameObject;
                 Debug.Log("XXXXXXXXXXXXX");
             }
-            else if (Physics2D.Linecast(head.position, sightEnd5.position, 1 << LayerMask.NameToLayer(animal)).collider != null) {
+            else if (
+                Physics2D.Linecast(head.position, sightEnd4.position, 1 << LayerMask.NameToLayer(animal))
+                    .collider != null)
+            {
                 if (Prey == null)
-                    Prey = Physics2D.Linecast(head.position, sightEnd5.position, 1 << LayerMask.NameToLayer(animal)).collider.gameObject;
+                    Prey =
+                        Physics2D.Linecast(head.position, sightEnd4.position,
+                            1 << LayerMask.NameToLayer(animal)).collider.gameObject;
                 Debug.Log("XXXXXXXXXXXXX");
             }
-            else if (Physics2D.Linecast(head.position, sightEnd6.position, 1 << LayerMask.NameToLayer(animal)).collider != null) {
+            else if (
+                Physics2D.Linecast(head.position, sightEnd5.position,
+                    1 << LayerMask.NameToLayer(animal)).collider != null)
+            {
                 if (Prey == null)
-                    Prey = Physics2D.Linecast(head.position, sightEnd6.position, 1 << LayerMask.NameToLayer(animal)).collider.gameObject;
+                    Prey =
+                        Physics2D.Linecast(head.position, sightEnd5.position,
+                            1 << LayerMask.NameToLayer(animal)).collider.gameObject;
                 Debug.Log("XXXXXXXXXXXXX");
             }
-            else if (Physics2D.Linecast(head.position, sightEnd7.position, 1 << LayerMask.NameToLayer(animal)).collider != null) {
+            else if (
+                Physics2D.Linecast(head.position, sightEnd6.position,
+                    1 << LayerMask.NameToLayer(animal)).collider != null)
+            {
                 if (Prey == null)
-                    Prey = Physics2D.Linecast(head.position, sightEnd7.position, 1 << LayerMask.NameToLayer(animal)).collider.gameObject;
+                    Prey =
+                        Physics2D.Linecast(head.position, sightEnd6.position,
+                            1 << LayerMask.NameToLayer(animal)).collider.gameObject;
                 Debug.Log("XXXXXXXXXXXXX");
             }
-            else if (Physics2D.Linecast(head.position, sightEnd8.position, 1 << LayerMask.NameToLayer(animal)).collider != null) {
+            else if (
+                Physics2D.Linecast(head.position, sightEnd7.position,
+                    1 << LayerMask.NameToLayer(animal)).collider != null)
+            {
                 if (Prey == null)
-                    Prey = Physics2D.Linecast(head.position, sightEnd8.position, 1 << LayerMask.NameToLayer(animal)).collider.gameObject;
+                    Prey =
+                        Physics2D.Linecast(head.position, sightEnd7.position,
+                            1 << LayerMask.NameToLayer(animal)).collider.gameObject;
                 Debug.Log("XXXXXXXXXXXXX");
             }
-            
+            else if (
+                Physics2D.Linecast(head.position, sightEnd8.position,
+                    1 << LayerMask.NameToLayer(animal)).collider != null)
+            {
+                if (Prey == null)
+                    Prey =
+                        Physics2D.Linecast(head.position, sightEnd8.position,
+                            1 << LayerMask.NameToLayer(animal)).collider.gameObject;
+                Debug.Log("XXXXXXXXXXXXX");
+            }
+
             return true;
         }
-       return false;
+        return false;
     }
 
-    public void SearchPrey() {
-        switch (SearchSteps) {
+    public void SearchPrey()
+    {
+
+
+        RandomMov1();
+        /*
+        switch (SearchSteps)
+        {
             case 1:
                 if (LookAround()) SearchSteps++;
                 break;
@@ -128,16 +181,17 @@ public class Carnivorous : Animal
             default:
                 SearchSteps = 1;
                 break;
-        }
+        }*/
 
     }
-    
+
     public bool GoToUnseen(Vector3 targetPos)
     {
 
         bool unseenPath = !inPreyVisionArea(targetPos);
-        
-        if(!unseenPath) { 
+
+        if (!unseenPath)
+        {
             if (LocationTarget == Vector3.zero)
             {
                 var i = 1;
@@ -184,7 +238,7 @@ public class Carnivorous : Animal
                     }
                     i += 10;
                 }
-                    /*
+                /*
                         if direct path is through prey field of vision
                         Need to find an unseen path 
                         Then move towards unseen path 
@@ -193,11 +247,11 @@ public class Carnivorous : Animal
                     */
                 if (!unseenPath)
                 {
-                    var temp = new Vector3(1 , 0, 0 );
+                    var temp = new Vector3(1, 0, 0);
                     if (ObstacleBetweenTarget(temp))
                         temp.x = -temp.x;
                     LocationTarget = transform.TransformPoint(temp);
-                   
+
                 }
 
             }
@@ -209,11 +263,12 @@ public class Carnivorous : Animal
             StopAction();
             LocationTarget = targetPos;
         }
-
+        Debug.Log(LocationTarget);
         if (GoToLocation(LocationTarget))
         {
 
-            if (LocationTarget != targetPos) {
+            if (LocationTarget != targetPos)
+            {
                 StopAction();
                 LocationTarget = Vector3.zero;
             }
@@ -224,14 +279,15 @@ public class Carnivorous : Animal
                 return true;
             }
         }
-        
+
         return false;
     }
 
     public bool inPreyVisionArea(Vector3 point)
     {
 
-        RaycastHit2D[] hits = Physics2D.LinecastAll(transform.position, point, 1 << LayerMask.NameToLayer("field_of_vision"));
+        RaycastHit2D[] hits = Physics2D.LinecastAll(transform.position, point,
+            1 << LayerMask.NameToLayer("field_of_vision"));
 
         var Collided = new GameObject[hits.Length];
         for (var i = 0; i < hits.Length; i++)
@@ -239,7 +295,8 @@ public class Carnivorous : Animal
             Collided[i] = hits[i].collider.gameObject;
         }
 
-        foreach( var obj in Collided) { 
+        foreach (var obj in Collided)
+        {
             if (obj.transform.parent.gameObject != null)
                 if (obj.transform.parent.gameObject.Equals(Prey))
                     return true;
@@ -251,7 +308,32 @@ public class Carnivorous : Animal
     bool ObstacleBetweenTarget(Vector3 target)
     {
         return Physics2D.Linecast(transform.position, target, 1 << LayerMask.NameToLayer("Block"))
-            || Physics2D.Linecast(transform.position, target, 1 << LayerMask.NameToLayer("wall_block"));
+               || Physics2D.Linecast(transform.position, target, 1 << LayerMask.NameToLayer("wall_block"));
     }
 
+    /* protected new void OnTriggerEnter2D(Collider2D col)
+     {
+         base.OnTriggerEnter2D(col);
+
+         if (col.tag == "Herbivorous")
+         {
+             //ScoreAndHealthSystem sh = (Player)ScoreAndHealthSystem.GetComponent("ScoreAndHealthSystem");
+             //sh.currentHealth--;
+         }
+
+     }*/
+
+    protected new void OnCollisionEnter2D(Collision2D other)
+    {
+        base.OnCollisionEnter2D(other);
+
+        if (other.gameObject.tag.Equals("Meat"))
+        {
+            //ScoreAndHealthSystem sh = (Player)ScoreAndHealthSystem.GetComponent("ScoreAndHealthSystem");
+            currentHunger -= Time.deltaTime * 50f;
+            if (currentHunger < 0)
+                currentHunger = 0;
+        }
+
+    }
 }

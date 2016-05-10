@@ -11,6 +11,7 @@ public class Wolf : Carnivorous
         foreach (var co in coliiders)
         {
             Physics2D.IgnoreCollision(co.GetComponent<UnityEngine.BoxCollider2D>(), GetComponent<UnityEngine.BoxCollider2D>());
+            
         }
     }
 
