@@ -23,7 +23,7 @@ public class Pack : MonoBehaviour
     */
     Vector3[] StalkPos =
     {
-        new Vector3(2, -0.75f, 0),
+        new Vector3(-2, -0.75f, 0),
         new Vector3(1, -1.25f, 0),
         new Vector3(-1, -1.25f, 0),
         new Vector3(1, -1.75f, 0),
@@ -48,19 +48,19 @@ public class Pack : MonoBehaviour
     {
         _huntingSteps = 0;
         _pack = GameObject.FindGameObjectsWithTag("Wolf");
-        /*  foreach(GameObject wolf in pack) {
+          foreach(var wolf in _pack) {
 
               wolf.GetComponent<Wolf>().Start();
 
-          }*/
+          }
 
-        for (var i = 0; i < _pack.Length; i++)
+       /* for (var i = 0; i < _pack.Length; i++)
         {
             if (_pack.Length - i == 1)
             {
                 _pack[i].GetComponent<Wolf>().Start();
             }
-        }
+        }*/
 
 
     }
@@ -128,7 +128,7 @@ public class Pack : MonoBehaviour
                 if (CallSeniors()) {
                     _huntingSteps++;
                     StopActions();
-                    Debug.Log("Call Seniors");
+                    Debug.Log("Seniors where called");
                 }
                 break;
             case 3:
@@ -150,7 +150,7 @@ public class Pack : MonoBehaviour
                 {
                     _huntingSteps++;
                     StopActions();
-                    Debug.Log("CallJuniors");
+                    Debug.Log("Juniors where called");
                 }
                 break;
             case 6:
@@ -159,7 +159,7 @@ public class Pack : MonoBehaviour
                 {
                     _huntingSteps++;
                     StopActions();
-                    Debug.Log("Looking at target");
+                    Debug.Log("Pack is looking at target");
                 }
                 break;
             case 7:
@@ -181,16 +181,20 @@ public class Pack : MonoBehaviour
 
     public bool StalkPrey()
     {
-        foreach (var animal in _pack)
+        /*foreach (var animal in _pack)
         {
             //Set the position of the first wolf who spotted a prey
-            if(!animal.Equals(_pack[_searchAgent]))
-                animal.GetComponent<Wolf>().RandomMov1();
-            else
-                if (_pack[_searchAgent].GetComponent<Wolf>().GoToLocation(Prey.transform.TransformPoint(StalkPos[0])))
+            if (animal.Equals(_pack[_searchAgent]))
+            {*/
+                if (_pack[_searchAgent].GetComponent<Wolf>().GoToUnseen(Prey.transform.TransformPoint(StalkPos[StalkPos.Length-1])))
                     if (_pack[_searchAgent].GetComponent<Wolf>().LookAtTarget(Prey.transform.position))
                         return true;
-        }
+            /*}
+            else
+            {
+                animal.GetComponent<Wolf>().RandomMov1();
+            }
+        }*/
         return false;
     }
 
@@ -209,23 +213,13 @@ public class Pack : MonoBehaviour
 
     public bool CallSeniors()
     {
-        /*var count = type == 1 ? new int[3] : new int[_pack.Length];
-      
-        for (var i = 0; i < count.Length; i++)
-        {
-            if (_pack[i].GetComponent<Wolf>().LookAtTarget(Prey.transform.position))
-                count[i] = 1;
-        }
-        return count.All(i => i != 0);*/
-
-
         var count = 0;
         for (var i = 1; i < 4; i++)
         {
-            if (_pack[i].GetComponent<Wolf>().GoToUnseen(Prey.transform.TransformPoint(StalkPos[_pack.Length - i])))
+            if (_pack[i-1].GetComponent<Wolf>().GoToUnseen(Prey.transform.TransformPoint(StalkPos[_pack.Length - i])))
                 count++;
         }
-        return count == 3;
+        return count >= 3;
     }
 
     public void StopActions()
@@ -259,13 +253,13 @@ public class Pack : MonoBehaviour
 
     public bool CallJuniors()
     {
-        var temp = 0;
+        var count = 0;
         for (var i = 0; i < _pack.Length; i++)
         {
             if (_pack[i].GetComponent<Wolf>().GoToUnseen(Prey.transform.TransformPoint(StalkPos[i])))
-                temp++;
+                count++;
         }
-        return temp == _pack.Length;
+        return count >= _pack.Length;
     }
 
     public float GetDistance(Vector3 origin, Vector3 rayDir, Vector3 avoidanceArea)
