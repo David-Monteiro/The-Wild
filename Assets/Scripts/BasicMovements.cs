@@ -16,9 +16,9 @@ public class BasicMovements : MonoBehaviour {
     protected float _target = 0;
     protected int _goingToLocationSteps = -1;
 
-    protected Transform head, tail;
-    protected Transform frontPointA, frontPointB;
-    protected Transform backPointA, backPointB, backPointC;
+    public Transform head, tail;
+    public Transform frontPointA, frontPointB;
+    public Transform backPointA, backPointB, backPointC;
 
 
     //Controlled Movements
@@ -66,7 +66,7 @@ public class BasicMovements : MonoBehaviour {
             isMoving_flag = false;
             //Instantiate(Smell, new Vector3(backPointB.position.x, backPointB.position.y, -0.5f), Quaternion.identity);
         }
-        else if (CheckForNearObstacle("inFront")) isMoving_flag = false;
+        else if (NearObstacle("inFront")) isMoving_flag = false;
 
         return !isMoving_flag;
     }
@@ -81,7 +81,7 @@ public class BasicMovements : MonoBehaviour {
         MoveTowardsPoint(_locationTarget);
 
         if (_locationTarget == transform.position) isMoving_flag = false;
-        else if (CheckForNearObstacle("behind")) isMoving_flag = false;
+        else if (NearObstacle("behind")) isMoving_flag = false;
         return !isMoving_flag;
     }
 
@@ -101,7 +101,7 @@ public class BasicMovements : MonoBehaviour {
             //Instantiate(Smell, new Vector3(backPointB.position.x, backPointB.position.y, -0.5f), Quaternion.identity);
             //Instantiate(Smell, new Vector3(backPointB.position.x, backPointB.position.y, -0.5f), Quaternion.identity);
         }
-        else if (CheckForNearObstacle("inFront")) isMoving_flag = false;
+        else if (NearObstacle("inFront")) isMoving_flag = false;
         return !isMoving_flag;
     }
 
@@ -119,7 +119,7 @@ public class BasicMovements : MonoBehaviour {
             isMoving_flag = false;
             //Instantiate(Smell, new Vector3(frontPointA.position.x, frontPointA.position.y, -0.5f), Quaternion.identity);
         }
-        else if (CheckForNearObstacle("behind")) isMoving_flag = false;
+        else if (NearObstacle("behind")) isMoving_flag = false;
         return !isMoving_flag;
     }
 
@@ -140,7 +140,7 @@ public class BasicMovements : MonoBehaviour {
             //Instantiate(Smell, new Vector3(backPointB.position.x, backPointB.position.y, -0.5f), Quaternion.identity);
             //Instantiate(Smell, new Vector3(backPointB.position.x, backPointB.position.y, -0.5f), Quaternion.identity);
         }
-        else if (CheckForNearObstacle("inFront")) isMoving_flag = false;
+        else if (NearObstacle("inFront")) isMoving_flag = false;
         return !isMoving_flag;
 
     }
@@ -388,21 +388,24 @@ public class BasicMovements : MonoBehaviour {
 
     
     //Obstacle check
-    bool CheckForNearObstacle(string str)
+    protected bool NearObstacle(string str)
     {
         if (str.Equals("behind"))
         {
             return Physics2D.Linecast(transform.position, tail.position, 1 << LayerMask.NameToLayer("Block"))
                    || Physics2D.Linecast(transform.position, backPointA.position, 1 << LayerMask.NameToLayer("Block"))
                    || Physics2D.Linecast(transform.position, tail.position, 1 << LayerMask.NameToLayer("wall_block"))
-                   ||
-                   Physics2D.Linecast(transform.position, backPointA.position, 1 << LayerMask.NameToLayer("wall_block"));
+                   || Physics2D.Linecast(transform.position, backPointA.position, 1 << LayerMask.NameToLayer("wall_block"))
+               || Physics2D.Linecast(transform.position, head.position, 1 << LayerMask.NameToLayer("obstacle"))
+               || Physics2D.Linecast(transform.position, frontPointA.position, 1 << LayerMask.NameToLayer("obstacle"));
         }
 
         return Physics2D.Linecast(transform.position, head.position, 1 << LayerMask.NameToLayer("Block"))
                || Physics2D.Linecast(transform.position, frontPointA.position, 1 << LayerMask.NameToLayer("Block"))
                || Physics2D.Linecast(transform.position, head.position, 1 << LayerMask.NameToLayer("wall_block"))
-               || Physics2D.Linecast(transform.position, frontPointA.position, 1 << LayerMask.NameToLayer("wall_block"));
+               || Physics2D.Linecast(transform.position, frontPointA.position, 1 << LayerMask.NameToLayer("wall_block"))
+               || Physics2D.Linecast(transform.position, head.position, 1 << LayerMask.NameToLayer("obstacle"))
+               || Physics2D.Linecast(transform.position, frontPointA.position, 1 << LayerMask.NameToLayer("obstacle"));
     }
 
 

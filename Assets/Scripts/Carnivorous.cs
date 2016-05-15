@@ -38,6 +38,40 @@ public class Carnivorous : Animal
 
     }
 
+    public bool GetFood()
+    {
+        if (currentHunger < 20)
+        {
+            StopAction();
+            Debug.Log("done");
+            return true;
+        }
+        switch (_steps)
+        {
+            case 1:
+                if (!GoToLocation(FoodLocation))
+                {
+                    if(Vector3.Distance(transform.position, FoodLocation) < 0.4) { 
+                        StopAction();
+                        _steps++;;
+                    }
+                }
+                break;
+            case 2:
+                if (SmallMoveBackward()) _steps--;
+                break;
+            default:
+                RandomMov();
+                if (IsSpotted(MEAT))
+                {
+                    StopAction();
+                    getLocation(MEAT);
+                    _steps++;
+                }
+                break;
+        }
+        return false;
+    }
 
     public bool IsPreySpotted(string animal)
     {
@@ -153,7 +187,7 @@ public class Carnivorous : Animal
     {
 
 
-        RandomMov1();
+        RandomMov();
         /*
         switch (SearchSteps)
         {
@@ -286,16 +320,16 @@ public class Carnivorous : Animal
     public bool inPreyVisionArea(Vector3 point)
     {
 
-        RaycastHit2D[] hits = Physics2D.LinecastAll(transform.position, point,
+        var hits = Physics2D.LinecastAll(transform.position, point,
             1 << LayerMask.NameToLayer("field_of_vision"));
 
-        var Collided = new GameObject[hits.Length];
+        var collided = new GameObject[hits.Length];
         for (var i = 0; i < hits.Length; i++)
         {
-            Collided[i] = hits[i].collider.gameObject;
+            collided[i] = hits[i].collider.gameObject;
         }
 
-        foreach (var obj in Collided)
+        foreach (var obj in collided)
         {
             if (obj.transform.parent.gameObject != null)
                 if (obj.transform.parent.gameObject.Equals(Prey))
@@ -333,6 +367,22 @@ public class Carnivorous : Animal
             currentHunger -= Time.deltaTime * 50f;
             if (currentHunger < 0)
                 currentHunger = 0;
+        }
+
+        if (!other.gameObject.tag.Equals(tag) && other.gameObject.tag.Equals("Bear"))
+        {
+        }
+
+        if (!other.gameObject.tag.Equals(tag) && other.gameObject.tag.Equals("Wolf"))
+        {
+        }
+
+        if (other.gameObject.tag.Equals("Moose"))
+        {
+        }
+
+        if (other.gameObject.tag.Equals("Dear"))
+        {
         }
 
     }

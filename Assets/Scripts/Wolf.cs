@@ -21,13 +21,16 @@ public class Wolf : Carnivorous
         Animator.SetInteger("Animation_Rotation_State", (int) transform.rotation.eulerAngles.z);
         Animator.SetBool("Animation_Mov_State", isMoving_flag);
 
+        if (cond == false)
+            cond = GetFood();
+
 
         //float dist = DistancePointLine(transform.position, enemy.GetComponent<Animal>().backPointC.position,
         // enemy.transform.position);
 
         //if (cond == false)
-          //  cond = GoToUnseen(enemy.GetComponent<Animal>().backPointC.position);
-           
+        //  cond = GoToUnseen(enemy.GetComponent<Animal>().backPointC.position);
+
 
 
 

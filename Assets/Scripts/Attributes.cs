@@ -8,41 +8,71 @@ public class Attributes
 {
     private Dictionary<string, float> values = new Dictionary<string, float>();
 
+    protected float CurrentThirst;
+    protected float CurrentHunger;
+    protected float CurrentHealth;
+    protected float Strenght;
+    protected float Agility;
+    protected float Speed;
+    protected float AttackSpeed;
+    protected float DefenceSpeed;
+    protected float Aggresion;
+    protected float Vision;
+    protected float Height;
+    protected float Weight;
+
+    protected readonly float HungerSpeed = .1f;
+    protected readonly float ThirstSpeed = .1f;
+
     public Attributes()
     {
-        values.Add("strenght", 0);
-        values.Add("agility", 0);//rotation from 25 to 35
-        values.Add("speed", 0);//movement from 2 to 4
+        /*values.Add("strenght", 0);
+        values.Add("agility", 0); //rotation from 25 to 35
+        values.Add("speed", 0); //movement from 2 to 4
         values.Add("attackSpeed", 0);
         values.Add("defenceSpeed", 0);
         values.Add("aggresion", 0);
-        values.Add("vision", 0);//raycast, from 0.5 to 1
+        values.Add("vision", 0); //raycast, from 0.5 to 1
         values.Add("height", 0);
         values.Add("weight", 0);
 
         values.Add("health", 100);
         values.Add("hunger", 0);
-        values.Add("thirst", 0);
-    }
+        values.Add("thirst", 0);*/
+
+        CurrentThirst = 0;
+        CurrentHunger = 0;
+        CurrentHealth = 100;
+        Strenght = 0;
+        Agility = 0;
+        Speed = 0;
+        AttackSpeed = 0;
+        DefenceSpeed = 0;
+        Aggresion = 0;
+        Vision = 0;
+        Height = 0;
+        Weight = 0;
+
+}
 
     public void PrintAttributes()
     {
-        Console.WriteLine("strenght" + values["strenght"]);
-        Console.WriteLine("agility" + values["agility"]);
-        Console.WriteLine("stamina" + values["stamina"]);
-        Console.WriteLine("speed" + values["strenspeedght"]);
-        Console.WriteLine("attackSpeed" + values["attackSpeed"]);
-        Console.WriteLine("defenceSpeed" + values["defenceSpeed"]);
-        Console.WriteLine("regeneration" + values["regeneration"]);
-        Console.WriteLine("aggresion" + values["aggresion"]);
-        Console.WriteLine("bravery" + values["bravery"]);
-        Console.WriteLine("vision" + values["vision"]);
-        Console.WriteLine("height" + values["height"]);
-        Console.WriteLine("weight" + values["weight"]);
+        Console.WriteLine("strenght: " + values["strenght"]);
+        Console.WriteLine("agility: " + values["agility"]);
+        Console.WriteLine("stamina: " + values["stamina"]);
+        Console.WriteLine("speed: " + values["strenspeedght"]);
+        Console.WriteLine("attackSpeed: " + values["attackSpeed"]);
+        Console.WriteLine("defenceSpeed: " + values["defenceSpeed"]);
+        Console.WriteLine("regeneration: " + values["regeneration"]);
+        Console.WriteLine("aggresion: " + values["aggresion"]);
+        Console.WriteLine("bravery: " + values["bravery"]);
+        Console.WriteLine("vision: " + values["vision"]);
+        Console.WriteLine("height: " + values["height"]);
+        Console.WriteLine("weight: " + values["weight"]);
 
-        Console.WriteLine("health" + values["health"]);
-        Console.WriteLine("hunger" + values["hunger"]);
-        Console.WriteLine("thirst" + values["thirst"]);
+        Console.WriteLine("health:" + values["health"]);
+        Console.WriteLine("hunger:" + values["hunger"]);
+        Console.WriteLine("thirst:" + values["thirst"]);
     }
     public void SetAttributes(string key, float value)
     {
