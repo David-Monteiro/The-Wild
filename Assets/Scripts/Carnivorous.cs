@@ -40,7 +40,7 @@ public class Carnivorous : Animal
 
     public bool GetFood()
     {
-        if (currentHunger < 20)
+        if (attr.CurrentHunger < 20)
         {
             StopAction();
             Debug.Log("done");
@@ -364,9 +364,9 @@ public class Carnivorous : Animal
         if (other.gameObject.tag.Equals("Meat"))
         {
             //ScoreAndHealthSystem sh = (Player)ScoreAndHealthSystem.GetComponent("ScoreAndHealthSystem");
-            currentHunger -= Time.deltaTime * 50f;
-            if (currentHunger < 0)
-                currentHunger = 0;
+            attr.CurrentHunger -= Time.deltaTime * 50f;
+            if (attr.CurrentHunger < 0)
+                attr.CurrentHunger = 0;
         }
 
         if (!other.gameObject.tag.Equals(tag) && other.gameObject.tag.Equals("Bear"))

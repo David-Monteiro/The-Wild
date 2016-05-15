@@ -17,12 +17,12 @@ public class Animal : BasicMovements
 
     private Attributes attributes = new Attributes();
 
-    public float hungerSpeed = .1f;
-    public float thirstSpeed = .1f;
+   // public float hungerSpeed = .1f;
+    //public float thirstSpeed = .1f;
 
-    public float currentThirst = 0;
-    public float currentHunger = 0;
-    public float currentHealth = 0;
+    //public float currentThirst = 0;
+    //public float currentHunger = 0;
+    //public float currentHealth = 0;
 
     public bool Spotted = false;
     public Vector3 WaterLocation;
@@ -54,8 +54,8 @@ public class Animal : BasicMovements
         transform.eulerAngles = new Vector3(0, 0, 0);
         //Smell = GameObject.Find("smell_mechanism");
 
-        rotationSpeed = attributes.GetAttribute("agility");
-        movementSpeed = attributes.GetAttribute("speed");
+        //rotationSpeed = attributes.GetAttribute("agility");
+        //movementSpeed = attributes.GetAttribute("speed");
         //currentHunger = attributes.GetAttribute("hunger");
         //currentThirst = attributes.GetAttribute("thirst");
 
@@ -66,8 +66,8 @@ public class Animal : BasicMovements
         RayCasting();
 
 
-        currentHunger += Time.deltaTime * hungerSpeed;
-        currentThirst += Time.deltaTime * thirstSpeed;
+        attr.CurrentHunger += Time.deltaTime * attr.HungerSpeed;
+        attr.CurrentThirst += Time.deltaTime * attr.ThirstSpeed;
         ControlledMov();
         
         //RandomMov1();
@@ -309,9 +309,9 @@ public class Animal : BasicMovements
         if(other.gameObject.tag.Equals("Water"))
         {
             //ScoreAndHealthSystem sh = (Player)ScoreAndHealthSystem.GetComponent("ScoreAndHealthSystem");
-            currentThirst -= Time.deltaTime * 50f;
-            if (currentThirst < 0)
-                currentThirst = 0;
+            attr.CurrentThirst -= Time.deltaTime * 50f;
+            if (attr.CurrentThirst < 0)
+                attr.CurrentThirst = 0;
             Debug.Log("test2");
         }
 
@@ -319,7 +319,7 @@ public class Animal : BasicMovements
 
     public bool GetWater()
     {
-        if (currentThirst < 20)
+        if (attr.CurrentThirst < 20)
         {
             StopAction();
             return true;
@@ -330,7 +330,7 @@ public class Animal : BasicMovements
                 if (GoToLocation(WaterLocation))
                 {
                     StopAction();
-                    if (currentThirst > 50)
+                    if (attr.CurrentThirst > 50)
                         _steps++;
                     else
                     {

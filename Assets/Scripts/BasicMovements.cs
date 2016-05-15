@@ -3,8 +3,10 @@ using System.Collections;
 
 public class BasicMovements : MonoBehaviour {
 
-    public float movementSpeed;
-    public float rotationSpeed;
+    //public float movementSpeed;
+    //public float rotationSpeed;
+
+    public Attributes attr;
 
     public bool isMoving_flag;
     public bool isRotating_flag;
@@ -26,11 +28,11 @@ public class BasicMovements : MonoBehaviour {
     {
         if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow))
         {
-            transform.Translate(Vector2.up * movementSpeed * Time.deltaTime);
+            transform.Translate(Vector2.up * attr.Speed * Time.deltaTime);
         }
         if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow))
         {
-            transform.Translate(Vector2.down * movementSpeed * Time.deltaTime);
+            transform.Translate(Vector2.down * attr.Speed * Time.deltaTime);
         }
     }
 
@@ -43,11 +45,11 @@ public class BasicMovements : MonoBehaviour {
 
         if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
         {
-            transform.Rotate(new Vector3(forceX, forceY, tiltAngle) * Time.deltaTime * rotationSpeed);
+            transform.Rotate(new Vector3(forceX, forceY, tiltAngle) * Time.deltaTime * attr.Agility);
         }
         if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
         {
-            transform.Rotate(new Vector3(forceX, forceY, -tiltAngle) * Time.deltaTime * rotationSpeed);
+            transform.Rotate(new Vector3(forceX, forceY, -tiltAngle) * Time.deltaTime * attr.Agility);
         }
     }
 
@@ -367,7 +369,7 @@ public class BasicMovements : MonoBehaviour {
         else
         {
             //t0 stands for targetPoint
-            float finalAngle = Mathf.MoveTowardsAngle(transform.eulerAngles.z, t0, rotationSpeed * Time.deltaTime);
+            float finalAngle = Mathf.MoveTowardsAngle(transform.eulerAngles.z, t0, attr.Agility * Time.deltaTime);
             transform.eulerAngles = new Vector3(0, 0, finalAngle);
             //once in a while it will break 1/10
             //Debug.Log("diff : " + (int)angleDiff(transform.eulerAngles.z, t0));
@@ -383,7 +385,7 @@ public class BasicMovements : MonoBehaviour {
     {
         transform.position = Vector3.MoveTowards(transform.position,
             new Vector3(targetPoint.x, targetPoint.y, targetPoint.z),
-            movementSpeed * Time.deltaTime);
+            attr.Speed * Time.deltaTime);
     }
 
     

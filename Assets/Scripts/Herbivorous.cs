@@ -11,9 +11,9 @@ public class Herbivorous : Animal{
         if (other.gameObject.tag == "Grass")
         {
             //ScoreAndHealthSystem sh = (Player)ScoreAndHealthSystem.GetComponent("ScoreAndHealthSystem");
-            currentHunger -= Time.deltaTime * 50f;
-            if (currentHunger < 0)
-                currentHunger = 0;
+            attr.CurrentHunger -= Time.deltaTime * 50f;
+            if (attr.CurrentHunger < 0)
+                attr.CurrentHunger = 0;
             Debug.Log("test2");
 
         }

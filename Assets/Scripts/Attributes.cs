@@ -6,58 +6,43 @@ using Random = UnityEngine.Random;
 
 public class Attributes 
 {
-    private Dictionary<string, float> values = new Dictionary<string, float>();
+    public float CurrentThirst;
+    public float CurrentHunger;
+    public float CurrentHealth;
 
-    protected float CurrentThirst;
-    protected float CurrentHunger;
-    protected float CurrentHealth;
-    protected float Strenght;
-    protected float Agility;
-    protected float Speed;
-    protected float AttackSpeed;
-    protected float DefenceSpeed;
-    protected float Aggresion;
-    protected float Vision;
-    protected float Height;
-    protected float Weight;
+    public float Strenght;
+    public float Agility;
+    public float Speed;
+    public float AttackSpeed;
+    public float DefenceSpeed;
+    public float Aggresion;
+    public float Vision;
+    public float Height;
+    public float Weight;
 
-    protected readonly float HungerSpeed = .1f;
-    protected readonly float ThirstSpeed = .1f;
+    public readonly float HungerSpeed = .1f;
+    public readonly float ThirstSpeed = .1f;
 
     public Attributes()
     {
-        /*values.Add("strenght", 0);
-        values.Add("agility", 0); //rotation from 25 to 35
-        values.Add("speed", 0); //movement from 2 to 4
-        values.Add("attackSpeed", 0);
-        values.Add("defenceSpeed", 0);
-        values.Add("aggresion", 0);
-        values.Add("vision", 0); //raycast, from 0.5 to 1
-        values.Add("height", 0);
-        values.Add("weight", 0);
+        Strenght = Random.Range(1, 11);
+        Agility = Random.Range(25, 35);//rotation from 25 to 35
+        Speed = Random.Range(2f, 4f);//movement from 2 to 4
+        AttackSpeed = Random.Range(1, 11);
+        DefenceSpeed = Random.Range(1, 11);
+        Aggresion = Random.Range(1, 11);
+        Vision = Random.Range(0.5f, 1f);//raycast, from 0.5 to 1
+        Height = Random.Range(1500, 300);
+        Weight = Random.Range(20, 40);
 
-        values.Add("health", 100);
-        values.Add("hunger", 0);
-        values.Add("thirst", 0);*/
-
-        CurrentThirst = 0;
-        CurrentHunger = 0;
+        CurrentThirst = Random.Range(0, 100);
+        CurrentHunger = Random.Range(0, 100);
         CurrentHealth = 100;
-        Strenght = 0;
-        Agility = 0;
-        Speed = 0;
-        AttackSpeed = 0;
-        DefenceSpeed = 0;
-        Aggresion = 0;
-        Vision = 0;
-        Height = 0;
-        Weight = 0;
-
-}
+    }   
 
     public void PrintAttributes()
     {
-        Console.WriteLine("strenght: " + values["strenght"]);
+        /*Console.WriteLine("strenght: " + values["strenght"]);
         Console.WriteLine("agility: " + values["agility"]);
         Console.WriteLine("stamina: " + values["stamina"]);
         Console.WriteLine("speed: " + values["strenspeedght"]);
@@ -72,35 +57,62 @@ public class Attributes
 
         Console.WriteLine("health:" + values["health"]);
         Console.WriteLine("hunger:" + values["hunger"]);
-        Console.WriteLine("thirst:" + values["thirst"]);
+        Console.WriteLine("thirst:" + values["thirst"]);*/
     }
-    public void SetAttributes(string key, float value)
+
+    public void SetAttributes(int[] attributesValue)
     {
-        values[key] = value;
+        for (var i = 0; i < attributesValue.Length; i++)
+        {
+            switch (i)
+            {
+                case 1:
+                    Agility = attributesValue[i];
+                    break;
+                case 2:
+                    Speed = attributesValue[i];
+                    break;
+                case 3:
+                    AttackSpeed = attributesValue[i];
+                    break;
+                case 4:
+                    DefenceSpeed = attributesValue[i];
+                    break;
+                case 5:
+                    Aggresion = attributesValue[i];
+                    break;
+                case 6:
+                    Vision = attributesValue[i];
+                    break;
+                case 7:
+                    Height = attributesValue[i];
+                    break;
+                case 8:
+                    Weight = attributesValue[i];
+                    break;
+                default:
+                    Strenght = attributesValue[i];
+                    break;
+            }
+            if (i != attributesValue.Length - 1) continue;
+            CurrentThirst = Random.Range(0, 100);
+            CurrentHunger = Random.Range(0, 100);
+            CurrentHealth = 100;
+        }
     }
+
+
 
     public void SetAttributes()
     {
-        values["strenght"] = Random.Range(1, 11);
-        values["agility"] = Random.Range(25, 35);//rotation from 25 to 35
-        values["speed"] = Random.Range(2f, 4f);//movement from 2 to 4
-        values["attackSpeed"] = Random.Range(1, 11);
-        values["defenceSpeed"] = Random.Range(1, 11);
-        values["aggresion"] = Random.Range(1, 11);
-        values["vision"] = Random.Range(0.5f, 1f);//raycast, from 0.5 to 1
-        values["height"] = Random.Range(1500, 300);
-        values["weight"] = Random.Range(20, 40);
 
-        values["health"] = 100;
-        values["hunger"] = 0;
-        values["thirst"] = 0;
     }
 
-    public float GetAttribute(string attr_name)
+    /*public float GetAttribute(string attr_name)
     {
         float value;
         if (values.TryGetValue(attr_name, out value)) return value;
         return -1;
         //-1 stands for null value
-    }
+    }*/
 }
