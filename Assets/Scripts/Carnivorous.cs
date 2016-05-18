@@ -65,7 +65,7 @@ public class Carnivorous : Animal
                 if (IsSpotted(MEAT))
                 {
                     StopAction();
-                    getLocation(MEAT);
+                    GetLocation(MEAT);
                     _steps++;
                 }
                 break;

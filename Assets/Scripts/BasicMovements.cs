@@ -6,7 +6,7 @@ public class BasicMovements : MonoBehaviour {
     //public float movementSpeed;
     //public float rotationSpeed;
 
-    public Attributes attr;
+    public Attributes attr = new Attributes();
 
     public bool isMoving_flag;
     public bool isRotating_flag;
@@ -21,6 +21,8 @@ public class BasicMovements : MonoBehaviour {
     public Transform head, tail;
     public Transform frontPointA, frontPointB;
     public Transform backPointA, backPointB, backPointC;
+
+    protected GameObject Smell;
 
 
     //Controlled Movements
@@ -39,9 +41,9 @@ public class BasicMovements : MonoBehaviour {
     protected void Rotation()
     {
 
-        var forceX = 0f;
-        var forceY = 0f;
-        float tiltAngle = 25f;
+        const float forceX = 0f;
+        const float forceY = 0f;
+        const float tiltAngle = 25f;
 
         if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
         {
@@ -66,7 +68,7 @@ public class BasicMovements : MonoBehaviour {
         if (_locationTarget == transform.position)
         {
             isMoving_flag = false;
-            //Instantiate(Smell, new Vector3(backPointB.position.x, backPointB.position.y, -0.5f), Quaternion.identity);
+            Instantiate(Smell, new Vector3(backPointB.position.x, backPointB.position.y, -0.5f), transform.localRotation);
         }
         else if (NearObstacle("inFront")) isMoving_flag = false;
 
@@ -170,7 +172,7 @@ public class BasicMovements : MonoBehaviour {
     {
         GetAnglePos();
         isRotating_flag = true;
-        int angle = (int)((_anglePos + (360 - angleTurn)) % 360);
+        var angle = (int)((_anglePos + (360 - angleTurn)) % 360);
 
         if (rightRotDone_flag == false)
             RotateTowardsAngleZ(angle);
@@ -292,7 +294,7 @@ public class BasicMovements : MonoBehaviour {
             RotateTowardsAngleZ(myTarget);
             leftRotDone_flag = (int)transform.rotation.eulerAngles.z == (int)myTarget;
         }
-        else if (rightRotDone_flag == false && leftRotDone_flag == true)
+        else if (!rightRotDone_flag && leftRotDone_flag)
         {
             myTarget = (int)((_anglePos + (360 - 20)) % 360);
             RotateTowardsAngleZ(myTarget);
@@ -429,7 +431,7 @@ public class BasicMovements : MonoBehaviour {
 
     private float AngleDiff(float angleA, float angleB)
     {
-        float diff = angleA - angleB;
+        var diff = angleA - angleB;
         while (diff < -180) diff += 360;
         while (diff > 180) diff -= 360;
         return diff;

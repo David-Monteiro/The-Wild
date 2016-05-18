@@ -15,7 +15,7 @@ public class Animal : BasicMovements
     protected RaycastHit2D hit;
     public Transform sightEnd0, sightEnd1, sightEnd2, sightEnd3, sightEnd4, sightEnd5, sightEnd6, sightEnd7, sightEnd8;
 
-    private Attributes attributes = new Attributes();
+    //private Attributes attributes = new Attributes();
 
    // public float hungerSpeed = .1f;
     //public float thirstSpeed = .1f;
@@ -34,7 +34,7 @@ public class Animal : BasicMovements
 
     public GameObject enemy;
     protected Animator Animator;
-    //protected GameObject Smell;
+    
     public bool cond;
 
     protected void Start()
@@ -47,7 +47,7 @@ public class Animal : BasicMovements
 
         _steps = 0;
 
-        attributes.SetAttributes();
+        attr.SetAttributes();
         cond = false;
         enemy = GameObject.Find("Turtle").gameObject;
         Animator = GetComponent<Animator>();
@@ -65,11 +65,11 @@ public class Animal : BasicMovements
     {
         RayCasting();
 
+        HealthHandler();
 
-        attr.CurrentHunger += Time.deltaTime * attr.HungerSpeed;
-        attr.CurrentThirst += Time.deltaTime * attr.ThirstSpeed;
         ControlledMov();
-        
+        //attr.OnGUI();
+
         //RandomMov1();
 
         // Debug.Log(enemy.GetComponent<Animal>().backPointC.position);
@@ -347,7 +347,7 @@ public class Animal : BasicMovements
                 if (IsSpotted(WATER))
                 {
                     StopAction();
-                    getLocation(WATER);
+                    GetLocation(WATER);
                     _steps++;
                 }
                 break;
@@ -355,8 +355,7 @@ public class Animal : BasicMovements
         return false;
     }
 
-
-    public void getLocation(string type)
+    public void GetLocation(string type)
     {
         if (Physics2D.Linecast(head.position, sightEnd0.position, 1 << LayerMask.NameToLayer(type)).collider != null)
         {
@@ -467,6 +466,43 @@ public class Animal : BasicMovements
                         .collider.transform.position;
         }
 
+    }
+
+
+    protected void Die()
+    {
+        Destroy(gameObject);
+    }
+
+    protected void HealthHandler()
+    {
+        attr.CurrentHealth += Time.deltaTime*attr.RegenerationSpeed;
+        attr.CurrentHunger += Time.deltaTime * attr.HungerSpeed;
+        attr.CurrentThirst += Time.deltaTime * attr.ThirstSpeed;
+
+        if (attr.CurrentHunger >= 100)
+        {
+            attr.CurrentHunger = 100;
+        }
+        if (attr.CurrentThirst >= 100)
+        {
+            attr.CurrentThirst = 100;
+        }
+        if (attr.CurrentHealth <= 0)
+        {
+            attr.CurrentHealth = 0;
+        }
+        else if (attr.CurrentHealth > 100)
+        {
+            attr.CurrentHealth = 100;
+        }
+
+        if (attr.CurrentThirst >= 100
+            || attr.CurrentHunger >= 100
+            || attr.CurrentHealth <= 0)
+        {
+            Die();
+        }
     }
 
 

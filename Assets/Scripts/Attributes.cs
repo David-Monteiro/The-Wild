@@ -2,10 +2,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using System;
+using System.Runtime.Remoting.Messaging;
 using Random = UnityEngine.Random;
 
 public class Attributes 
 {
+    public bool DisplayAttributes;
+
     public float CurrentThirst;
     public float CurrentHunger;
     public float CurrentHealth;
@@ -20,27 +23,20 @@ public class Attributes
     public float Height;
     public float Weight;
 
-    public readonly float HungerSpeed = .1f;
-    public readonly float ThirstSpeed = .1f;
+    public readonly float RegenerationSpeed;
+    public readonly float HungerSpeed;
+    public readonly float ThirstSpeed;
 
     public Attributes()
     {
-        Strenght = Random.Range(1, 11);
-        Agility = Random.Range(25, 35);//rotation from 25 to 35
-        Speed = Random.Range(2f, 4f);//movement from 2 to 4
-        AttackSpeed = Random.Range(1, 11);
-        DefenceSpeed = Random.Range(1, 11);
-        Aggresion = Random.Range(1, 11);
-        Vision = Random.Range(0.5f, 1f);//raycast, from 0.5 to 1
-        Height = Random.Range(1500, 300);
-        Weight = Random.Range(20, 40);
+        DisplayAttributes = false;
 
-        CurrentThirst = Random.Range(0, 100);
-        CurrentHunger = Random.Range(0, 100);
-        CurrentHealth = 100;
+        HungerSpeed = .1f;
+        ThirstSpeed = .1f;
+        RegenerationSpeed = 0.09f;
     }   
 
-    public void PrintAttributes()
+    /*public void OnGUI()
     {
         /*Console.WriteLine("strenght: " + values["strenght"]);
         Console.WriteLine("agility: " + values["agility"]);
@@ -57,8 +53,25 @@ public class Attributes
 
         Console.WriteLine("health:" + values["health"]);
         Console.WriteLine("hunger:" + values["hunger"]);
-        Console.WriteLine("thirst:" + values["thirst"]);*/
-    }
+        Console.WriteLine("thirst:" + values["thirst"]);* /
+
+        if (DisplayAttributes)
+        { 
+
+            var w = Screen.width;
+            var h = Screen.height;
+            GUI.Box(new Rect(w - 150, h - 100, 150, 100), "");
+
+            GUI.Label(new Rect(w - 140, h - 90, 100, 30), "Health");
+            GUI.Label(new Rect(w - 50, h - 90, 100, 30), CurrentHealth.ToString());
+            GUI.Label(new Rect(w - 140, h - 70, 100, 30), "Hunger");
+            GUI.Label(new Rect(w - 50, h - 70, 100, 30), CurrentHunger.ToString("0"));
+            GUI.Label(new Rect(w - 140, h - 50, 100, 30), "Thirst");
+            GUI.Label(new Rect(w - 50, h - 50, 100, 30), CurrentThirst.ToString("0"));
+
+        }
+    }*/
+
 
     public void SetAttributes(int[] attributesValue)
     {
@@ -95,9 +108,9 @@ public class Attributes
                     break;
             }
             if (i != attributesValue.Length - 1) continue;
-            CurrentThirst = Random.Range(0, 100);
-            CurrentHunger = Random.Range(0, 100);
-            CurrentHealth = 100;
+            CurrentThirst = Random.Range(0, 50);
+            CurrentHunger = Random.Range(0, 50);
+            CurrentHealth = Random.Range(50, 100);
         }
     }
 
@@ -105,14 +118,58 @@ public class Attributes
 
     public void SetAttributes()
     {
+        Strenght = Random.Range(1, 11);
+        Agility = Random.Range(25, 35);//rotation from 25 to 35
+        Speed = Random.Range(2f, 4f);//movement from 2 to 4
+        AttackSpeed = Random.Range(1, 11);
+        DefenceSpeed = Random.Range(1, 11);
+        Aggresion = Random.Range(1, 11);
+        Vision = Random.Range(0.5f, 1f);//raycast, from 0.5 to 1
+        Height = Random.Range(1500, 300);
+        Weight = Random.Range(20, 40);
 
+        CurrentThirst = Random.Range(0, 50);
+        CurrentHunger = Random.Range(0, 50);
+        CurrentHealth = Random.Range(50, 100);
     }
 
-    /*public float GetAttribute(string attr_name)
+    public float [] GetAttributes()
     {
-        float value;
-        if (values.TryGetValue(attr_name, out value)) return value;
-        return -1;
-        //-1 stands for null value
-    }*/
+        var attr = new float[9];
+
+        for (var i = 0; i < attr.Length; i++)
+        {
+            switch (i)
+            {
+                case 1:
+                    attr[i] = Agility;
+                    break;
+                case 2:
+                    attr[i] = Speed;
+                    break;
+                case 3:
+                    attr[i] = AttackSpeed;
+                    break;
+                case 4:
+                    attr[i] = DefenceSpeed;
+                    break;
+                case 5:
+                    attr[i] = Aggresion;
+                    break;
+                case 6:
+                    attr[i] = Vision;
+                    break;
+                case 7:
+                    attr[i] = Height;
+                    break;
+                case 8:
+                    attr[i] = Weight;
+                    break;
+                default:
+                    attr[i] = Strenght;
+                    break;
+            }
+        }
+        return attr;
+    }
 }
