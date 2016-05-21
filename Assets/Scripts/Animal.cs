@@ -39,6 +39,8 @@ public class Animal : BasicMovements
 
     protected void Start()
     {
+        base.Start();
+
         isMoving_flag = false;
         isRotating_flag = false;
         leftRotDone_flag = false;
@@ -52,7 +54,7 @@ public class Animal : BasicMovements
         enemy = GameObject.Find("Turtle").gameObject;
         Animator = GetComponent<Animator>();
         transform.eulerAngles = new Vector3(0, 0, 0);
-        //Smell = GameObject.Find("smell_mechanism");
+        
 
         //rotationSpeed = attributes.GetAttribute("agility");
         //movementSpeed = attributes.GetAttribute("speed");
@@ -67,7 +69,7 @@ public class Animal : BasicMovements
 
         HealthHandler();
 
-        ControlledMov();
+
         //attr.OnGUI();
 
         //RandomMov1();
@@ -83,6 +85,11 @@ public class Animal : BasicMovements
             turnLeft(25);
         }
         */
+
+        if (Input.GetKeyDown(KeyCode.Mouse0))
+        {
+            Instantiate(smellPrefab, transform.TransformPoint(_previousStep), Quaternion.identity);
+        }
 
     }
 
@@ -123,7 +130,7 @@ public class Animal : BasicMovements
 
     }
 
-    private void ControlledMov()
+    protected void ControlledMov()
     {
         Movement();
         Rotation();
@@ -156,22 +163,30 @@ public class Animal : BasicMovements
         Debug.Log(new Vector3(Mathf.Sin(transform.eulerAngles.z), Mathf.Cos(transform.eulerAngles.z), 0) + " " + transform.eulerAngles.z);
         */
     }
-    
-    public bool IsSpotted(string layer_name)
+
+    public bool CanSmell(string animal)
     {
-        if (Physics2D.Linecast(head.position, sightEnd0.position, 1 << LayerMask.NameToLayer(layer_name))
-            || Physics2D.Linecast(head.position, sightEnd1.position, 1 << LayerMask.NameToLayer(layer_name))
-            || Physics2D.Linecast(head.position, sightEnd2.position, 1 << LayerMask.NameToLayer(layer_name))
-            || Physics2D.Linecast(head.position, sightEnd3.position, 1 << LayerMask.NameToLayer(layer_name))
-            || Physics2D.Linecast(head.position, sightEnd4.position, 1 << LayerMask.NameToLayer(layer_name))
-            || Physics2D.Linecast(head.position, sightEnd5.position, 1 << LayerMask.NameToLayer(layer_name))
-            || Physics2D.Linecast(head.position, sightEnd6.position, 1 << LayerMask.NameToLayer(layer_name))
-            || Physics2D.Linecast(head.position, sightEnd7.position, 1 << LayerMask.NameToLayer(layer_name))
-            || Physics2D.Linecast(head.position, sightEnd8.position, 1 << LayerMask.NameToLayer(layer_name)))
-        {
-            return true;
+        GameObject collided = null;
+        if( Physics2D.Linecast(head.position, transform.TransformPoint(0, 0, 1), 1 << LayerMask.NameToLayer("smell")).collider != null) { 
+            collided = Physics2D.Linecast(head.position, transform.TransformPoint(0, 0, 1)
+                , 1 << LayerMask.NameToLayer("smell")).collider.gameObject;
+            Debug.Log(animal);
         }
-        return false;
+        if (collided == null) return false;
+        return collided.gameObject.GetComponent<Smell>().GetParentName().Equals(animal);
+    }
+
+    public bool IsSpotted(string layerName)
+    {
+        return Physics2D.Linecast(head.position, sightEnd0.position, 1 << LayerMask.NameToLayer(layerName))
+               || Physics2D.Linecast(head.position, sightEnd1.position, 1 << LayerMask.NameToLayer(layerName))
+               || Physics2D.Linecast(head.position, sightEnd2.position, 1 << LayerMask.NameToLayer(layerName))
+               || Physics2D.Linecast(head.position, sightEnd3.position, 1 << LayerMask.NameToLayer(layerName))
+               || Physics2D.Linecast(head.position, sightEnd4.position, 1 << LayerMask.NameToLayer(layerName))
+               || Physics2D.Linecast(head.position, sightEnd5.position, 1 << LayerMask.NameToLayer(layerName))
+               || Physics2D.Linecast(head.position, sightEnd6.position, 1 << LayerMask.NameToLayer(layerName))
+               || Physics2D.Linecast(head.position, sightEnd7.position, 1 << LayerMask.NameToLayer(layerName))
+               || Physics2D.Linecast(head.position, sightEnd8.position, 1 << LayerMask.NameToLayer(layerName));
     }
 
     /*public bool GoAround()

@@ -22,8 +22,13 @@ public class BasicMovements : MonoBehaviour {
     public Transform frontPointA, frontPointB;
     public Transform backPointA, backPointB, backPointC;
 
-    protected GameObject Smell;
+    public GameObject smellPrefab;
+    private int steps = 0;
+    protected readonly Vector3 _previousStep = new Vector3(0, -0.5f, 0.5f);
 
+    protected void Start()
+    {
+    }
 
     //Controlled Movements
     protected void Movement()
@@ -68,7 +73,8 @@ public class BasicMovements : MonoBehaviour {
         if (_locationTarget == transform.position)
         {
             isMoving_flag = false;
-            Instantiate(Smell, new Vector3(backPointB.position.x, backPointB.position.y, -0.5f), transform.localRotation);
+            var smell = (GameObject)Instantiate(smellPrefab, transform.TransformPoint(_previousStep), Quaternion.identity);
+            smell.GetComponent<Smell>().SetParentName(tag);
         }
         else if (NearObstacle("inFront")) isMoving_flag = false;
 
@@ -102,8 +108,7 @@ public class BasicMovements : MonoBehaviour {
         {
             isMoving_flag = false;
 
-            //Instantiate(Smell, new Vector3(backPointB.position.x, backPointB.position.y, -0.5f), Quaternion.identity);
-            //Instantiate(Smell, new Vector3(backPointB.position.x, backPointB.position.y, -0.5f), Quaternion.identity);
+            Instantiate(smellPrefab, transform.TransformPoint(_previousStep), Quaternion.identity);
         }
         else if (NearObstacle("inFront")) isMoving_flag = false;
         return !isMoving_flag;
@@ -121,7 +126,7 @@ public class BasicMovements : MonoBehaviour {
         if (_locationTarget == transform.position)
         {
             isMoving_flag = false;
-            //Instantiate(Smell, new Vector3(frontPointA.position.x, frontPointA.position.y, -0.5f), Quaternion.identity);
+            Instantiate(smellPrefab, new Vector3(frontPointA.position.x, frontPointA.position.y, 0.5f), Quaternion.identity);
         }
         else if (NearObstacle("behind")) isMoving_flag = false;
         return !isMoving_flag;
@@ -136,13 +141,15 @@ public class BasicMovements : MonoBehaviour {
         }
         isMoving_flag = true;
         MoveTowardsPoint(_locationTarget);
-
+        steps++;
+        if (steps == 5)
+        {
+            steps = 0;
+            Instantiate(smellPrefab, transform.TransformPoint(_previousStep), Quaternion.identity);
+        }
         if (_locationTarget == transform.position)
         {
             isMoving_flag = false;
-
-            //Instantiate(Smell, new Vector3(backPointB.position.x, backPointB.position.y, -0.5f), Quaternion.identity);
-            //Instantiate(Smell, new Vector3(backPointB.position.x, backPointB.position.y, -0.5f), Quaternion.identity);
         }
         else if (NearObstacle("inFront")) isMoving_flag = false;
         return !isMoving_flag;
@@ -203,6 +210,8 @@ public class BasicMovements : MonoBehaviour {
         return false;
     }
 
+
+    //Complex Movements
     protected bool GoToLocation(Vector3 targetPos)
     {
         if (targetPos == transform.position) return true;
@@ -224,6 +233,53 @@ public class BasicMovements : MonoBehaviour {
         _goingToLocationSteps = -1;
         //Debug.Log("final step");
         return true;
+
+    }
+
+    public bool LookAtTarget(Vector3 targetPos)
+    {
+        GetAnglePos();
+
+        if (!isRotating_flag)
+        {
+            double angle;
+
+            if (targetPos.x == transform.position.x)
+            {
+                angle = (targetPos.y < transform.position.y) ? 180 : 0;
+            }
+            else if (targetPos.y == transform.position.y)
+            {
+                angle = (targetPos.x < transform.position.x) ? 90 : 270;
+            }
+            else
+            {
+                float tangent = (targetPos.x - transform.position.x) / (targetPos.y - transform.position.y);
+
+                angle = Mathf.Atan(tangent) * 57.2958;
+
+                if (targetPos.y - transform.position.y < 0) angle -= 180;
+
+                angle = (transform.position.x < targetPos.x && transform.position.y > targetPos.y)
+                    ? angle * -1
+                    : 360 - angle;
+
+            }
+
+            _target = (float)angle;
+        }
+
+        isRotating_flag = true;
+
+        //Debug.Log("Rotation towards: " + _target);
+
+        RotateTowardsAngleZ(_target);
+
+        isRotating_flag = (int)transform.rotation.eulerAngles.z != (int)_target % 360;
+
+        //Debug.Log(isRotating_flag);
+
+        return !isRotating_flag;
 
     }
 
@@ -312,52 +368,6 @@ public class BasicMovements : MonoBehaviour {
         else return false;
     }
 
-    public bool LookAtTarget(Vector3 targetPos)
-    {
-        GetAnglePos();
-
-        if (!isRotating_flag)
-        {
-            double angle;
-
-            if (targetPos.x == transform.position.x)
-            {
-                angle = (targetPos.y < transform.position.y) ? 180 : 0;
-            }
-            else if (targetPos.y == transform.position.y)
-            {
-                angle = (targetPos.x < transform.position.x) ? 90 : 270;
-            }
-            else
-            {
-                float tangent = (targetPos.x - transform.position.x) / (targetPos.y - transform.position.y);
-
-                angle = Mathf.Atan(tangent) * 57.2958;
-
-                if (targetPos.y - transform.position.y < 0) angle -= 180;
-
-                angle = (transform.position.x < targetPos.x && transform.position.y > targetPos.y)
-                    ? angle * -1
-                    : 360 - angle;
-
-            }
-
-            _target = (float)angle;
-        }
-
-        isRotating_flag = true;
-
-        //Debug.Log("Rotation towards: " + _target);
-
-        RotateTowardsAngleZ(_target);
-
-        isRotating_flag = (int)transform.rotation.eulerAngles.z != (int)_target % 360;
-
-        //Debug.Log(isRotating_flag);
-
-        return !isRotating_flag;
-
-    }
 
 
     //Core functions of movements and rotations

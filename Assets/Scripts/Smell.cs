@@ -3,13 +3,24 @@ using System.Collections;
 
 public class Smell : MonoBehaviour
 {
+    private string _parentName = "";
 
+    protected Animator Animator;
 
-    protected Animator animator;
-    void Start()
+    public void Start()
     {
-        animator = GetComponent<Animator>();
-        Object.Destroy(gameObject, 1.0f);
+        Animator = GetComponent<Animator>();
+        Destroy(gameObject, 3.0f);
+    }
+
+    public void SetParentName(string name0)
+    {
+        _parentName = name0;
+    }
+
+    public string GetParentName()
+    {
+        return _parentName;
     }
 
 }

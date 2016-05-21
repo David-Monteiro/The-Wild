@@ -21,10 +21,13 @@ public class Wolf : Carnivorous
         Animator.SetInteger("Animation_Rotation_State", (int) transform.rotation.eulerAngles.z);
         Animator.SetBool("Animation_Mov_State", isMoving_flag);
 
-        if (cond == false)
-            cond = GetFood();
+        ControlledMov();
+        //if (cond == false)
+        // cond = GetFood();
 
-
+        if (canSmellPrey())
+            Debug.Log("Prey smelled");
+        
         //float dist = DistancePointLine(transform.position, enemy.GetComponent<Animal>().backPointC.position,
         // enemy.transform.position);
 
@@ -51,6 +54,7 @@ public class Wolf : Carnivorous
     {
         return Vector3.Magnitude(ProjectPointLine(avoidanceArea, lineStart, lineEnd) - avoidanceArea);
     }
+
     public static Vector3 ProjectPointLine(Vector3 lineStart, Vector3 lineEnd, Vector3 avoidanceArea)
     {
         Vector3 rhs = avoidanceArea - lineStart;
