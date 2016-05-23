@@ -9,8 +9,9 @@ public class Animal : BasicMovements
     protected readonly string WATER = "Water";
     protected readonly string MEAT = "Meat";
     protected readonly string HAY = "Hay";
-    protected readonly string OBSTACLE = "obstacle";
-    protected readonly string WORLD_END = "world_end";
+
+
+    public GameObject deadBody;
 
     protected RaycastHit2D hit;
     public Transform sightEnd0, sightEnd1, sightEnd2, sightEnd3, sightEnd4, sightEnd5, sightEnd6, sightEnd7, sightEnd8;
@@ -25,12 +26,12 @@ public class Animal : BasicMovements
     //public float currentHealth = 0;
 
     public bool Spotted = false;
-    public Vector3 WaterLocation;
-    public Vector3 FoodLocation;
+    public Vector3 WaterLocation = new Vector3(-1, -1, -1);
+    public Vector3 FoodLocation = new Vector3(-1, -1, -1);
     public bool AnimalSmell;
 
     protected int _steps;
-    private int _decisionNo;
+    public int _decisionNo;
 
     public GameObject enemy;
     protected Animator Animator;
@@ -39,7 +40,6 @@ public class Animal : BasicMovements
 
     protected void Start()
     {
-        base.Start();
 
         isMoving_flag = false;
         isRotating_flag = false;
@@ -49,7 +49,7 @@ public class Animal : BasicMovements
 
         _steps = 0;
 
-        attr.SetAttributes();
+        attr.SetAttributes(tag);
         cond = false;
         enemy = GameObject.Find("Turtle").gameObject;
         Animator = GetComponent<Animator>();
@@ -65,10 +65,10 @@ public class Animal : BasicMovements
 
     protected void Update()
     {
-        RayCasting();
+        
 
         HealthHandler();
-
+        
 
         //attr.OnGUI();
 
@@ -86,10 +86,10 @@ public class Animal : BasicMovements
         }
         */
 
-        if (Input.GetKeyDown(KeyCode.Mouse0))
+        /*if (Input.GetKeyDown(KeyCode.Mouse0))
         {
-            Instantiate(smellPrefab, transform.TransformPoint(_previousStep), Quaternion.identity);
-        }
+            
+        }*/
 
     }
 
@@ -126,7 +126,11 @@ public class Animal : BasicMovements
             _decisionNo = _decisionNo > 4 ? Random.Range(0, 2) : Random.Range(8, 10);
 
         if (NearObstacle(""))
+        {
+            StopAction();
             _decisionNo = 7;
+        }
+            
 
     }
 
@@ -138,7 +142,6 @@ public class Animal : BasicMovements
 
     public void RayCasting()
     {
-
         Spotted = IsSpotted(OBSTACLE);
         if (!Spotted)
         {
@@ -170,7 +173,6 @@ public class Animal : BasicMovements
         if( Physics2D.Linecast(head.position, transform.TransformPoint(0, 0, 1), 1 << LayerMask.NameToLayer("smell")).collider != null) { 
             collided = Physics2D.Linecast(head.position, transform.TransformPoint(0, 0, 1)
                 , 1 << LayerMask.NameToLayer("smell")).collider.gameObject;
-            Debug.Log(animal);
         }
         if (collided == null) return false;
         return collided.gameObject.GetComponent<Smell>().GetParentName().Equals(animal);
@@ -187,6 +189,11 @@ public class Animal : BasicMovements
                || Physics2D.Linecast(head.position, sightEnd6.position, 1 << LayerMask.NameToLayer(layerName))
                || Physics2D.Linecast(head.position, sightEnd7.position, 1 << LayerMask.NameToLayer(layerName))
                || Physics2D.Linecast(head.position, sightEnd8.position, 1 << LayerMask.NameToLayer(layerName));
+    }
+
+    public float GetFitnessLevel()
+    {
+        return attr.GetFitness();
     }
 
     /*public bool GoAround()
@@ -321,7 +328,7 @@ public class Animal : BasicMovements
             Destroy(other.gameObject);
         }
 
-        if(other.gameObject.tag.Equals("Water"))
+        if(other.gameObject.tag.Equals(WATER))
         {
             //ScoreAndHealthSystem sh = (Player)ScoreAndHealthSystem.GetComponent("ScoreAndHealthSystem");
             attr.CurrentThirst -= Time.deltaTime * 50f;
@@ -337,20 +344,18 @@ public class Animal : BasicMovements
         if (attr.CurrentThirst < 20)
         {
             StopAction();
+            _steps = 0;
             return true;
         }
         switch (_steps)
         {
             case 1:
-                if (GoToLocation(WaterLocation))
+                if (!GoToLocation(WaterLocation))
                 {
-                    StopAction();
-                    if (attr.CurrentThirst > 50)
-                        _steps++;
-                    else
+                    if (Vector3.Distance(transform.position, FoodLocation) < 0.4)
                     {
-                        _steps = 0;
-                        return true;
+                        StopAction();
+                        _steps++;
                     }
                 }
                 break;
@@ -358,6 +363,10 @@ public class Animal : BasicMovements
                 if (SmallMoveBackward()) _steps--;
                 break;
             default:
+                if (WaterLocation != new Vector3(-1, -1, -1))
+                {
+                    _steps++;
+                }
                 RandomMov();
                 if (IsSpotted(WATER))
                 {
@@ -484,8 +493,9 @@ public class Animal : BasicMovements
     }
 
 
-    protected void Die()
+    protected void DieNow()
     {
+        Instantiate(deadBody, transform.position, Quaternion.identity);
         Destroy(gameObject);
     }
 
@@ -516,7 +526,7 @@ public class Animal : BasicMovements
             || attr.CurrentHunger >= 100
             || attr.CurrentHealth <= 0)
         {
-            Die();
+            DieNow();
         }
     }
 

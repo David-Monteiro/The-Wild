@@ -1,6 +1,7 @@
 ﻿using System;
 using UnityEngine;
 using System.Collections;
+using System.Linq;
 
 public class Carnivorous : Animal
 {
@@ -24,7 +25,12 @@ public class Carnivorous : Animal
     {
         base.RayCasting();
 
-        PreySpotted = IsPreySpotted("herbivorous");
+        foreach (var prey in Herbivorous)
+        {
+            PreySpotted = IsPreySpotted(prey);
+            if (PreySpotted) break;
+        }
+        
 
 
         // prey = RaycastHit.transform.gameObject : GameObject;
@@ -38,46 +44,11 @@ public class Carnivorous : Animal
 
     }
 
-    public bool GetFood()
-    {
-        if (attr.CurrentHunger < 20)
-        {
-            StopAction();
-            Debug.Log("done");
-            return true;
-        }
-        switch (_steps)
-        {
-            case 1:
-                if (!GoToLocation(FoodLocation))
-                {
-                    if(Vector3.Distance(transform.position, FoodLocation) < 0.4) { 
-                        StopAction();
-                        _steps++;;
-                    }
-                }
-                break;
-            case 2:
-                if (SmallMoveBackward()) _steps--;
-                break;
-            default:
-                RandomMov();
-                if (IsSpotted(MEAT))
-                {
-                    StopAction();
-                    GetLocation(MEAT);
-                    _steps++;
-                }
-                break;
-        }
-        return false;
-    }
-
     public bool IsPreySpotted(string animal)
     {
         //make this a void function, instead of returning a bool value it changes the var PreySpotted
         if (Prey != null) return true;
-        if(IsSpotted(animal))
+        if (IsSpotted(animal))
         {
             if (Physics2D.Linecast(head.position, sightEnd0.position, 1 << LayerMask.NameToLayer(animal)).collider !=
                 null)
@@ -157,46 +128,27 @@ public class Carnivorous : Animal
                         Physics2D.Linecast(head.position, sightEnd8.position,
                             1 << LayerMask.NameToLayer(animal)).collider.gameObject;
             }
-
             return true;
+        }
+        return false;
+    }
+
+    public bool canSmellPrey()
+    {
+        foreach (var animal in Herbivorous)
+        {
+            if (CanSmell(animal))
+            {
+                Debug.Log(animal);
+                return true;
+            }
         }
         return false;
     }
 
     public void SearchPrey()
     {
-
-
         RandomMov();
-        /*
-        switch (SearchSteps)
-        {
-            case 1:
-                if (LookAround()) SearchSteps++;
-                break;
-            case 2:
-                if (BigMoveForward()) SearchSteps++;
-                break;
-            case 3:
-                if (LookRight()) SearchSteps++;
-                break;
-            case 4:
-                if (BigMoveForward()) SearchSteps++;
-                break;
-            case 5:
-                if (LookLeft()) SearchSteps++;
-                break;
-            case 6:
-                if (BigMoveForward()) SearchSteps++;
-                break;
-            case 7:
-                if (LookRight()) SearchSteps++;
-                break;
-            default:
-                SearchSteps = 1;
-                break;
-        }*/
-
     }
 
     public bool GoToUnseen(Vector3 targetPos)
@@ -261,7 +213,7 @@ public class Carnivorous : Animal
                     */
                 if (!unseenPath)
                 {
-                    var temp = new Vector3(1, 0, 0);
+                    var temp = new Vector3(2, 0, 0);
                     if (ObstacleBetweenTarget(temp))
                         temp.x = -temp.x;
                     LocationTarget = transform.TransformPoint(temp);
@@ -277,7 +229,6 @@ public class Carnivorous : Animal
             StopAction();
             LocationTarget = targetPos;
         }
-        Debug.Log(LocationTarget);
         if (GoToLocation(LocationTarget))
         {
 
@@ -319,23 +270,11 @@ public class Carnivorous : Animal
         return false;
     }
 
-    bool ObstacleBetweenTarget(Vector3 target)
+    protected bool ObstacleBetweenTarget(Vector3 target)
     {
-        return Physics2D.Linecast(transform.position, target, 1 << LayerMask.NameToLayer("Block"))
-               || Physics2D.Linecast(transform.position, target, 1 << LayerMask.NameToLayer("wall_block"));
+        return Physics2D.Linecast(transform.position, target, 1 << LayerMask.NameToLayer(OBSTACLE))
+               || Physics2D.Linecast(transform.position, target, 1 << LayerMask.NameToLayer(WORLD_END));
     }
-
-    /* protected new void OnTriggerEnter2D(Collider2D col)
-     {
-         base.OnTriggerEnter2D(col);
-
-         if (col.tag == "Herbivorous")
-         {
-             //ScoreAndHealthSystem sh = (Player)ScoreAndHealthSystem.GetComponent("ScoreAndHealthSystem");
-             //sh.currentHealth--;
-         }
-
-     }*/
 
     protected new void OnCollisionEnter2D(Collision2D other)
     {
@@ -349,7 +288,7 @@ public class Carnivorous : Animal
                 attr.CurrentHunger = 0;
         }
 
-        if (!other.gameObject.tag.Equals(tag) && other.gameObject.tag.Equals("Bear"))
+        /*if (!other.gameObject.tag.Equals(tag) && other.gameObject.tag.Equals("Bear"))
         {
         }
 
@@ -359,21 +298,76 @@ public class Carnivorous : Animal
 
         if (other.gameObject.tag.Equals("Moose"))
         {
-        }
+        }*/
 
-        if (other.gameObject.tag.Equals("Dear"))
+        if (other.gameObject.tag.Equals(Herbivorous[0]) 
+            || other.gameObject.tag.Equals(Herbivorous[1]) 
+            || other.gameObject.tag.Equals(Herbivorous[2]))
         {
+            attr.GetAttackStats();
+
         }
+        /*foreach (var animal in Herbivorous.Where(animal => other.gameObject.tag.Equals(animal)))
+        {
+
+        }*/
 
     }
 
-    protected bool canSmellPrey()
+    public bool GetFood()
     {
-        foreach (var animal in Herbivorous)
+        if (attr.CurrentHunger < 20)
         {
-            if(CanSmell(animal))
-                return true;
+            StopAction();
+            _steps = 0;
+            return true;
+        }
+        switch (_steps)
+        {
+            case 1:
+                if (!GoToLocation(FoodLocation))
+                {
+                    if (Vector3.Distance(transform.position, FoodLocation) < 0.4)
+                    {
+                        StopAction();
+                        _steps++;
+                    }
+                }
+                break;
+            case 2:
+                if (SmallMoveBackward()) _steps--;
+                break;
+            default:
+                RandomMov();
+                if (IsSpotted(MEAT))
+                {
+                    StopAction();
+                    GetLocation(MEAT);
+                    _steps++;
+                }
+                break;
         }
         return false;
+    }
+
+    public void Attack(Vector3 animal)
+    {
+        switch (_steps)
+        {
+            case 1:
+                if (SmallMoveBackward()) _steps--;
+                break;
+            default:
+                if (!GoToLocation(animal))
+                {
+                    if (Vector3.Distance(transform.position, FoodLocation) < 0.4)
+                    {
+                        StopAction();
+                        _steps++;
+                    }
+                }
+                break;
+        }
+
     }
 }

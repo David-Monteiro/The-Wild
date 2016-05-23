@@ -8,6 +8,9 @@ public class BasicMovements : MonoBehaviour {
 
     public Attributes attr = new Attributes();
 
+    protected readonly string OBSTACLE = "Obstacle";
+    protected readonly string WORLD_END = "World_End";
+
     public bool isMoving_flag;
     public bool isRotating_flag;
     protected bool leftRotDone_flag;
@@ -24,11 +27,9 @@ public class BasicMovements : MonoBehaviour {
 
     public GameObject smellPrefab;
     private int steps = 0;
-    protected readonly Vector3 _previousStep = new Vector3(0, -0.5f, 0.5f);
+    protected readonly Vector3 FrontStep = new Vector3(0, -0.5f, 0.5f);
+    protected  readonly Vector3 BackStep = new Vector3(0, 0.5f, 0.5f);
 
-    protected void Start()
-    {
-    }
 
     //Controlled Movements
     protected void Movement()
@@ -73,8 +74,7 @@ public class BasicMovements : MonoBehaviour {
         if (_locationTarget == transform.position)
         {
             isMoving_flag = false;
-            var smell = (GameObject)Instantiate(smellPrefab, transform.TransformPoint(_previousStep), Quaternion.identity);
-            smell.GetComponent<Smell>().SetParentName(tag);
+            _leaveSmellParticle(FrontStep);
         }
         else if (NearObstacle("inFront")) isMoving_flag = false;
 
@@ -108,7 +108,7 @@ public class BasicMovements : MonoBehaviour {
         {
             isMoving_flag = false;
 
-            Instantiate(smellPrefab, transform.TransformPoint(_previousStep), Quaternion.identity);
+            _leaveSmellParticle(FrontStep);
         }
         else if (NearObstacle("inFront")) isMoving_flag = false;
         return !isMoving_flag;
@@ -126,7 +126,7 @@ public class BasicMovements : MonoBehaviour {
         if (_locationTarget == transform.position)
         {
             isMoving_flag = false;
-            Instantiate(smellPrefab, new Vector3(frontPointA.position.x, frontPointA.position.y, 0.5f), Quaternion.identity);
+            _leaveSmellParticle(BackStep);
         }
         else if (NearObstacle("behind")) isMoving_flag = false;
         return !isMoving_flag;
@@ -142,10 +142,10 @@ public class BasicMovements : MonoBehaviour {
         isMoving_flag = true;
         MoveTowardsPoint(_locationTarget);
         steps++;
-        if (steps == 5)
+        if (steps == 10)
         {
             steps = 0;
-            Instantiate(smellPrefab, transform.TransformPoint(_previousStep), Quaternion.identity);
+            _leaveSmellParticle(FrontStep);
         }
         if (_locationTarget == transform.position)
         {
@@ -212,7 +212,7 @@ public class BasicMovements : MonoBehaviour {
 
 
     //Complex Movements
-    protected bool GoToLocation(Vector3 targetPos)
+    public bool GoToLocation(Vector3 targetPos)
     {
         if (targetPos == transform.position) return true;
         //Rotation is not working properly
@@ -406,20 +406,16 @@ public class BasicMovements : MonoBehaviour {
     {
         if (str.Equals("behind"))
         {
-            return Physics2D.Linecast(transform.position, tail.position, 1 << LayerMask.NameToLayer("Block"))
-                   || Physics2D.Linecast(transform.position, backPointA.position, 1 << LayerMask.NameToLayer("Block"))
-                   || Physics2D.Linecast(transform.position, tail.position, 1 << LayerMask.NameToLayer("wall_block"))
-                   || Physics2D.Linecast(transform.position, backPointA.position, 1 << LayerMask.NameToLayer("wall_block"))
-               || Physics2D.Linecast(transform.position, head.position, 1 << LayerMask.NameToLayer("obstacle"))
-               || Physics2D.Linecast(transform.position, frontPointA.position, 1 << LayerMask.NameToLayer("obstacle"));
+            return Physics2D.Linecast(transform.position, tail.position, 1 << LayerMask.NameToLayer(OBSTACLE))
+                   || Physics2D.Linecast(transform.position, backPointA.position, 1 << LayerMask.NameToLayer(OBSTACLE))
+                   || Physics2D.Linecast(transform.position, tail.position, 1 << LayerMask.NameToLayer(WORLD_END))
+                   || Physics2D.Linecast(transform.position, backPointA.position, 1 << LayerMask.NameToLayer(WORLD_END));
         }
 
-        return Physics2D.Linecast(transform.position, head.position, 1 << LayerMask.NameToLayer("Block"))
-               || Physics2D.Linecast(transform.position, frontPointA.position, 1 << LayerMask.NameToLayer("Block"))
-               || Physics2D.Linecast(transform.position, head.position, 1 << LayerMask.NameToLayer("wall_block"))
-               || Physics2D.Linecast(transform.position, frontPointA.position, 1 << LayerMask.NameToLayer("wall_block"))
-               || Physics2D.Linecast(transform.position, head.position, 1 << LayerMask.NameToLayer("obstacle"))
-               || Physics2D.Linecast(transform.position, frontPointA.position, 1 << LayerMask.NameToLayer("obstacle"));
+        return Physics2D.Linecast(transform.position, head.position, 1 << LayerMask.NameToLayer(OBSTACLE))
+               || Physics2D.Linecast(transform.position, frontPointA.position, 1 << LayerMask.NameToLayer(OBSTACLE))
+               || Physics2D.Linecast(transform.position, head.position, 1 << LayerMask.NameToLayer(WORLD_END))
+               || Physics2D.Linecast(transform.position, frontPointA.position, 1 << LayerMask.NameToLayer(WORLD_END));
     }
 
 
@@ -445,5 +441,12 @@ public class BasicMovements : MonoBehaviour {
         while (diff < -180) diff += 360;
         while (diff > 180) diff -= 360;
         return diff;
+    }
+
+
+    private void _leaveSmellParticle(Vector3 step)
+    {
+        var smell = (GameObject)Instantiate(smellPrefab, transform.TransformPoint(step), Quaternion.identity);
+        smell.GetComponent<Smell>().SetParentName(tag);
     }
 }

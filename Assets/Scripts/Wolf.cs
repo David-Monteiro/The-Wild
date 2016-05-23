@@ -5,7 +5,7 @@ public class Wolf : Carnivorous
 {
 
     public new void Start(){
-      base.Start();
+        base.Start();
 
         var coliiders = GameObject.FindGameObjectsWithTag("Wolf");
         foreach (var co in coliiders)
@@ -13,23 +13,29 @@ public class Wolf : Carnivorous
             Physics2D.IgnoreCollision(co.GetComponent<UnityEngine.BoxCollider2D>(), GetComponent<UnityEngine.BoxCollider2D>());
             
         }
+
+        Debug.Log("My attack: " + attr.GetAttackStats());
+        Debug.Log("My defence: " + attr.GetDefenceStats());
+        Debug.Log("My fitness :" + attr.GetFitness());
     }
 
     public new void Update()
     {
         base.Update();
+
+        RayCasting();
+
         Animator.SetInteger("Animation_Rotation_State", (int) transform.rotation.eulerAngles.z);
         Animator.SetBool("Animation_Mov_State", isMoving_flag);
 
-        ControlledMov();
+        
         //if (cond == false)
         // cond = GetFood();
 
-        if (canSmellPrey())
-            Debug.Log("Prey smelled");
+      /*  if (canSmellPrey())
+            Debug.Log("Prey smelled");*/
         
-        //float dist = DistancePointLine(transform.position, enemy.GetComponent<Animal>().backPointC.position,
-        // enemy.transform.position);
+        
 
         //if (cond == false)
         //  cond = GoToUnseen(enemy.GetComponent<Animal>().backPointC.position);

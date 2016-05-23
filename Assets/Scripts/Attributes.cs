@@ -3,10 +3,15 @@ using System.Collections;
 using System.Collections.Generic;
 using System;
 using System.Runtime.Remoting.Messaging;
+using UnityEditor;
 using Random = UnityEngine.Random;
 
 public class Attributes 
 {
+    private readonly string WOLF = "Wolf";
+    private readonly string BEAR = "Bear";
+    private readonly string MOOSE = "Moose";
+
     public bool DisplayAttributes;
 
     public float CurrentThirst;
@@ -18,7 +23,7 @@ public class Attributes
     public float Speed;
     public float AttackSpeed;
     public float DefenceSpeed;
-    public float Aggresion;
+    public float Aggression;
     public float Vision;
     public float Height;
     public float Weight;
@@ -45,7 +50,7 @@ public class Attributes
         Console.WriteLine("attackSpeed: " + values["attackSpeed"]);
         Console.WriteLine("defenceSpeed: " + values["defenceSpeed"]);
         Console.WriteLine("regeneration: " + values["regeneration"]);
-        Console.WriteLine("aggresion: " + values["aggresion"]);
+        Console.WriteLine("aggression: " + values["aggresion"]);
         Console.WriteLine("bravery: " + values["bravery"]);
         Console.WriteLine("vision: " + values["vision"]);
         Console.WriteLine("height: " + values["height"]);
@@ -92,7 +97,7 @@ public class Attributes
                     DefenceSpeed = attributesValue[i];
                     break;
                 case 5:
-                    Aggresion = attributesValue[i];
+                    Aggression = attributesValue[i];
                     break;
                 case 6:
                     Vision = attributesValue[i];
@@ -114,19 +119,44 @@ public class Attributes
         }
     }
 
-
-
-    public void SetAttributes()
+    
+    public void SetAttributes(string animal)
     {
-        Strenght = Random.Range(1, 11);
-        Agility = Random.Range(25, 35);//rotation from 25 to 35
-        Speed = Random.Range(2f, 4f);//movement from 2 to 4
-        AttackSpeed = Random.Range(1, 11);
+        switch (animal)
+        {
+            case "Wolf":
+                Height = Random.Range(80, 85);
+                Weight = Random.Range(30, 80);
+                Strenght = Random.Range(1, 11);
+                Speed = Random.Range(3.25f, 3.5f); 
+                Aggression = Random.Range(5, 11);
+                break;
+            case "Bear":
+                Height = Random.Range(70, 150);
+                Weight = Random.Range(100, 500);
+                Strenght = Random.Range(1, 11);
+                Speed = Random.Range(2.75f, 3f); 
+                Aggression = Random.Range(5, 11);
+                break;
+            case "Moose":
+                Height = Random.Range(140, 210);
+                Weight = Random.Range(380, 600);
+                Strenght = Random.Range(1, 11);
+                Speed = Random.Range(2.5f, 2.85f);
+                Aggression = Random.Range(3, 8);
+                break;
+            default:
+                Height = Random.Range(80, 150);
+                Weight = Random.Range(100, 300);
+                Strenght = Random.Range(2, 7);
+                Speed = Random.Range(3f, 4f);
+                Aggression = Random.Range(3, 8);
+                break;
+        }
+        Agility = Random.Range(((Weight * 35) / 600) + 23, 36);
+        AttackSpeed = Random.Range(1, 21);
         DefenceSpeed = Random.Range(1, 11);
-        Aggresion = Random.Range(1, 11);
-        Vision = Random.Range(0.5f, 1f);//raycast, from 0.5 to 1
-        Height = Random.Range(1500, 300);
-        Weight = Random.Range(20, 40);
+        Vision = Random.Range(0.5f, 1f); //raycast, from 0.5 to 1
 
         CurrentThirst = Random.Range(0, 50);
         CurrentHunger = Random.Range(0, 50);
@@ -154,7 +184,7 @@ public class Attributes
                     attr[i] = DefenceSpeed;
                     break;
                 case 5:
-                    attr[i] = Aggresion;
+                    attr[i] = Aggression;
                     break;
                 case 6:
                     attr[i] = Vision;
@@ -172,4 +202,20 @@ public class Attributes
         }
         return attr;
     }
+
+    public float GetFitness()
+    {
+        return ((Height/5)*Weight)/(Strenght*Aggression);
+    }
+
+    public float GetAttackStats()
+    {
+        return GetFitness() * AttackSpeed;
+    }
+
+    public float GetDefenceStats()
+    {
+        return GetFitness() * DefenceSpeed;
+    }
+
 }
