@@ -69,7 +69,7 @@ public class BasicMovements : MonoBehaviour {
             _locationTarget = frontPointA.position;
         }
         isMoving_flag = true;
-        MoveTowardsPoint(_locationTarget);
+        StepTowardsPoint(_locationTarget);
 
         if (_locationTarget == transform.position)
         {
@@ -88,7 +88,7 @@ public class BasicMovements : MonoBehaviour {
             _locationTarget = backPointA.position;
         }
         isMoving_flag = true;
-        MoveTowardsPoint(_locationTarget);
+        StepTowardsPoint(_locationTarget);
 
         if (_locationTarget == transform.position) isMoving_flag = false;
         else if (NearObstacle("behind")) isMoving_flag = false;
@@ -102,7 +102,7 @@ public class BasicMovements : MonoBehaviour {
             _locationTarget = frontPointB.position;
         }
         isMoving_flag = true;
-        MoveTowardsPoint(_locationTarget);
+        StepTowardsPoint(_locationTarget);
 
         if (_locationTarget == transform.position)
         {
@@ -121,7 +121,7 @@ public class BasicMovements : MonoBehaviour {
             _locationTarget = backPointB.position;
         }
         isMoving_flag = true;
-        MoveTowardsPoint(_locationTarget);
+        StepTowardsPoint(_locationTarget);
 
         if (_locationTarget == transform.position)
         {
@@ -140,7 +140,7 @@ public class BasicMovements : MonoBehaviour {
             _locationTarget = point;
         }
         isMoving_flag = true;
-        MoveTowardsPoint(_locationTarget);
+        StepTowardsPoint(_locationTarget);
         steps++;
         if (steps == 10)
         {
@@ -163,7 +163,7 @@ public class BasicMovements : MonoBehaviour {
         float angle = (_anglePos + angleTurn) % 360;
 
         if (leftRotDone_flag == false)
-            RotateTowardsAngleZ(angle);
+            StepTowardsAngleZ(angle);
 
         //Here we finish this method and release the rotating flag if targetPoint as been met
         isRotating_flag = (int)transform.rotation.eulerAngles.z != (int)angle;
@@ -182,7 +182,7 @@ public class BasicMovements : MonoBehaviour {
         var angle = (int)((_anglePos + (360 - angleTurn)) % 360);
 
         if (rightRotDone_flag == false)
-            RotateTowardsAngleZ(angle);
+            StepTowardsAngleZ(angle);
 
         isRotating_flag = (int)transform.rotation.eulerAngles.z != (int)angle;
 
@@ -199,7 +199,7 @@ public class BasicMovements : MonoBehaviour {
         isRotating_flag = true;
         float myTarget = (int)((_anglePos + 180) % 360);
 
-        RotateTowardsAngleZ(myTarget);
+        StepTowardsAngleZ(myTarget);
 
         isRotating_flag = (int)transform.rotation.eulerAngles.z == (int)myTarget;
 
@@ -273,7 +273,7 @@ public class BasicMovements : MonoBehaviour {
 
         //Debug.Log("Rotation towards: " + _target);
 
-        RotateTowardsAngleZ(_target);
+        StepTowardsAngleZ(_target);
 
         isRotating_flag = (int)transform.rotation.eulerAngles.z != (int)_target % 360;
 
@@ -293,12 +293,12 @@ public class BasicMovements : MonoBehaviour {
 
         if (leftRotDone_flag == false)
         {
-            RotateTowardsAngleZ(myTarget);
+            StepTowardsAngleZ(myTarget);
             leftRotDone_flag = (int)transform.rotation.eulerAngles.z == (int)myTarget;
         }
         else if (rightRotDone_flag == false && leftRotDone_flag)
         {
-            RotateTowardsAngleZ(_anglePos);
+            StepTowardsAngleZ(_anglePos);
             rightRotDone_flag = (int)transform.rotation.eulerAngles.z == (int)_anglePos;
         }
         isRotating_flag = !(rightRotDone_flag && leftRotDone_flag);
@@ -320,12 +320,12 @@ public class BasicMovements : MonoBehaviour {
 
         if (rightRotDone_flag == false)
         {
-            RotateTowardsAngleZ(myTarget);
+            StepTowardsAngleZ(myTarget);
             rightRotDone_flag = (int)transform.rotation.eulerAngles.z == (int)myTarget;
         }
         else if (rightRotDone_flag && leftRotDone_flag == false)
         {
-            RotateTowardsAngleZ(_anglePos);
+            StepTowardsAngleZ(_anglePos);
             leftRotDone_flag = (int)transform.rotation.eulerAngles.z == (int)_anglePos;
         }
 
@@ -347,16 +347,16 @@ public class BasicMovements : MonoBehaviour {
         if (leftRotDone_flag == false)
         {
             myTarget = (int)((_anglePos + 20) % 360);
-            RotateTowardsAngleZ(myTarget);
+            StepTowardsAngleZ(myTarget);
             leftRotDone_flag = (int)transform.rotation.eulerAngles.z == (int)myTarget;
         }
         else if (!rightRotDone_flag && leftRotDone_flag)
         {
             myTarget = (int)((_anglePos + (360 - 20)) % 360);
-            RotateTowardsAngleZ(myTarget);
+            StepTowardsAngleZ(myTarget);
             rightRotDone_flag = (int)transform.rotation.eulerAngles.z == (int)myTarget;
         }
-        else RotateTowardsAngleZ(_anglePos);
+        else StepTowardsAngleZ(_anglePos);
 
         isRotating_flag = !(rightRotDone_flag && leftRotDone_flag) && (transform.eulerAngles.z == _anglePos);
         if (!isRotating_flag)
@@ -371,7 +371,7 @@ public class BasicMovements : MonoBehaviour {
 
 
     //Core functions of movements and rotations
-    private void RotateTowardsAngleZ(float t0)
+    private void StepTowardsAngleZ(float t0)
     {
 
         if (transform.eulerAngles.z - t0 == 1 || t0 - transform.eulerAngles.z == 1)
@@ -393,7 +393,7 @@ public class BasicMovements : MonoBehaviour {
         }
     }
 
-    private void MoveTowardsPoint(Vector3 targetPoint)
+    private void StepTowardsPoint(Vector3 targetPoint)
     {
         transform.position = Vector3.MoveTowards(transform.position,
             new Vector3(targetPoint.x, targetPoint.y, targetPoint.z),

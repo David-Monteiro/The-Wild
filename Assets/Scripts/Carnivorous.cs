@@ -204,13 +204,7 @@ public class Carnivorous : Animal
                     }
                     i += 10;
                 }
-                /*
-                        if direct path is through prey field of vision
-                        Need to find an unseen path 
-                        Then move towards unseen path 
-                        Check again
-                        if unseen go to target location
-                    */
+
                 if (!unseenPath)
                 {
                     var temp = new Vector3(2, 0, 0);
@@ -282,7 +276,6 @@ public class Carnivorous : Animal
 
         if (other.gameObject.tag.Equals("Meat"))
         {
-            //ScoreAndHealthSystem sh = (Player)ScoreAndHealthSystem.GetComponent("ScoreAndHealthSystem");
             attr.CurrentHunger -= Time.deltaTime * 50f;
             if (attr.CurrentHunger < 0)
                 attr.CurrentHunger = 0;
@@ -300,17 +293,11 @@ public class Carnivorous : Animal
         {
         }*/
 
-        if (other.gameObject.tag.Equals(Herbivorous[0]) 
-            || other.gameObject.tag.Equals(Herbivorous[1]) 
-            || other.gameObject.tag.Equals(Herbivorous[2]))
+        
+        foreach (var animal in Herbivorous.Where(animal => other.gameObject.tag.Equals(animal)))
         {
-            attr.GetAttackStats();
-
+            attr.CurrentHealth -= Time.deltaTime * (50f- (attr.GetAttackStats()/400000));
         }
-        /*foreach (var animal in Herbivorous.Where(animal => other.gameObject.tag.Equals(animal)))
-        {
-
-        }*/
 
     }
 

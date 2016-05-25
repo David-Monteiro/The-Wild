@@ -2,6 +2,16 @@
 using UnityEngine;
 
 public class Simulator : MonoBehaviour {
+
+    public GameObject wolfPrefab;
+    public GameObject bearPrefab;
+    public GameObject moosePrefab;
+    public GameObject dearPrefab;
+
+
+    private readonly string SENIOR_AGE = "Senior";
+    private readonly string JUNIOR_AGE = "Junior";
+
     private GameObject[] animals;
     void Start() {
         
@@ -62,5 +72,83 @@ public class Simulator : MonoBehaviour {
         //GetComponent<Pack>().Update();
     }
 
-    
+    void SetFirstAnimals()
+    {
+        for (var i = 0; i < 6; i++)
+        {
+            var wolf = (GameObject)Instantiate(wolfPrefab, transform.position, Quaternion.identity);
+            wolf.GetComponent<Wolf>().SetAge(i < 3 ? SENIOR_AGE : JUNIOR_AGE);
+        }
+
+        var moose0 = (GameObject)Instantiate(moosePrefab, transform.position, Quaternion.identity);
+        moose0.GetComponent<Wolf>().SetAge(SENIOR_AGE);
+
+        var moose1 = (GameObject)Instantiate(moosePrefab, transform.position, Quaternion.identity);
+        moose1.GetComponent<Wolf>().SetAge(SENIOR_AGE);
+
+    }
+
+
+
+    void SetAnimals()
+    {
+        animals = GameObject.FindGameObjectsWithTag("Wolf");
+
+        sortWolfPack();
+        var newGeneration = animals;
+        for (var i = 0; i < animals.Length/2; i++)
+        {
+            newGeneration[i+3].GetComponent<Wolf>().SetAttributes(mutation(animals[i].GetComponent<Wolf>().GetAttributes()
+                , animals[i + 3].GetComponent<Wolf>().GetAttributes()));
+            newGeneration[i].GetComponent<Wolf>().SetAttributes(animals[i+3].GetComponent<Wolf>().GetAttributes());
+        }
+        if (Random.Range(0, 50) < 25)
+        {
+            var moose0 = (GameObject) Instantiate(moosePrefab, transform.position, Quaternion.identity);
+            moose0.GetComponent<Wolf>().SetAge(SENIOR_AGE);
+
+            var moose1 = (GameObject) Instantiate(moosePrefab, transform.position, Quaternion.identity);
+            moose1.GetComponent<Wolf>().SetAge(SENIOR_AGE);
+        }
+        else
+        {
+            var moose = (GameObject)Instantiate(moosePrefab, transform.position, Quaternion.identity);
+            moose.GetComponent<Moose>().SetAge(SENIOR_AGE);
+
+            var bear = (GameObject)Instantiate(bearPrefab, transform.position, Quaternion.identity);
+            bear.GetComponent<Bear>().SetAge(SENIOR_AGE);
+        }
+        
+    }
+
+    protected void sortWolfPack()
+    {
+        animals = GameObject.FindGameObjectsWithTag("Wolf");
+        for (var i = 0; i < animals.Length-1; i++)
+        {
+            for (var j = i+1; j < animals.Length; j++)
+            {
+            
+                if(animals[i].GetComponent<Wolf>().GetAge().Equals(JUNIOR_AGE)
+                    && animals[j].GetComponent<Wolf>().GetAge().Equals(SENIOR_AGE))
+                {
+                    var temp = animals[i];
+                    animals[i] = animals[j];
+                    animals[j] = temp;
+                    break;
+                }
+            }
+        }
+
+    }
+
+    protected float [] mutation(float [] attributesFromA, float[] attributesFromB)
+    {
+        var mutation = new float[attributesFromA.Length];
+        for (var i = 0; i < mutation.Length; i++)
+        {
+            mutation[i] = Random.Range(0, 50) < 25 ? attributesFromA[i] : attributesFromB[i];
+        }
+        return mutation;
+    }
 }

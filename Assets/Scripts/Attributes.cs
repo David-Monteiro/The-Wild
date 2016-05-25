@@ -13,6 +13,7 @@ public class Attributes
     private readonly string MOOSE = "Moose";
 
     public bool DisplayAttributes;
+    public string AgeGroup = "";
 
     public float CurrentThirst;
     public float CurrentHunger;
@@ -43,23 +44,6 @@ public class Attributes
 
     /*public void OnGUI()
     {
-        /*Console.WriteLine("strenght: " + values["strenght"]);
-        Console.WriteLine("agility: " + values["agility"]);
-        Console.WriteLine("stamina: " + values["stamina"]);
-        Console.WriteLine("speed: " + values["strenspeedght"]);
-        Console.WriteLine("attackSpeed: " + values["attackSpeed"]);
-        Console.WriteLine("defenceSpeed: " + values["defenceSpeed"]);
-        Console.WriteLine("regeneration: " + values["regeneration"]);
-        Console.WriteLine("aggression: " + values["aggresion"]);
-        Console.WriteLine("bravery: " + values["bravery"]);
-        Console.WriteLine("vision: " + values["vision"]);
-        Console.WriteLine("height: " + values["height"]);
-        Console.WriteLine("weight: " + values["weight"]);
-
-        Console.WriteLine("health:" + values["health"]);
-        Console.WriteLine("hunger:" + values["hunger"]);
-        Console.WriteLine("thirst:" + values["thirst"]);* /
-
         if (DisplayAttributes)
         { 
 
@@ -78,7 +62,7 @@ public class Attributes
     }*/
 
 
-    public void SetAttributes(int[] attributesValue)
+    public void SetAttributes(float[] attributesValue)
     {
         for (var i = 0; i < attributesValue.Length; i++)
         {
@@ -120,6 +104,12 @@ public class Attributes
     }
 
     
+    public void SetAttributes(string animal, string age)
+    {
+        SetAttributes(animal);
+        AgeGroup = age;
+    }
+
     public void SetAttributes(string animal)
     {
         switch (animal)
@@ -128,14 +118,14 @@ public class Attributes
                 Height = Random.Range(80, 85);
                 Weight = Random.Range(30, 80);
                 Strenght = Random.Range(1, 11);
-                Speed = Random.Range(3.25f, 3.5f); 
+                Speed = Random.Range(3.25f, 3.5f);
                 Aggression = Random.Range(5, 11);
                 break;
             case "Bear":
                 Height = Random.Range(70, 150);
                 Weight = Random.Range(100, 500);
                 Strenght = Random.Range(1, 11);
-                Speed = Random.Range(2.75f, 3f); 
+                Speed = Random.Range(2.75f, 3f);
                 Aggression = Random.Range(5, 11);
                 break;
             case "Moose":
@@ -201,6 +191,16 @@ public class Attributes
             }
         }
         return attr;
+    }
+
+    public string GetAge()
+    {
+        return AgeGroup;
+    }
+
+    public void SetAge(string age)
+    {
+        AgeGroup = age;
     }
 
     public float GetFitness()

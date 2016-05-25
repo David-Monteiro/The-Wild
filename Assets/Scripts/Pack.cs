@@ -19,6 +19,9 @@ public class Pack : MonoBehaviour
         new Vector3(0, -2, 0)
     };
 
+    private readonly string SENIOR_AGE = "Senior";
+    private readonly string JUNIOR_AGE = "Junior";
+
     public GameObject Prey;
 
     //Instead of an array of gameObjects, make a list of wolfs and their status in the pack.
@@ -34,30 +37,14 @@ public class Pack : MonoBehaviour
     {
         _huntingSteps = 0;
         _pack = GameObject.FindGameObjectsWithTag("Wolf");
-
-
-
-        foreach (var wolf in _pack) {
-
-            //wolf.GetComponent<Wolf>().Start();
-
-        }
-
-       /* for (var i = 0; i < _pack.Length; i++)
-        {
-            if (_pack.Length - i == 1)
-            {
-                _pack[i].GetComponent<Wolf>().Start();
-            }
-        }*/
-
+        SetPackHierarchy();
 
     }
 
 
     public void Update()
     {
-       // RayCast();
+        // RayCast();
         Hunt();
     }
 
@@ -71,36 +58,31 @@ public class Pack : MonoBehaviour
 
     public void Hunt()
     {
-        //A STEP TO STOP ALL WOLVES MOVEMENTS
-        //First hunt
         switch (_huntingSteps)
         {
             case 1:
-                //Set the position the first wolf who spotted a prey
                 if (!PreyInSight())
                 {
                     _huntingSteps = 0;
                     break;
                 }
-                    
-                if (StalkPrey()) {
+
+                if (StalkPrey())
+                {
                     _huntingSteps++;
                 }
-                
+
                 break;
             case 2:
-                //call pack seniors 
-                // Lock first wolf to angle 180 of prey while maintaining a minimum distance of 2f
-                Debug.Log("Calling Seniors");
                 if (!PreyInSight())
                 {
                     _huntingSteps = 0;
                     break;
                 }
-                if (CallSeniors()) {
+                if (CallSeniors())
+                {
                     _huntingSteps++;
                     StopActions();
-                    Debug.Log("Seniors where called");
                 }
                 break;
             case 3:
@@ -112,17 +94,11 @@ public class Pack : MonoBehaviour
                 if (LookAtPrey2(2))
                 {
                     _huntingSteps = 5;
-                    Debug.Log("Seniors looking at prey");
                 }
-                //adjust position for senior wolves so they also stalk the prey in the rear area of the prey line of sight
                 break;
             case 4:
-                //alpha wolf analyses the prey and decides whether or not to produce the hunt
                 break;
             case 5:
-                //if alpha decides to hunt
-                //call the junior members of the pack and keep stalking until the rest of the members arrive
-                Debug.Log("Calling Juniors");
                 if (!PreyInSight())
                 {
                     _huntingSteps = 0;
@@ -132,11 +108,9 @@ public class Pack : MonoBehaviour
                 {
                     _huntingSteps++;
                     StopActions();
-                    Debug.Log("Juniors where called");
                 }
                 break;
             case 6:
-                //has they arrive adjust positions so all members can surround the prey without being noticed by the prey
                 if (!PreyInSight())
                 {
                     _huntingSteps++;
@@ -146,11 +120,9 @@ public class Pack : MonoBehaviour
                 {
                     _huntingSteps++;
                     StopActions();
-                    Debug.Log("Pack is looking at target");
                 }
                 break;
             case 7:
-                //besiese behaviour
                 if (Feed())
                 {
                     break;
@@ -164,14 +136,10 @@ public class Pack : MonoBehaviour
                 }
                 break;
             default:
-                //Search for prey
-
-                //Here each wolf will look for a prey
-                if(SearchPrey())
+                if (SearchPrey())
                 {
                     _huntingSteps++;
                     StopActions();
-                    Debug.Log("Prey found");
                     StartCoroutine(PreyTimer());
                     break;
                 }
@@ -187,7 +155,7 @@ public class Pack : MonoBehaviour
     public bool Feed()
     {
 
-        var count =  new int[_pack.Length] ;
+        var count = new int[_pack.Length];
 
         for (var i = 0; i < count.Length; i++)
         {
@@ -214,10 +182,12 @@ public class Pack : MonoBehaviour
             //Set the position of the first wolf who spotted a prey
             if (animal.Equals(_pack[_searchAgent]))
             {*/
-                if (_pack[_searchAgent].GetComponent<Wolf>().GoToUnseen(Prey.transform.TransformPoint(StalkPos[StalkPos.Length-1])))
-                    if (_pack[_searchAgent].GetComponent<Wolf>().LookAtTarget(Prey.transform.position))
-                        return true;
-            /*}
+        if (
+            _pack[_searchAgent].GetComponent<Wolf>()
+                .GoToUnseen(Prey.transform.TransformPoint(StalkPos[StalkPos.Length - 1])))
+            if (_pack[_searchAgent].GetComponent<Wolf>().LookAtTarget(Prey.transform.position))
+                return true;
+        /*}
             else
             {
                 animal.GetComponent<Wolf>().RandomMov1();
@@ -228,7 +198,7 @@ public class Pack : MonoBehaviour
 
     public bool LookAtPrey2(int type)
     {
-        
+
         var count = type == 1 ? new int[_pack.Length] : new int[3];
 
         for (var i = 0; i < count.Length; i++)
@@ -244,7 +214,7 @@ public class Pack : MonoBehaviour
         var count = 0;
         for (var i = 1; i < 4; i++)
         {
-            if (_pack[i-1].GetComponent<Wolf>().GoToUnseen(Prey.transform.TransformPoint(StalkPos[_pack.Length - i])))
+            if (_pack[i - 1].GetComponent<Wolf>().GoToUnseen(Prey.transform.TransformPoint(StalkPos[_pack.Length - i])))
                 count++;
         }
         return count >= 3;
@@ -258,7 +228,8 @@ public class Pack : MonoBehaviour
         }
     }
 
-    public bool SearchPrey() {
+    public bool SearchPrey()
+    {
 
         for (var i = 0; i < 3; i++)
         {
@@ -283,17 +254,18 @@ public class Pack : MonoBehaviour
             if (_pack[i].GetComponent<Wolf>().GoToUnseen(Prey.transform.TransformPoint(StalkPos[i])))
                 count++;
         }
-        return count >= _pack.Length-2;
+        return count >= _pack.Length - 2;
     }
 
     public float GetDistance(Vector3 origin, Vector3 rayDir, Vector3 avoidanceArea)
     {
         float distance = Vector3.Distance(origin, avoidanceArea);
         float angle = Vector3.Angle(rayDir, avoidanceArea - origin);
-        return (distance * Mathf.Sin(angle * Mathf.Deg2Rad));
+        return (distance*Mathf.Sin(angle*Mathf.Deg2Rad));
     }
 
-    protected bool PreyInSight() {
+    protected bool PreyInSight()
+    {
         if (Prey != null) return true;
 
         foreach (GameObject animal in _pack)
@@ -323,7 +295,7 @@ public class Pack : MonoBehaviour
         {
             _pack[i].GetComponent<Wolf>().GoToLocation(pos);
             if (Vector3.Distance(_pack[i].GetComponent<Wolf>().transform.position, pos) < 1)
-                    count[i] = 1;
+                count[i] = 1;
         }
         return count.All(i => i != 0);
     }
@@ -349,6 +321,39 @@ public class Pack : MonoBehaviour
         {
             animal.GetComponent<Wolf>().Prey = null;
             animal.GetComponent<Wolf>().StopAction();
+        }
+    }
+
+    protected void SetPackHierarchy()
+    {
+        for (var i = 0; i < _pack.Length - 1; i++)
+        {
+            for (var j = i + 1; j < _pack.Length; j++)
+            {
+
+                if (_pack[i].GetComponent<Wolf>().GetAge().Equals(JUNIOR_AGE)
+                    && _pack[j].GetComponent<Wolf>().GetAge().Equals(SENIOR_AGE))
+                {
+                    var temp = _pack[i];
+                    _pack[i] = _pack[j];
+                    _pack[j] = temp;
+                    break;
+                }
+            }
+        }
+        for (var i = 0; i < 2; i++)
+        {
+            for (var j = i + 1; j < 3; j++)
+            {
+                if (_pack[i].GetComponent<Wolf>().GetFitnessLevel()
+                    < _pack[j].GetComponent<Wolf>().GetFitnessLevel())
+                {
+                    var temp = _pack[i];
+                    _pack[i] = _pack[j];
+                    _pack[j] = temp;
+                    break;
+                }
+            }
         }
     }
 }

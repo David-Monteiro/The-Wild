@@ -16,14 +16,6 @@ public class Animal : BasicMovements
     protected RaycastHit2D hit;
     public Transform sightEnd0, sightEnd1, sightEnd2, sightEnd3, sightEnd4, sightEnd5, sightEnd6, sightEnd7, sightEnd8;
 
-    //private Attributes attributes = new Attributes();
-
-   // public float hungerSpeed = .1f;
-    //public float thirstSpeed = .1f;
-
-    //public float currentThirst = 0;
-    //public float currentHunger = 0;
-    //public float currentHealth = 0;
 
     public bool Spotted = false;
     public Vector3 WaterLocation = new Vector3(-1, -1, -1);
@@ -32,9 +24,8 @@ public class Animal : BasicMovements
 
     protected int _steps;
     public int _decisionNo;
-
-    public GameObject enemy;
-    protected Animator Animator;
+    
+    public Animator Animator;
     
     public bool cond;
 
@@ -51,7 +42,6 @@ public class Animal : BasicMovements
 
         attr.SetAttributes(tag);
         cond = false;
-        enemy = GameObject.Find("Turtle").gameObject;
         Animator = GetComponent<Animator>();
         transform.eulerAngles = new Vector3(0, 0, 0);
         
@@ -196,6 +186,17 @@ public class Animal : BasicMovements
         return attr.GetFitness();
     }
 
+    public void SetAge(string age)
+    {
+        attr.SetAge(age);
+    }
+
+    public string GetAge()
+    {
+        return attr.GetAge();
+    }
+
+
     /*public bool GoAround()
     {
         if(!Physics2D.OverlapPoint(sightEnd4.position, 1 << LayerMask.NameToLayer("Block")).gameObject.tag.Equals("Block")  
@@ -289,10 +290,16 @@ public class Animal : BasicMovements
 
     }
 
-    void setAttributes()
+    public void SetAttributes(float [] newValues)
     {
-
+        attr.SetAttributes(newValues);
     }
+
+    public float [] GetAttributes()
+    {
+        return attr.GetAttributes();
+    }
+
 
     /*public void OnTriggerEnter2D(Collider2D other)
     {
@@ -492,12 +499,11 @@ public class Animal : BasicMovements
 
     }
 
-
-    protected void DieNow()
+    /*protected void DieNow()
     {
         Instantiate(deadBody, transform.position, Quaternion.identity);
-        Destroy(gameObject);
-    }
+        Destroy(gameObject, 30f);
+    }*/
 
     protected void HealthHandler()
     {
@@ -528,6 +534,12 @@ public class Animal : BasicMovements
         {
             DieNow();
         }
+    }
+
+    public void DieNow()
+    {
+        Destroy(gameObject);
+        Instantiate(deadBody, transform.position, Quaternion.identity);
     }
 
 
