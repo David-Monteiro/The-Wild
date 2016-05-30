@@ -23,11 +23,11 @@ public class Herbivorous : Animal
 
     public new void Update()
     {
-        if (!rule_flag)
+        if (rule_flag)
         { 
             SetRules();
         }
-       // rule_flag = !MakeRule();
+        rule_flag = !MakeRule();
     }
 
     protected new void OnCollisionEnter2D(Collision2D other)
@@ -46,6 +46,23 @@ public class Herbivorous : Animal
         foreach (var animal in Carnivorous.Where(animal => other.gameObject.tag.Equals(animal)))
         {
             attr.CurrentHealth -= Time.deltaTime * (50f - (attr.GetDefenceStats() / 400000));
+        }
+
+    }
+
+    public void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.tag == "Collectible")
+        {
+            //currentScore++;
+            Destroy(other.gameObject);
+        }
+
+
+        if (other.tag.Equals(HAY))
+        {
+            attr.CurrentHunger -= Time.deltaTime * 50f;
+
         }
 
     }

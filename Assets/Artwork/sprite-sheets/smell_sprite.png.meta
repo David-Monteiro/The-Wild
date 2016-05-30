@@ -1,0 +1,5806 @@
+fileFormatVersion: 2
+guid: fc2cf337751567c49890ec2a5a28b7ed
+timeCreated: 1459607189
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: smell_sprite_0
+    21300002: smell_sprite_1
+    21300004: smell_sprite_2
+    21300006: smell_sprite_3
+    21300008: smell_sprite_4
+    21300010: smell_sprite_5
+    21300012: smell_sprite_6
+    21300014: smell_sprite_7
+    21300016: smell_sprite_8
+    21300018: smell_sprite_9
+    21300020: smell_sprite_10
+    21300022: smell_sprite_11
+    21300024: smell_sprite_12
+    21300026: smell_sprite_13
+    21300028: smell_sprite_14
+    21300030: smell_sprite_15
+    21300032: smell_sprite_16
+    21300034: smell_sprite_17
+    21300036: smell_sprite_18
+    21300038: smell_sprite_19
+    21300040: smell_sprite_20
+    21300042: smell_sprite_21
+    21300044: smell_sprite_22
+    21300046: smell_sprite_23
+    21300048: smell_sprite_24
+    21300050: smell_sprite_25
+    21300052: smell_sprite_26
+    21300054: smell_sprite_27
+    21300056: smell_sprite_28
+    21300058: smell_sprite_29
+    21300060: smell_sprite_30
+    21300062: smell_sprite_31
+    21300064: smell_sprite_32
+    21300066: smell_sprite_33
+    21300068: smell_sprite_34
+    21300070: smell_sprite_35
+    21300072: smell_sprite_36
+    21300074: smell_sprite_37
+    21300076: smell_sprite_38
+    21300078: smell_sprite_39
+    21300080: smell_sprite_40
+    21300082: smell_sprite_41
+    21300084: smell_sprite_42
+    21300086: smell_sprite_43
+    21300088: smell_sprite_44
+    21300090: smell_sprite_45
+    21300092: smell_sprite_46
+    21300094: smell_sprite_47
+    21300096: smell_sprite_48
+    21300098: smell_sprite_49
+    21300100: smell_sprite_50
+    21300102: smell_sprite_51
+    21300104: smell_sprite_52
+    21300106: smell_sprite_53
+    21300108: smell_sprite_54
+    21300110: smell_sprite_55
+    21300112: smell_sprite_56
+    21300114: smell_sprite_57
+    21300116: smell_sprite_58
+    21300118: smell_sprite_59
+    21300120: smell_sprite_60
+    21300122: smell_sprite_61
+    21300124: smell_sprite_62
+    21300126: smell_sprite_63
+    21300128: smell_sprite_64
+    21300130: smell_sprite_65
+    21300132: smell_sprite_66
+    21300134: smell_sprite_67
+    21300136: smell_sprite_68
+    21300138: smell_sprite_69
+    21300140: smell_sprite_70
+    21300142: smell_sprite_71
+    21300144: smell_sprite_72
+    21300146: smell_sprite_73
+    21300148: smell_sprite_74
+    21300150: smell_sprite_75
+    21300152: smell_sprite_76
+    21300154: smell_sprite_77
+    21300156: smell_sprite_78
+    21300158: smell_sprite_79
+    21300160: smell_sprite_80
+    21300162: smell_sprite_81
+    21300164: smell_sprite_82
+    21300166: smell_sprite_83
+    21300168: smell_sprite_84
+    21300170: smell_sprite_85
+    21300172: smell_sprite_86
+    21300174: smell_sprite_87
+    21300176: smell_sprite_88
+    21300178: smell_sprite_89
+    21300180: smell_sprite_90
+    21300182: smell_sprite_91
+    21300184: smell_sprite_92
+    21300186: smell_sprite_93
+    21300188: smell_sprite_94
+    21300190: smell_sprite_95
+    21300192: smell_sprite_96
+    21300194: smell_sprite_97
+    21300196: smell_sprite_98
+    21300198: smell_sprite_99
+    21300200: smell_sprite_100
+    21300202: smell_sprite_101
+    21300204: smell_sprite_102
+    21300206: smell_sprite_103
+    21300208: smell_sprite_104
+    21300210: smell_sprite_105
+    21300212: smell_sprite_106
+    21300214: smell_sprite_107
+    21300216: smell_sprite_108
+    21300218: smell_sprite_109
+    21300220: smell_sprite_110
+    21300222: smell_sprite_111
+    21300224: smell_sprite_112
+    21300226: smell_sprite_113
+    21300228: smell_sprite_114
+    21300230: smell_sprite_115
+    21300232: smell_sprite_116
+    21300234: smell_sprite_117
+    21300236: smell_sprite_118
+    21300238: smell_sprite_119
+    21300240: smell_sprite_120
+    21300242: smell_sprite_121
+    21300244: smell_sprite_122
+    21300246: smell_sprite_123
+    21300248: smell_sprite_124
+    21300250: smell_sprite_125
+    21300252: smell_sprite_126
+    21300254: smell_sprite_127
+    21300256: smell_sprite_128
+    21300258: smell_sprite_129
+    21300260: smell_sprite_130
+    21300262: smell_sprite_131
+    21300264: smell_sprite_132
+    21300266: smell_sprite_133
+    21300268: smell_sprite_134
+    21300270: smell_sprite_135
+    21300272: smell_sprite_136
+    21300274: smell_sprite_137
+    21300276: smell_sprite_138
+    21300278: smell_sprite_139
+    21300280: smell_sprite_140
+    21300282: smell_sprite_141
+    21300284: smell_sprite_142
+    21300286: smell_sprite_143
+    21300288: smell_sprite_144
+    21300290: smell_sprite_145
+    21300292: smell_sprite_146
+    21300294: smell_sprite_147
+    21300296: smell_sprite_148
+    21300298: smell_sprite_149
+    21300300: smell_sprite_150
+    21300302: smell_sprite_151
+    21300304: smell_sprite_152
+    21300306: smell_sprite_153
+    21300308: smell_sprite_154
+    21300310: smell_sprite_155
+    21300312: smell_sprite_156
+    21300314: smell_sprite_157
+    21300316: smell_sprite_158
+    21300318: smell_sprite_159
+    21300320: smell_sprite_160
+    21300322: smell_sprite_161
+    21300324: smell_sprite_162
+    21300326: smell_sprite_163
+    21300328: smell_sprite_164
+    21300330: smell_sprite_165
+    21300332: smell_sprite_166
+    21300334: smell_sprite_167
+    21300336: smell_sprite_168
+    21300338: smell_sprite_169
+    21300340: smell_sprite_170
+    21300342: smell_sprite_171
+    21300344: smell_sprite_172
+    21300346: smell_sprite_173
+    21300348: smell_sprite_174
+    21300350: smell_sprite_175
+    21300352: smell_sprite_176
+    21300354: smell_sprite_177
+    21300356: smell_sprite_178
+    21300358: smell_sprite_179
+    21300360: smell_sprite_180
+    21300362: smell_sprite_181
+    21300364: smell_sprite_182
+    21300366: smell_sprite_183
+    21300368: smell_sprite_184
+    21300370: smell_sprite_185
+    21300372: smell_sprite_186
+    21300374: smell_sprite_187
+    21300376: smell_sprite_188
+    21300378: smell_sprite_189
+    21300380: smell_sprite_190
+    21300382: smell_sprite_191
+    21300384: smell_sprite_192
+    21300386: smell_sprite_193
+    21300388: smell_sprite_194
+    21300390: smell_sprite_195
+    21300392: smell_sprite_196
+    21300394: smell_sprite_197
+    21300396: smell_sprite_198
+    21300398: smell_sprite_199
+    21300400: smell_sprite_200
+    21300402: smell_sprite_201
+    21300404: smell_sprite_202
+    21300406: smell_sprite_203
+    21300408: smell_sprite_204
+    21300410: smell_sprite_205
+    21300412: smell_sprite_206
+    21300414: smell_sprite_207
+    21300416: smell_sprite_208
+    21300418: smell_sprite_209
+    21300420: smell_sprite_210
+    21300422: smell_sprite_211
+    21300424: smell_sprite_212
+    21300426: smell_sprite_213
+    21300428: smell_sprite_214
+    21300430: smell_sprite_215
+    21300432: smell_sprite_216
+    21300434: smell_sprite_217
+    21300436: smell_sprite_218
+    21300438: smell_sprite_219
+    21300440: smell_sprite_220
+    21300442: smell_sprite_221
+    21300444: smell_sprite_222
+    21300446: smell_sprite_223
+    21300448: smell_sprite_224
+    21300450: smell_sprite_225
+    21300452: smell_sprite_226
+    21300454: smell_sprite_227
+    21300456: smell_sprite_228
+    21300458: smell_sprite_229
+    21300460: smell_sprite_230
+    21300462: smell_sprite_231
+    21300464: smell_sprite_232
+    21300466: smell_sprite_233
+    21300468: smell_sprite_234
+    21300470: smell_sprite_235
+    21300472: smell_sprite_236
+    21300474: smell_sprite_237
+    21300476: smell_sprite_238
+    21300478: smell_sprite_239
+    21300480: smell_sprite_240
+    21300482: smell_sprite_241
+    21300484: smell_sprite_242
+    21300486: smell_sprite_243
+    21300488: smell_sprite_244
+    21300490: smell_sprite_245
+    21300492: smell_sprite_246
+    21300494: smell_sprite_247
+    21300496: smell_sprite_248
+    21300498: smell_sprite_249
+    21300500: smell_sprite_250
+    21300502: smell_sprite_251
+    21300504: smell_sprite_252
+    21300506: smell_sprite_253
+    21300508: smell_sprite_254
+    21300510: smell_sprite_255
+    21300512: smell_sprite_256
+    21300514: smell_sprite_257
+    21300516: smell_sprite_258
+    21300518: smell_sprite_259
+    21300520: smell_sprite_260
+    21300522: smell_sprite_261
+    21300524: smell_sprite_262
+    21300526: smell_sprite_263
+    21300528: smell_sprite_264
+    21300530: smell_sprite_265
+    21300532: smell_sprite_266
+    21300534: smell_sprite_267
+    21300536: smell_sprite_268
+    21300538: smell_sprite_269
+    21300540: smell_sprite_270
+    21300542: smell_sprite_271
+    21300544: smell_sprite_272
+    21300546: smell_sprite_273
+    21300548: smell_sprite_274
+    21300550: smell_sprite_275
+    21300552: smell_sprite_276
+    21300554: smell_sprite_277
+    21300556: smell_sprite_278
+    21300558: smell_sprite_279
+    21300560: smell_sprite_280
+    21300562: smell_sprite_281
+    21300564: smell_sprite_282
+    21300566: smell_sprite_283
+    21300568: smell_sprite_284
+    21300570: smell_sprite_285
+    21300572: smell_sprite_286
+    21300574: smell_sprite_287
+    21300576: smell_sprite_288
+    21300578: smell_sprite_289
+    21300580: smell_sprite_290
+    21300582: smell_sprite_291
+    21300584: smell_sprite_292
+    21300586: smell_sprite_293
+    21300588: smell_sprite_294
+    21300590: smell_sprite_295
+    21300592: smell_sprite_296
+    21300594: smell_sprite_297
+    21300596: smell_sprite_298
+    21300598: smell_sprite_299
+    21300600: smell_sprite_300
+    21300602: smell_sprite_301
+    21300604: smell_sprite_302
+    21300606: smell_sprite_303
+    21300608: smell_sprite_304
+    21300610: smell_sprite_305
+    21300612: smell_sprite_306
+    21300614: smell_sprite_307
+    21300616: smell_sprite_308
+    21300618: smell_sprite_309
+    21300620: smell_sprite_310
+    21300622: smell_sprite_311
+    21300624: smell_sprite_312
+    21300626: smell_sprite_313
+    21300628: smell_sprite_314
+    21300630: smell_sprite_315
+    21300632: smell_sprite_316
+    21300634: smell_sprite_317
+    21300636: smell_sprite_318
+    21300638: smell_sprite_319
+    21300640: smell_sprite_320
+    21300642: smell_sprite_321
+    21300644: smell_sprite_322
+    21300646: smell_sprite_323
+    21300648: smell_sprite_324
+    21300650: smell_sprite_325
+    21300652: smell_sprite_326
+    21300654: smell_sprite_327
+    21300656: smell_sprite_328
+    21300658: smell_sprite_329
+    21300660: smell_sprite_330
+    21300662: smell_sprite_331
+    21300664: smell_sprite_332
+    21300666: smell_sprite_333
+    21300668: smell_sprite_334
+    21300670: smell_sprite_335
+    21300672: smell_sprite_336
+    21300674: smell_sprite_337
+    21300676: smell_sprite_338
+    21300678: smell_sprite_339
+    21300680: smell_sprite_340
+    21300682: smell_sprite_341
+    21300684: smell_sprite_342
+    21300686: smell_sprite_343
+    21300688: smell_sprite_344
+    21300690: smell_sprite_345
+    21300692: smell_sprite_346
+    21300694: smell_sprite_347
+    21300696: smell_sprite_348
+    21300698: smell_sprite_349
+    21300700: smell_sprite_350
+    21300702: smell_sprite_351
+    21300704: smell_sprite_352
+    21300706: smell_sprite_353
+    21300708: smell_sprite_354
+    21300710: smell_sprite_355
+    21300712: smell_sprite_356
+    21300714: smell_sprite_357
+    21300716: smell_sprite_358
+    21300718: smell_sprite_359
+    21300720: smell_sprite_360
+    21300722: smell_sprite_361
+    21300724: smell_sprite_362
+    21300726: smell_sprite_363
+    21300728: smell_sprite_364
+    21300730: smell_sprite_365
+    21300732: smell_sprite_366
+    21300734: smell_sprite_367
+    21300736: smell_sprite_368
+    21300738: smell_sprite_369
+    21300740: smell_sprite_370
+    21300742: smell_sprite_371
+    21300744: smell_sprite_372
+    21300746: smell_sprite_373
+    21300748: smell_sprite_374
+    21300750: smell_sprite_375
+    21300752: smell_sprite_376
+    21300754: smell_sprite_377
+    21300756: smell_sprite_378
+    21300758: smell_sprite_379
+    21300760: smell_sprite_380
+    21300762: smell_sprite_381
+    21300764: smell_sprite_382
+    21300766: smell_sprite_383
+    21300768: smell_sprite_384
+    21300770: smell_sprite_385
+    21300772: smell_sprite_386
+    21300774: smell_sprite_387
+    21300776: smell_sprite_388
+    21300778: smell_sprite_389
+    21300780: smell_sprite_390
+    21300782: smell_sprite_391
+    21300784: smell_sprite_392
+    21300786: smell_sprite_393
+    21300788: smell_sprite_394
+    21300790: smell_sprite_395
+    21300792: smell_sprite_396
+    21300794: smell_sprite_397
+    21300796: smell_sprite_398
+    21300798: smell_sprite_399
+    21300800: smell_sprite_400
+    21300802: smell_sprite_401
+    21300804: smell_sprite_402
+    21300806: smell_sprite_403
+    21300808: smell_sprite_404
+    21300810: smell_sprite_405
+    21300812: smell_sprite_406
+    21300814: smell_sprite_407
+    21300816: smell_sprite_408
+    21300818: smell_sprite_409
+    21300820: smell_sprite_410
+    21300822: smell_sprite_411
+    21300824: smell_sprite_412
+    21300826: smell_sprite_413
+    21300828: smell_sprite_414
+    21300830: smell_sprite_415
+    21300832: smell_sprite_416
+    21300834: smell_sprite_417
+    21300836: smell_sprite_418
+    21300838: smell_sprite_419
+    21300840: smell_sprite_420
+    21300842: smell_sprite_421
+    21300844: smell_sprite_422
+    21300846: smell_sprite_423
+    21300848: smell_sprite_424
+    21300850: smell_sprite_425
+    21300852: smell_sprite_426
+    21300854: smell_sprite_427
+    21300856: smell_sprite_428
+    21300858: smell_sprite_429
+    21300860: smell_sprite_430
+    21300862: smell_sprite_431
+    21300864: smell_sprite_432
+    21300866: smell_sprite_433
+    21300868: smell_sprite_434
+    21300870: smell_sprite_435
+    21300872: smell_sprite_436
+    21300874: smell_sprite_437
+    21300876: smell_sprite_438
+    21300878: smell_sprite_439
+    21300880: smell_sprite_440
+    21300882: smell_sprite_441
+    21300884: smell_sprite_442
+    21300886: smell_sprite_443
+    21300888: smell_sprite_444
+    21300890: smell_sprite_445
+    21300892: smell_sprite_446
+    21300894: smell_sprite_447
+    21300896: smell_sprite_448
+    21300898: smell_sprite_449
+    21300900: smell_sprite_450
+    21300902: smell_sprite_451
+    21300904: smell_sprite_452
+    21300906: smell_sprite_453
+    21300908: smell_sprite_454
+    21300910: smell_sprite_455
+    21300912: smell_sprite_456
+    21300914: smell_sprite_457
+    21300916: smell_sprite_458
+    21300918: smell_sprite_459
+    21300920: smell_sprite_460
+    21300922: smell_sprite_461
+    21300924: smell_sprite_462
+    21300926: smell_sprite_463
+    21300928: smell_sprite_464
+    21300930: smell_sprite_465
+    21300932: smell_sprite_466
+    21300934: smell_sprite_467
+    21300936: smell_sprite_468
+    21300938: smell_sprite_469
+    21300940: smell_sprite_470
+    21300942: smell_sprite_471
+    21300944: smell_sprite_472
+    21300946: smell_sprite_473
+    21300948: smell_sprite_474
+    21300950: smell_sprite_475
+    21300952: smell_sprite_476
+    21300954: smell_sprite_477
+    21300956: smell_sprite_478
+    21300958: smell_sprite_479
+    21300960: smell_sprite_480
+    21300962: smell_sprite_481
+    21300964: smell_sprite_482
+    21300966: smell_sprite_483
+    21300968: smell_sprite_484
+    21300970: smell_sprite_485
+    21300972: smell_sprite_486
+    21300974: smell_sprite_487
+    21300976: smell_sprite_488
+    21300978: smell_sprite_489
+    21300980: smell_sprite_490
+    21300982: smell_sprite_491
+    21300984: smell_sprite_492
+    21300986: smell_sprite_493
+    21300988: smell_sprite_494
+    21300990: smell_sprite_495
+    21300992: smell_sprite_496
+    21300994: smell_sprite_497
+    21300996: smell_sprite_498
+    21300998: smell_sprite_499
+    21301000: smell_sprite_500
+    21301002: smell_sprite_501
+    21301004: smell_sprite_502
+    21301006: smell_sprite_503
+    21301008: smell_sprite_504
+    21301010: smell_sprite_505
+    21301012: smell_sprite_506
+    21301014: smell_sprite_507
+    21301016: smell_sprite_508
+    21301018: smell_sprite_509
+    21301020: smell_sprite_510
+    21301022: smell_sprite_511
+    21301024: smell_sprite_512
+    21301026: smell_sprite_513
+    21301028: smell_sprite_514
+    21301030: smell_sprite_515
+    21301032: smell_sprite_516
+    21301034: smell_sprite_517
+    21301036: smell_sprite_518
+    21301038: smell_sprite_519
+    21301040: smell_sprite_520
+    21301042: smell_sprite_521
+    21301044: smell_sprite_522
+    21301046: smell_sprite_523
+    21301048: smell_sprite_524
+    21301050: smell_sprite_525
+    21301052: smell_sprite_526
+    21301054: smell_sprite_527
+    21301056: smell_sprite_528
+    21301058: smell_sprite_529
+    21301060: smell_sprite_530
+    21301062: smell_sprite_531
+    21301064: smell_sprite_532
+    21301066: smell_sprite_533
+    21301068: smell_sprite_534
+    21301070: smell_sprite_535
+    21301072: smell_sprite_536
+    21301074: smell_sprite_537
+    21301076: smell_sprite_538
+    21301078: smell_sprite_539
+    21301080: smell_sprite_540
+    21301082: smell_sprite_541
+    21301084: smell_sprite_542
+    21301086: smell_sprite_543
+    21301088: smell_sprite_544
+    21301090: smell_sprite_545
+    21301092: smell_sprite_546
+    21301094: smell_sprite_547
+    21301096: smell_sprite_548
+    21301098: smell_sprite_549
+    21301100: smell_sprite_550
+    21301102: smell_sprite_551
+    21301104: smell_sprite_552
+    21301106: smell_sprite_553
+    21301108: smell_sprite_554
+    21301110: smell_sprite_555
+    21301112: smell_sprite_556
+    21301114: smell_sprite_557
+    21301116: smell_sprite_558
+    21301118: smell_sprite_559
+    21301120: smell_sprite_560
+    21301122: smell_sprite_561
+    21301124: smell_sprite_562
+    21301126: smell_sprite_563
+    21301128: smell_sprite_564
+    21301130: smell_sprite_565
+    21301132: smell_sprite_566
+    21301134: smell_sprite_567
+    21301136: smell_sprite_568
+    21301138: smell_sprite_569
+    21301140: smell_sprite_570
+    21301142: smell_sprite_571
+    21301144: smell_sprite_572
+    21301146: smell_sprite_573
+    21301148: smell_sprite_574
+    21301150: smell_sprite_575
+    21301152: smell_sprite_576
+    21301154: smell_sprite_577
+    21301156: smell_sprite_578
+    21301158: smell_sprite_579
+    21301160: smell_sprite_580
+    21301162: smell_sprite_581
+    21301164: smell_sprite_582
+    21301166: smell_sprite_583
+    21301168: smell_sprite_584
+    21301170: smell_sprite_585
+    21301172: smell_sprite_586
+    21301174: smell_sprite_587
+    21301176: smell_sprite_588
+    21301178: smell_sprite_589
+    21301180: smell_sprite_590
+    21301182: smell_sprite_591
+    21301184: smell_sprite_592
+    21301186: smell_sprite_593
+    21301188: smell_sprite_594
+    21301190: smell_sprite_595
+    21301192: smell_sprite_596
+    21301194: smell_sprite_597
+    21301196: smell_sprite_598
+    21301198: smell_sprite_599
+    21301200: smell_sprite_600
+    21301202: smell_sprite_601
+    21301204: smell_sprite_602
+    21301206: smell_sprite_603
+    21301208: smell_sprite_604
+    21301210: smell_sprite_605
+    21301212: smell_sprite_606
+    21301214: smell_sprite_607
+    21301216: smell_sprite_608
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: smell_sprite_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1537
+        width: 255
+        height: 255
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -2.5, y: 3.5}
+        - {x: 2.5, y: -1.5}
+        - {x: 5.5, y: 0.5}
+        - {x: 4.5, y: 4.5}
+        - {x: 3.5, y: 7.5}
+        - {x: 0.5, y: 7.5}
+        - {x: -2.5, y: 6.5}
+    - name: smell_sprite_1
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 1537
+        width: 255
+        height: 255
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 23.5, y: 33.5}
+        - {x: -20.5, y: 33.5}
+        - {x: -39.5, y: 14.5}
+        - {x: -39.5, y: 6.5}
+        - {x: -20.5, y: -32.5}
+        - {x: 22.5, y: -32.5}
+        - {x: 38.5, y: -15.5}
+        - {x: 39.5, y: -11.5}
+        - {x: 39.5, y: 10.5}
+    - name: smell_sprite_2
+      rect:
+        serializedVersion: 2
+        x: 510
+        y: 1537
+        width: 255
+        height: 255
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 20.5, y: -43.5}
+        - {x: 17.5, y: -48.5}
+        - {x: 16.5, y: -51.5}
+        - {x: 22.5, y: -57.5}
+        - {x: 25.5, y: -57.5}
+        - {x: 29.5, y: -52.5}
+        - {x: 29.5, y: -47.5}
+        - {x: 22.5, y: -43.5}
+      - - {x: 45.5, y: 10.5}
+        - {x: 48.5, y: 10.5}
+        - {x: 53.5, y: 14.5}
+        - {x: 51.5, y: 44.5}
+        - {x: -42.5, y: 44.5}
+        - {x: -56.5, y: 18.5}
+        - {x: -56.5, y: -15.5}
+        - {x: -49.5, y: -38.5}
+        - {x: -7.5, y: -49.5}
+        - {x: 33.5, y: -49.5}
+        - {x: 55.5, y: -15.5}
+        - {x: 55.5, y: -1.5}
+        - {x: 47.5, y: 10.5}
+      - - {x: -26.5, y: -41.5}
+        - {x: -26.5, y: -45.5}
+        - {x: -23.5, y: -48.5}
+        - {x: -16.5, y: -45.5}
+        - {x: -15.5, y: -41.5}
+        - {x: -18.5, y: -37.5}
+        - {x: -20.5, y: -37.5}
+      - - {x: -27.5, y: 52.5}
+        - {x: -30.5, y: 50.5}
+        - {x: -30.5, y: 43.5}
+        - {x: -29.5, y: 39.5}
+        - {x: -20.5, y: 39.5}
+        - {x: -18.5, y: 40.5}
+        - {x: -17.5, y: 44.5}
+        - {x: -17.5, y: 49.5}
+        - {x: -22.5, y: 52.5}
+    - name: smell_sprite_3
+      rect:
+        serializedVersion: 2
+        x: 765
+        y: 1537
+        width: 255
+        height: 255
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 30.5, y: 48.5}
+        - {x: 32.5, y: 46.5}
+        - {x: 28.5, y: 49.5}
+        - {x: 25.5, y: 49.5}
+        - {x: 24.5, y: 58.5}
+        - {x: 19.5, y: 63.5}
+        - {x: 13.5, y: 64.5}
+        - {x: 9.5, y: 59.5}
+        - {x: 9.5, y: 58.5}
+        - {x: 7.5, y: 63.5}
+        - {x: 6.5, y: 64.5}
+        - {x: -8.5, y: 64.5}
+        - {x: -59.5, y: 38.5}
+        - {x: -59.5, y: -43.5}
+        - {x: -51.5, y: -65.5}
+        - {x: 45.5, y: -65.5}
+        - {x: 69.5, y: -47.5}
+        - {x: 69.5, y: 23.5}
+        - {x: 49.5, y: 62.5}
+        - {x: 36.5, y: 55.5}
+        - {x: 30.5, y: 49.5}
+      - - {x: -52.5, y: -4.5}
+        - {x: -56.5, y: -4.5}
+        - {x: -59.5, y: -9.5}
+        - {x: -59.5, y: -14.5}
+        - {x: -56.5, y: -19.5}
+        - {x: -45.5, y: -19.5}
+        - {x: -43.5, y: -14.5}
+        - {x: -43.5, y: -8.5}
+        - {x: -46.5, y: -5.5}
+      - - {x: 67.5, y: 30.5}
+        - {x: 60.5, y: 30.5}
+        - {x: 59.5, y: 27.5}
+        - {x: 59.5, y: 18.5}
+        - {x: 71.5, y: 18.5}
+        - {x: 72.5, y: 20.5}
+        - {x: 72.5, y: 27.5}
+      - - {x: 52.5, y: 40.5}
+        - {x: 54.5, y: 38.5}
+        - {x: 58.5, y: 38.5}
+        - {x: 63.5, y: 40.5}
+        - {x: 63.5, y: 47.5}
+        - {x: 62.5, y: 50.5}
+        - {x: 55.5, y: 50.5}
+        - {x: 52.5, y: 44.5}
+      - - {x: -39.5, y: 70.5}
+        - {x: -39.5, y: 61.5}
+        - {x: -38.5, y: 57.5}
+        - {x: -31.5, y: 57.5}
+        - {x: -29.5, y: 60.5}
+        - {x: -29.5, y: 67.5}
+        - {x: -36.5, y: 70.5}
+    - name: smell_sprite_4
+      rect:
+        serializedVersion: 2
+        x: 1020
+        y: 1537
+        width: 255
+        height: 255
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 52.5, y: 29.5}
+        - {x: 46.5, y: 29.5}
+        - {x: 50.5, y: 29.5}
+        - {x: 57.5, y: 39.5}
+        - {x: 41.5, y: 60.5}
+        - {x: 20.5, y: 73.5}
+        - {x: 15.5, y: 73.5}
+        - {x: 10.5, y: 65.5}
+        - {x: 10.5, y: 58.5}
+        - {x: 9.5, y: 68.5}
+        - {x: 4.5, y: 73.5}
+        - {x: -9.5, y: 73.5}
+        - {x: -64.5, y: 14.5}
+        - {x: -64.5, y: -27.5}
+        - {x: -53.5, y: -69.5}
+        - {x: 56.5, y: -69.5}
+        - {x: 77.5, y: -32.5}
+        - {x: 77.5, y: 29.5}
+        - {x: 68.5, y: 32.5}
+      - - {x: 45.5, y: -42.5}
+        - {x: 41.5, y: -44.5}
+        - {x: 41.5, y: -51.5}
+        - {x: 44.5, y: -54.5}
+        - {x: 50.5, y: -54.5}
+        - {x: 51.5, y: -52.5}
+        - {x: 51.5, y: -43.5}
+        - {x: 50.5, y: -42.5}
+      - - {x: -52.5, y: -40.5}
+        - {x: -55.5, y: -44.5}
+        - {x: -55.5, y: -49.5}
+        - {x: -54.5, y: -50.5}
+        - {x: -48.5, y: -50.5}
+        - {x: -43.5, y: -48.5}
+        - {x: -43.5, y: -46.5}
+        - {x: -46.5, y: -40.5}
+      - - {x: 59.5, y: -20.5}
+        - {x: 56.5, y: -25.5}
+        - {x: 56.5, y: -27.5}
+        - {x: 59.5, y: -31.5}
+        - {x: 63.5, y: -31.5}
+        - {x: 68.5, y: -29.5}
+        - {x: 68.5, y: -26.5}
+        - {x: 62.5, y: -20.5}
+      - - {x: -65.5, y: 33.5}
+        - {x: -65.5, y: 29.5}
+        - {x: -63.5, y: 23.5}
+        - {x: -53.5, y: 23.5}
+        - {x: -53.5, y: 35.5}
+        - {x: -56.5, y: 36.5}
+      - - {x: -44.5, y: 48.5}
+        - {x: -44.5, y: 37.5}
+        - {x: -43.5, y: 36.5}
+        - {x: -36.5, y: 36.5}
+        - {x: -33.5, y: 39.5}
+        - {x: -33.5, y: 42.5}
+        - {x: -35.5, y: 48.5}
+      - - {x: 58.5, y: 51.5}
+        - {x: 53.5, y: 48.5}
+        - {x: 53.5, y: 41.5}
+        - {x: 55.5, y: 38.5}
+        - {x: 64.5, y: 38.5}
+        - {x: 64.5, y: 50.5}
+        - {x: 61.5, y: 51.5}
+      - - {x: -39.5, y: 71.5}
+        - {x: -40.5, y: 68.5}
+        - {x: -40.5, y: 60.5}
+        - {x: -38.5, y: 57.5}
+        - {x: -37.5, y: 57.5}
+        - {x: -31.5, y: 58.5}
+        - {x: -28.5, y: 60.5}
+        - {x: -28.5, y: 67.5}
+        - {x: -29.5, y: 71.5}
+    - name: smell_sprite_5
+      rect:
+        serializedVersion: 2
+        x: 1275
+        y: 1537
+        width: 255
+        height: 255
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -25.5, y: -74.5}
+        - {x: -34.5, y: -78.5}
+        - {x: -35.5, y: -81.5}
+        - {x: -35.5, y: -83.5}
+        - {x: -27.5, y: -94.5}
+        - {x: -24.5, y: -94.5}
+        - {x: -18.5, y: -89.5}
+        - {x: -17.5, y: -86.5}
+        - {x: -17.5, y: -80.5}
+        - {x: -21.5, y: -74.5}
+      - - {x: 30.5, y: 67.5}
+        - {x: 28.5, y: 69.5}
+        - {x: 20.5, y: 73.5}
+        - {x: 18.5, y: 73.5}
+        - {x: 14.5, y: 68.5}
+        - {x: 10.5, y: 73.5}
+        - {x: 8.5, y: 74.5}
+        - {x: 2.5, y: 74.5}
+        - {x: -0.5, y: 72.5}
+        - {x: -3.5, y: 68.5}
+        - {x: -4.5, y: 65.5}
+        - {x: -10.5, y: 54.5}
+        - {x: -10.5, y: 53.5}
+        - {x: -12.5, y: 63.5}
+        - {x: -50.5, y: 48.5}
+        - {x: -66.5, y: 21.5}
+        - {x: -66.5, y: -29.5}
+        - {x: -61.5, y: -51.5}
+        - {x: -31.5, y: -74.5}
+        - {x: 35.5, y: -74.5}
+        - {x: 89.5, y: -26.5}
+        - {x: 89.5, y: 17.5}
+        - {x: 60.5, y: 57.5}
+      - - {x: 45.5, y: -42.5}
+        - {x: 42.5, y: -43.5}
+        - {x: 41.5, y: -46.5}
+        - {x: 41.5, y: -50.5}
+        - {x: 48.5, y: -56.5}
+        - {x: 50.5, y: -56.5}
+        - {x: 52.5, y: -54.5}
+        - {x: 53.5, y: -50.5}
+        - {x: 53.5, y: -48.5}
+        - {x: 49.5, y: -42.5}
+      - - {x: -58.5, y: 43.5}
+        - {x: -64.5, y: 41.5}
+        - {x: -64.5, y: 24.5}
+        - {x: -60.5, y: 22.5}
+        - {x: -50.5, y: 22.5}
+        - {x: -50.5, y: 42.5}
+        - {x: -52.5, y: 43.5}
+      - - {x: 52.5, y: 42.5}
+        - {x: 52.5, y: 39.5}
+        - {x: 55.5, y: 38.5}
+        - {x: 60.5, y: 38.5}
+        - {x: 65.5, y: 42.5}
+        - {x: 65.5, y: 46.5}
+        - {x: 60.5, y: 51.5}
+        - {x: 57.5, y: 50.5}
+      - - {x: 42.5, y: 66.5}
+        - {x: 39.5, y: 61.5}
+        - {x: 39.5, y: 57.5}
+        - {x: 40.5, y: 55.5}
+        - {x: 45.5, y: 55.5}
+        - {x: 50.5, y: 56.5}
+        - {x: 51.5, y: 62.5}
+        - {x: 47.5, y: 66.5}
+      - - {x: -34.5, y: 71.5}
+        - {x: -37.5, y: 70.5}
+        - {x: -37.5, y: 58.5}
+        - {x: -27.5, y: 58.5}
+        - {x: -27.5, y: 68.5}
+        - {x: -30.5, y: 71.5}
+      - - {x: 24.5, y: 91.5}
+        - {x: 20.5, y: 86.5}
+        - {x: 20.5, y: 81.5}
+        - {x: 21.5, y: 79.5}
+        - {x: 26.5, y: 79.5}
+        - {x: 32.5, y: 81.5}
+        - {x: 32.5, y: 84.5}
+        - {x: 28.5, y: 91.5}
+    - name: smell_sprite_6
+      rect:
+        serializedVersion: 2
+        x: 1530
+        y: 1537
+        width: 255
+        height: 255
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -28.5, y: -75.5}
+        - {x: -33.5, y: -78.5}
+        - {x: -34.5, y: -84.5}
+        - {x: -33.5, y: -90.5}
+        - {x: -29.5, y: -94.5}
+        - {x: -16.5, y: -94.5}
+        - {x: -15.5, y: -91.5}
+        - {x: -15.5, y: -80.5}
+        - {x: -19.5, y: -75.5}
+      - - {x: 91.5, y: -9.5}
+        - {x: 91.5, y: -3.5}
+        - {x: 89.5, y: 0.5}
+        - {x: 80.5, y: 1.5}
+        - {x: 73.5, y: 7.5}
+        - {x: 66.5, y: 12.5}
+        - {x: 73.5, y: 9.5}
+        - {x: 81.5, y: 19.5}
+        - {x: 84.5, y: 35.5}
+        - {x: 76.5, y: 55.5}
+        - {x: 56.5, y: 74.5}
+        - {x: -37.5, y: 74.5}
+        - {x: -40.5, y: 73.5}
+        - {x: -47.5, y: 57.5}
+        - {x: -47.5, y: 37.5}
+        - {x: -46.5, y: 35.5}
+        - {x: -48.5, y: 34.5}
+        - {x: -49.5, y: 31.5}
+        - {x: -51.5, y: 31.5}
+        - {x: -47.5, y: 35.5}
+        - {x: -47.5, y: 36.5}
+        - {x: -48.5, y: 42.5}
+        - {x: -55.5, y: 46.5}
+        - {x: -66.5, y: 50.5}
+        - {x: -66.5, y: -63.5}
+        - {x: -53.5, y: -75.5}
+        - {x: 53.5, y: -75.5}
+        - {x: 91.5, y: -63.5}
+        - {x: 91.5, y: -56.5}
+        - {x: 78.5, y: -24.5}
+        - {x: 74.5, y: -22.5}
+        - {x: 79.5, y: -20.5}
+      - - {x: 54.5, y: 44.5}
+        - {x: 63.5, y: 39.5}
+        - {x: 66.5, y: 40.5}
+        - {x: 67.5, y: 46.5}
+        - {x: 65.5, y: 51.5}
+        - {x: 59.5, y: 51.5}
+        - {x: 54.5, y: 48.5}
+      - - {x: 22.5, y: 90.5}
+        - {x: 21.5, y: 87.5}
+        - {x: 21.5, y: 81.5}
+        - {x: 25.5, y: 78.5}
+        - {x: 31.5, y: 78.5}
+        - {x: 33.5, y: 83.5}
+        - {x: 33.5, y: 85.5}
+        - {x: 29.5, y: 90.5}
+    - name: smell_sprite_7
+      rect:
+        serializedVersion: 2
+        x: 1785
+        y: 1537
+        width: 255
+        height: 255
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 75.5, y: -47.5}
+        - {x: 90.5, y: -50.5}
+        - {x: 95.5, y: -48.5}
+        - {x: 95.5, y: 45.5}
+        - {x: 87.5, y: 50.5}
+        - {x: 81.5, y: 42.5}
+        - {x: 81.5, y: 39.5}
+        - {x: 79.5, y: 40.5}
+        - {x: 73.5, y: 38.5}
+        - {x: 57.5, y: 40.5}
+        - {x: 55.5, y: 37.5}
+        - {x: 51.5, y: 33.5}
+        - {x: 52.5, y: 35.5}
+        - {x: 52.5, y: 38.5}
+        - {x: 75.5, y: 60.5}
+        - {x: 53.5, y: 75.5}
+        - {x: -46.5, y: 75.5}
+        - {x: -67.5, y: 57.5}
+        - {x: -67.5, y: -53.5}
+        - {x: -49.5, y: -98.5}
+        - {x: -3.5, y: -98.5}
+        - {x: 59.5, y: -64.5}
+        - {x: 75.5, y: -42.5}
+        - {x: 76.5, y: -39.5}
+      - - {x: 55.5, y: 42.5}
+        - {x: 57.5, y: 40.5}
+        - {x: 63.5, y: 40.5}
+        - {x: 68.5, y: 44.5}
+        - {x: 68.5, y: 46.5}
+        - {x: 67.5, y: 48.5}
+        - {x: 61.5, y: 51.5}
+        - {x: 60.5, y: 51.5}
+        - {x: 55.5, y: 45.5}
+      - - {x: 26.5, y: 90.5}
+        - {x: 22.5, y: 88.5}
+        - {x: 22.5, y: 82.5}
+        - {x: 26.5, y: 78.5}
+        - {x: 32.5, y: 78.5}
+        - {x: 33.5, y: 80.5}
+        - {x: 33.5, y: 88.5}
+        - {x: 31.5, y: 90.5}
+    - name: smell_sprite_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1282
+        width: 255
+        height: 255
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -39.5, y: -94.5}
+        - {x: -32.5, y: -100.5}
+        - {x: -26.5, y: -100.5}
+        - {x: -20.5, y: -92.5}
+        - {x: -20.5, y: -86.5}
+        - {x: -22.5, y: -83.5}
+        - {x: -27.5, y: -78.5}
+        - {x: -31.5, y: -78.5}
+        - {x: -39.5, y: -79.5}
+      - - {x: 66.5, y: 9.5}
+        - {x: 62.5, y: 8.5}
+        - {x: 68.5, y: 10.5}
+        - {x: 77.5, y: 19.5}
+        - {x: 81.5, y: 32.5}
+        - {x: 81.5, y: 36.5}
+        - {x: 68.5, y: 39.5}
+        - {x: 61.5, y: 48.5}
+        - {x: 41.5, y: 71.5}
+        - {x: 32.5, y: 68.5}
+        - {x: 30.5, y: 66.5}
+        - {x: 30.5, y: 61.5}
+        - {x: 27.5, y: 60.5}
+        - {x: 25.5, y: 62.5}
+        - {x: 32.5, y: 69.5}
+        - {x: 36.5, y: 71.5}
+        - {x: 29.5, y: 89.5}
+        - {x: -9.5, y: 89.5}
+        - {x: -54.5, y: 74.5}
+        - {x: -75.5, y: 37.5}
+        - {x: -75.5, y: 23.5}
+        - {x: -66.5, y: 15.5}
+        - {x: -64.5, y: 15.5}
+        - {x: -69.5, y: 15.5}
+        - {x: -75.5, y: 14.5}
+        - {x: -75.5, y: -73.5}
+        - {x: -50.5, y: -78.5}
+        - {x: 49.5, y: -78.5}
+        - {x: 80.5, y: -42.5}
+        - {x: 85.5, y: -17.5}
+        - {x: 85.5, y: 1.5}
+      - - {x: 74.5, y: -31.5}
+        - {x: 69.5, y: -36.5}
+        - {x: 69.5, y: -49.5}
+        - {x: 74.5, y: -51.5}
+        - {x: 83.5, y: -51.5}
+        - {x: 87.5, y: -47.5}
+        - {x: 88.5, y: -45.5}
+        - {x: 88.5, y: -37.5}
+        - {x: 86.5, y: -31.5}
+      - - {x: -71.5, y: 17.5}
+        - {x: -68.5, y: 18.5}
+        - {x: -68.5, y: 21.5}
+        - {x: -71.5, y: 22.5}
+        - {x: -73.5, y: 20.5}
+      - - {x: 81.5, y: 44.5}
+        - {x: 74.5, y: 41.5}
+        - {x: 74.5, y: 37.5}
+        - {x: 80.5, y: 33.5}
+        - {x: 86.5, y: 33.5}
+        - {x: 88.5, y: 34.5}
+        - {x: 88.5, y: 38.5}
+        - {x: 86.5, y: 44.5}
+      - - {x: -31.5, y: 85.5}
+        - {x: -33.5, y: 82.5}
+        - {x: -33.5, y: 76.5}
+        - {x: -31.5, y: 75.5}
+        - {x: -25.5, y: 75.5}
+        - {x: -23.5, y: 78.5}
+        - {x: -23.5, y: 83.5}
+        - {x: -25.5, y: 85.5}
+    - name: smell_sprite_9
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 1282
+        width: 255
+        height: 255
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -36.5, y: -78.5}
+        - {x: -38.5, y: -79.5}
+        - {x: -38.5, y: -93.5}
+        - {x: -34.5, y: -99.5}
+        - {x: -30.5, y: -100.5}
+        - {x: -21.5, y: -100.5}
+        - {x: -21.5, y: -80.5}
+        - {x: -22.5, y: -78.5}
+      - - {x: 24.5, y: -74.5}
+        - {x: 31.5, y: -74.5}
+        - {x: 48.5, y: -66.5}
+        - {x: 62.5, y: -57.5}
+        - {x: 61.5, y: -44.5}
+        - {x: 58.5, y: -40.5}
+        - {x: 68.5, y: -41.5}
+        - {x: 74.5, y: -35.5}
+        - {x: 74.5, y: -29.5}
+        - {x: 86.5, y: -17.5}
+        - {x: 86.5, y: 3.5}
+        - {x: 73.5, y: 27.5}
+        - {x: 61.5, y: 41.5}
+        - {x: 58.5, y: 40.5}
+        - {x: 56.5, y: 38.5}
+        - {x: 56.5, y: 39.5}
+        - {x: 60.5, y: 42.5}
+        - {x: 64.5, y: 44.5}
+        - {x: 64.5, y: 54.5}
+        - {x: 28.5, y: 89.5}
+        - {x: -10.5, y: 89.5}
+        - {x: -43.5, y: 82.5}
+        - {x: -78.5, y: 36.5}
+        - {x: -72.5, y: 18.5}
+        - {x: -70.5, y: 17.5}
+        - {x: -76.5, y: 13.5}
+        - {x: -83.5, y: -0.5}
+        - {x: -83.5, y: -16.5}
+        - {x: -69.5, y: -54.5}
+        - {x: -46.5, y: -65.5}
+        - {x: -40.5, y: -62.5}
+        - {x: -39.5, y: -61.5}
+        - {x: -35.5, y: -61.5}
+        - {x: -32.5, y: -60.5}
+        - {x: -38.5, y: -62.5}
+        - {x: -40.5, y: -72.5}
+        - {x: -33.5, y: -78.5}
+        - {x: 6.5, y: -78.5}
+        - {x: 18.5, y: -73.5}
+        - {x: 17.5, y: -66.5}
+        - {x: 14.5, y: -61.5}
+      - - {x: 80.5, y: -30.5}
+        - {x: 76.5, y: -33.5}
+        - {x: 70.5, y: -37.5}
+        - {x: 70.5, y: -42.5}
+        - {x: 74.5, y: -49.5}
+        - {x: 80.5, y: -51.5}
+        - {x: 83.5, y: -51.5}
+        - {x: 91.5, y: -47.5}
+        - {x: 91.5, y: -38.5}
+        - {x: 88.5, y: -30.5}
+      - - {x: 75.5, y: 38.5}
+        - {x: 69.5, y: 38.5}
+        - {x: 67.5, y: 32.5}
+        - {x: 67.5, y: 30.5}
+        - {x: 72.5, y: 27.5}
+        - {x: 76.5, y: 27.5}
+        - {x: 82.5, y: 31.5}
+        - {x: 82.5, y: 36.5}
+      - - {x: 81.5, y: 45.5}
+        - {x: 75.5, y: 43.5}
+        - {x: 75.5, y: 38.5}
+        - {x: 84.5, y: 33.5}
+        - {x: 92.5, y: 33.5}
+        - {x: 93.5, y: 34.5}
+        - {x: 93.5, y: 42.5}
+        - {x: 91.5, y: 45.5}
+      - - {x: -29.5, y: 73.5}
+        - {x: -27.5, y: 73.5}
+        - {x: -22.5, y: 76.5}
+        - {x: -22.5, y: 82.5}
+        - {x: -23.5, y: 85.5}
+        - {x: -30.5, y: 85.5}
+        - {x: -32.5, y: 84.5}
+        - {x: -32.5, y: 78.5}
+    - name: smell_sprite_10
+      rect:
+        serializedVersion: 2
+        x: 510
+        y: 1282
+        width: 255
+        height: 255
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 11.5, y: -62.5}
+        - {x: 15.5, y: -61.5}
+        - {x: 17.5, y: -64.5}
+        - {x: 17.5, y: -65.5}
+        - {x: 18.5, y: -68.5}
+        - {x: 30.5, y: -81.5}
+        - {x: 67.5, y: -57.5}
+        - {x: 87.5, y: -26.5}
+        - {x: 87.5, y: 1.5}
+        - {x: 85.5, y: 4.5}
+        - {x: 72.5, y: 6.5}
+        - {x: 66.5, y: 0.5}
+        - {x: 63.5, y: 4.5}
+        - {x: 65.5, y: 2.5}
+        - {x: 67.5, y: 2.5}
+        - {x: 71.5, y: 5.5}
+        - {x: 79.5, y: 18.5}
+        - {x: 74.5, y: 28.5}
+        - {x: 61.5, y: 68.5}
+        - {x: 28.5, y: 90.5}
+        - {x: -42.5, y: 90.5}
+        - {x: -81.5, y: 88.5}
+        - {x: -81.5, y: 54.5}
+        - {x: -71.5, y: 18.5}
+        - {x: -69.5, y: 17.5}
+        - {x: -79.5, y: 9.5}
+        - {x: -81.5, y: 4.5}
+        - {x: -81.5, y: -39.5}
+        - {x: -71.5, y: -75.5}
+        - {x: -43.5, y: -100.5}
+        - {x: -12.5, y: -100.5}
+        - {x: 15.5, y: -70.5}
+        - {x: 17.5, y: -65.5}
+        - {x: 17.5, y: -64.5}
+        - {x: 15.5, y: -62.5}
+      - - {x: 74.5, y: -30.5}
+        - {x: 74.5, y: -51.5}
+        - {x: 92.5, y: -51.5}
+        - {x: 93.5, y: -46.5}
+        - {x: 93.5, y: -40.5}
+        - {x: 90.5, y: -30.5}
+      - - {x: 71.5, y: 38.5}
+        - {x: 69.5, y: 35.5}
+        - {x: 69.5, y: 34.5}
+        - {x: 71.5, y: 29.5}
+        - {x: 73.5, y: 27.5}
+        - {x: 79.5, y: 27.5}
+        - {x: 82.5, y: 29.5}
+        - {x: 83.5, y: 32.5}
+        - {x: 82.5, y: 35.5}
+        - {x: 75.5, y: 38.5}
+      - - {x: 82.5, y: 45.5}
+        - {x: 76.5, y: 43.5}
+        - {x: 76.5, y: 38.5}
+        - {x: 85.5, y: 33.5}
+        - {x: 93.5, y: 33.5}
+        - {x: 94.5, y: 34.5}
+        - {x: 94.5, y: 42.5}
+        - {x: 92.5, y: 45.5}
+      - - {x: 55.5, y: 50.5}
+        - {x: 54.5, y: 47.5}
+        - {x: 58.5, y: 42.5}
+        - {x: 61.5, y: 42.5}
+        - {x: 63.5, y: 44.5}
+        - {x: 62.5, y: 47.5}
+        - {x: 56.5, y: 50.5}
+      - - {x: -28.5, y: 85.5}
+        - {x: -31.5, y: 83.5}
+        - {x: -31.5, y: 80.5}
+        - {x: -29.5, y: 74.5}
+        - {x: -28.5, y: 73.5}
+        - {x: -26.5, y: 73.5}
+        - {x: -21.5, y: 77.5}
+        - {x: -21.5, y: 82.5}
+        - {x: -26.5, y: 85.5}
+    - name: smell_sprite_11
+      rect:
+        serializedVersion: 2
+        x: 765
+        y: 1282
+        width: 255
+        height: 255
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -27.5, y: -80.5}
+        - {x: -33.5, y: -82.5}
+        - {x: -36.5, y: -86.5}
+        - {x: -36.5, y: -95.5}
+        - {x: -31.5, y: -97.5}
+        - {x: -25.5, y: -100.5}
+        - {x: -21.5, y: -99.5}
+        - {x: -19.5, y: -90.5}
+        - {x: -19.5, y: -82.5}
+        - {x: -22.5, y: -80.5}
+      - - {x: 76.5, y: -4.5}
+        - {x: 77.5, y: -0.5}
+        - {x: 76.5, y: 2.5}
+        - {x: 71.5, y: 3.5}
+        - {x: 80.5, y: 19.5}
+        - {x: 84.5, y: 32.5}
+        - {x: 83.5, y: 35.5}
+        - {x: 55.5, y: 87.5}
+        - {x: 36.5, y: 90.5}
+        - {x: 11.5, y: 90.5}
+        - {x: -24.5, y: 72.5}
+        - {x: -20.5, y: 65.5}
+        - {x: -29.5, y: 64.5}
+        - {x: -31.5, y: 62.5}
+        - {x: -27.5, y: 67.5}
+        - {x: -27.5, y: 70.5}
+        - {x: -43.5, y: 87.5}
+        - {x: -80.5, y: 47.5}
+        - {x: -80.5, y: 46.5}
+        - {x: -70.5, y: 18.5}
+        - {x: -68.5, y: 17.5}
+        - {x: -65.5, y: 19.5}
+        - {x: -76.5, y: 7.5}
+        - {x: -80.5, y: 2.5}
+        - {x: -80.5, y: -19.5}
+        - {x: -65.5, y: -34.5}
+        - {x: -56.5, y: -28.5}
+        - {x: -54.5, y: -26.5}
+        - {x: -56.5, y: -28.5}
+        - {x: -57.5, y: -32.5}
+        - {x: -67.5, y: -37.5}
+        - {x: -79.5, y: -81.5}
+        - {x: 58.5, y: -81.5}
+        - {x: 88.5, y: -45.5}
+        - {x: 88.5, y: 4.5}
+        - {x: 79.5, y: -0.5}
+      - - {x: 78.5, y: -31.5}
+        - {x: 75.5, y: -37.5}
+        - {x: 75.5, y: -47.5}
+        - {x: 80.5, y: -51.5}
+        - {x: 86.5, y: -51.5}
+        - {x: 94.5, y: -47.5}
+        - {x: 94.5, y: -43.5}
+        - {x: 92.5, y: -36.5}
+        - {x: 88.5, y: -32.5}
+        - {x: 85.5, y: -31.5}
+      - - {x: 85.5, y: 45.5}
+        - {x: 82.5, y: 42.5}
+        - {x: 82.5, y: 37.5}
+        - {x: 86.5, y: 33.5}
+        - {x: 92.5, y: 33.5}
+        - {x: 95.5, y: 34.5}
+        - {x: 95.5, y: 39.5}
+        - {x: 90.5, y: 45.5}
+      - - {x: 79.5, y: 37.5}
+        - {x: 82.5, y: 38.5}
+        - {x: 82.5, y: 41.5}
+        - {x: 79.5, y: 42.5}
+        - {x: 77.5, y: 40.5}
+      - - {x: 55.5, y: 47.5}
+        - {x: 59.5, y: 42.5}
+        - {x: 62.5, y: 43.5}
+        - {x: 62.5, y: 45.5}
+        - {x: 58.5, y: 50.5}
+        - {x: 56.5, y: 50.5}
+      - - {x: -29.5, y: 78.5}
+        - {x: -26.5, y: 73.5}
+        - {x: -20.5, y: 76.5}
+        - {x: -20.5, y: 81.5}
+        - {x: -21.5, y: 84.5}
+        - {x: -26.5, y: 84.5}
+        - {x: -29.5, y: 81.5}
+    - name: smell_sprite_12
+      rect:
+        serializedVersion: 2
+        x: 1020
+        y: 1282
+        width: 255
+        height: 255
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -26.5, y: -80.5}
+        - {x: -32.5, y: -82.5}
+        - {x: -35.5, y: -86.5}
+        - {x: -35.5, y: -95.5}
+        - {x: -28.5, y: -99.5}
+        - {x: -21.5, y: -99.5}
+        - {x: -19.5, y: -98.5}
+        - {x: -18.5, y: -90.5}
+        - {x: -18.5, y: -82.5}
+        - {x: -21.5, y: -80.5}
+      - - {x: 69.5, y: -24.5}
+        - {x: 84.5, y: -15.5}
+        - {x: 89.5, y: -8.5}
+        - {x: 89.5, y: -2.5}
+        - {x: 74.5, y: 4.5}
+        - {x: 89.5, y: 15.5}
+        - {x: 89.5, y: 39.5}
+        - {x: 82.5, y: 80.5}
+        - {x: 55.5, y: 80.5}
+        - {x: 47.5, y: 76.5}
+        - {x: 38.5, y: 66.5}
+        - {x: 36.5, y: 63.5}
+        - {x: 40.5, y: 73.5}
+        - {x: 37.5, y: 88.5}
+        - {x: 25.5, y: 90.5}
+        - {x: 18.5, y: 90.5}
+        - {x: -20.5, y: 72.5}
+        - {x: -30.5, y: 62.5}
+        - {x: -26.5, y: 67.5}
+        - {x: -25.5, y: 69.5}
+        - {x: -41.5, y: 84.5}
+        - {x: -79.5, y: 45.5}
+        - {x: -79.5, y: -13.5}
+        - {x: -74.5, y: -21.5}
+        - {x: -58.5, y: -38.5}
+        - {x: -65.5, y: -35.5}
+        - {x: -78.5, y: -63.5}
+        - {x: -64.5, y: -81.5}
+        - {x: 39.5, y: -81.5}
+        - {x: 85.5, y: -35.5}
+        - {x: 75.5, y: -25.5}
+        - {x: 72.5, y: -23.5}
+      - - {x: 71.5, y: -31.5}
+        - {x: 63.5, y: -47.5}
+        - {x: 63.5, y: -65.5}
+        - {x: 78.5, y: -65.5}
+        - {x: 95.5, y: -54.5}
+        - {x: 95.5, y: -39.5}
+        - {x: 90.5, y: -31.5}
+      - - {x: 86.5, y: 45.5}
+        - {x: 83.5, y: 42.5}
+        - {x: 83.5, y: 37.5}
+        - {x: 87.5, y: 33.5}
+        - {x: 93.5, y: 33.5}
+        - {x: 96.5, y: 34.5}
+        - {x: 96.5, y: 39.5}
+        - {x: 91.5, y: 45.5}
+      - - {x: 60.5, y: 42.5}
+        - {x: 63.5, y: 43.5}
+        - {x: 63.5, y: 46.5}
+        - {x: 60.5, y: 47.5}
+        - {x: 58.5, y: 45.5}
+      - - {x: -28.5, y: 81.5}
+        - {x: -28.5, y: 78.5}
+        - {x: -25.5, y: 73.5}
+        - {x: -19.5, y: 73.5}
+        - {x: -19.5, y: 84.5}
+        - {x: -25.5, y: 84.5}
+      - - {x: 70.5, y: 92.5}
+        - {x: 67.5, y: 92.5}
+        - {x: 62.5, y: 89.5}
+        - {x: 62.5, y: 83.5}
+        - {x: 63.5, y: 80.5}
+        - {x: 71.5, y: 80.5}
+        - {x: 74.5, y: 83.5}
+        - {x: 75.5, y: 87.5}
+        - {x: 75.5, y: 89.5}
+    - name: smell_sprite_13
+      rect:
+        serializedVersion: 2
+        x: 1275
+        y: 1282
+        width: 255
+        height: 255
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -21.5, y: -88.5}
+        - {x: -17.5, y: -86.5}
+        - {x: -17.5, y: -82.5}
+        - {x: -20.5, y: -80.5}
+        - {x: -27.5, y: -80.5}
+        - {x: -33.5, y: -85.5}
+        - {x: -34.5, y: -87.5}
+        - {x: -34.5, y: -93.5}
+        - {x: -25.5, y: -100.5}
+        - {x: -22.5, y: -100.5}
+        - {x: -20.5, y: -99.5}
+        - {x: -17.5, y: -89.5}
+        - {x: -19.5, y: -87.5}
+      - - {x: 36.5, y: -79.5}
+        - {x: 62.5, y: -61.5}
+        - {x: 81.5, y: -28.5}
+        - {x: 74.5, y: -22.5}
+        - {x: 68.5, y: -25.5}
+        - {x: 65.5, y: -20.5}
+        - {x: 83.5, y: -20.5}
+        - {x: 95.5, y: -10.5}
+        - {x: 95.5, y: -3.5}
+        - {x: 92.5, y: 1.5}
+        - {x: 88.5, y: 2.5}
+        - {x: 75.5, y: 11.5}
+        - {x: 75.5, y: 10.5}
+        - {x: 85.5, y: 18.5}
+        - {x: 85.5, y: 21.5}
+        - {x: 74.5, y: 28.5}
+        - {x: 73.5, y: 28.5}
+        - {x: 78.5, y: 28.5}
+        - {x: 85.5, y: 32.5}
+        - {x: 87.5, y: 44.5}
+        - {x: 59.5, y: 90.5}
+        - {x: 57.5, y: 90.5}
+        - {x: 38.5, y: 66.5}
+        - {x: 37.5, y: 63.5}
+        - {x: 40.5, y: 71.5}
+        - {x: 40.5, y: 74.5}
+        - {x: 38.5, y: 76.5}
+        - {x: 38.5, y: 81.5}
+        - {x: 36.5, y: 83.5}
+        - {x: 33.5, y: 82.5}
+        - {x: 36.5, y: 85.5}
+        - {x: 33.5, y: 90.5}
+        - {x: -19.5, y: 90.5}
+        - {x: -34.5, y: 87.5}
+        - {x: -78.5, y: 62.5}
+        - {x: -78.5, y: -64.5}
+        - {x: -63.5, y: -54.5}
+        - {x: -59.5, y: -56.5}
+        - {x: -59.5, y: -55.5}
+        - {x: -60.5, y: -56.5}
+        - {x: -61.5, y: -55.5}
+        - {x: -65.5, y: -56.5}
+        - {x: -73.5, y: -67.5}
+        - {x: -71.5, y: -72.5}
+        - {x: -65.5, y: -77.5}
+        - {x: -63.5, y: -77.5}
+        - {x: -54.5, y: -71.5}
+        - {x: -52.5, y: -69.5}
+        - {x: -46.5, y: -71.5}
+        - {x: -29.5, y: -82.5}
+        - {x: -19.5, y: -85.5}
+        - {x: -2.5, y: -85.5}
+        - {x: 25.5, y: -72.5}
+        - {x: 27.5, y: -73.5}
+        - {x: 30.5, y: -78.5}
+      - - {x: 68.5, y: -45.5}
+        - {x: 65.5, y: -54.5}
+        - {x: 65.5, y: -62.5}
+        - {x: 67.5, y: -65.5}
+        - {x: 73.5, y: -65.5}
+        - {x: 82.5, y: -64.5}
+        - {x: 83.5, y: -63.5}
+        - {x: 83.5, y: -49.5}
+        - {x: 80.5, y: -45.5}
+      - - {x: 79.5, y: -33.5}
+        - {x: 79.5, y: -43.5}
+        - {x: 81.5, y: -48.5}
+        - {x: 84.5, y: -49.5}
+        - {x: 89.5, y: -49.5}
+        - {x: 96.5, y: -47.5}
+        - {x: 96.5, y: -43.5}
+        - {x: 95.5, y: -38.5}
+        - {x: 89.5, y: -33.5}
+      - - {x: 90.5, y: 45.5}
+        - {x: 87.5, y: 44.5}
+        - {x: 87.5, y: 37.5}
+        - {x: 88.5, y: 35.5}
+        - {x: 93.5, y: 35.5}
+        - {x: 96.5, y: 40.5}
+        - {x: 96.5, y: 42.5}
+        - {x: 93.5, y: 45.5}
+      - - {x: -28.5, y: 85.5}
+        - {x: -29.5, y: 83.5}
+        - {x: -29.5, y: 78.5}
+        - {x: -27.5, y: 74.5}
+        - {x: -26.5, y: 73.5}
+        - {x: -23.5, y: 73.5}
+        - {x: -18.5, y: 77.5}
+        - {x: -18.5, y: 81.5}
+        - {x: -24.5, y: 85.5}
+      - - {x: 62.5, y: 89.5}
+        - {x: 62.5, y: 84.5}
+        - {x: 65.5, y: 79.5}
+        - {x: 67.5, y: 79.5}
+        - {x: 74.5, y: 85.5}
+        - {x: 73.5, y: 91.5}
+        - {x: 71.5, y: 93.5}
+    - name: smell_sprite_14
+      rect:
+        serializedVersion: 2
+        x: 1530
+        y: 1282
+        width: 255
+        height: 255
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -24.5, y: -80.5}
+        - {x: -33.5, y: -87.5}
+        - {x: -33.5, y: -92.5}
+        - {x: -27.5, y: -100.5}
+        - {x: -17.5, y: -100.5}
+        - {x: -16.5, y: -97.5}
+        - {x: -16.5, y: -80.5}
+      - - {x: 36.5, y: -70.5}
+        - {x: 41.5, y: -66.5}
+        - {x: 56.5, y: -64.5}
+        - {x: 96.5, y: -32.5}
+        - {x: 96.5, y: 64.5}
+        - {x: 53.5, y: 93.5}
+        - {x: 21.5, y: 93.5}
+        - {x: 20.5, y: 90.5}
+        - {x: 17.5, y: 93.5}
+        - {x: -55.5, y: 93.5}
+        - {x: -77.5, y: 77.5}
+        - {x: -77.5, y: -32.5}
+        - {x: -74.5, y: -36.5}
+        - {x: -64.5, y: -40.5}
+        - {x: -62.5, y: -39.5}
+        - {x: -54.5, y: -37.5}
+        - {x: -53.5, y: -33.5}
+        - {x: -52.5, y: -37.5}
+        - {x: -60.5, y: -42.5}
+        - {x: -65.5, y: -52.5}
+        - {x: -62.5, y: -54.5}
+        - {x: -58.5, y: -56.5}
+        - {x: -58.5, y: -55.5}
+        - {x: -59.5, y: -56.5}
+        - {x: -60.5, y: -55.5}
+        - {x: -66.5, y: -55.5}
+        - {x: -75.5, y: -77.5}
+        - {x: -69.5, y: -90.5}
+        - {x: 54.5, y: -90.5}
+        - {x: 53.5, y: -78.5}
+        - {x: 43.5, y: -66.5}
+        - {x: 41.5, y: -67.5}
+      - - {x: 67.5, y: -59.5}
+        - {x: 68.5, y: -62.5}
+        - {x: 71.5, y: -65.5}
+        - {x: 73.5, y: -66.5}
+        - {x: 80.5, y: -66.5}
+        - {x: 84.5, y: -62.5}
+        - {x: 84.5, y: -52.5}
+        - {x: 81.5, y: -45.5}
+        - {x: 69.5, y: -45.5}
+        - {x: 66.5, y: -54.5}
+      - - {x: 90.5, y: -33.5}
+        - {x: 81.5, y: -33.5}
+        - {x: 80.5, y: -35.5}
+        - {x: 80.5, y: -46.5}
+        - {x: 83.5, y: -48.5}
+        - {x: 97.5, y: -48.5}
+        - {x: 97.5, y: -45.5}
+        - {x: 96.5, y: -38.5}
+      - - {x: -74.5, y: -22.5}
+        - {x: -71.5, y: -21.5}
+        - {x: -71.5, y: -18.5}
+        - {x: -74.5, y: -17.5}
+        - {x: -76.5, y: -19.5}
+      - - {x: 88.5, y: 37.5}
+        - {x: 89.5, y: 36.5}
+        - {x: 92.5, y: 36.5}
+        - {x: 97.5, y: 39.5}
+        - {x: 97.5, y: 41.5}
+        - {x: 96.5, y: 43.5}
+        - {x: 91.5, y: 45.5}
+        - {x: 88.5, y: 43.5}
+      - - {x: -28.5, y: 82.5}
+        - {x: -28.5, y: 80.5}
+        - {x: -23.5, y: 75.5}
+        - {x: -19.5, y: 76.5}
+        - {x: -17.5, y: 78.5}
+        - {x: -19.5, y: 83.5}
+        - {x: -23.5, y: 84.5}
+      - - {x: 69.5, y: 93.5}
+        - {x: 65.5, y: 88.5}
+        - {x: 65.5, y: 83.5}
+        - {x: 67.5, y: 80.5}
+        - {x: 74.5, y: 80.5}
+        - {x: 75.5, y: 85.5}
+        - {x: 75.5, y: 93.5}
+    - name: smell_sprite_15
+      rect:
+        serializedVersion: 2
+        x: 1785
+        y: 1282
+        width: 255
+        height: 255
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -19.5, y: -84.5}
+        - {x: -23.5, y: -84.5}
+        - {x: -32.5, y: -87.5}
+        - {x: -32.5, y: -93.5}
+        - {x: -24.5, y: -99.5}
+        - {x: -20.5, y: -99.5}
+        - {x: -17.5, y: -98.5}
+        - {x: -15.5, y: -92.5}
+        - {x: -15.5, y: -89.5}
+      - - {x: 50.5, y: -56.5}
+        - {x: 53.5, y: -61.5}
+        - {x: 60.5, y: -61.5}
+        - {x: 87.5, y: -34.5}
+        - {x: 85.5, y: -30.5}
+        - {x: 75.5, y: -19.5}
+        - {x: 80.5, y: -23.5}
+        - {x: 91.5, y: -19.5}
+        - {x: 97.5, y: -15.5}
+        - {x: 97.5, y: 43.5}
+        - {x: 72.5, y: 99.5}
+        - {x: -40.5, y: 99.5}
+        - {x: -60.5, y: 56.5}
+        - {x: -46.5, y: 47.5}
+        - {x: -44.5, y: 45.5}
+        - {x: -41.5, y: 46.5}
+        - {x: -44.5, y: 45.5}
+        - {x: -48.5, y: 46.5}
+        - {x: -52.5, y: 48.5}
+        - {x: -59.5, y: 51.5}
+        - {x: -79.5, y: 42.5}
+        - {x: -79.5, y: -94.5}
+        - {x: 54.5, y: -94.5}
+        - {x: 56.5, y: -76.5}
+        - {x: 51.5, y: -59.5}
+        - {x: 48.5, y: -58.5}
+      - - {x: 73.5, y: -45.5}
+        - {x: 71.5, y: -45.5}
+        - {x: 68.5, y: -52.5}
+        - {x: 68.5, y: -64.5}
+        - {x: 75.5, y: -66.5}
+        - {x: 80.5, y: -66.5}
+        - {x: 82.5, y: -64.5}
+        - {x: 85.5, y: -53.5}
+        - {x: 83.5, y: -48.5}
+        - {x: 81.5, y: -46.5}
+      - - {x: 85.5, y: -33.5}
+        - {x: 85.5, y: -48.5}
+        - {x: 97.5, y: -48.5}
+        - {x: 98.5, y: -47.5}
+        - {x: 98.5, y: -42.5}
+        - {x: 91.5, y: -33.5}
+      - - {x: 84.5, y: 16.5}
+        - {x: 80.5, y: 13.5}
+        - {x: 80.5, y: 7.5}
+        - {x: 81.5, y: 3.5}
+        - {x: 87.5, y: 3.5}
+        - {x: 91.5, y: 7.5}
+        - {x: 91.5, y: 9.5}
+        - {x: 88.5, y: 15.5}
+      - - {x: 96.5, y: 33.5}
+        - {x: 99.5, y: 34.5}
+        - {x: 99.5, y: 37.5}
+        - {x: 96.5, y: 38.5}
+        - {x: 94.5, y: 36.5}
+      - - {x: 91.5, y: 39.5}
+        - {x: 94.5, y: 40.5}
+        - {x: 94.5, y: 43.5}
+        - {x: 91.5, y: 44.5}
+        - {x: 89.5, y: 42.5}
+      - - {x: 39.5, y: 71.5}
+        - {x: 42.5, y: 72.5}
+        - {x: 42.5, y: 75.5}
+        - {x: 39.5, y: 76.5}
+        - {x: 37.5, y: 74.5}
+      - - {x: -25.5, y: 81.5}
+        - {x: -25.5, y: 79.5}
+        - {x: -22.5, y: 76.5}
+        - {x: -21.5, y: 76.5}
+        - {x: -17.5, y: 80.5}
+        - {x: -18.5, y: 83.5}
+        - {x: -22.5, y: 84.5}
+      - - {x: 69.5, y: 91.5}
+        - {x: 65.5, y: 87.5}
+        - {x: 65.5, y: 84.5}
+        - {x: 68.5, y: 80.5}
+        - {x: 75.5, y: 80.5}
+        - {x: 78.5, y: 84.5}
+        - {x: 78.5, y: 89.5}
+        - {x: 77.5, y: 90.5}
+    - name: smell_sprite_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1027
+        width: 255
+        height: 255
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -31.5, y: -97.5}
+        - {x: -30.5, y: -100.5}
+        - {x: -27.5, y: -100.5}
+        - {x: -25.5, y: -98.5}
+        - {x: -26.5, y: -95.5}
+        - {x: -29.5, y: -95.5}
+      - - {x: 8.5, y: -90.5}
+        - {x: 8.5, y: -94.5}
+        - {x: 11.5, y: -97.5}
+        - {x: 14.5, y: -96.5}
+        - {x: 14.5, y: -90.5}
+        - {x: 12.5, y: -88.5}
+        - {x: 10.5, y: -88.5}
+      - - {x: 38.5, y: -58.5}
+        - {x: 37.5, y: -58.5}
+        - {x: 38.5, y: -58.5}
+        - {x: 41.5, y: -59.5}
+        - {x: 43.5, y: -57.5}
+        - {x: 45.5, y: -63.5}
+        - {x: 53.5, y: -61.5}
+        - {x: 60.5, y: -53.5}
+        - {x: 78.5, y: -34.5}
+        - {x: 76.5, y: -29.5}
+        - {x: 65.5, y: -22.5}
+        - {x: 73.5, y: -24.5}
+        - {x: 90.5, y: -19.5}
+        - {x: 90.5, y: 51.5}
+        - {x: 68.5, y: 98.5}
+        - {x: -62.5, y: 98.5}
+        - {x: -64.5, y: 56.5}
+        - {x: -53.5, y: 46.5}
+        - {x: -51.5, y: 44.5}
+        - {x: -48.5, y: 45.5}
+        - {x: -51.5, y: 44.5}
+        - {x: -55.5, y: 45.5}
+        - {x: -59.5, y: 47.5}
+        - {x: -70.5, y: 51.5}
+        - {x: -87.5, y: 43.5}
+        - {x: -89.5, y: 37.5}
+        - {x: -89.5, y: 18.5}
+        - {x: -84.5, y: -3.5}
+        - {x: -81.5, y: -5.5}
+        - {x: -77.5, y: -5.5}
+        - {x: -71.5, y: -8.5}
+        - {x: -77.5, y: -5.5}
+        - {x: -80.5, y: -5.5}
+        - {x: -83.5, y: -6.5}
+        - {x: -84.5, y: -9.5}
+        - {x: -85.5, y: -42.5}
+        - {x: -76.5, y: -51.5}
+        - {x: -72.5, y: -48.5}
+        - {x: -80.5, y: -68.5}
+        - {x: -74.5, y: -91.5}
+        - {x: -47.5, y: -95.5}
+        - {x: 46.5, y: -95.5}
+        - {x: 50.5, y: -77.5}
+        - {x: 44.5, y: -63.5}
+        - {x: 44.5, y: -60.5}
+      - - {x: -39.5, y: -91.5}
+        - {x: -38.5, y: -94.5}
+        - {x: -34.5, y: -94.5}
+        - {x: -32.5, y: -92.5}
+        - {x: -33.5, y: -89.5}
+        - {x: -37.5, y: -89.5}
+      - - {x: -32.5, y: -89.5}
+        - {x: -32.5, y: -90.5}
+        - {x: -30.5, y: -92.5}
+        - {x: -29.5, y: -92.5}
+        - {x: -26.5, y: -89.5}
+        - {x: -26.5, y: -87.5}
+        - {x: -29.5, y: -86.5}
+      - - {x: 61.5, y: -63.5}
+        - {x: 65.5, y: -67.5}
+        - {x: 74.5, y: -67.5}
+        - {x: 78.5, y: -61.5}
+        - {x: 78.5, y: -54.5}
+        - {x: 73.5, y: -47.5}
+        - {x: 70.5, y: -46.5}
+        - {x: 63.5, y: -46.5}
+        - {x: 61.5, y: -54.5}
+      - - {x: 81.5, y: -42.5}
+        - {x: 81.5, y: -46.5}
+        - {x: 85.5, y: -49.5}
+        - {x: 90.5, y: -49.5}
+        - {x: 91.5, y: -48.5}
+        - {x: 91.5, y: -44.5}
+        - {x: 86.5, y: -42.5}
+      - - {x: 75.5, y: 15.5}
+        - {x: 73.5, y: 12.5}
+        - {x: 73.5, y: 5.5}
+        - {x: 75.5, y: 2.5}
+        - {x: 80.5, y: 2.5}
+        - {x: 85.5, y: 6.5}
+        - {x: 85.5, y: 9.5}
+        - {x: 81.5, y: 15.5}
+      - - {x: 84.5, y: 38.5}
+        - {x: 87.5, y: 39.5}
+        - {x: 87.5, y: 42.5}
+        - {x: 84.5, y: 43.5}
+        - {x: 82.5, y: 41.5}
+      - - {x: 62.5, y: 89.5}
+        - {x: 58.5, y: 86.5}
+        - {x: 62.5, y: 79.5}
+        - {x: 67.5, y: 79.5}
+        - {x: 69.5, y: 81.5}
+        - {x: 69.5, y: 87.5}
+        - {x: 68.5, y: 89.5}
+    - name: smell_sprite_17
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 1027
+        width: 255
+        height: 255
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -30.5, y: -98.5}
+        - {x: -27.5, y: -101.5}
+        - {x: -24.5, y: -100.5}
+        - {x: -24.5, y: -98.5}
+        - {x: -27.5, y: -95.5}
+        - {x: -29.5, y: -95.5}
+      - - {x: 83.5, y: 2.5}
+        - {x: 69.5, y: 2.5}
+        - {x: 66.5, y: -0.5}
+        - {x: 67.5, y: 1.5}
+        - {x: 73.5, y: 5.5}
+        - {x: 76.5, y: 18.5}
+        - {x: 75.5, y: 21.5}
+        - {x: 72.5, y: 25.5}
+        - {x: 69.5, y: 26.5}
+        - {x: 64.5, y: 20.5}
+        - {x: 68.5, y: 27.5}
+        - {x: 72.5, y: 28.5}
+        - {x: 82.5, y: 27.5}
+        - {x: 77.5, y: 42.5}
+        - {x: 62.5, y: 76.5}
+        - {x: 53.5, y: 81.5}
+        - {x: 46.5, y: 76.5}
+        - {x: 46.5, y: 63.5}
+        - {x: 47.5, y: 60.5}
+        - {x: 46.5, y: 56.5}
+        - {x: 47.5, y: 58.5}
+        - {x: 47.5, y: 60.5}
+        - {x: 44.5, y: 65.5}
+        - {x: 45.5, y: 95.5}
+        - {x: 31.5, y: 98.5}
+        - {x: -68.5, y: 98.5}
+        - {x: -88.5, y: 58.5}
+        - {x: -88.5, y: 22.5}
+        - {x: -69.5, y: 16.5}
+        - {x: -66.5, y: 17.5}
+        - {x: -60.5, y: 15.5}
+        - {x: -75.5, y: 15.5}
+        - {x: -83.5, y: 8.5}
+        - {x: -86.5, y: 2.5}
+        - {x: -87.5, y: -14.5}
+        - {x: -81.5, y: -47.5}
+        - {x: -71.5, y: -78.5}
+        - {x: -31.5, y: -95.5}
+        - {x: 50.5, y: -95.5}
+        - {x: 55.5, y: -94.5}
+        - {x: 91.5, y: -35.5}
+        - {x: 91.5, y: -1.5}
+        - {x: 90.5, y: -0.5}
+      - - {x: -74.5, y: -78.5}
+        - {x: -71.5, y: -77.5}
+        - {x: -71.5, y: -74.5}
+        - {x: -74.5, y: -73.5}
+        - {x: -76.5, y: -75.5}
+      - - {x: 62.5, y: -63.5}
+        - {x: 68.5, y: -67.5}
+        - {x: 76.5, y: -67.5}
+        - {x: 79.5, y: -62.5}
+        - {x: 79.5, y: -53.5}
+        - {x: 77.5, y: -46.5}
+        - {x: 65.5, y: -46.5}
+        - {x: 62.5, y: -53.5}
+      - - {x: 82.5, y: -43.5}
+        - {x: 85.5, y: -42.5}
+        - {x: 85.5, y: -39.5}
+        - {x: 82.5, y: -38.5}
+        - {x: 80.5, y: -40.5}
+      - - {x: 77.5, y: -41.5}
+        - {x: 80.5, y: -40.5}
+        - {x: 80.5, y: -37.5}
+        - {x: 77.5, y: -36.5}
+        - {x: 75.5, y: -38.5}
+      - - {x: 72.5, y: 6.5}
+        - {x: 79.5, y: 3.5}
+        - {x: 84.5, y: 5.5}
+        - {x: 84.5, y: 10.5}
+        - {x: 83.5, y: 14.5}
+        - {x: 80.5, y: 15.5}
+        - {x: 76.5, y: 15.5}
+        - {x: 72.5, y: 10.5}
+      - - {x: 83.5, y: 41.5}
+        - {x: 83.5, y: 40.5}
+        - {x: 85.5, y: 38.5}
+        - {x: 86.5, y: 38.5}
+        - {x: 89.5, y: 41.5}
+        - {x: 89.5, y: 43.5}
+        - {x: 86.5, y: 44.5}
+      - - {x: 68.5, y: 92.5}
+        - {x: 61.5, y: 92.5}
+        - {x: 59.5, y: 89.5}
+        - {x: 59.5, y: 84.5}
+        - {x: 62.5, y: 80.5}
+        - {x: 65.5, y: 80.5}
+        - {x: 70.5, y: 84.5}
+        - {x: 70.5, y: 91.5}
+    - name: smell_sprite_18
+      rect:
+        serializedVersion: 2
+        x: 510
+        y: 1027
+        width: 255
+        height: 255
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -27.5, y: -100.5}
+        - {x: -24.5, y: -99.5}
+        - {x: -24.5, y: -96.5}
+        - {x: -27.5, y: -95.5}
+        - {x: -29.5, y: -97.5}
+      - - {x: 75.5, y: 13.5}
+        - {x: 66.5, y: 18.5}
+        - {x: 69.5, y: 16.5}
+        - {x: 72.5, y: 15.5}
+        - {x: 80.5, y: 14.5}
+        - {x: 92.5, y: 25.5}
+        - {x: 92.5, y: 32.5}
+        - {x: 85.5, y: 40.5}
+        - {x: 72.5, y: 64.5}
+        - {x: 54.5, y: 85.5}
+        - {x: 47.5, y: 76.5}
+        - {x: 47.5, y: 62.5}
+        - {x: 49.5, y: 61.5}
+        - {x: 48.5, y: 59.5}
+        - {x: 50.5, y: 55.5}
+        - {x: 48.5, y: 58.5}
+        - {x: 48.5, y: 60.5}
+        - {x: 44.5, y: 64.5}
+        - {x: 29.5, y: 64.5}
+        - {x: 31.5, y: 64.5}
+        - {x: 34.5, y: 68.5}
+        - {x: 34.5, y: 70.5}
+        - {x: 37.5, y: 80.5}
+        - {x: 29.5, y: 98.5}
+        - {x: -72.5, y: 98.5}
+        - {x: -87.5, y: 53.5}
+        - {x: -87.5, y: -9.5}
+        - {x: -85.5, y: -13.5}
+        - {x: -73.5, y: -23.5}
+        - {x: -67.5, y: -24.5}
+        - {x: -65.5, y: -24.5}
+        - {x: -63.5, y: -22.5}
+        - {x: -70.5, y: -30.5}
+        - {x: -80.5, y: -30.5}
+        - {x: -83.5, y: -42.5}
+        - {x: -71.5, y: -50.5}
+        - {x: -68.5, y: -45.5}
+        - {x: -68.5, y: -44.5}
+        - {x: -67.5, y: -52.5}
+        - {x: -72.5, y: -56.5}
+        - {x: -73.5, y: -94.5}
+        - {x: -49.5, y: -97.5}
+        - {x: 68.5, y: -97.5}
+        - {x: 89.5, y: -24.5}
+        - {x: 92.5, y: -9.5}
+        - {x: 92.5, y: 3.5}
+      - - {x: -73.5, y: -78.5}
+        - {x: -70.5, y: -77.5}
+        - {x: -70.5, y: -74.5}
+        - {x: -73.5, y: -73.5}
+        - {x: -75.5, y: -75.5}
+      - - {x: 65.5, y: -46.5}
+        - {x: 65.5, y: -64.5}
+        - {x: 68.5, y: -67.5}
+        - {x: 77.5, y: -67.5}
+        - {x: 78.5, y: -66.5}
+        - {x: 80.5, y: -59.5}
+        - {x: 80.5, y: -55.5}
+        - {x: 76.5, y: -46.5}
+      - - {x: 77.5, y: 15.5}
+        - {x: 75.5, y: 12.5}
+        - {x: 75.5, y: 7.5}
+        - {x: 78.5, y: 3.5}
+        - {x: 82.5, y: 3.5}
+        - {x: 85.5, y: 6.5}
+        - {x: 85.5, y: 11.5}
+        - {x: 79.5, y: 15.5}
+      - - {x: 84.5, y: 41.5}
+        - {x: 84.5, y: 40.5}
+        - {x: 86.5, y: 38.5}
+        - {x: 87.5, y: 38.5}
+        - {x: 90.5, y: 41.5}
+        - {x: 90.5, y: 43.5}
+        - {x: 87.5, y: 44.5}
+      - - {x: 67.5, y: 92.5}
+        - {x: 62.5, y: 88.5}
+        - {x: 62.5, y: 85.5}
+        - {x: 65.5, y: 80.5}
+        - {x: 69.5, y: 80.5}
+        - {x: 70.5, y: 86.5}
+        - {x: 70.5, y: 92.5}
+    - name: smell_sprite_19
+      rect:
+        serializedVersion: 2
+        x: 765
+        y: 1027
+        width: 255
+        height: 255
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 48.5, y: -62.5}
+        - {x: 57.5, y: -72.5}
+        - {x: 93.5, y: -30.5}
+        - {x: 93.5, y: 34.5}
+        - {x: 84.5, y: 45.5}
+        - {x: 70.5, y: 38.5}
+        - {x: 68.5, y: 36.5}
+        - {x: 67.5, y: 45.5}
+        - {x: 44.5, y: 66.5}
+        - {x: 38.5, y: 65.5}
+        - {x: 28.5, y: 76.5}
+        - {x: 28.5, y: 77.5}
+        - {x: 28.5, y: 76.5}
+        - {x: 31.5, y: 73.5}
+        - {x: 33.5, y: 73.5}
+        - {x: 40.5, y: 81.5}
+        - {x: 30.5, y: 99.5}
+        - {x: 17.5, y: 99.5}
+        - {x: 14.5, y: 91.5}
+        - {x: 19.5, y: 91.5}
+        - {x: 3.5, y: 89.5}
+        - {x: -59.5, y: 99.5}
+        - {x: -78.5, y: 99.5}
+        - {x: -89.5, y: 75.5}
+        - {x: -89.5, y: -12.5}
+        - {x: -74.5, y: -16.5}
+        - {x: -70.5, y: -12.5}
+        - {x: -71.5, y: -15.5}
+        - {x: -68.5, y: -26.5}
+        - {x: -69.5, y: -31.5}
+        - {x: -69.5, y: -32.5}
+        - {x: -80.5, y: -29.5}
+        - {x: -89.5, y: -44.5}
+        - {x: -89.5, y: -91.5}
+        - {x: -73.5, y: -97.5}
+        - {x: 49.5, y: -97.5}
+        - {x: 53.5, y: -77.5}
+        - {x: 44.5, y: -59.5}
+        - {x: 42.5, y: -57.5}
+      - - {x: -72.5, y: -78.5}
+        - {x: -69.5, y: -77.5}
+        - {x: -69.5, y: -74.5}
+        - {x: -72.5, y: -73.5}
+        - {x: -74.5, y: -75.5}
+      - - {x: 73.5, y: -48.5}
+        - {x: 67.5, y: -55.5}
+        - {x: 67.5, y: -65.5}
+        - {x: 71.5, y: -67.5}
+        - {x: 77.5, y: -67.5}
+        - {x: 81.5, y: -61.5}
+        - {x: 81.5, y: -55.5}
+        - {x: 77.5, y: -48.5}
+      - - {x: 68.5, y: -51.5}
+        - {x: 71.5, y: -50.5}
+        - {x: 71.5, y: -47.5}
+        - {x: 68.5, y: -46.5}
+        - {x: 66.5, y: -48.5}
+      - - {x: 79.5, y: -41.5}
+        - {x: 82.5, y: -40.5}
+        - {x: 82.5, y: -37.5}
+        - {x: 79.5, y: -36.5}
+        - {x: 77.5, y: -38.5}
+      - - {x: 76.5, y: 15.5}
+        - {x: 76.5, y: 7.5}
+        - {x: 77.5, y: 3.5}
+        - {x: 81.5, y: 3.5}
+        - {x: 86.5, y: 5.5}
+        - {x: 88.5, y: 13.5}
+        - {x: 87.5, y: 15.5}
+      - - {x: 74.5, y: 21.5}
+        - {x: 73.5, y: 19.5}
+        - {x: 74.5, y: 16.5}
+        - {x: 79.5, y: 16.5}
+        - {x: 82.5, y: 17.5}
+        - {x: 82.5, y: 20.5}
+        - {x: 80.5, y: 21.5}
+      - - {x: 87.5, y: 38.5}
+        - {x: 90.5, y: 39.5}
+        - {x: 90.5, y: 42.5}
+        - {x: 87.5, y: 43.5}
+        - {x: 85.5, y: 41.5}
+      - - {x: 48.5, y: 66.5}
+        - {x: 48.5, y: 61.5}
+        - {x: 52.5, y: 52.5}
+        - {x: 57.5, y: 51.5}
+        - {x: 61.5, y: 51.5}
+        - {x: 63.5, y: 52.5}
+        - {x: 63.5, y: 56.5}
+        - {x: 55.5, y: 66.5}
+      - - {x: 52.5, y: 80.5}
+        - {x: 52.5, y: 71.5}
+        - {x: 58.5, y: 63.5}
+        - {x: 63.5, y: 63.5}
+        - {x: 64.5, y: 65.5}
+        - {x: 64.5, y: 77.5}
+        - {x: 61.5, y: 80.5}
+      - - {x: 70.5, y: 92.5}
+        - {x: 66.5, y: 92.5}
+        - {x: 63.5, y: 89.5}
+        - {x: 63.5, y: 84.5}
+        - {x: 65.5, y: 83.5}
+        - {x: 73.5, y: 83.5}
+        - {x: 74.5, y: 85.5}
+        - {x: 74.5, y: 87.5}
+    - name: smell_sprite_20
+      rect:
+        serializedVersion: 2
+        x: 1020
+        y: 1027
+        width: 255
+        height: 255
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -39.5, y: 93.5}
+        - {x: -43.5, y: 92.5}
+        - {x: -48.5, y: 85.5}
+        - {x: -56.5, y: 57.5}
+        - {x: -49.5, y: 45.5}
+        - {x: -46.5, y: 44.5}
+        - {x: -49.5, y: 46.5}
+        - {x: -55.5, y: 54.5}
+        - {x: -74.5, y: 50.5}
+        - {x: -88.5, y: 42.5}
+        - {x: -88.5, y: 29.5}
+        - {x: -67.5, y: 15.5}
+        - {x: -59.5, y: 16.5}
+        - {x: -62.5, y: 13.5}
+        - {x: -62.5, y: 14.5}
+        - {x: -74.5, y: 15.5}
+        - {x: -84.5, y: 6.5}
+        - {x: -80.5, y: -10.5}
+        - {x: -84.5, y: -42.5}
+        - {x: -68.5, y: -47.5}
+        - {x: -56.5, y: -46.5}
+        - {x: -54.5, y: -47.5}
+        - {x: -54.5, y: -46.5}
+        - {x: -55.5, y: -47.5}
+        - {x: -56.5, y: -46.5}
+        - {x: -61.5, y: -46.5}
+        - {x: -67.5, y: -67.5}
+        - {x: -73.5, y: -91.5}
+        - {x: -44.5, y: -97.5}
+        - {x: 63.5, y: -97.5}
+        - {x: 94.5, y: -47.5}
+        - {x: 94.5, y: 24.5}
+        - {x: 49.5, y: 93.5}
+      - - {x: 68.5, y: -59.5}
+        - {x: 68.5, y: -63.5}
+        - {x: 70.5, y: -66.5}
+        - {x: 73.5, y: -67.5}
+        - {x: 77.5, y: -67.5}
+        - {x: 82.5, y: -62.5}
+        - {x: 82.5, y: -54.5}
+        - {x: 80.5, y: -50.5}
+        - {x: 73.5, y: -50.5}
+        - {x: 71.5, y: -51.5}
+      - - {x: 50.5, y: -62.5}
+        - {x: 53.5, y: -61.5}
+        - {x: 53.5, y: -58.5}
+        - {x: 50.5, y: -57.5}
+        - {x: 48.5, y: -59.5}
+      - - {x: 80.5, y: 15.5}
+        - {x: 77.5, y: 14.5}
+        - {x: 77.5, y: 9.5}
+        - {x: 78.5, y: 3.5}
+        - {x: 88.5, y: 3.5}
+        - {x: 89.5, y: 9.5}
+        - {x: 89.5, y: 14.5}
+        - {x: 87.5, y: 15.5}
+      - - {x: 82.5, y: 38.5}
+        - {x: 76.5, y: 35.5}
+        - {x: 74.5, y: 30.5}
+        - {x: 74.5, y: 20.5}
+        - {x: 94.5, y: 20.5}
+        - {x: 94.5, y: 32.5}
+        - {x: 85.5, y: 38.5}
+      - - {x: -78.5, y: 23.5}
+        - {x: -75.5, y: 24.5}
+        - {x: -75.5, y: 27.5}
+        - {x: -78.5, y: 28.5}
+        - {x: -80.5, y: 26.5}
+      - - {x: 88.5, y: 38.5}
+        - {x: 91.5, y: 39.5}
+        - {x: 91.5, y: 42.5}
+        - {x: 88.5, y: 43.5}
+        - {x: 86.5, y: 41.5}
+      - - {x: 53.5, y: 80.5}
+        - {x: 53.5, y: 71.5}
+        - {x: 59.5, y: 63.5}
+        - {x: 64.5, y: 63.5}
+        - {x: 65.5, y: 65.5}
+        - {x: 65.5, y: 77.5}
+        - {x: 62.5, y: 80.5}
+      - - {x: 29.5, y: 76.5}
+        - {x: 32.5, y: 73.5}
+        - {x: 35.5, y: 74.5}
+        - {x: 35.5, y: 76.5}
+        - {x: 32.5, y: 79.5}
+        - {x: 30.5, y: 79.5}
+      - - {x: 68.5, y: 92.5}
+        - {x: 67.5, y: 90.5}
+        - {x: 67.5, y: 84.5}
+        - {x: 75.5, y: 84.5}
+        - {x: 75.5, y: 88.5}
+        - {x: 70.5, y: 92.5}
+      - - {x: 21.5, y: 95.5}
+        - {x: 23.5, y: 93.5}
+        - {x: 26.5, y: 94.5}
+        - {x: 26.5, y: 97.5}
+        - {x: 24.5, y: 99.5}
+        - {x: 21.5, y: 98.5}
+    - name: smell_sprite_21
+      rect:
+        serializedVersion: 2
+        x: 1275
+        y: 1027
+        width: 255
+        height: 255
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 40.5, y: -66.5}
+        - {x: 47.5, y: -61.5}
+        - {x: 44.5, y: -56.5}
+        - {x: 45.5, y: -54.5}
+        - {x: 45.5, y: -51.5}
+        - {x: 45.5, y: -55.5}
+        - {x: 46.5, y: -58.5}
+        - {x: 59.5, y: -59.5}
+        - {x: 83.5, y: -40.5}
+        - {x: 99.5, y: -41.5}
+        - {x: 99.5, y: 94.5}
+        - {x: -87.5, y: 94.5}
+        - {x: -87.5, y: -50.5}
+        - {x: -68.5, y: -46.5}
+        - {x: -66.5, y: -44.5}
+        - {x: -65.5, y: -40.5}
+        - {x: -60.5, y: -39.5}
+        - {x: -61.5, y: -40.5}
+        - {x: -81.5, y: -86.5}
+        - {x: -50.5, y: -97.5}
+        - {x: -39.5, y: -97.5}
+        - {x: -24.5, y: -93.5}
+        - {x: -20.5, y: -90.5}
+        - {x: -14.5, y: -97.5}
+        - {x: 47.5, y: -97.5}
+        - {x: 57.5, y: -86.5}
+        - {x: 48.5, y: -64.5}
+        - {x: 43.5, y: -65.5}
+      - - {x: 71.5, y: -50.5}
+        - {x: 69.5, y: -60.5}
+        - {x: 69.5, y: -63.5}
+        - {x: 71.5, y: -66.5}
+        - {x: 74.5, y: -67.5}
+        - {x: 78.5, y: -67.5}
+        - {x: 83.5, y: -62.5}
+        - {x: 83.5, y: -56.5}
+        - {x: 80.5, y: -50.5}
+      - - {x: 51.5, y: -62.5}
+        - {x: 54.5, y: -61.5}
+        - {x: 54.5, y: -58.5}
+        - {x: 51.5, y: -57.5}
+        - {x: 49.5, y: -59.5}
+      - - {x: 80.5, y: 15.5}
+        - {x: 79.5, y: 13.5}
+        - {x: 78.5, y: 9.5}
+        - {x: 81.5, y: 3.5}
+        - {x: 86.5, y: 3.5}
+        - {x: 91.5, y: 6.5}
+        - {x: 91.5, y: 13.5}
+        - {x: 89.5, y: 15.5}
+      - - {x: -77.5, y: 23.5}
+        - {x: -74.5, y: 24.5}
+        - {x: -74.5, y: 27.5}
+        - {x: -77.5, y: 28.5}
+        - {x: -79.5, y: 26.5}
+      - - {x: 65.5, y: 74.5}
+        - {x: 61.5, y: 78.5}
+        - {x: 58.5, y: 78.5}
+        - {x: 57.5, y: 76.5}
+        - {x: 57.5, y: 67.5}
+        - {x: 60.5, y: 63.5}
+        - {x: 64.5, y: 63.5}
+        - {x: 66.5, y: 65.5}
+        - {x: 65.5, y: 68.5}
+      - - {x: 71.5, y: 92.5}
+        - {x: 69.5, y: 92.5}
+        - {x: 68.5, y: 89.5}
+        - {x: 72.5, y: 84.5}
+        - {x: 74.5, y: 84.5}
+        - {x: 79.5, y: 88.5}
+        - {x: 79.5, y: 90.5}
+        - {x: 76.5, y: 91.5}
+      - - {x: 22.5, y: 95.5}
+        - {x: 24.5, y: 93.5}
+        - {x: 27.5, y: 94.5}
+        - {x: 27.5, y: 97.5}
+        - {x: 25.5, y: 99.5}
+        - {x: 22.5, y: 98.5}
+      - - {x: 29.5, y: 95.5}
+        - {x: 32.5, y: 96.5}
+        - {x: 32.5, y: 99.5}
+        - {x: 29.5, y: 100.5}
+        - {x: 27.5, y: 98.5}
+    - name: smell_sprite_22
+      rect:
+        serializedVersion: 2
+        x: 1530
+        y: 1027
+        width: 255
+        height: 255
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 44.5, y: -64.5}
+        - {x: 71.5, y: -55.5}
+        - {x: 91.5, y: -39.5}
+        - {x: 96.5, y: -32.5}
+        - {x: 100.5, y: -10.5}
+        - {x: 94.5, y: -0.5}
+        - {x: 75.5, y: 18.5}
+        - {x: 71.5, y: 23.5}
+        - {x: 75.5, y: 18.5}
+        - {x: 82.5, y: 14.5}
+        - {x: 100.5, y: 22.5}
+        - {x: 100.5, y: 37.5}
+        - {x: 98.5, y: 41.5}
+        - {x: 35.5, y: 96.5}
+        - {x: -31.5, y: 96.5}
+        - {x: -43.5, y: 94.5}
+        - {x: -83.5, y: 44.5}
+        - {x: -83.5, y: -3.5}
+        - {x: -71.5, y: -14.5}
+        - {x: -68.5, y: -14.5}
+        - {x: -83.5, y: -43.5}
+        - {x: -67.5, y: -46.5}
+        - {x: -65.5, y: -44.5}
+        - {x: -64.5, y: -40.5}
+        - {x: -59.5, y: -39.5}
+        - {x: -60.5, y: -40.5}
+        - {x: -62.5, y: -43.5}
+        - {x: -55.5, y: -54.5}
+        - {x: -50.5, y: -59.5}
+        - {x: -54.5, y: -56.5}
+        - {x: -58.5, y: -55.5}
+        - {x: -62.5, y: -63.5}
+        - {x: -66.5, y: -80.5}
+        - {x: -25.5, y: -97.5}
+        - {x: 50.5, y: -97.5}
+        - {x: 54.5, y: -91.5}
+        - {x: 53.5, y: -78.5}
+        - {x: 47.5, y: -66.5}
+      - - {x: 70.5, y: -67.5}
+        - {x: 80.5, y: -67.5}
+        - {x: 81.5, y: -65.5}
+        - {x: 81.5, y: -58.5}
+        - {x: 80.5, y: -56.5}
+        - {x: 76.5, y: -56.5}
+        - {x: 70.5, y: -57.5}
+      - - {x: 74.5, y: -52.5}
+        - {x: 75.5, y: -55.5}
+        - {x: 78.5, y: -55.5}
+        - {x: 80.5, y: -53.5}
+        - {x: 79.5, y: -50.5}
+        - {x: 76.5, y: -50.5}
+      - - {x: 79.5, y: 7.5}
+        - {x: 83.5, y: 3.5}
+        - {x: 84.5, y: 3.5}
+        - {x: 92.5, y: 8.5}
+        - {x: 92.5, y: 11.5}
+        - {x: 91.5, y: 15.5}
+        - {x: 80.5, y: 15.5}
+        - {x: 79.5, y: 12.5}
+      - - {x: -76.5, y: 23.5}
+        - {x: -73.5, y: 24.5}
+        - {x: -73.5, y: 27.5}
+        - {x: -76.5, y: 28.5}
+        - {x: -78.5, y: 26.5}
+      - - {x: -84.5, y: 33.5}
+        - {x: -81.5, y: 34.5}
+        - {x: -81.5, y: 37.5}
+        - {x: -84.5, y: 38.5}
+        - {x: -86.5, y: 36.5}
+      - - {x: 63.5, y: 52.5}
+        - {x: 66.5, y: 53.5}
+        - {x: 66.5, y: 56.5}
+        - {x: 63.5, y: 57.5}
+        - {x: 61.5, y: 55.5}
+      - - {x: 60.5, y: 80.5}
+        - {x: 58.5, y: 77.5}
+        - {x: 58.5, y: 66.5}
+        - {x: 61.5, y: 63.5}
+        - {x: 66.5, y: 63.5}
+        - {x: 67.5, y: 65.5}
+        - {x: 67.5, y: 80.5}
+      - - {x: 72.5, y: 92.5}
+        - {x: 70.5, y: 92.5}
+        - {x: 69.5, y: 89.5}
+        - {x: 73.5, y: 84.5}
+        - {x: 75.5, y: 84.5}
+        - {x: 80.5, y: 88.5}
+        - {x: 80.5, y: 90.5}
+        - {x: 77.5, y: 91.5}
+      - - {x: 25.5, y: 93.5}
+        - {x: 28.5, y: 94.5}
+        - {x: 28.5, y: 97.5}
+        - {x: 25.5, y: 98.5}
+        - {x: 23.5, y: 96.5}
+      - - {x: 30.5, y: 95.5}
+        - {x: 33.5, y: 96.5}
+        - {x: 33.5, y: 99.5}
+        - {x: 30.5, y: 100.5}
+        - {x: 28.5, y: 98.5}
+    - name: smell_sprite_23
+      rect:
+        serializedVersion: 2
+        x: 1785
+        y: 1027
+        width: 255
+        height: 255
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -0.5, y: 97.5}
+        - {x: -10.5, y: 82.5}
+        - {x: -12.5, y: 73.5}
+        - {x: -12.5, y: 69.5}
+        - {x: -15.5, y: 69.5}
+        - {x: -14.5, y: 69.5}
+        - {x: -12.5, y: 71.5}
+        - {x: -12.5, y: 72.5}
+        - {x: -21.5, y: 89.5}
+        - {x: -48.5, y: 93.5}
+        - {x: -79.5, y: 31.5}
+        - {x: -79.5, y: 29.5}
+        - {x: -69.5, y: 24.5}
+        - {x: -67.5, y: 26.5}
+        - {x: -74.5, y: 18.5}
+        - {x: -79.5, y: 16.5}
+        - {x: -79.5, y: 14.5}
+        - {x: -77.5, y: 9.5}
+        - {x: -79.5, y: 9.5}
+        - {x: -79.5, y: -44.5}
+        - {x: -65.5, y: -48.5}
+        - {x: -51.5, y: -57.5}
+        - {x: -48.5, y: -59.5}
+        - {x: -50.5, y: -61.5}
+        - {x: -53.5, y: -56.5}
+        - {x: -57.5, y: -55.5}
+        - {x: -61.5, y: -63.5}
+        - {x: -59.5, y: -74.5}
+        - {x: -45.5, y: -77.5}
+        - {x: -38.5, y: -75.5}
+        - {x: -36.5, y: -97.5}
+        - {x: 89.5, y: -97.5}
+        - {x: 101.5, y: -59.5}
+        - {x: 101.5, y: 43.5}
+        - {x: 30.5, y: 97.5}
+      - - {x: 76.5, y: -56.5}
+        - {x: 71.5, y: -58.5}
+        - {x: 71.5, y: -62.5}
+        - {x: 72.5, y: -64.5}
+        - {x: 82.5, y: -64.5}
+        - {x: 82.5, y: -56.5}
+      - - {x: 78.5, y: -55.5}
+        - {x: 81.5, y: -54.5}
+        - {x: 81.5, y: -51.5}
+        - {x: 78.5, y: -50.5}
+        - {x: 76.5, y: -52.5}
+      - - {x: -69.5, y: -14.5}
+        - {x: -66.5, y: -13.5}
+        - {x: -66.5, y: -10.5}
+        - {x: -69.5, y: -9.5}
+        - {x: -71.5, y: -11.5}
+      - - {x: 89.5, y: -2.5}
+        - {x: 88.5, y: -4.5}
+        - {x: 92.5, y: -11.5}
+        - {x: 97.5, y: -9.5}
+        - {x: 97.5, y: -3.5}
+        - {x: 94.5, y: -2.5}
+      - - {x: -75.5, y: 23.5}
+        - {x: -72.5, y: 24.5}
+        - {x: -72.5, y: 27.5}
+        - {x: -75.5, y: 28.5}
+        - {x: -77.5, y: 26.5}
+      - - {x: -80.5, y: 29.5}
+        - {x: -77.5, y: 30.5}
+        - {x: -77.5, y: 33.5}
+        - {x: -80.5, y: 34.5}
+        - {x: -82.5, y: 32.5}
+      - - {x: -83.5, y: 33.5}
+        - {x: -80.5, y: 34.5}
+        - {x: -80.5, y: 37.5}
+        - {x: -83.5, y: 38.5}
+        - {x: -85.5, y: 36.5}
+      - - {x: -78.5, y: 37.5}
+        - {x: -75.5, y: 38.5}
+        - {x: -75.5, y: 41.5}
+        - {x: -78.5, y: 42.5}
+        - {x: -80.5, y: 40.5}
+      - - {x: 64.5, y: 52.5}
+        - {x: 67.5, y: 53.5}
+        - {x: 67.5, y: 56.5}
+        - {x: 64.5, y: 57.5}
+        - {x: 62.5, y: 55.5}
+      - - {x: 67.5, y: 74.5}
+        - {x: 65.5, y: 77.5}
+        - {x: 63.5, y: 77.5}
+        - {x: 59.5, y: 75.5}
+        - {x: 59.5, y: 69.5}
+        - {x: 62.5, y: 63.5}
+        - {x: 66.5, y: 63.5}
+        - {x: 68.5, y: 65.5}
+        - {x: 67.5, y: 68.5}
+      - - {x: 78.5, y: 86.5}
+        - {x: 81.5, y: 87.5}
+        - {x: 81.5, y: 90.5}
+        - {x: 78.5, y: 91.5}
+        - {x: 76.5, y: 89.5}
+      - - {x: 72.5, y: 87.5}
+        - {x: 75.5, y: 88.5}
+        - {x: 75.5, y: 91.5}
+        - {x: 72.5, y: 92.5}
+        - {x: 70.5, y: 90.5}
+      - - {x: 26.5, y: 93.5}
+        - {x: 29.5, y: 94.5}
+        - {x: 29.5, y: 97.5}
+        - {x: 26.5, y: 98.5}
+        - {x: 24.5, y: 96.5}
+      - - {x: 31.5, y: 95.5}
+        - {x: 34.5, y: 96.5}
+        - {x: 34.5, y: 99.5}
+        - {x: 31.5, y: 100.5}
+        - {x: 29.5, y: 98.5}
+    - name: smell_sprite_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 772
+        width: 255
+        height: 255
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 37.5, y: -50.5}
+        - {x: 38.5, y: -52.5}
+        - {x: 41.5, y: -53.5}
+        - {x: 43.5, y: -56.5}
+        - {x: 55.5, y: -68.5}
+        - {x: 73.5, y: -65.5}
+        - {x: 90.5, y: -31.5}
+        - {x: 76.5, y: -29.5}
+        - {x: 72.5, y: -29.5}
+        - {x: 60.5, y: -25.5}
+        - {x: 58.5, y: -23.5}
+        - {x: 60.5, y: -24.5}
+        - {x: 74.5, y: -29.5}
+        - {x: 84.5, y: -23.5}
+        - {x: 94.5, y: -2.5}
+        - {x: 94.5, y: 48.5}
+        - {x: 60.5, y: 77.5}
+        - {x: 28.5, y: 68.5}
+        - {x: 30.5, y: 69.5}
+        - {x: 33.5, y: 79.5}
+        - {x: 32.5, y: 87.5}
+        - {x: 26.5, y: 93.5}
+        - {x: 18.5, y: 91.5}
+        - {x: 10.5, y: 97.5}
+        - {x: -4.5, y: 97.5}
+        - {x: -8.5, y: 95.5}
+        - {x: -19.5, y: 81.5}
+        - {x: -19.5, y: 68.5}
+        - {x: -22.5, y: 68.5}
+        - {x: -21.5, y: 68.5}
+        - {x: -19.5, y: 70.5}
+        - {x: -19.5, y: 72.5}
+        - {x: -23.5, y: 85.5}
+        - {x: -42.5, y: 92.5}
+        - {x: -47.5, y: 89.5}
+        - {x: -51.5, y: 78.5}
+        - {x: -53.5, y: 51.5}
+        - {x: -59.5, y: 52.5}
+        - {x: -86.5, y: 35.5}
+        - {x: -86.5, y: -83.5}
+        - {x: -33.5, y: -102.5}
+        - {x: 30.5, y: -102.5}
+        - {x: 35.5, y: -101.5}
+        - {x: 46.5, y: -91.5}
+        - {x: 45.5, y: -63.5}
+        - {x: 40.5, y: -54.5}
+      - - {x: -15.5, y: -87.5}
+        - {x: -12.5, y: -86.5}
+        - {x: -12.5, y: -83.5}
+        - {x: -15.5, y: -82.5}
+        - {x: -17.5, y: -84.5}
+      - - {x: 70.5, y: -64.5}
+        - {x: 72.5, y: -65.5}
+        - {x: 75.5, y: -64.5}
+        - {x: 75.5, y: -60.5}
+        - {x: 74.5, y: -57.5}
+        - {x: 71.5, y: -57.5}
+        - {x: 70.5, y: -59.5}
+      - - {x: -83.5, y: -41.5}
+        - {x: -83.5, y: -43.5}
+        - {x: -75.5, y: -47.5}
+        - {x: -72.5, y: -45.5}
+        - {x: -72.5, y: -36.5}
+        - {x: -75.5, y: -34.5}
+        - {x: -80.5, y: -34.5}
+      - - {x: 89.5, y: -21.5}
+        - {x: 89.5, y: -28.5}
+        - {x: 90.5, y: -30.5}
+        - {x: 98.5, y: -30.5}
+        - {x: 98.5, y: -21.5}
+      - - {x: -76.5, y: -15.5}
+        - {x: -73.5, y: -14.5}
+        - {x: -73.5, y: -11.5}
+        - {x: -76.5, y: -10.5}
+        - {x: -78.5, y: -12.5}
+      - - {x: 83.5, y: -7.5}
+        - {x: 83.5, y: -10.5}
+        - {x: 85.5, y: -12.5}
+        - {x: 90.5, y: -10.5}
+        - {x: 90.5, y: -6.5}
+        - {x: 87.5, y: -3.5}
+        - {x: 84.5, y: -4.5}
+      - - {x: -84.5, y: 5.5}
+        - {x: -80.5, y: 2.5}
+        - {x: -74.5, y: 2.5}
+        - {x: -74.5, y: 13.5}
+        - {x: -81.5, y: 13.5}
+        - {x: -83.5, y: 12.5}
+        - {x: -84.5, y: 11.5}
+      - - {x: -87.5, y: 28.5}
+        - {x: -84.5, y: 29.5}
+        - {x: -84.5, y: 32.5}
+        - {x: -87.5, y: 33.5}
+        - {x: -89.5, y: 31.5}
+      - - {x: -90.5, y: 32.5}
+        - {x: -87.5, y: 33.5}
+        - {x: -87.5, y: 36.5}
+        - {x: -90.5, y: 37.5}
+        - {x: -92.5, y: 35.5}
+      - - {x: -85.5, y: 36.5}
+        - {x: -82.5, y: 37.5}
+        - {x: -82.5, y: 40.5}
+        - {x: -85.5, y: 41.5}
+        - {x: -87.5, y: 39.5}
+      - - {x: 57.5, y: 51.5}
+        - {x: 60.5, y: 52.5}
+        - {x: 60.5, y: 55.5}
+        - {x: 57.5, y: 56.5}
+        - {x: 55.5, y: 54.5}
+      - - {x: -53.5, y: 52.5}
+        - {x: -50.5, y: 53.5}
+        - {x: -50.5, y: 56.5}
+        - {x: -53.5, y: 57.5}
+        - {x: -55.5, y: 55.5}
+      - - {x: 54.5, y: 65.5}
+        - {x: 55.5, y: 62.5}
+        - {x: 59.5, y: 62.5}
+        - {x: 61.5, y: 64.5}
+        - {x: 60.5, y: 67.5}
+        - {x: 56.5, y: 67.5}
+      - - {x: 54.5, y: 73.5}
+        - {x: 57.5, y: 70.5}
+        - {x: 60.5, y: 71.5}
+        - {x: 60.5, y: 73.5}
+        - {x: 57.5, y: 76.5}
+        - {x: 55.5, y: 76.5}
+      - - {x: 71.5, y: 85.5}
+        - {x: 74.5, y: 86.5}
+        - {x: 74.5, y: 89.5}
+        - {x: 71.5, y: 90.5}
+        - {x: 69.5, y: 88.5}
+      - - {x: 65.5, y: 86.5}
+        - {x: 68.5, y: 87.5}
+        - {x: 68.5, y: 90.5}
+        - {x: 65.5, y: 91.5}
+        - {x: 63.5, y: 89.5}
+      - - {x: 19.5, y: 92.5}
+        - {x: 22.5, y: 93.5}
+        - {x: 22.5, y: 96.5}
+        - {x: 19.5, y: 97.5}
+        - {x: 17.5, y: 95.5}
+    - name: smell_sprite_25
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 772
+        width: 255
+        height: 255
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 68.5, y: -31.5}
+        - {x: 69.5, y: -34.5}
+        - {x: 69.5, y: -33.5}
+        - {x: 65.5, y: -32.5}
+        - {x: 61.5, y: -23.5}
+        - {x: 72.5, y: -28.5}
+        - {x: 76.5, y: -28.5}
+        - {x: 87.5, y: -25.5}
+        - {x: 96.5, y: -7.5}
+        - {x: 96.5, y: 53.5}
+        - {x: 45.5, y: 96.5}
+        - {x: -7.5, y: 96.5}
+        - {x: -16.5, y: 83.5}
+        - {x: -18.5, y: 71.5}
+        - {x: -23.5, y: 67.5}
+        - {x: -21.5, y: 68.5}
+        - {x: -18.5, y: 77.5}
+        - {x: -41.5, y: 96.5}
+        - {x: -84.5, y: 96.5}
+        - {x: -84.5, y: -101.5}
+        - {x: 30.5, y: -101.5}
+        - {x: 96.5, y: -54.5}
+        - {x: 96.5, y: -43.5}
+        - {x: 86.5, y: -33.5}
+        - {x: 77.5, y: -28.5}
+        - {x: 69.5, y: -28.5}
+      - - {x: 41.5, y: -83.5}
+        - {x: 36.5, y: -87.5}
+        - {x: 36.5, y: -93.5}
+        - {x: 37.5, y: -95.5}
+        - {x: 41.5, y: -95.5}
+        - {x: 43.5, y: -94.5}
+        - {x: 47.5, y: -88.5}
+        - {x: 46.5, y: -85.5}
+      - - {x: 29.5, y: -75.5}
+        - {x: 28.5, y: -80.5}
+        - {x: 28.5, y: -85.5}
+        - {x: 29.5, y: -86.5}
+        - {x: 38.5, y: -86.5}
+        - {x: 41.5, y: -79.5}
+        - {x: 41.5, y: -76.5}
+        - {x: 37.5, y: -72.5}
+      - - {x: -59.5, y: -60.5}
+        - {x: -63.5, y: -60.5}
+        - {x: -66.5, y: -66.5}
+        - {x: -66.5, y: -73.5}
+        - {x: -65.5, y: -74.5}
+        - {x: -63.5, y: -74.5}
+        - {x: -58.5, y: -71.5}
+        - {x: -57.5, y: -67.5}
+        - {x: -57.5, y: -61.5}
+      - - {x: -68.5, y: -68.5}
+        - {x: -65.5, y: -67.5}
+        - {x: -65.5, y: -64.5}
+        - {x: -68.5, y: -63.5}
+        - {x: -70.5, y: -65.5}
+      - - {x: 73.5, y: -65.5}
+        - {x: 76.5, y: -64.5}
+        - {x: 76.5, y: -61.5}
+        - {x: 73.5, y: -60.5}
+        - {x: 71.5, y: -62.5}
+      - - {x: 71.5, y: -56.5}
+        - {x: 74.5, y: -55.5}
+        - {x: 74.5, y: -52.5}
+        - {x: 71.5, y: -51.5}
+        - {x: 69.5, y: -53.5}
+      - - {x: -81.5, y: -32.5}
+        - {x: -82.5, y: -35.5}
+        - {x: -82.5, y: -36.5}
+        - {x: -80.5, y: -42.5}
+        - {x: -76.5, y: -42.5}
+        - {x: -75.5, y: -40.5}
+        - {x: -75.5, y: -35.5}
+        - {x: -79.5, y: -32.5}
+      - - {x: -60.5, y: -40.5}
+        - {x: -57.5, y: -39.5}
+        - {x: -57.5, y: -36.5}
+        - {x: -60.5, y: -35.5}
+        - {x: -62.5, y: -37.5}
+      - - {x: -66.5, y: -38.5}
+        - {x: -63.5, y: -37.5}
+        - {x: -63.5, y: -34.5}
+        - {x: -66.5, y: -33.5}
+        - {x: -68.5, y: -35.5}
+      - - {x: 90.5, y: -24.5}
+        - {x: 91.5, y: -29.5}
+        - {x: 94.5, y: -31.5}
+        - {x: 96.5, y: -31.5}
+        - {x: 98.5, y: -30.5}
+        - {x: 100.5, y: -25.5}
+        - {x: 100.5, y: -22.5}
+        - {x: 95.5, y: -20.5}
+      - - {x: 84.5, y: -7.5}
+        - {x: 84.5, y: -10.5}
+        - {x: 86.5, y: -12.5}
+        - {x: 91.5, y: -10.5}
+        - {x: 91.5, y: -6.5}
+        - {x: 88.5, y: -3.5}
+        - {x: 85.5, y: -4.5}
+      - - {x: -88.5, y: 31.5}
+        - {x: -87.5, y: 28.5}
+        - {x: -85.5, y: 28.5}
+        - {x: -80.5, y: 32.5}
+        - {x: -80.5, y: 34.5}
+        - {x: -83.5, y: 35.5}
+      - - {x: -89.5, y: 32.5}
+        - {x: -86.5, y: 33.5}
+        - {x: -86.5, y: 36.5}
+        - {x: -89.5, y: 37.5}
+        - {x: -91.5, y: 35.5}
+      - - {x: 56.5, y: 70.5}
+        - {x: 59.5, y: 71.5}
+        - {x: 59.5, y: 74.5}
+        - {x: 56.5, y: 75.5}
+        - {x: 54.5, y: 73.5}
+      - - {x: -46.5, y: 85.5}
+        - {x: -43.5, y: 82.5}
+        - {x: -40.5, y: 83.5}
+        - {x: -40.5, y: 85.5}
+        - {x: -43.5, y: 88.5}
+        - {x: -45.5, y: 88.5}
+    - name: smell_sprite_26
+      rect:
+        serializedVersion: 2
+        x: 510
+        y: 772
+        width: 255
+        height: 255
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 66.5, y: -48.5}
+        - {x: 63.5, y: -45.5}
+        - {x: 62.5, y: -41.5}
+        - {x: 61.5, y: -40.5}
+        - {x: 61.5, y: -37.5}
+        - {x: 61.5, y: -39.5}
+        - {x: 63.5, y: -41.5}
+        - {x: 64.5, y: -45.5}
+        - {x: 66.5, y: -47.5}
+        - {x: 68.5, y: -47.5}
+        - {x: 69.5, y: -44.5}
+        - {x: 76.5, y: -48.5}
+        - {x: 78.5, y: -49.5}
+        - {x: 87.5, y: -39.5}
+        - {x: 97.5, y: 9.5}
+        - {x: 97.5, y: 31.5}
+        - {x: 29.5, y: 96.5}
+        - {x: -11.5, y: 96.5}
+        - {x: -16.5, y: 77.5}
+        - {x: -17.5, y: 71.5}
+        - {x: -23.5, y: 66.5}
+        - {x: -26.5, y: 66.5}
+        - {x: -24.5, y: 66.5}
+        - {x: -20.5, y: 68.5}
+        - {x: -19.5, y: 72.5}
+        - {x: -25.5, y: 84.5}
+        - {x: -40.5, y: 84.5}
+        - {x: -50.5, y: 80.5}
+        - {x: -46.5, y: 73.5}
+        - {x: -63.5, y: 59.5}
+        - {x: -66.5, y: 50.5}
+        - {x: -67.5, y: 41.5}
+        - {x: -64.5, y: 33.5}
+        - {x: -67.5, y: 32.5}
+        - {x: -65.5, y: 35.5}
+        - {x: -65.5, y: 37.5}
+        - {x: -68.5, y: 39.5}
+        - {x: -83.5, y: 37.5}
+        - {x: -83.5, y: -35.5}
+        - {x: -62.5, y: -85.5}
+        - {x: -30.5, y: -101.5}
+        - {x: -5.5, y: -101.5}
+        - {x: 2.5, y: -100.5}
+        - {x: 76.5, y: -68.5}
+        - {x: 73.5, y: -48.5}
+        - {x: 68.5, y: -47.5}
+      - - {x: 42.5, y: -83.5}
+        - {x: 38.5, y: -87.5}
+        - {x: 37.5, y: -92.5}
+        - {x: 37.5, y: -94.5}
+        - {x: 39.5, y: -95.5}
+        - {x: 41.5, y: -95.5}
+        - {x: 44.5, y: -93.5}
+        - {x: 45.5, y: -86.5}
+        - {x: 45.5, y: -84.5}
+      - - {x: 29.5, y: -75.5}
+        - {x: 29.5, y: -85.5}
+        - {x: 31.5, y: -86.5}
+        - {x: 35.5, y: -85.5}
+        - {x: 35.5, y: -75.5}
+        - {x: 33.5, y: -74.5}
+      - - {x: 35.5, y: -78.5}
+        - {x: 38.5, y: -83.5}
+        - {x: 41.5, y: -82.5}
+        - {x: 42.5, y: -77.5}
+        - {x: 38.5, y: -72.5}
+        - {x: 35.5, y: -73.5}
+      - - {x: -63.5, y: -63.5}
+        - {x: -63.5, y: -70.5}
+        - {x: -60.5, y: -72.5}
+        - {x: -57.5, y: -71.5}
+        - {x: -57.5, y: -65.5}
+        - {x: -59.5, y: -63.5}
+      - - {x: -81.5, y: -35.5}
+        - {x: -79.5, y: -40.5}
+        - {x: -77.5, y: -42.5}
+        - {x: -74.5, y: -41.5}
+        - {x: -74.5, y: -37.5}
+        - {x: -78.5, y: -32.5}
+        - {x: -80.5, y: -32.5}
+      - - {x: -59.5, y: -40.5}
+        - {x: -56.5, y: -39.5}
+        - {x: -56.5, y: -36.5}
+        - {x: -59.5, y: -35.5}
+        - {x: -61.5, y: -37.5}
+      - - {x: -65.5, y: -38.5}
+        - {x: -62.5, y: -37.5}
+        - {x: -62.5, y: -34.5}
+        - {x: -65.5, y: -33.5}
+        - {x: -67.5, y: -35.5}
+      - - {x: 91.5, y: -24.5}
+        - {x: 92.5, y: -29.5}
+        - {x: 95.5, y: -31.5}
+        - {x: 97.5, y: -31.5}
+        - {x: 99.5, y: -30.5}
+        - {x: 102.5, y: -26.5}
+        - {x: 100.5, y: -21.5}
+        - {x: 96.5, y: -20.5}
+      - - {x: 86.5, y: -4.5}
+        - {x: 85.5, y: -9.5}
+        - {x: 87.5, y: -11.5}
+        - {x: 90.5, y: -11.5}
+        - {x: 92.5, y: -9.5}
+        - {x: 92.5, y: -6.5}
+        - {x: 89.5, y: -3.5}
+      - - {x: 82.5, y: 8.5}
+        - {x: 82.5, y: 7.5}
+        - {x: 84.5, y: 5.5}
+        - {x: 85.5, y: 5.5}
+        - {x: 88.5, y: 8.5}
+        - {x: 88.5, y: 10.5}
+        - {x: 85.5, y: 11.5}
+      - - {x: -85.5, y: 28.5}
+        - {x: -82.5, y: 29.5}
+        - {x: -82.5, y: 32.5}
+        - {x: -85.5, y: 33.5}
+        - {x: -87.5, y: 31.5}
+      - - {x: -45.5, y: 85.5}
+        - {x: -42.5, y: 82.5}
+        - {x: -39.5, y: 83.5}
+        - {x: -39.5, y: 85.5}
+        - {x: -42.5, y: 88.5}
+        - {x: -44.5, y: 88.5}
+    - name: smell_sprite_27
+      rect:
+        serializedVersion: 2
+        x: 765
+        y: 772
+        width: 255
+        height: 255
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 5.5, y: -80.5}
+        - {x: 8.5, y: -81.5}
+        - {x: 12.5, y: -81.5}
+        - {x: 25.5, y: -83.5}
+        - {x: 60.5, y: -78.5}
+        - {x: 73.5, y: -58.5}
+        - {x: 72.5, y: -30.5}
+        - {x: 65.5, y: -25.5}
+        - {x: 74.5, y: -31.5}
+        - {x: 85.5, y: -27.5}
+        - {x: 95.5, y: -17.5}
+        - {x: 96.5, y: -11.5}
+        - {x: 96.5, y: 31.5}
+        - {x: 92.5, y: 37.5}
+        - {x: 82.5, y: 30.5}
+        - {x: 81.5, y: 30.5}
+        - {x: 85.5, y: 35.5}
+        - {x: 86.5, y: 39.5}
+        - {x: 54.5, y: 70.5}
+        - {x: 42.5, y: 73.5}
+        - {x: 40.5, y: 71.5}
+        - {x: 44.5, y: 94.5}
+        - {x: 33.5, y: 100.5}
+        - {x: -17.5, y: 100.5}
+        - {x: -50.5, y: 80.5}
+        - {x: -40.5, y: 63.5}
+        - {x: -38.5, y: 60.5}
+        - {x: -35.5, y: 59.5}
+        - {x: -50.5, y: 61.5}
+        - {x: -89.5, y: 53.5}
+        - {x: -89.5, y: 34.5}
+        - {x: -88.5, y: 32.5}
+        - {x: -86.5, y: 32.5}
+        - {x: -81.5, y: -3.5}
+        - {x: -70.5, y: -93.5}
+        - {x: -40.5, y: -103.5}
+        - {x: 8.5, y: -103.5}
+        - {x: 9.5, y: -82.5}
+        - {x: 4.5, y: -79.5}
+        - {x: 4.5, y: -77.5}
+      - - {x: 43.5, y: -85.5}
+        - {x: 39.5, y: -85.5}
+        - {x: 38.5, y: -88.5}
+        - {x: 38.5, y: -93.5}
+        - {x: 40.5, y: -95.5}
+        - {x: 43.5, y: -95.5}
+        - {x: 47.5, y: -91.5}
+        - {x: 47.5, y: -89.5}
+        - {x: 46.5, y: -87.5}
+      - - {x: 30.5, y: -75.5}
+        - {x: 30.5, y: -85.5}
+        - {x: 32.5, y: -86.5}
+        - {x: 36.5, y: -85.5}
+        - {x: 36.5, y: -75.5}
+        - {x: 34.5, y: -74.5}
+      - - {x: 37.5, y: -69.5}
+        - {x: 36.5, y: -71.5}
+        - {x: 36.5, y: -84.5}
+        - {x: 41.5, y: -84.5}
+        - {x: 43.5, y: -79.5}
+        - {x: 43.5, y: -75.5}
+        - {x: 40.5, y: -69.5}
+      - - {x: 74.5, y: -30.5}
+        - {x: 71.5, y: -36.5}
+        - {x: 71.5, y: -38.5}
+        - {x: 74.5, y: -40.5}
+        - {x: 75.5, y: -40.5}
+        - {x: 73.5, y: -40.5}
+        - {x: 72.5, y: -43.5}
+        - {x: 76.5, y: -48.5}
+        - {x: 78.5, y: -48.5}
+        - {x: 86.5, y: -45.5}
+        - {x: 87.5, y: -40.5}
+        - {x: 87.5, y: -32.5}
+        - {x: 85.5, y: -30.5}
+      - - {x: -78.5, y: -36.5}
+        - {x: -80.5, y: -42.5}
+        - {x: -78.5, y: -44.5}
+        - {x: -77.5, y: -44.5}
+        - {x: -73.5, y: -40.5}
+        - {x: -73.5, y: -37.5}
+        - {x: -75.5, y: -35.5}
+      - - {x: 94.5, y: -27.5}
+        - {x: 97.5, y: -30.5}
+        - {x: 100.5, y: -29.5}
+        - {x: 102.5, y: -24.5}
+        - {x: 101.5, y: -22.5}
+        - {x: 97.5, y: -22.5}
+        - {x: 94.5, y: -23.5}
+      - - {x: 88.5, y: -10.5}
+        - {x: 93.5, y: -8.5}
+        - {x: 93.5, y: -5.5}
+        - {x: 90.5, y: -4.5}
+        - {x: 86.5, y: -7.5}
+      - - {x: -41.5, y: 82.5}
+        - {x: -38.5, y: 83.5}
+        - {x: -38.5, y: 86.5}
+        - {x: -41.5, y: 87.5}
+        - {x: -43.5, y: 85.5}
+    - name: smell_sprite_28
+      rect:
+        serializedVersion: 2
+        x: 1020
+        y: 772
+        width: 255
+        height: 255
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 3.5, y: -76.5}
+        - {x: 5.5, y: -75.5}
+        - {x: 9.5, y: -75.5}
+        - {x: 7.5, y: -75.5}
+        - {x: 4.5, y: -77.5}
+        - {x: 8.5, y: -82.5}
+        - {x: 16.5, y: -88.5}
+        - {x: 41.5, y: -75.5}
+        - {x: 31.5, y: -71.5}
+        - {x: 27.5, y: -71.5}
+        - {x: 25.5, y: -69.5}
+        - {x: 30.5, y: -71.5}
+        - {x: 31.5, y: -71.5}
+        - {x: 38.5, y: -68.5}
+        - {x: 39.5, y: -64.5}
+        - {x: 42.5, y: -54.5}
+        - {x: 40.5, y: -50.5}
+        - {x: 41.5, y: -52.5}
+        - {x: 43.5, y: -54.5}
+        - {x: 42.5, y: -57.5}
+        - {x: 44.5, y: -66.5}
+        - {x: 58.5, y: -75.5}
+        - {x: 74.5, y: -68.5}
+        - {x: 72.5, y: -48.5}
+        - {x: 73.5, y: -41.5}
+        - {x: 78.5, y: -39.5}
+        - {x: 75.5, y: -40.5}
+        - {x: 73.5, y: -42.5}
+        - {x: 74.5, y: -46.5}
+        - {x: 80.5, y: -49.5}
+        - {x: 88.5, y: -46.5}
+        - {x: 88.5, y: -29.5}
+        - {x: 80.5, y: -30.5}
+        - {x: 78.5, y: -31.5}
+        - {x: 76.5, y: -33.5}
+        - {x: 73.5, y: -31.5}
+        - {x: 78.5, y: -31.5}
+        - {x: 88.5, y: -25.5}
+        - {x: 93.5, y: -16.5}
+        - {x: 93.5, y: 49.5}
+        - {x: 60.5, y: 85.5}
+        - {x: 38.5, y: 100.5}
+        - {x: -17.5, y: 100.5}
+        - {x: -30.5, y: 79.5}
+        - {x: -27.5, y: 75.5}
+        - {x: -29.5, y: 71.5}
+        - {x: -29.5, y: 70.5}
+        - {x: -31.5, y: 73.5}
+        - {x: -28.5, y: 75.5}
+        - {x: -28.5, y: 77.5}
+        - {x: -43.5, y: 91.5}
+        - {x: -81.5, y: 58.5}
+        - {x: -88.5, y: 49.5}
+        - {x: -88.5, y: -5.5}
+        - {x: -82.5, y: -45.5}
+        - {x: -65.5, y: -80.5}
+        - {x: -55.5, y: -85.5}
+        - {x: -43.5, y: -80.5}
+        - {x: -41.5, y: -75.5}
+        - {x: -37.5, y: -69.5}
+        - {x: -39.5, y: -75.5}
+        - {x: -42.5, y: -86.5}
+        - {x: -39.5, y: -91.5}
+        - {x: -26.5, y: -102.5}
+        - {x: 2.5, y: -102.5}
+        - {x: 7.5, y: -94.5}
+        - {x: 8.5, y: -83.5}
+        - {x: 7.5, y: -81.5}
+      - - {x: 41.5, y: -95.5}
+        - {x: 44.5, y: -94.5}
+        - {x: 44.5, y: -91.5}
+        - {x: 41.5, y: -90.5}
+        - {x: 39.5, y: -92.5}
+      - - {x: 31.5, y: -85.5}
+        - {x: 33.5, y: -86.5}
+        - {x: 36.5, y: -84.5}
+        - {x: 36.5, y: -78.5}
+        - {x: 34.5, y: -76.5}
+        - {x: 31.5, y: -77.5}
+      - - {x: 37.5, y: -78.5}
+        - {x: 40.5, y: -83.5}
+        - {x: 43.5, y: -82.5}
+        - {x: 44.5, y: -77.5}
+        - {x: 40.5, y: -72.5}
+        - {x: 37.5, y: -73.5}
+      - - {x: -10.5, y: -80.5}
+        - {x: -7.5, y: -79.5}
+        - {x: -7.5, y: -76.5}
+        - {x: -10.5, y: -75.5}
+        - {x: -12.5, y: -77.5}
+      - - {x: -36.5, y: -63.5}
+        - {x: -33.5, y: -62.5}
+        - {x: -33.5, y: -59.5}
+        - {x: -36.5, y: -58.5}
+        - {x: -38.5, y: -60.5}
+      - - {x: -78.5, y: -39.5}
+        - {x: -77.5, y: -42.5}
+        - {x: -74.5, y: -42.5}
+        - {x: -72.5, y: -40.5}
+        - {x: -73.5, y: -37.5}
+        - {x: -76.5, y: -37.5}
+      - - {x: 95.5, y: -27.5}
+        - {x: 98.5, y: -30.5}
+        - {x: 101.5, y: -29.5}
+        - {x: 103.5, y: -24.5}
+        - {x: 102.5, y: -22.5}
+        - {x: 98.5, y: -22.5}
+        - {x: 95.5, y: -23.5}
+      - - {x: 89.5, y: -10.5}
+        - {x: 92.5, y: -9.5}
+        - {x: 92.5, y: -6.5}
+        - {x: 89.5, y: -5.5}
+        - {x: 87.5, y: -7.5}
+      - - {x: 94.5, y: 26.5}
+        - {x: 97.5, y: 27.5}
+        - {x: 97.5, y: 30.5}
+        - {x: 94.5, y: 31.5}
+        - {x: 92.5, y: 29.5}
+      - - {x: -63.5, y: 41.5}
+        - {x: -60.5, y: 37.5}
+        - {x: -57.5, y: 37.5}
+        - {x: -54.5, y: 38.5}
+        - {x: -53.5, y: 43.5}
+        - {x: -55.5, y: 45.5}
+        - {x: -62.5, y: 44.5}
+      - - {x: -100.5, y: 62.5}
+        - {x: -105.5, y: 58.5}
+        - {x: -107.5, y: 53.5}
+        - {x: -107.5, y: 48.5}
+        - {x: -106.5, y: 46.5}
+        - {x: -98.5, y: 46.5}
+        - {x: -94.5, y: 48.5}
+        - {x: -94.5, y: 56.5}
+        - {x: -99.5, y: 62.5}
+    - name: smell_sprite_29
+      rect:
+        serializedVersion: 2
+        x: 1275
+        y: 772
+        width: 255
+        height: 255
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 10.5, y: -75.5}
+        - {x: 13.5, y: -72.5}
+        - {x: 12.5, y: -70.5}
+        - {x: 14.5, y: -73.5}
+        - {x: 8.5, y: -78.5}
+        - {x: 9.5, y: -81.5}
+        - {x: 15.5, y: -83.5}
+        - {x: 36.5, y: -79.5}
+        - {x: 39.5, y: -67.5}
+        - {x: 43.5, y: -55.5}
+        - {x: 43.5, y: -53.5}
+        - {x: 43.5, y: -58.5}
+        - {x: 40.5, y: -67.5}
+        - {x: 95.5, y: -93.5}
+        - {x: 95.5, y: 82.5}
+        - {x: 68.5, y: 100.5}
+        - {x: -58.5, y: 100.5}
+        - {x: -43.5, y: 69.5}
+        - {x: -36.5, y: 62.5}
+        - {x: -34.5, y: 63.5}
+        - {x: -31.5, y: 66.5}
+        - {x: -31.5, y: 67.5}
+        - {x: -28.5, y: 69.5}
+        - {x: -33.5, y: 63.5}
+        - {x: -33.5, y: 62.5}
+        - {x: -49.5, y: 63.5}
+        - {x: -53.5, y: 55.5}
+        - {x: -60.5, y: 44.5}
+        - {x: -62.5, y: 41.5}
+        - {x: -69.5, y: 51.5}
+        - {x: -79.5, y: 58.5}
+        - {x: -87.5, y: 53.5}
+        - {x: -87.5, y: 15.5}
+        - {x: -73.5, y: -45.5}
+        - {x: -65.5, y: -79.5}
+        - {x: -59.5, y: -85.5}
+        - {x: -49.5, y: -84.5}
+        - {x: -41.5, y: -75.5}
+        - {x: -36.5, y: -69.5}
+        - {x: -38.5, y: -75.5}
+        - {x: -42.5, y: -86.5}
+        - {x: -22.5, y: -94.5}
+        - {x: -13.5, y: -87.5}
+        - {x: -7.5, y: -80.5}
+        - {x: -6.5, y: -77.5}
+        - {x: -8.5, y: -83.5}
+        - {x: -11.5, y: -100.5}
+        - {x: -6.5, y: -102.5}
+        - {x: 3.5, y: -102.5}
+        - {x: 6.5, y: -97.5}
+        - {x: 8.5, y: -85.5}
+        - {x: 6.5, y: -77.5}
+      - - {x: 39.5, y: -81.5}
+        - {x: 41.5, y: -83.5}
+        - {x: 44.5, y: -82.5}
+        - {x: 45.5, y: -77.5}
+        - {x: 43.5, y: -75.5}
+        - {x: 40.5, y: -76.5}
+      - - {x: -74.5, y: -42.5}
+        - {x: -71.5, y: -41.5}
+        - {x: -71.5, y: -38.5}
+        - {x: -74.5, y: -37.5}
+        - {x: -76.5, y: -39.5}
+      - - {x: 96.5, y: -25.5}
+        - {x: 99.5, y: -30.5}
+        - {x: 102.5, y: -28.5}
+        - {x: 101.5, y: -24.5}
+        - {x: 99.5, y: -22.5}
+        - {x: 97.5, y: -22.5}
+      - - {x: 95.5, y: 26.5}
+        - {x: 98.5, y: 27.5}
+        - {x: 98.5, y: 30.5}
+        - {x: 95.5, y: 31.5}
+        - {x: 93.5, y: 29.5}
+      - - {x: -106.5, y: 50.5}
+        - {x: -106.5, y: 48.5}
+        - {x: -103.5, y: 46.5}
+        - {x: -93.5, y: 46.5}
+        - {x: -93.5, y: 60.5}
+        - {x: -94.5, y: 65.5}
+        - {x: -101.5, y: 65.5}
+        - {x: -105.5, y: 60.5}
+    - name: smell_sprite_30
+      rect:
+        serializedVersion: 2
+        x: 1530
+        y: 772
+        width: 255
+        height: 255
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 14.5, y: -72.5}
+        - {x: 13.5, y: -69.5}
+        - {x: 15.5, y: -73.5}
+        - {x: 9.5, y: -78.5}
+        - {x: 15.5, y: -92.5}
+        - {x: 61.5, y: -84.5}
+        - {x: 73.5, y: -66.5}
+        - {x: 75.5, y: -48.5}
+        - {x: 71.5, y: -47.5}
+        - {x: 81.5, y: -48.5}
+        - {x: 86.5, y: -44.5}
+        - {x: 88.5, y: -42.5}
+        - {x: 90.5, y: -37.5}
+        - {x: 87.5, y: -32.5}
+        - {x: 80.5, y: -30.5}
+        - {x: 79.5, y: -30.5}
+        - {x: 80.5, y: -30.5}
+        - {x: 89.5, y: -31.5}
+        - {x: 98.5, y: -29.5}
+        - {x: 100.5, y: -27.5}
+        - {x: 100.5, y: 57.5}
+        - {x: 53.5, y: 95.5}
+        - {x: 41.5, y: 68.5}
+        - {x: 36.5, y: 64.5}
+        - {x: 38.5, y: 67.5}
+        - {x: 38.5, y: 68.5}
+        - {x: 36.5, y: 70.5}
+        - {x: 33.5, y: 72.5}
+        - {x: 31.5, y: 74.5}
+        - {x: 34.5, y: 72.5}
+        - {x: 36.5, y: 72.5}
+        - {x: 39.5, y: 79.5}
+        - {x: 36.5, y: 81.5}
+        - {x: 45.5, y: 93.5}
+        - {x: 32.5, y: 100.5}
+        - {x: -21.5, y: 100.5}
+        - {x: -49.5, y: 85.5}
+        - {x: -35.5, y: 62.5}
+        - {x: -33.5, y: 63.5}
+        - {x: -30.5, y: 66.5}
+        - {x: -30.5, y: 67.5}
+        - {x: -27.5, y: 69.5}
+        - {x: -32.5, y: 63.5}
+        - {x: -32.5, y: 62.5}
+        - {x: -48.5, y: 64.5}
+        - {x: -52.5, y: 56.5}
+        - {x: -50.5, y: 52.5}
+        - {x: -87.5, y: 64.5}
+        - {x: -87.5, y: -22.5}
+        - {x: -85.5, y: -52.5}
+        - {x: -67.5, y: -51.5}
+        - {x: -57.5, y: -49.5}
+        - {x: -56.5, y: -46.5}
+        - {x: -50.5, y: -43.5}
+        - {x: -49.5, y: -43.5}
+        - {x: -47.5, y: -42.5}
+        - {x: -52.5, y: -45.5}
+        - {x: -51.5, y: -48.5}
+        - {x: -48.5, y: -48.5}
+        - {x: -49.5, y: -48.5}
+        - {x: -52.5, y: -49.5}
+        - {x: -54.5, y: -47.5}
+        - {x: -57.5, y: -48.5}
+        - {x: -57.5, y: -50.5}
+        - {x: -54.5, y: -56.5}
+        - {x: -50.5, y: -59.5}
+        - {x: -63.5, y: -77.5}
+        - {x: -59.5, y: -89.5}
+        - {x: -45.5, y: -82.5}
+        - {x: -35.5, y: -73.5}
+        - {x: -34.5, y: -69.5}
+        - {x: -28.5, y: -69.5}
+        - {x: -37.5, y: -75.5}
+        - {x: -41.5, y: -86.5}
+        - {x: -20.5, y: -102.5}
+        - {x: 2.5, y: -102.5}
+        - {x: 10.5, y: -97.5}
+        - {x: 8.5, y: -77.5}
+        - {x: 11.5, y: -75.5}
+      - - {x: 100.5, y: -30.5}
+        - {x: 103.5, y: -29.5}
+        - {x: 103.5, y: -26.5}
+        - {x: 100.5, y: -25.5}
+        - {x: 98.5, y: -27.5}
+      - - {x: -96.5, y: 62.5}
+        - {x: -99.5, y: 62.5}
+        - {x: -104.5, y: 60.5}
+        - {x: -105.5, y: 56.5}
+        - {x: -105.5, y: 47.5}
+        - {x: -101.5, y: 46.5}
+        - {x: -94.5, y: 46.5}
+        - {x: -93.5, y: 49.5}
+        - {x: -92.5, y: 55.5}
+        - {x: -92.5, y: 57.5}
+    - name: smell_sprite_31
+      rect:
+        serializedVersion: 2
+        x: 1785
+        y: 772
+        width: 255
+        height: 255
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 14.5, y: -70.5}
+        - {x: 14.5, y: -67.5}
+        - {x: 14.5, y: -68.5}
+        - {x: 16.5, y: -70.5}
+        - {x: 9.5, y: -78.5}
+        - {x: 11.5, y: -81.5}
+        - {x: 16.5, y: -81.5}
+        - {x: 32.5, y: -76.5}
+        - {x: 34.5, y: -74.5}
+        - {x: 42.5, y: -73.5}
+        - {x: 45.5, y: -66.5}
+        - {x: 42.5, y: -61.5}
+        - {x: 58.5, y: -79.5}
+        - {x: 75.5, y: -70.5}
+        - {x: 96.5, y: -37.5}
+        - {x: 88.5, y: -32.5}
+        - {x: 81.5, y: -30.5}
+        - {x: 80.5, y: -30.5}
+        - {x: 81.5, y: -30.5}
+        - {x: 90.5, y: -31.5}
+        - {x: 101.5, y: -22.5}
+        - {x: 97.5, y: -7.5}
+        - {x: 78.5, y: 11.5}
+        - {x: 78.5, y: 15.5}
+        - {x: 73.5, y: 22.5}
+        - {x: 73.5, y: 24.5}
+        - {x: 75.5, y: 23.5}
+        - {x: 77.5, y: 23.5}
+        - {x: 77.5, y: 18.5}
+        - {x: 78.5, y: 15.5}
+        - {x: 79.5, y: 13.5}
+        - {x: 80.5, y: 10.5}
+        - {x: 84.5, y: 9.5}
+        - {x: 100.5, y: 23.5}
+        - {x: 102.5, y: 29.5}
+        - {x: 102.5, y: 46.5}
+        - {x: 90.5, y: 54.5}
+        - {x: 57.5, y: 75.5}
+        - {x: 39.5, y: 66.5}
+        - {x: 37.5, y: 64.5}
+        - {x: 39.5, y: 67.5}
+        - {x: 46.5, y: 70.5}
+        - {x: 39.5, y: 100.5}
+        - {x: -35.5, y: 100.5}
+        - {x: -85.5, y: 53.5}
+        - {x: -85.5, y: -11.5}
+        - {x: -68.5, y: -57.5}
+        - {x: -56.5, y: -50.5}
+        - {x: -49.5, y: -43.5}
+        - {x: -48.5, y: -43.5}
+        - {x: -49.5, y: -43.5}
+        - {x: -51.5, y: -45.5}
+        - {x: -55.5, y: -55.5}
+        - {x: -65.5, y: -77.5}
+        - {x: -57.5, y: -86.5}
+        - {x: -47.5, y: -85.5}
+        - {x: -34.5, y: -66.5}
+        - {x: -40.5, y: -82.5}
+        - {x: -37.5, y: -89.5}
+        - {x: -21.5, y: -94.5}
+        - {x: -12.5, y: -87.5}
+        - {x: -7.5, y: -98.5}
+        - {x: -4.5, y: -101.5}
+        - {x: -2.5, y: -102.5}
+        - {x: 5.5, y: -102.5}
+        - {x: 11.5, y: -93.5}
+        - {x: 10.5, y: -87.5}
+        - {x: 9.5, y: -77.5}
+      - - {x: 101.5, y: -30.5}
+        - {x: 104.5, y: -29.5}
+        - {x: 104.5, y: -26.5}
+        - {x: 101.5, y: -25.5}
+        - {x: 99.5, y: -27.5}
+      - - {x: -101.5, y: 62.5}
+        - {x: -104.5, y: 56.5}
+        - {x: -104.5, y: 49.5}
+        - {x: -101.5, y: 46.5}
+        - {x: -93.5, y: 46.5}
+        - {x: -91.5, y: 51.5}
+        - {x: -91.5, y: 59.5}
+        - {x: -96.5, y: 62.5}
+      - - {x: -35.5, y: 66.5}
+        - {x: -35.5, y: 65.5}
+        - {x: -33.5, y: 63.5}
+        - {x: -32.5, y: 63.5}
+        - {x: -29.5, y: 66.5}
+        - {x: -29.5, y: 68.5}
+        - {x: -32.5, y: 69.5}
+      - - {x: 32.5, y: 75.5}
+        - {x: 35.5, y: 72.5}
+        - {x: 38.5, y: 73.5}
+        - {x: 38.5, y: 75.5}
+        - {x: 35.5, y: 78.5}
+        - {x: 33.5, y: 78.5}
+    - name: smell_sprite_32
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 517
+        width: 255
+        height: 255
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -8.5, y: -88.5}
+        - {x: -14.5, y: -96.5}
+        - {x: -14.5, y: -101.5}
+        - {x: -9.5, y: -103.5}
+        - {x: -4.5, y: -103.5}
+        - {x: -2.5, y: -102.5}
+        - {x: -2.5, y: -91.5}
+        - {x: -4.5, y: -88.5}
+      - - {x: 49.5, y: 99.5}
+        - {x: -47.5, y: 99.5}
+        - {x: -91.5, y: 70.5}
+        - {x: -91.5, y: -57.5}
+        - {x: -64.5, y: -94.5}
+        - {x: -53.5, y: -94.5}
+        - {x: -51.5, y: -76.5}
+        - {x: -51.5, y: -75.5}
+        - {x: -51.5, y: -76.5}
+        - {x: -49.5, y: -78.5}
+        - {x: -46.5, y: -76.5}
+        - {x: -39.5, y: -62.5}
+        - {x: -46.5, y: -83.5}
+        - {x: -47.5, y: -89.5}
+        - {x: -40.5, y: -94.5}
+        - {x: 56.5, y: -94.5}
+        - {x: 97.5, y: -58.5}
+        - {x: 97.5, y: 68.5}
+      - - {x: 7.5, y: -82.5}
+        - {x: 10.5, y: -81.5}
+        - {x: 10.5, y: -78.5}
+        - {x: 7.5, y: -77.5}
+        - {x: 5.5, y: -79.5}
+      - - {x: 77.5, y: -47.5}
+        - {x: 80.5, y: -46.5}
+        - {x: 80.5, y: -43.5}
+        - {x: 77.5, y: -42.5}
+        - {x: 75.5, y: -44.5}
+      - - {x: 94.5, y: -31.5}
+        - {x: 97.5, y: -30.5}
+        - {x: 97.5, y: -27.5}
+        - {x: 94.5, y: -26.5}
+        - {x: 92.5, y: -28.5}
+      - - {x: 73.5, y: 9.5}
+        - {x: 76.5, y: 8.5}
+        - {x: 79.5, y: 10.5}
+        - {x: 78.5, y: 13.5}
+        - {x: 74.5, y: 14.5}
+        - {x: 72.5, y: 12.5}
+      - - {x: -74.5, y: 44.5}
+        - {x: -71.5, y: 45.5}
+        - {x: -71.5, y: 48.5}
+        - {x: -74.5, y: 49.5}
+        - {x: -76.5, y: 47.5}
+      - - {x: -105.5, y: 61.5}
+        - {x: -110.5, y: 59.5}
+        - {x: -111.5, y: 49.5}
+        - {x: -111.5, y: 48.5}
+        - {x: -109.5, y: 45.5}
+        - {x: -99.5, y: 45.5}
+        - {x: -99.5, y: 61.5}
+      - - {x: 25.5, y: 74.5}
+        - {x: 28.5, y: 71.5}
+        - {x: 31.5, y: 72.5}
+        - {x: 31.5, y: 74.5}
+        - {x: 28.5, y: 77.5}
+        - {x: 26.5, y: 77.5}
+      - - {x: 17.5, y: 83.5}
+        - {x: 17.5, y: 79.5}
+        - {x: 19.5, y: 77.5}
+        - {x: 26.5, y: 77.5}
+        - {x: 30.5, y: 83.5}
+        - {x: 30.5, y: 89.5}
+        - {x: 22.5, y: 89.5}
+    - name: smell_sprite_33
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 517
+        width: 255
+        height: 255
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -7.5, y: -91.5}
+        - {x: -13.5, y: -96.5}
+        - {x: -13.5, y: -100.5}
+        - {x: -8.5, y: -102.5}
+        - {x: -3.5, y: -102.5}
+        - {x: -1.5, y: -100.5}
+        - {x: -1.5, y: -91.5}
+      - - {x: -11.5, y: -84.5}
+        - {x: -10.5, y: -84.5}
+        - {x: -1.5, y: -90.5}
+        - {x: 6.5, y: -91.5}
+        - {x: 42.5, y: -67.5}
+        - {x: 41.5, y: -64.5}
+        - {x: 38.5, y: -63.5}
+        - {x: 44.5, y: -65.5}
+        - {x: 51.5, y: -80.5}
+        - {x: 63.5, y: -73.5}
+        - {x: 69.5, y: -67.5}
+        - {x: 68.5, y: -62.5}
+        - {x: 68.5, y: -57.5}
+        - {x: 68.5, y: -58.5}
+        - {x: 76.5, y: -50.5}
+        - {x: 82.5, y: -46.5}
+        - {x: 98.5, y: -25.5}
+        - {x: 98.5, y: 56.5}
+        - {x: 25.5, y: 99.5}
+        - {x: -9.5, y: 99.5}
+        - {x: -12.5, y: 94.5}
+        - {x: -14.5, y: 78.5}
+        - {x: -10.5, y: 67.5}
+        - {x: -10.5, y: 63.5}
+        - {x: -10.5, y: 68.5}
+        - {x: -13.5, y: 69.5}
+        - {x: -13.5, y: 73.5}
+        - {x: -15.5, y: 79.5}
+        - {x: -45.5, y: 99.5}
+        - {x: -52.5, y: 99.5}
+        - {x: -90.5, y: 70.5}
+        - {x: -90.5, y: -13.5}
+        - {x: -59.5, y: -86.5}
+        - {x: -46.5, y: -79.5}
+        - {x: -31.5, y: -61.5}
+        - {x: -29.5, y: -64.5}
+        - {x: -27.5, y: -64.5}
+        - {x: -31.5, y: -63.5}
+        - {x: -33.5, y: -65.5}
+        - {x: -32.5, y: -68.5}
+        - {x: -38.5, y: -74.5}
+        - {x: -50.5, y: -90.5}
+        - {x: -37.5, y: -94.5}
+        - {x: -24.5, y: -94.5}
+        - {x: -20.5, y: -89.5}
+        - {x: -21.5, y: -87.5}
+        - {x: -21.5, y: -80.5}
+      - - {x: -60.5, y: -75.5}
+        - {x: -65.5, y: -78.5}
+        - {x: -65.5, y: -85.5}
+        - {x: -52.5, y: -85.5}
+        - {x: -51.5, y: -80.5}
+        - {x: -51.5, y: -78.5}
+        - {x: -54.5, y: -75.5}
+      - - {x: 8.5, y: -82.5}
+        - {x: 11.5, y: -81.5}
+        - {x: 11.5, y: -78.5}
+        - {x: 8.5, y: -77.5}
+        - {x: 6.5, y: -79.5}
+      - - {x: 38.5, y: -76.5}
+        - {x: 38.5, y: -77.5}
+        - {x: 40.5, y: -82.5}
+        - {x: 43.5, y: -82.5}
+        - {x: 48.5, y: -80.5}
+        - {x: 48.5, y: -68.5}
+        - {x: 40.5, y: -68.5}
+      - - {x: 78.5, y: -47.5}
+        - {x: 81.5, y: -46.5}
+        - {x: 81.5, y: -43.5}
+        - {x: 78.5, y: -42.5}
+        - {x: 76.5, y: -44.5}
+      - - {x: 95.5, y: -31.5}
+        - {x: 98.5, y: -30.5}
+        - {x: 98.5, y: -27.5}
+        - {x: 95.5, y: -26.5}
+        - {x: 93.5, y: -28.5}
+      - - {x: 75.5, y: 9.5}
+        - {x: 78.5, y: 10.5}
+        - {x: 78.5, y: 13.5}
+        - {x: 75.5, y: 14.5}
+        - {x: 73.5, y: 12.5}
+      - - {x: 77.5, y: 14.5}
+        - {x: 80.5, y: 15.5}
+        - {x: 80.5, y: 18.5}
+        - {x: 77.5, y: 19.5}
+        - {x: 75.5, y: 17.5}
+      - - {x: 69.5, y: 20.5}
+        - {x: 70.5, y: 17.5}
+        - {x: 72.5, y: 17.5}
+        - {x: 77.5, y: 21.5}
+        - {x: 77.5, y: 23.5}
+        - {x: 74.5, y: 24.5}
+      - - {x: -108.5, y: 60.5}
+        - {x: -110.5, y: 55.5}
+        - {x: -110.5, y: 48.5}
+        - {x: -107.5, y: 45.5}
+        - {x: -105.5, y: 45.5}
+        - {x: -101.5, y: 47.5}
+        - {x: -98.5, y: 54.5}
+        - {x: -101.5, y: 59.5}
+        - {x: -103.5, y: 60.5}
+      - - {x: -88.5, y: 46.5}
+        - {x: -85.5, y: 47.5}
+        - {x: -85.5, y: 50.5}
+        - {x: -88.5, y: 51.5}
+        - {x: -90.5, y: 49.5}
+      - - {x: -111.5, y: 53.5}
+        - {x: -108.5, y: 54.5}
+        - {x: -108.5, y: 57.5}
+        - {x: -111.5, y: 58.5}
+        - {x: -113.5, y: 56.5}
+      - - {x: 26.5, y: 89.5}
+        - {x: 21.5, y: 83.5}
+        - {x: 21.5, y: 79.5}
+        - {x: 23.5, y: 77.5}
+        - {x: 27.5, y: 77.5}
+        - {x: 31.5, y: 83.5}
+        - {x: 31.5, y: 89.5}
+      - - {x: -13.5, y: 89.5}
+        - {x: -10.5, y: 90.5}
+        - {x: -10.5, y: 93.5}
+        - {x: -13.5, y: 94.5}
+        - {x: -15.5, y: 92.5}
+    - name: smell_sprite_34
+      rect:
+        serializedVersion: 2
+        x: 510
+        y: 517
+        width: 255
+        height: 255
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -6.5, y: -91.5}
+        - {x: -12.5, y: -96.5}
+        - {x: -12.5, y: -99.5}
+        - {x: -10.5, y: -101.5}
+        - {x: -1.5, y: -101.5}
+        - {x: -0.5, y: -98.5}
+        - {x: -0.5, y: -93.5}
+        - {x: -1.5, y: -91.5}
+      - - {x: 39.5, y: -63.5}
+        - {x: 82.5, y: -80.5}
+        - {x: 101.5, y: -28.5}
+        - {x: 101.5, y: 77.5}
+        - {x: 57.5, y: 101.5}
+        - {x: -29.5, y: 101.5}
+        - {x: -89.5, y: 74.5}
+        - {x: -89.5, y: 36.5}
+        - {x: -87.5, y: 35.5}
+        - {x: -79.5, y: 35.5}
+        - {x: -72.5, y: 36.5}
+        - {x: -74.5, y: 33.5}
+        - {x: -76.5, y: 33.5}
+        - {x: -83.5, y: 34.5}
+        - {x: -84.5, y: 32.5}
+        - {x: -83.5, y: 29.5}
+        - {x: -76.5, y: 21.5}
+        - {x: -73.5, y: 22.5}
+        - {x: -85.5, y: 12.5}
+        - {x: -85.5, y: -1.5}
+        - {x: -78.5, y: -7.5}
+        - {x: -75.5, y: -7.5}
+        - {x: -76.5, y: -7.5}
+        - {x: -81.5, y: -8.5}
+        - {x: -86.5, y: -19.5}
+        - {x: -74.5, y: -51.5}
+        - {x: -69.5, y: -52.5}
+        - {x: -58.5, y: -44.5}
+        - {x: -62.5, y: -50.5}
+        - {x: -58.5, y: -58.5}
+        - {x: -56.5, y: -74.5}
+        - {x: -53.5, y: -75.5}
+        - {x: -44.5, y: -77.5}
+        - {x: -39.5, y: -68.5}
+        - {x: -29.5, y: -62.5}
+        - {x: -27.5, y: -64.5}
+        - {x: -26.5, y: -64.5}
+        - {x: -28.5, y: -64.5}
+        - {x: -29.5, y: -63.5}
+        - {x: -32.5, y: -65.5}
+        - {x: -31.5, y: -68.5}
+        - {x: -43.5, y: -83.5}
+        - {x: -44.5, y: -88.5}
+        - {x: -33.5, y: -93.5}
+        - {x: 20.5, y: -93.5}
+        - {x: 35.5, y: -89.5}
+        - {x: 43.5, y: -67.5}
+        - {x: 42.5, y: -64.5}
+      - - {x: -64.5, y: -80.5}
+        - {x: -63.5, y: -84.5}
+        - {x: -62.5, y: -86.5}
+        - {x: -58.5, y: -86.5}
+        - {x: -51.5, y: -83.5}
+        - {x: -51.5, y: -79.5}
+        - {x: -54.5, y: -75.5}
+        - {x: -58.5, y: -75.5}
+      - - {x: 9.5, y: -82.5}
+        - {x: 12.5, y: -81.5}
+        - {x: 12.5, y: -78.5}
+        - {x: 9.5, y: -77.5}
+        - {x: 7.5, y: -79.5}
+      - - {x: 39.5, y: -80.5}
+        - {x: 40.5, y: -82.5}
+        - {x: 44.5, y: -82.5}
+        - {x: 49.5, y: -79.5}
+        - {x: 49.5, y: -74.5}
+        - {x: 46.5, y: -70.5}
+        - {x: 39.5, y: -70.5}
+      - - {x: 67.5, y: -57.5}
+        - {x: 58.5, y: -57.5}
+        - {x: 52.5, y: -59.5}
+        - {x: 52.5, y: -75.5}
+        - {x: 53.5, y: -76.5}
+        - {x: 55.5, y: -76.5}
+        - {x: 63.5, y: -72.5}
+        - {x: 68.5, y: -64.5}
+        - {x: 68.5, y: -59.5}
+      - - {x: 66.5, y: -69.5}
+        - {x: 69.5, y: -68.5}
+        - {x: 69.5, y: -65.5}
+        - {x: 66.5, y: -64.5}
+        - {x: 64.5, y: -66.5}
+      - - {x: 79.5, y: -47.5}
+        - {x: 82.5, y: -46.5}
+        - {x: 82.5, y: -43.5}
+        - {x: 79.5, y: -42.5}
+        - {x: 77.5, y: -44.5}
+      - - {x: 76.5, y: 9.5}
+        - {x: 79.5, y: 10.5}
+        - {x: 79.5, y: 13.5}
+        - {x: 76.5, y: 14.5}
+        - {x: 74.5, y: 12.5}
+      - - {x: 78.5, y: 14.5}
+        - {x: 81.5, y: 15.5}
+        - {x: 81.5, y: 18.5}
+        - {x: 78.5, y: 19.5}
+        - {x: 76.5, y: 17.5}
+      - - {x: 75.5, y: 19.5}
+        - {x: 78.5, y: 20.5}
+        - {x: 78.5, y: 23.5}
+        - {x: 75.5, y: 24.5}
+        - {x: 73.5, y: 22.5}
+      - - {x: -72.5, y: 44.5}
+        - {x: -69.5, y: 45.5}
+        - {x: -69.5, y: 48.5}
+        - {x: -72.5, y: 49.5}
+        - {x: -74.5, y: 47.5}
+      - - {x: -107.5, y: 60.5}
+        - {x: -109.5, y: 55.5}
+        - {x: -109.5, y: 48.5}
+        - {x: -106.5, y: 45.5}
+        - {x: -99.5, y: 45.5}
+        - {x: -99.5, y: 57.5}
+        - {x: -102.5, y: 60.5}
+      - - {x: -110.5, y: 53.5}
+        - {x: -107.5, y: 54.5}
+        - {x: -107.5, y: 57.5}
+        - {x: -110.5, y: 58.5}
+        - {x: -112.5, y: 56.5}
+      - - {x: 27.5, y: 89.5}
+        - {x: 25.5, y: 86.5}
+        - {x: 25.5, y: 82.5}
+        - {x: 27.5, y: 80.5}
+        - {x: 31.5, y: 81.5}
+        - {x: 32.5, y: 86.5}
+        - {x: 32.5, y: 88.5}
+        - {x: 31.5, y: 89.5}
+    - name: smell_sprite_35
+      rect:
+        serializedVersion: 2
+        x: 765
+        y: 517
+        width: 255
+        height: 255
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -5.5, y: -91.5}
+        - {x: -8.5, y: -96.5}
+        - {x: -8.5, y: -101.5}
+        - {x: -4.5, y: -101.5}
+        - {x: 0.5, y: -98.5}
+        - {x: 0.5, y: -94.5}
+        - {x: -0.5, y: -91.5}
+      - - {x: 55.5, y: -76.5}
+        - {x: 59.5, y: -77.5}
+        - {x: 69.5, y: -62.5}
+        - {x: 69.5, y: -59.5}
+        - {x: 68.5, y: -56.5}
+        - {x: 65.5, y: -54.5}
+        - {x: 66.5, y: -55.5}
+        - {x: 69.5, y: -55.5}
+        - {x: 85.5, y: -50.5}
+        - {x: 91.5, y: -39.5}
+        - {x: 88.5, y: -32.5}
+        - {x: 82.5, y: -33.5}
+        - {x: 78.5, y: -30.5}
+        - {x: 86.5, y: -32.5}
+        - {x: 89.5, y: -30.5}
+        - {x: 97.5, y: -23.5}
+        - {x: 102.5, y: -6.5}
+        - {x: 102.5, y: 53.5}
+        - {x: 83.5, y: 52.5}
+        - {x: 76.5, y: 38.5}
+        - {x: 78.5, y: 34.5}
+        - {x: 83.5, y: 31.5}
+        - {x: 84.5, y: 31.5}
+        - {x: 84.5, y: 30.5}
+        - {x: 82.5, y: 31.5}
+        - {x: 77.5, y: 35.5}
+        - {x: 76.5, y: 35.5}
+        - {x: 70.5, y: 72.5}
+        - {x: 2.5, y: 100.5}
+        - {x: -6.5, y: 100.5}
+        - {x: -9.5, y: 91.5}
+        - {x: -5.5, y: 89.5}
+        - {x: -4.5, y: 87.5}
+        - {x: -2.5, y: 87.5}
+        - {x: -6.5, y: 88.5}
+        - {x: -9.5, y: 87.5}
+        - {x: -13.5, y: 80.5}
+        - {x: -12.5, y: 78.5}
+        - {x: -8.5, y: 74.5}
+        - {x: -12.5, y: 77.5}
+        - {x: -20.5, y: 81.5}
+        - {x: -41.5, y: 83.5}
+        - {x: -54.5, y: 64.5}
+        - {x: -54.5, y: 55.5}
+        - {x: -50.5, y: 51.5}
+        - {x: -82.5, y: 55.5}
+        - {x: -88.5, y: 41.5}
+        - {x: -88.5, y: 37.5}
+        - {x: -86.5, y: 35.5}
+        - {x: -80.5, y: 35.5}
+        - {x: -75.5, y: 22.5}
+        - {x: -72.5, y: 22.5}
+        - {x: -71.5, y: 25.5}
+        - {x: -70.5, y: 21.5}
+        - {x: -87.5, y: 13.5}
+        - {x: -88.5, y: -20.5}
+        - {x: -77.5, y: -25.5}
+        - {x: -70.5, y: -28.5}
+        - {x: -71.5, y: -32.5}
+        - {x: -73.5, y: -43.5}
+        - {x: -71.5, y: -50.5}
+        - {x: -68.5, y: -60.5}
+        - {x: -44.5, y: -93.5}
+        - {x: 26.5, y: -93.5}
+        - {x: 52.5, y: -79.5}
+        - {x: 50.5, y: -54.5}
+        - {x: 51.5, y: -65.5}
+      - - {x: -63.5, y: -81.5}
+        - {x: -61.5, y: -84.5}
+        - {x: -54.5, y: -84.5}
+        - {x: -50.5, y: -83.5}
+        - {x: -50.5, y: -79.5}
+        - {x: -51.5, y: -76.5}
+        - {x: -55.5, y: -75.5}
+        - {x: -58.5, y: -75.5}
+        - {x: -63.5, y: -80.5}
+      - - {x: 10.5, y: -82.5}
+        - {x: 13.5, y: -81.5}
+        - {x: 13.5, y: -78.5}
+        - {x: 10.5, y: -77.5}
+        - {x: 8.5, y: -79.5}
+      - - {x: 79.5, y: 14.5}
+        - {x: 82.5, y: 15.5}
+        - {x: 82.5, y: 18.5}
+        - {x: 79.5, y: 19.5}
+        - {x: 77.5, y: 17.5}
+      - - {x: -81.5, y: 29.5}
+        - {x: -78.5, y: 30.5}
+        - {x: -78.5, y: 33.5}
+        - {x: -81.5, y: 34.5}
+        - {x: -83.5, y: 32.5}
+      - - {x: -71.5, y: 44.5}
+        - {x: -68.5, y: 45.5}
+        - {x: -68.5, y: 48.5}
+        - {x: -71.5, y: 49.5}
+        - {x: -73.5, y: 47.5}
+      - - {x: -108.5, y: 48.5}
+        - {x: -106.5, y: 45.5}
+        - {x: -102.5, y: 45.5}
+        - {x: -98.5, y: 48.5}
+        - {x: -98.5, y: 53.5}
+        - {x: -100.5, y: 58.5}
+        - {x: -105.5, y: 58.5}
+        - {x: -107.5, y: 57.5}
+        - {x: -108.5, y: 55.5}
+      - - {x: -109.5, y: 53.5}
+        - {x: -106.5, y: 54.5}
+        - {x: -106.5, y: 57.5}
+        - {x: -109.5, y: 58.5}
+        - {x: -111.5, y: 56.5}
+      - - {x: 30.5, y: 84.5}
+        - {x: 33.5, y: 85.5}
+        - {x: 33.5, y: 88.5}
+        - {x: 30.5, y: 89.5}
+        - {x: 28.5, y: 87.5}
+      - - {x: 4.5, y: 98.5}
+        - {x: 7.5, y: 99.5}
+        - {x: 7.5, y: 102.5}
+        - {x: 4.5, y: 103.5}
+        - {x: 2.5, y: 101.5}
+    - name: smell_sprite_36
+      rect:
+        serializedVersion: 2
+        x: 1020
+        y: 517
+        width: 255
+        height: 255
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -7.5, y: -99.5}
+        - {x: -6.5, y: -101.5}
+        - {x: -3.5, y: -101.5}
+        - {x: 1.5, y: -98.5}
+        - {x: 1.5, y: -96.5}
+        - {x: 0.5, y: -94.5}
+        - {x: -4.5, y: -93.5}
+        - {x: -6.5, y: -95.5}
+      - - {x: -35.5, y: -88.5}
+        - {x: -33.5, y: -93.5}
+        - {x: -22.5, y: -93.5}
+        - {x: -22.5, y: -87.5}
+        - {x: -24.5, y: -82.5}
+        - {x: -28.5, y: -80.5}
+        - {x: -33.5, y: -80.5}
+        - {x: -35.5, y: -81.5}
+      - - {x: 56.5, y: -75.5}
+        - {x: 70.5, y: -69.5}
+        - {x: 80.5, y: -49.5}
+        - {x: 78.5, y: -46.5}
+        - {x: 75.5, y: -46.5}
+        - {x: 77.5, y: -46.5}
+        - {x: 83.5, y: -51.5}
+        - {x: 92.5, y: -47.5}
+        - {x: 92.5, y: -17.5}
+        - {x: 71.5, y: 74.5}
+        - {x: 41.5, y: 88.5}
+        - {x: -50.5, y: 88.5}
+        - {x: -83.5, y: 70.5}
+        - {x: -83.5, y: -28.5}
+        - {x: -77.5, y: -57.5}
+        - {x: -59.5, y: -50.5}
+        - {x: -58.5, y: -47.5}
+        - {x: -57.5, y: -43.5}
+        - {x: -57.5, y: -41.5}
+        - {x: -57.5, y: -47.5}
+        - {x: -60.5, y: -52.5}
+        - {x: -56.5, y: -58.5}
+        - {x: -57.5, y: -85.5}
+        - {x: 52.5, y: -85.5}
+        - {x: 55.5, y: -79.5}
+        - {x: 48.5, y: -65.5}
+        - {x: 53.5, y: -74.5}
+      - - {x: -56.5, y: -75.5}
+        - {x: -62.5, y: -80.5}
+        - {x: -62.5, y: -81.5}
+        - {x: -60.5, y: -84.5}
+        - {x: -50.5, y: -84.5}
+        - {x: -49.5, y: -81.5}
+        - {x: -49.5, y: -78.5}
+        - {x: -55.5, y: -75.5}
+      - - {x: 68.5, y: -69.5}
+        - {x: 71.5, y: -68.5}
+        - {x: 71.5, y: -65.5}
+        - {x: 68.5, y: -64.5}
+        - {x: 66.5, y: -66.5}
+      - - {x: 64.5, y: -61.5}
+        - {x: 65.5, y: -64.5}
+        - {x: 68.5, y: -64.5}
+        - {x: 70.5, y: -62.5}
+        - {x: 69.5, y: -59.5}
+        - {x: 66.5, y: -59.5}
+      - - {x: 88.5, y: -20.5}
+        - {x: 91.5, y: -23.5}
+        - {x: 94.5, y: -22.5}
+        - {x: 94.5, y: -20.5}
+        - {x: 91.5, y: -17.5}
+        - {x: 89.5, y: -17.5}
+      - - {x: 80.5, y: 14.5}
+        - {x: 83.5, y: 15.5}
+        - {x: 83.5, y: 18.5}
+        - {x: 80.5, y: 19.5}
+        - {x: 78.5, y: 17.5}
+      - - {x: 77.5, y: 19.5}
+        - {x: 80.5, y: 20.5}
+        - {x: 80.5, y: 23.5}
+        - {x: 77.5, y: 24.5}
+        - {x: 75.5, y: 22.5}
+      - - {x: 81.5, y: 29.5}
+        - {x: 80.5, y: 27.5}
+        - {x: 80.5, y: 21.5}
+        - {x: 88.5, y: 21.5}
+        - {x: 88.5, y: 25.5}
+        - {x: 83.5, y: 29.5}
+      - - {x: 78.5, y: 40.5}
+        - {x: 78.5, y: 34.5}
+        - {x: 87.5, y: 24.5}
+        - {x: 100.5, y: 24.5}
+        - {x: 103.5, y: 29.5}
+        - {x: 103.5, y: 41.5}
+        - {x: 102.5, y: 44.5}
+        - {x: 97.5, y: 50.5}
+        - {x: 92.5, y: 50.5}
+        - {x: 80.5, y: 45.5}
+      - - {x: -80.5, y: 30.5}
+        - {x: -78.5, y: 27.5}
+        - {x: -74.5, y: 28.5}
+        - {x: -72.5, y: 30.5}
+        - {x: -72.5, y: 32.5}
+        - {x: -75.5, y: 33.5}
+      - - {x: -87.5, y: 35.5}
+        - {x: -77.5, y: 35.5}
+        - {x: -71.5, y: 39.5}
+        - {x: -71.5, y: 48.5}
+        - {x: -72.5, y: 52.5}
+        - {x: -78.5, y: 53.5}
+        - {x: -82.5, y: 53.5}
+        - {x: -87.5, y: 51.5}
+      - - {x: 103.5, y: 37.5}
+        - {x: 106.5, y: 38.5}
+        - {x: 106.5, y: 41.5}
+        - {x: 103.5, y: 42.5}
+        - {x: 101.5, y: 40.5}
+      - - {x: -105.5, y: 50.5}
+        - {x: -101.5, y: 46.5}
+        - {x: -98.5, y: 47.5}
+        - {x: -98.5, y: 49.5}
+        - {x: -102.5, y: 53.5}
+        - {x: -104.5, y: 53.5}
+      - - {x: -47.5, y: 51.5}
+        - {x: -45.5, y: 54.5}
+        - {x: -45.5, y: 60.5}
+        - {x: -49.5, y: 60.5}
+        - {x: -51.5, y: 57.5}
+        - {x: -51.5, y: 51.5}
+      - - {x: -105.5, y: 55.5}
+        - {x: -103.5, y: 53.5}
+        - {x: -100.5, y: 54.5}
+        - {x: -100.5, y: 58.5}
+        - {x: -102.5, y: 60.5}
+        - {x: -105.5, y: 59.5}
+      - - {x: 31.5, y: 84.5}
+        - {x: 34.5, y: 85.5}
+        - {x: 34.5, y: 88.5}
+        - {x: 31.5, y: 89.5}
+        - {x: 29.5, y: 87.5}
+      - - {x: -1.5, y: 101.5}
+        - {x: -4.5, y: 99.5}
+        - {x: -7.5, y: 92.5}
+        - {x: -4.5, y: 86.5}
+        - {x: 10.5, y: 86.5}
+        - {x: 12.5, y: 91.5}
+        - {x: 12.5, y: 97.5}
+        - {x: 2.5, y: 101.5}
+    - name: smell_sprite_37
+      rect:
+        serializedVersion: 2
+        x: 1275
+        y: 517
+        width: 255
+        height: 255
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -0.5, y: -99.5}
+        - {x: 2.5, y: -98.5}
+        - {x: 2.5, y: -95.5}
+        - {x: -0.5, y: -94.5}
+        - {x: -2.5, y: -96.5}
+      - - {x: -34.5, y: -81.5}
+        - {x: -34.5, y: -87.5}
+        - {x: -27.5, y: -93.5}
+        - {x: -22.5, y: -93.5}
+        - {x: -21.5, y: -92.5}
+        - {x: -21.5, y: -89.5}
+        - {x: -27.5, y: -80.5}
+        - {x: -33.5, y: -80.5}
+      - - {x: 11.5, y: -71.5}
+        - {x: 17.5, y: -71.5}
+        - {x: 20.5, y: -69.5}
+        - {x: 19.5, y: -70.5}
+        - {x: 17.5, y: -79.5}
+        - {x: 46.5, y: -87.5}
+        - {x: 53.5, y: -79.5}
+        - {x: 53.5, y: -71.5}
+        - {x: 50.5, y: -65.5}
+        - {x: 42.5, y: -55.5}
+        - {x: 47.5, y: -55.5}
+        - {x: 47.5, y: -58.5}
+        - {x: 50.5, y: -64.5}
+        - {x: 54.5, y: -65.5}
+        - {x: 55.5, y: -66.5}
+        - {x: 54.5, y: -71.5}
+        - {x: 54.5, y: -73.5}
+        - {x: 56.5, y: -77.5}
+        - {x: 64.5, y: -73.5}
+        - {x: 80.5, y: -49.5}
+        - {x: 80.5, y: -47.5}
+        - {x: 78.5, y: -45.5}
+        - {x: 79.5, y: -44.5}
+        - {x: 79.5, y: -45.5}
+        - {x: 81.5, y: -47.5}
+        - {x: 87.5, y: -50.5}
+        - {x: 92.5, y: -44.5}
+        - {x: 92.5, y: -37.5}
+        - {x: 90.5, y: -32.5}
+        - {x: 80.5, y: -30.5}
+        - {x: 78.5, y: -28.5}
+        - {x: 84.5, y: -31.5}
+        - {x: 92.5, y: -31.5}
+        - {x: 92.5, y: 19.5}
+        - {x: 86.5, y: 20.5}
+        - {x: 92.5, y: 28.5}
+        - {x: 92.5, y: 36.5}
+        - {x: 60.5, y: 81.5}
+        - {x: 31.5, y: 88.5}
+        - {x: -8.5, y: 88.5}
+        - {x: -9.5, y: 81.5}
+        - {x: -5.5, y: 80.5}
+        - {x: -1.5, y: 81.5}
+        - {x: 0.5, y: 79.5}
+        - {x: 2.5, y: 79.5}
+        - {x: 1.5, y: 79.5}
+        - {x: -2.5, y: 80.5}
+        - {x: -5.5, y: 78.5}
+        - {x: -18.5, y: 81.5}
+        - {x: -29.5, y: 78.5}
+        - {x: -97.5, y: 72.5}
+        - {x: -97.5, y: -67.5}
+        - {x: -93.5, y: -90.5}
+        - {x: -12.5, y: -90.5}
+        - {x: 10.5, y: -84.5}
+        - {x: 9.5, y: -69.5}
+        - {x: 8.5, y: -66.5}
+        - {x: 9.5, y: -69.5}
+      - - {x: -55.5, y: -75.5}
+        - {x: -60.5, y: -79.5}
+        - {x: -58.5, y: -84.5}
+        - {x: -53.5, y: -84.5}
+        - {x: -48.5, y: -83.5}
+        - {x: -48.5, y: -77.5}
+        - {x: -51.5, y: -75.5}
+      - - {x: 68.5, y: -64.5}
+        - {x: 71.5, y: -63.5}
+        - {x: 71.5, y: -60.5}
+        - {x: 68.5, y: -59.5}
+        - {x: 66.5, y: -61.5}
+      - - {x: 86.5, y: 25.5}
+        - {x: 89.5, y: 26.5}
+        - {x: 89.5, y: 29.5}
+        - {x: 86.5, y: 30.5}
+        - {x: 84.5, y: 28.5}
+      - - {x: 96.5, y: 50.5}
+        - {x: 89.5, y: 50.5}
+        - {x: 83.5, y: 45.5}
+        - {x: 83.5, y: 29.5}
+        - {x: 90.5, y: 25.5}
+        - {x: 98.5, y: 25.5}
+        - {x: 102.5, y: 27.5}
+        - {x: 102.5, y: 34.5}
+        - {x: 100.5, y: 45.5}
+      - - {x: -76.5, y: 50.5}
+        - {x: -86.5, y: 41.5}
+        - {x: -86.5, y: 37.5}
+        - {x: -85.5, y: 36.5}
+        - {x: -83.5, y: 35.5}
+        - {x: -77.5, y: 35.5}
+        - {x: -70.5, y: 41.5}
+        - {x: -70.5, y: 49.5}
+        - {x: -71.5, y: 50.5}
+      - - {x: -79.5, y: 48.5}
+        - {x: -76.5, y: 49.5}
+        - {x: -76.5, y: 52.5}
+        - {x: -79.5, y: 53.5}
+        - {x: -81.5, y: 51.5}
+      - - {x: -48.5, y: 51.5}
+        - {x: -45.5, y: 52.5}
+        - {x: -45.5, y: 55.5}
+        - {x: -48.5, y: 56.5}
+        - {x: -50.5, y: 54.5}
+      - - {x: -106.5, y: 59.5}
+        - {x: -108.5, y: 58.5}
+        - {x: -108.5, y: 57.5}
+        - {x: -106.5, y: 54.5}
+        - {x: -102.5, y: 53.5}
+        - {x: -99.5, y: 54.5}
+        - {x: -99.5, y: 58.5}
+        - {x: -101.5, y: 59.5}
+      - - {x: 32.5, y: 84.5}
+        - {x: 35.5, y: 85.5}
+        - {x: 35.5, y: 88.5}
+        - {x: 32.5, y: 89.5}
+        - {x: 30.5, y: 87.5}
+      - - {x: -1.5, y: 101.5}
+        - {x: -6.5, y: 95.5}
+        - {x: -6.5, y: 90.5}
+        - {x: 0.5, y: 88.5}
+        - {x: 7.5, y: 88.5}
+        - {x: 13.5, y: 92.5}
+        - {x: 13.5, y: 95.5}
+        - {x: 4.5, y: 101.5}
+    - name: smell_sprite_38
+      rect:
+        serializedVersion: 2
+        x: 1530
+        y: 517
+        width: 255
+        height: 255
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 0.5, y: -99.5}
+        - {x: 3.5, y: -98.5}
+        - {x: 3.5, y: -95.5}
+        - {x: 0.5, y: -94.5}
+        - {x: -1.5, y: -96.5}
+      - - {x: 93.5, y: -40.5}
+        - {x: 93.5, y: 15.5}
+        - {x: 66.5, y: 70.5}
+        - {x: 37.5, y: 75.5}
+        - {x: 22.5, y: 75.5}
+        - {x: 20.5, y: 73.5}
+        - {x: 21.5, y: 70.5}
+        - {x: 24.5, y: 70.5}
+        - {x: 18.5, y: 70.5}
+        - {x: 9.5, y: 87.5}
+        - {x: 2.5, y: 87.5}
+        - {x: -0.5, y: 82.5}
+        - {x: -0.5, y: 80.5}
+        - {x: 2.5, y: 79.5}
+        - {x: -0.5, y: 80.5}
+        - {x: -8.5, y: 83.5}
+        - {x: -21.5, y: 87.5}
+        - {x: -60.5, y: 87.5}
+        - {x: -96.5, y: 28.5}
+        - {x: -96.5, y: -53.5}
+        - {x: -53.5, y: -94.5}
+        - {x: -18.5, y: -94.5}
+        - {x: 15.5, y: -86.5}
+        - {x: 10.5, y: -69.5}
+        - {x: 9.5, y: -66.5}
+        - {x: 10.5, y: -69.5}
+        - {x: 12.5, y: -71.5}
+        - {x: 32.5, y: -94.5}
+        - {x: 46.5, y: -94.5}
+        - {x: 55.5, y: -80.5}
+        - {x: 55.5, y: -69.5}
+        - {x: 65.5, y: -65.5}
+      - - {x: -33.5, y: -81.5}
+        - {x: -33.5, y: -86.5}
+        - {x: -29.5, y: -93.5}
+        - {x: -20.5, y: -93.5}
+        - {x: -20.5, y: -88.5}
+        - {x: -29.5, y: -81.5}
+      - - {x: -54.5, y: -75.5}
+        - {x: -59.5, y: -78.5}
+        - {x: -59.5, y: -80.5}
+        - {x: -57.5, y: -84.5}
+        - {x: -53.5, y: -84.5}
+        - {x: -47.5, y: -81.5}
+        - {x: -47.5, y: -77.5}
+        - {x: -50.5, y: -75.5}
+      - - {x: 54.5, y: -65.5}
+        - {x: 57.5, y: -64.5}
+        - {x: 57.5, y: -61.5}
+        - {x: 54.5, y: -60.5}
+        - {x: 52.5, y: -62.5}
+      - - {x: 86.5, y: -33.5}
+        - {x: 81.5, y: -36.5}
+        - {x: 80.5, y: -40.5}
+        - {x: 80.5, y: -47.5}
+        - {x: 84.5, y: -49.5}
+        - {x: 89.5, y: -49.5}
+        - {x: 92.5, y: -48.5}
+        - {x: 94.5, y: -44.5}
+        - {x: 94.5, y: -39.5}
+        - {x: 91.5, y: -33.5}
+      - - {x: 87.5, y: 25.5}
+        - {x: 90.5, y: 26.5}
+        - {x: 90.5, y: 29.5}
+        - {x: 87.5, y: 30.5}
+        - {x: 85.5, y: 28.5}
+      - - {x: 94.5, y: 50.5}
+        - {x: 87.5, y: 43.5}
+        - {x: 84.5, y: 35.5}
+        - {x: 84.5, y: 31.5}
+        - {x: 91.5, y: 25.5}
+        - {x: 101.5, y: 25.5}
+        - {x: 102.5, y: 28.5}
+        - {x: 102.5, y: 41.5}
+        - {x: 98.5, y: 50.5}
+      - - {x: -75.5, y: 50.5}
+        - {x: -85.5, y: 41.5}
+        - {x: -85.5, y: 37.5}
+        - {x: -84.5, y: 36.5}
+        - {x: -82.5, y: 35.5}
+        - {x: -76.5, y: 35.5}
+        - {x: -69.5, y: 41.5}
+        - {x: -69.5, y: 49.5}
+        - {x: -70.5, y: 50.5}
+      - - {x: -78.5, y: 48.5}
+        - {x: -75.5, y: 49.5}
+        - {x: -75.5, y: 52.5}
+        - {x: -78.5, y: 53.5}
+        - {x: -80.5, y: 51.5}
+      - - {x: -105.5, y: 54.5}
+        - {x: -102.5, y: 55.5}
+        - {x: -102.5, y: 58.5}
+        - {x: -105.5, y: 59.5}
+        - {x: -107.5, y: 57.5}
+      - - {x: -33.5, y: 74.5}
+        - {x: -34.5, y: 71.5}
+        - {x: -32.5, y: 69.5}
+        - {x: -28.5, y: 69.5}
+        - {x: -25.5, y: 75.5}
+        - {x: -25.5, y: 78.5}
+        - {x: -28.5, y: 78.5}
+      - - {x: -6.5, y: 82.5}
+        - {x: -4.5, y: 80.5}
+        - {x: -1.5, y: 81.5}
+        - {x: -0.5, y: 86.5}
+        - {x: -2.5, y: 88.5}
+        - {x: -5.5, y: 87.5}
+      - - {x: -2.5, y: 91.5}
+        - {x: 1.5, y: 88.5}
+        - {x: 6.5, y: 88.5}
+        - {x: 10.5, y: 89.5}
+        - {x: 10.5, y: 101.5}
+        - {x: -2.5, y: 101.5}
+    - name: smell_sprite_39
+      rect:
+        serializedVersion: 2
+        x: 1785
+        y: 517
+        width: 255
+        height: 255
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -52.5, y: 79.5}
+        - {x: -66.5, y: 42.5}
+        - {x: -67.5, y: 38.5}
+        - {x: -64.5, y: 34.5}
+        - {x: -68.5, y: 37.5}
+        - {x: -69.5, y: 37.5}
+        - {x: -76.5, y: 34.5}
+        - {x: -85.5, y: 27.5}
+        - {x: -95.5, y: 7.5}
+        - {x: -95.5, y: -20.5}
+        - {x: -53.5, y: -76.5}
+        - {x: -42.5, y: -80.5}
+        - {x: -39.5, y: -73.5}
+        - {x: -16.5, y: -94.5}
+        - {x: 65.5, y: -94.5}
+        - {x: 97.5, y: -49.5}
+        - {x: 97.5, y: 79.5}
+      - - {x: -30.5, y: -82.5}
+        - {x: -31.5, y: -84.5}
+        - {x: -30.5, y: -87.5}
+        - {x: -25.5, y: -90.5}
+        - {x: -22.5, y: -89.5}
+        - {x: -22.5, y: -85.5}
+        - {x: -27.5, y: -82.5}
+      - - {x: -55.5, y: -75.5}
+        - {x: -57.5, y: -79.5}
+        - {x: -57.5, y: -82.5}
+        - {x: -56.5, y: -84.5}
+        - {x: -52.5, y: -84.5}
+        - {x: -46.5, y: -81.5}
+        - {x: -46.5, y: -77.5}
+        - {x: -49.5, y: -75.5}
+      - - {x: 55.5, y: -65.5}
+        - {x: 58.5, y: -64.5}
+        - {x: 58.5, y: -61.5}
+        - {x: 55.5, y: -60.5}
+        - {x: 53.5, y: -62.5}
+      - - {x: 87.5, y: -33.5}
+        - {x: 82.5, y: -36.5}
+        - {x: 81.5, y: -40.5}
+        - {x: 81.5, y: -47.5}
+        - {x: 85.5, y: -49.5}
+        - {x: 90.5, y: -49.5}
+        - {x: 93.5, y: -48.5}
+        - {x: 95.5, y: -44.5}
+        - {x: 95.5, y: -39.5}
+        - {x: 92.5, y: -33.5}
+      - - {x: 88.5, y: 25.5}
+        - {x: 91.5, y: 26.5}
+        - {x: 91.5, y: 29.5}
+        - {x: 88.5, y: 30.5}
+        - {x: 86.5, y: 28.5}
+      - - {x: 98.5, y: 50.5}
+        - {x: 95.5, y: 50.5}
+        - {x: 82.5, y: 44.5}
+        - {x: 81.5, y: 40.5}
+        - {x: 81.5, y: 34.5}
+        - {x: 91.5, y: 25.5}
+        - {x: 101.5, y: 25.5}
+        - {x: 103.5, y: 38.5}
+        - {x: 101.5, y: 44.5}
+      - - {x: -81.5, y: 44.5}
+        - {x: -84.5, y: 40.5}
+        - {x: -84.5, y: 37.5}
+        - {x: -80.5, y: 35.5}
+        - {x: -75.5, y: 35.5}
+        - {x: -75.5, y: 42.5}
+        - {x: -78.5, y: 44.5}
+      - - {x: -76.5, y: 43.5}
+        - {x: -75.5, y: 42.5}
+        - {x: -73.5, y: 42.5}
+        - {x: -68.5, y: 46.5}
+        - {x: -68.5, y: 49.5}
+        - {x: -70.5, y: 50.5}
+        - {x: -72.5, y: 50.5}
+        - {x: -76.5, y: 45.5}
+      - - {x: -104.5, y: 54.5}
+        - {x: -101.5, y: 55.5}
+        - {x: -101.5, y: 58.5}
+        - {x: -104.5, y: 59.5}
+        - {x: -106.5, y: 57.5}
+      - - {x: -32.5, y: 74.5}
+        - {x: -33.5, y: 71.5}
+        - {x: -31.5, y: 69.5}
+        - {x: -27.5, y: 69.5}
+        - {x: -24.5, y: 75.5}
+        - {x: -24.5, y: 78.5}
+        - {x: -27.5, y: 78.5}
+      - - {x: 10.5, y: 76.5}
+        - {x: 13.5, y: 77.5}
+        - {x: 13.5, y: 80.5}
+        - {x: 10.5, y: 81.5}
+        - {x: 8.5, y: 79.5}
+      - - {x: 0.5, y: 82.5}
+        - {x: 2.5, y: 79.5}
+        - {x: 6.5, y: 80.5}
+        - {x: 11.5, y: 84.5}
+        - {x: 10.5, y: 87.5}
+        - {x: 3.5, y: 87.5}
+      - - {x: 7.5, y: 99.5}
+        - {x: 3.5, y: 99.5}
+        - {x: -1.5, y: 95.5}
+        - {x: -1.5, y: 92.5}
+        - {x: 0.5, y: 90.5}
+        - {x: 10.5, y: 90.5}
+        - {x: 11.5, y: 91.5}
+        - {x: 11.5, y: 94.5}
+    - name: smell_sprite_40
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 262
+        width: 255
+        height: 255
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 80.5, y: -34.5}
+        - {x: 75.5, y: -37.5}
+        - {x: 76.5, y: -35.5}
+        - {x: 74.5, y: -32.5}
+        - {x: 73.5, y: -29.5}
+        - {x: 83.5, y: -28.5}
+        - {x: 90.5, y: -7.5}
+        - {x: 90.5, y: 22.5}
+        - {x: 84.5, y: 35.5}
+        - {x: 62.5, y: 41.5}
+        - {x: 59.5, y: 39.5}
+        - {x: 57.5, y: 38.5}
+        - {x: 59.5, y: 40.5}
+        - {x: 65.5, y: 59.5}
+        - {x: 43.5, y: 76.5}
+        - {x: 19.5, y: 79.5}
+        - {x: -25.5, y: 79.5}
+        - {x: -35.5, y: 68.5}
+        - {x: -37.5, y: 62.5}
+        - {x: -37.5, y: 60.5}
+        - {x: -34.5, y: 59.5}
+        - {x: -36.5, y: 59.5}
+        - {x: -38.5, y: 62.5}
+        - {x: -37.5, y: 63.5}
+        - {x: -38.5, y: 66.5}
+        - {x: -41.5, y: 68.5}
+        - {x: -52.5, y: 52.5}
+        - {x: -76.5, y: 39.5}
+        - {x: -73.5, y: 35.5}
+        - {x: -71.5, y: 33.5}
+        - {x: -70.5, y: 33.5}
+        - {x: -72.5, y: 33.5}
+        - {x: -75.5, y: 36.5}
+        - {x: -76.5, y: 36.5}
+        - {x: -85.5, y: 32.5}
+        - {x: -85.5, y: 28.5}
+        - {x: -84.5, y: 24.5}
+        - {x: -74.5, y: 23.5}
+        - {x: -79.5, y: 16.5}
+        - {x: -81.5, y: 17.5}
+        - {x: -83.5, y: 17.5}
+        - {x: -80.5, y: 17.5}
+        - {x: -78.5, y: 19.5}
+        - {x: -80.5, y: 22.5}
+        - {x: -86.5, y: 23.5}
+        - {x: -89.5, y: 20.5}
+        - {x: -92.5, y: 12.5}
+        - {x: -102.5, y: -7.5}
+        - {x: -102.5, y: -13.5}
+        - {x: -99.5, y: -18.5}
+        - {x: -69.5, y: -27.5}
+        - {x: -68.5, y: -27.5}
+        - {x: -66.5, y: -25.5}
+        - {x: -66.5, y: -23.5}
+        - {x: -65.5, y: -24.5}
+        - {x: -68.5, y: -28.5}
+        - {x: -79.5, y: -29.5}
+        - {x: -81.5, y: -31.5}
+        - {x: -83.5, y: -37.5}
+        - {x: -81.5, y: -45.5}
+        - {x: -75.5, y: -51.5}
+        - {x: -71.5, y: -52.5}
+        - {x: -52.5, y: -74.5}
+        - {x: -20.5, y: -92.5}
+        - {x: 3.5, y: -84.5}
+        - {x: 10.5, y: -72.5}
+        - {x: 15.5, y: -70.5}
+        - {x: 15.5, y: -66.5}
+        - {x: 15.5, y: -68.5}
+        - {x: 14.5, y: -72.5}
+        - {x: 12.5, y: -82.5}
+        - {x: 23.5, y: -96.5}
+        - {x: 50.5, y: -96.5}
+        - {x: 90.5, y: -48.5}
+        - {x: 90.5, y: -38.5}
+        - {x: 85.5, y: -33.5}
+      - - {x: -58.5, y: -84.5}
+        - {x: -55.5, y: -83.5}
+        - {x: -55.5, y: -80.5}
+        - {x: -58.5, y: -79.5}
+        - {x: -60.5, y: -81.5}
+      - - {x: -61.5, y: -75.5}
+        - {x: -54.5, y: -79.5}
+        - {x: -49.5, y: -79.5}
+        - {x: -47.5, y: -78.5}
+        - {x: -46.5, y: -73.5}
+        - {x: -49.5, y: -67.5}
+        - {x: -54.5, y: -67.5}
+        - {x: -61.5, y: -71.5}
+      - - {x: 90.5, y: 24.5}
+        - {x: 93.5, y: 25.5}
+        - {x: 93.5, y: 28.5}
+        - {x: 90.5, y: 29.5}
+        - {x: 88.5, y: 27.5}
+      - - {x: 83.5, y: 47.5}
+        - {x: 74.5, y: 40.5}
+        - {x: 74.5, y: 33.5}
+        - {x: 75.5, y: 32.5}
+        - {x: 82.5, y: 29.5}
+        - {x: 94.5, y: 29.5}
+        - {x: 94.5, y: 46.5}
+        - {x: 93.5, y: 47.5}
+      - - {x: -89.5, y: 41.5}
+        - {x: -91.5, y: 38.5}
+        - {x: -90.5, y: 35.5}
+        - {x: -85.5, y: 34.5}
+        - {x: -82.5, y: 35.5}
+        - {x: -82.5, y: 39.5}
+        - {x: -86.5, y: 41.5}
+      - - {x: -81.5, y: 41.5}
+        - {x: -78.5, y: 42.5}
+        - {x: -78.5, y: 45.5}
+        - {x: -81.5, y: 46.5}
+        - {x: -83.5, y: 44.5}
+      - - {x: -111.5, y: 53.5}
+        - {x: -108.5, y: 54.5}
+        - {x: -108.5, y: 57.5}
+        - {x: -111.5, y: 58.5}
+        - {x: -113.5, y: 56.5}
+      - - {x: -37.5, y: 74.5}
+        - {x: -37.5, y: 73.5}
+        - {x: -35.5, y: 71.5}
+        - {x: -34.5, y: 71.5}
+        - {x: -31.5, y: 74.5}
+        - {x: -31.5, y: 76.5}
+        - {x: -34.5, y: 77.5}
+      - - {x: -4.5, y: 82.5}
+        - {x: -1.5, y: 79.5}
+        - {x: -0.5, y: 79.5}
+        - {x: 2.5, y: 82.5}
+        - {x: 1.5, y: 85.5}
+        - {x: -3.5, y: 85.5}
+      - - {x: -3.5, y: 98.5}
+        - {x: -5.5, y: 95.5}
+        - {x: -5.5, y: 91.5}
+        - {x: -3.5, y: 89.5}
+        - {x: 0.5, y: 90.5}
+        - {x: 1.5, y: 95.5}
+        - {x: 1.5, y: 97.5}
+        - {x: 0.5, y: 98.5}
+    - name: smell_sprite_41
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 262
+        width: 255
+        height: 255
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -48.5, y: 79.5}
+        - {x: -57.5, y: 75.5}
+        - {x: -36.5, y: 62.5}
+        - {x: -36.5, y: 60.5}
+        - {x: -33.5, y: 59.5}
+        - {x: -34.5, y: 58.5}
+        - {x: -38.5, y: 63.5}
+        - {x: -40.5, y: 63.5}
+        - {x: -50.5, y: 59.5}
+        - {x: -48.5, y: 46.5}
+        - {x: -71.5, y: 41.5}
+        - {x: -79.5, y: 37.5}
+        - {x: -85.5, y: 32.5}
+        - {x: -87.5, y: 34.5}
+        - {x: -101.5, y: 9.5}
+        - {x: -101.5, y: -17.5}
+        - {x: -98.5, y: -18.5}
+        - {x: -68.5, y: -27.5}
+        - {x: -66.5, y: -27.5}
+        - {x: -65.5, y: -24.5}
+        - {x: -64.5, y: -24.5}
+        - {x: -67.5, y: -28.5}
+        - {x: -80.5, y: -26.5}
+        - {x: -90.5, y: -41.5}
+        - {x: -36.5, y: -94.5}
+        - {x: 3.5, y: -90.5}
+        - {x: 6.5, y: -78.5}
+        - {x: 6.5, y: -70.5}
+        - {x: 8.5, y: -65.5}
+        - {x: 8.5, y: -64.5}
+        - {x: 10.5, y: -64.5}
+        - {x: 7.5, y: -67.5}
+        - {x: 6.5, y: -71.5}
+        - {x: 14.5, y: -82.5}
+        - {x: 27.5, y: -98.5}
+        - {x: 52.5, y: -98.5}
+        - {x: 91.5, y: -64.5}
+        - {x: 91.5, y: 32.5}
+        - {x: 72.5, y: 79.5}
+      - - {x: -54.5, y: -79.5}
+        - {x: -50.5, y: -79.5}
+        - {x: -45.5, y: -75.5}
+        - {x: -45.5, y: -74.5}
+        - {x: -48.5, y: -67.5}
+        - {x: -52.5, y: -67.5}
+        - {x: -60.5, y: -71.5}
+        - {x: -60.5, y: -76.5}
+      - - {x: 84.5, y: 47.5}
+        - {x: 75.5, y: 40.5}
+        - {x: 75.5, y: 30.5}
+        - {x: 77.5, y: 29.5}
+        - {x: 94.5, y: 29.5}
+        - {x: 95.5, y: 30.5}
+        - {x: 95.5, y: 45.5}
+        - {x: 92.5, y: 47.5}
+      - - {x: -110.5, y: 53.5}
+        - {x: -107.5, y: 54.5}
+        - {x: -107.5, y: 57.5}
+        - {x: -110.5, y: 58.5}
+        - {x: -112.5, y: 56.5}
+      - - {x: -34.5, y: 71.5}
+        - {x: -31.5, y: 72.5}
+        - {x: -31.5, y: 75.5}
+        - {x: -34.5, y: 76.5}
+        - {x: -36.5, y: 74.5}
+      - - {x: -2.5, y: 98.5}
+        - {x: -4.5, y: 95.5}
+        - {x: -4.5, y: 91.5}
+        - {x: -2.5, y: 89.5}
+        - {x: 1.5, y: 90.5}
+        - {x: 2.5, y: 95.5}
+        - {x: 2.5, y: 97.5}
+        - {x: 1.5, y: 98.5}
+    - name: smell_sprite_42
+      rect:
+        serializedVersion: 2
+        x: 510
+        y: 262
+        width: 255
+        height: 255
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 52.5, y: 79.5}
+        - {x: -40.5, y: 79.5}
+        - {x: -82.5, y: 41.5}
+        - {x: -73.5, y: 35.5}
+        - {x: -73.5, y: 30.5}
+        - {x: -73.5, y: 33.5}
+        - {x: -75.5, y: 36.5}
+        - {x: -90.5, y: 44.5}
+        - {x: -98.5, y: 24.5}
+        - {x: -98.5, y: -19.5}
+        - {x: -67.5, y: -27.5}
+        - {x: -65.5, y: -27.5}
+        - {x: -64.5, y: -24.5}
+        - {x: -66.5, y: -29.5}
+        - {x: -77.5, y: -29.5}
+        - {x: -82.5, y: -33.5}
+        - {x: -83.5, y: -39.5}
+        - {x: -77.5, y: -48.5}
+        - {x: -73.5, y: -52.5}
+        - {x: -69.5, y: -53.5}
+        - {x: -59.5, y: -44.5}
+        - {x: -60.5, y: -41.5}
+        - {x: -58.5, y: -45.5}
+        - {x: -59.5, y: -46.5}
+        - {x: -58.5, y: -49.5}
+        - {x: -59.5, y: -49.5}
+        - {x: -62.5, y: -51.5}
+        - {x: -95.5, y: -80.5}
+        - {x: -48.5, y: -101.5}
+        - {x: 65.5, y: -101.5}
+        - {x: 90.5, y: -51.5}
+        - {x: 90.5, y: 34.5}
+      - - {x: -53.5, y: -79.5}
+        - {x: -49.5, y: -79.5}
+        - {x: -44.5, y: -75.5}
+        - {x: -44.5, y: -74.5}
+        - {x: -47.5, y: -67.5}
+        - {x: -51.5, y: -67.5}
+        - {x: -59.5, y: -71.5}
+        - {x: -59.5, y: -76.5}
+      - - {x: 91.5, y: 29.5}
+        - {x: 94.5, y: 30.5}
+        - {x: 94.5, y: 33.5}
+        - {x: 91.5, y: 34.5}
+        - {x: 89.5, y: 32.5}
+      - - {x: 96.5, y: 44.5}
+        - {x: 95.5, y: 45.5}
+        - {x: 87.5, y: 45.5}
+        - {x: 79.5, y: 44.5}
+        - {x: 76.5, y: 38.5}
+        - {x: 76.5, y: 34.5}
+        - {x: 78.5, y: 33.5}
+        - {x: 87.5, y: 33.5}
+        - {x: 91.5, y: 34.5}
+        - {x: 95.5, y: 38.5}
+        - {x: 96.5, y: 42.5}
+      - - {x: 57.5, y: 59.5}
+        - {x: 61.5, y: 55.5}
+        - {x: 64.5, y: 56.5}
+        - {x: 64.5, y: 58.5}
+        - {x: 60.5, y: 62.5}
+        - {x: 58.5, y: 62.5}
+      - - {x: -33.5, y: 71.5}
+        - {x: -30.5, y: 72.5}
+        - {x: -30.5, y: 75.5}
+        - {x: -33.5, y: 76.5}
+        - {x: -35.5, y: 74.5}
+      - - {x: -1.5, y: 89.5}
+        - {x: 1.5, y: 90.5}
+        - {x: 1.5, y: 93.5}
+        - {x: -1.5, y: 94.5}
+        - {x: -3.5, y: 92.5}
+    - name: smell_sprite_43
+      rect:
+        serializedVersion: 2
+        x: 765
+        y: 262
+        width: 255
+        height: 255
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 45.5, y: -61.5}
+        - {x: 48.5, y: -65.5}
+        - {x: 60.5, y: -68.5}
+        - {x: 91.5, y: -50.5}
+        - {x: 91.5, y: 42.5}
+        - {x: 77.5, y: 85.5}
+        - {x: -31.5, y: 85.5}
+        - {x: -88.5, y: 48.5}
+        - {x: -77.5, y: 21.5}
+        - {x: -70.5, y: 18.5}
+        - {x: -75.5, y: 12.5}
+        - {x: -75.5, y: 11.5}
+        - {x: -75.5, y: 13.5}
+        - {x: -74.5, y: 15.5}
+        - {x: -78.5, y: 23.5}
+        - {x: -86.5, y: 34.5}
+        - {x: -97.5, y: 4.5}
+        - {x: -97.5, y: -31.5}
+        - {x: -36.5, y: -95.5}
+        - {x: -6.5, y: -101.5}
+        - {x: 41.5, y: -101.5}
+        - {x: 56.5, y: -81.5}
+        - {x: 47.5, y: -63.5}
+        - {x: 44.5, y: -62.5}
+      - - {x: 46.5, y: -92.5}
+        - {x: 49.5, y: -91.5}
+        - {x: 49.5, y: -88.5}
+        - {x: 46.5, y: -87.5}
+        - {x: 44.5, y: -89.5}
+      - - {x: -53.5, y: -70.5}
+        - {x: -54.5, y: -72.5}
+        - {x: -53.5, y: -75.5}
+        - {x: -49.5, y: -75.5}
+        - {x: -46.5, y: -74.5}
+        - {x: -46.5, y: -71.5}
+        - {x: -48.5, y: -70.5}
+      - - {x: -83.5, y: 31.5}
+        - {x: -83.5, y: 30.5}
+        - {x: -80.5, y: 26.5}
+        - {x: -75.5, y: 26.5}
+        - {x: -72.5, y: 27.5}
+        - {x: -72.5, y: 33.5}
+        - {x: -73.5, y: 35.5}
+        - {x: -76.5, y: 35.5}
+        - {x: -82.5, y: 33.5}
+      - - {x: 92.5, y: 29.5}
+        - {x: 95.5, y: 30.5}
+        - {x: 95.5, y: 33.5}
+        - {x: 92.5, y: 34.5}
+        - {x: 90.5, y: 32.5}
+      - - {x: 78.5, y: 45.5}
+        - {x: 77.5, y: 41.5}
+        - {x: 77.5, y: 33.5}
+        - {x: 89.5, y: 33.5}
+        - {x: 93.5, y: 34.5}
+        - {x: 97.5, y: 40.5}
+        - {x: 97.5, y: 45.5}
+      - - {x: 60.5, y: 57.5}
+        - {x: 63.5, y: 58.5}
+        - {x: 63.5, y: 61.5}
+        - {x: 60.5, y: 62.5}
+        - {x: 58.5, y: 60.5}
+    - name: smell_sprite_44
+      rect:
+        serializedVersion: 2
+        x: 1020
+        y: 262
+        width: 255
+        height: 255
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 88.5, y: -34.5}
+        - {x: 89.5, y: -12.5}
+        - {x: 88.5, y: -9.5}
+        - {x: 86.5, y: -9.5}
+        - {x: 84.5, y: -11.5}
+        - {x: 83.5, y: -10.5}
+        - {x: 84.5, y: -10.5}
+        - {x: 86.5, y: -8.5}
+        - {x: 85.5, y: -5.5}
+        - {x: 86.5, y: 0.5}
+        - {x: 83.5, y: 4.5}
+        - {x: 91.5, y: 5.5}
+        - {x: 91.5, y: 37.5}
+        - {x: 56.5, y: 86.5}
+        - {x: -12.5, y: 86.5}
+        - {x: -31.5, y: 67.5}
+        - {x: -28.5, y: 63.5}
+        - {x: -26.5, y: 61.5}
+        - {x: -34.5, y: 66.5}
+        - {x: -37.5, y: 76.5}
+        - {x: -84.5, y: 37.5}
+        - {x: -83.5, y: 1.5}
+        - {x: -80.5, y: -5.5}
+        - {x: -79.5, y: -6.5}
+        - {x: -82.5, y: -4.5}
+        - {x: -83.5, y: -4.5}
+        - {x: -93.5, y: -7.5}
+        - {x: -96.5, y: -13.5}
+        - {x: -96.5, y: -18.5}
+        - {x: -36.5, y: -95.5}
+        - {x: 8.5, y: -98.5}
+        - {x: 53.5, y: -98.5}
+        - {x: 91.5, y: -53.5}
+        - {x: 91.5, y: -39.5}
+      - - {x: -51.5, y: -75.5}
+        - {x: -48.5, y: -74.5}
+        - {x: -48.5, y: -71.5}
+        - {x: -51.5, y: -70.5}
+        - {x: -53.5, y: -72.5}
+      - - {x: -65.5, y: -29.5}
+        - {x: -76.5, y: -29.5}
+        - {x: -81.5, y: -31.5}
+        - {x: -81.5, y: -42.5}
+        - {x: -72.5, y: -52.5}
+        - {x: -68.5, y: -52.5}
+        - {x: -65.5, y: -50.5}
+        - {x: -57.5, y: -45.5}
+        - {x: -57.5, y: -43.5}
+        - {x: -63.5, y: -32.5}
+      - - {x: 76.5, y: -52.5}
+        - {x: 79.5, y: -51.5}
+        - {x: 79.5, y: -48.5}
+        - {x: 76.5, y: -47.5}
+        - {x: 74.5, y: -49.5}
+      - - {x: -81.5, y: 23.5}
+        - {x: -85.5, y: 19.5}
+        - {x: -84.5, y: 12.5}
+        - {x: -81.5, y: 9.5}
+        - {x: -78.5, y: 10.5}
+        - {x: -78.5, y: 22.5}
+      - - {x: -78.5, y: 35.5}
+        - {x: -81.5, y: 34.5}
+        - {x: -82.5, y: 33.5}
+        - {x: -82.5, y: 28.5}
+        - {x: -78.5, y: 26.5}
+        - {x: -72.5, y: 26.5}
+        - {x: -71.5, y: 27.5}
+        - {x: -71.5, y: 33.5}
+        - {x: -72.5, y: 35.5}
+      - - {x: 93.5, y: 29.5}
+        - {x: 96.5, y: 30.5}
+        - {x: 96.5, y: 33.5}
+        - {x: 93.5, y: 34.5}
+        - {x: 91.5, y: 32.5}
+      - - {x: 80.5, y: 42.5}
+        - {x: 78.5, y: 39.5}
+        - {x: 78.5, y: 33.5}
+        - {x: 95.5, y: 33.5}
+        - {x: 95.5, y: 38.5}
+        - {x: 91.5, y: 42.5}
+      - - {x: 61.5, y: 49.5}
+        - {x: 64.5, y: 50.5}
+        - {x: 64.5, y: 53.5}
+        - {x: 61.5, y: 54.5}
+        - {x: 59.5, y: 52.5}
+    - name: smell_sprite_45
+      rect:
+        serializedVersion: 2
+        x: 1275
+        y: 262
+        width: 255
+        height: 255
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 83.5, y: 5.5}
+        - {x: 81.5, y: 4.5}
+        - {x: 80.5, y: 7.5}
+        - {x: 75.5, y: 7.5}
+        - {x: 87.5, y: 7.5}
+        - {x: 92.5, y: 5.5}
+        - {x: 92.5, y: 18.5}
+        - {x: 85.5, y: 19.5}
+        - {x: 83.5, y: 17.5}
+        - {x: 86.5, y: 31.5}
+        - {x: 82.5, y: 86.5}
+        - {x: -62.5, y: 86.5}
+        - {x: -80.5, y: 40.5}
+        - {x: -80.5, y: -28.5}
+        - {x: -32.5, y: -94.5}
+        - {x: 27.5, y: -101.5}
+        - {x: 38.5, y: -101.5}
+        - {x: 47.5, y: -94.5}
+        - {x: 92.5, y: -43.5}
+        - {x: 92.5, y: -0.5}
+        - {x: 91.5, y: 5.5}
+      - - {x: -51.5, y: -70.5}
+        - {x: -52.5, y: -72.5}
+        - {x: -51.5, y: -75.5}
+        - {x: -47.5, y: -75.5}
+        - {x: -44.5, y: -74.5}
+        - {x: -44.5, y: -71.5}
+        - {x: -46.5, y: -70.5}
+      - - {x: -58.5, y: -34.5}
+        - {x: -69.5, y: -29.5}
+        - {x: -74.5, y: -29.5}
+        - {x: -79.5, y: -31.5}
+        - {x: -79.5, y: -36.5}
+        - {x: -74.5, y: -50.5}
+        - {x: -68.5, y: -52.5}
+        - {x: -64.5, y: -52.5}
+        - {x: -56.5, y: -46.5}
+        - {x: -56.5, y: -38.5}
+      - - {x: -65.5, y: -27.5}
+        - {x: -62.5, y: -26.5}
+        - {x: -62.5, y: -23.5}
+        - {x: -65.5, y: -22.5}
+        - {x: -67.5, y: -24.5}
+      - - {x: -83.5, y: -4.5}
+        - {x: -91.5, y: -7.5}
+        - {x: -91.5, y: -15.5}
+        - {x: -82.5, y: -15.5}
+        - {x: -78.5, y: -9.5}
+        - {x: -78.5, y: -5.5}
+        - {x: -79.5, y: -4.5}
+      - - {x: -83.5, y: 9.5}
+        - {x: -77.5, y: 1.5}
+        - {x: -73.5, y: 1.5}
+        - {x: -73.5, y: 7.5}
+        - {x: -75.5, y: 16.5}
+        - {x: -76.5, y: 17.5}
+        - {x: -82.5, y: 17.5}
+        - {x: -83.5, y: 16.5}
+      - - {x: -75.5, y: 35.5}
+        - {x: -78.5, y: 34.5}
+        - {x: -81.5, y: 31.5}
+        - {x: -80.5, y: 28.5}
+        - {x: -76.5, y: 27.5}
+        - {x: -72.5, y: 27.5}
+        - {x: -70.5, y: 31.5}
+        - {x: -70.5, y: 34.5}
+        - {x: -71.5, y: 35.5}
+      - - {x: 82.5, y: 42.5}
+        - {x: 82.5, y: 35.5}
+        - {x: 86.5, y: 34.5}
+        - {x: 96.5, y: 34.5}
+        - {x: 96.5, y: 37.5}
+        - {x: 92.5, y: 42.5}
+      - - {x: 62.5, y: 49.5}
+        - {x: 65.5, y: 50.5}
+        - {x: 65.5, y: 53.5}
+        - {x: 62.5, y: 54.5}
+        - {x: 60.5, y: 52.5}
+    - name: smell_sprite_46
+      rect:
+        serializedVersion: 2
+        x: 1530
+        y: 262
+        width: 255
+        height: 255
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 84.5, y: 5.5}
+        - {x: 82.5, y: 2.5}
+        - {x: 79.5, y: 2.5}
+        - {x: 82.5, y: 4.5}
+        - {x: 82.5, y: 6.5}
+        - {x: 79.5, y: 7.5}
+        - {x: 77.5, y: 5.5}
+        - {x: 77.5, y: 6.5}
+        - {x: 94.5, y: 14.5}
+        - {x: 94.5, y: 16.5}
+        - {x: 67.5, y: 70.5}
+        - {x: 47.5, y: 86.5}
+        - {x: -36.5, y: 86.5}
+        - {x: -78.5, y: 38.5}
+        - {x: -78.5, y: -61.5}
+        - {x: -12.5, y: -101.5}
+        - {x: 42.5, y: -101.5}
+        - {x: 58.5, y: -83.5}
+        - {x: 94.5, y: -48.5}
+        - {x: 94.5, y: -6.5}
+        - {x: 91.5, y: 6.5}
+      - - {x: -64.5, y: -61.5}
+        - {x: -68.5, y: -65.5}
+        - {x: -69.5, y: -68.5}
+        - {x: -69.5, y: -71.5}
+        - {x: -65.5, y: -74.5}
+        - {x: -59.5, y: -74.5}
+        - {x: -57.5, y: -70.5}
+        - {x: -57.5, y: -63.5}
+        - {x: -60.5, y: -61.5}
+      - - {x: -77.5, y: -17.5}
+        - {x: -74.5, y: -16.5}
+        - {x: -74.5, y: -13.5}
+        - {x: -77.5, y: -12.5}
+        - {x: -79.5, y: -14.5}
+      - - {x: -90.5, y: -13.5}
+        - {x: -87.5, y: -14.5}
+        - {x: -81.5, y: -14.5}
+        - {x: -80.5, y: -13.5}
+        - {x: -78.5, y: -6.5}
+        - {x: -81.5, y: -4.5}
+        - {x: -90.5, y: -8.5}
+      - - {x: -82.5, y: 9.5}
+        - {x: -76.5, y: 1.5}
+        - {x: -72.5, y: 1.5}
+        - {x: -72.5, y: 6.5}
+        - {x: -75.5, y: 16.5}
+        - {x: -78.5, y: 17.5}
+        - {x: -82.5, y: 17.5}
+      - - {x: 85.5, y: 19.5}
+        - {x: 84.5, y: 16.5}
+        - {x: 85.5, y: 10.5}
+        - {x: 87.5, y: 7.5}
+        - {x: 93.5, y: 7.5}
+        - {x: 93.5, y: 17.5}
+        - {x: 87.5, y: 19.5}
+      - - {x: -78.5, y: 28.5}
+        - {x: -75.5, y: 29.5}
+        - {x: -75.5, y: 32.5}
+        - {x: -78.5, y: 33.5}
+        - {x: -80.5, y: 31.5}
+      - - {x: -72.5, y: 30.5}
+        - {x: -69.5, y: 31.5}
+        - {x: -69.5, y: 34.5}
+        - {x: -72.5, y: 35.5}
+        - {x: -74.5, y: 33.5}
+      - - {x: 83.5, y: 37.5}
+        - {x: 85.5, y: 34.5}
+        - {x: 89.5, y: 34.5}
+        - {x: 94.5, y: 36.5}
+        - {x: 94.5, y: 40.5}
+        - {x: 92.5, y: 41.5}
+        - {x: 89.5, y: 41.5}
+        - {x: 83.5, y: 39.5}
+      - - {x: 45.5, y: 69.5}
+        - {x: 47.5, y: 67.5}
+        - {x: 50.5, y: 68.5}
+        - {x: 50.5, y: 73.5}
+        - {x: 48.5, y: 75.5}
+        - {x: 45.5, y: 74.5}
+      - - {x: 52.5, y: 68.5}
+        - {x: 55.5, y: 69.5}
+        - {x: 55.5, y: 72.5}
+        - {x: 52.5, y: 73.5}
+        - {x: 50.5, y: 71.5}
+    - name: smell_sprite_47
+      rect:
+        serializedVersion: 2
+        x: 1785
+        y: 262
+        width: 255
+        height: 255
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -44.5, y: 48.5}
+        - {x: -52.5, y: 49.5}
+        - {x: -74.5, y: 38.5}
+        - {x: -77.5, y: 1.5}
+        - {x: -77.5, y: -19.5}
+        - {x: -62.5, y: -22.5}
+        - {x: -60.5, y: -22.5}
+        - {x: -72.5, y: -29.5}
+        - {x: -77.5, y: -33.5}
+        - {x: -77.5, y: -44.5}
+        - {x: -22.5, y: -89.5}
+        - {x: 5.5, y: -85.5}
+        - {x: 8.5, y: -84.5}
+        - {x: 27.5, y: -101.5}
+        - {x: 47.5, y: -101.5}
+        - {x: 98.5, y: -46.5}
+        - {x: 98.5, y: 55.5}
+        - {x: 85.5, y: 86.5}
+        - {x: -43.5, y: 86.5}
+        - {x: -46.5, y: 50.5}
+      - - {x: -11.5, y: -81.5}
+        - {x: -11.5, y: -85.5}
+        - {x: -10.5, y: -88.5}
+        - {x: -8.5, y: -88.5}
+        - {x: -6.5, y: -87.5}
+        - {x: -5.5, y: -82.5}
+        - {x: -7.5, y: -80.5}
+        - {x: -9.5, y: -80.5}
+      - - {x: -68.5, y: -70.5}
+        - {x: -66.5, y: -74.5}
+        - {x: -59.5, y: -74.5}
+        - {x: -56.5, y: -73.5}
+        - {x: -56.5, y: -65.5}
+        - {x: -57.5, y: -61.5}
+        - {x: -62.5, y: -61.5}
+        - {x: -68.5, y: -65.5}
+      - - {x: -82.5, y: -14.5}
+        - {x: -79.5, y: -13.5}
+        - {x: -79.5, y: -10.5}
+        - {x: -82.5, y: -9.5}
+        - {x: -84.5, y: -11.5}
+      - - {x: -87.5, y: -12.5}
+        - {x: -84.5, y: -11.5}
+        - {x: -84.5, y: -8.5}
+        - {x: -87.5, y: -7.5}
+        - {x: -89.5, y: -9.5}
+      - - {x: -80.5, y: -9.5}
+        - {x: -77.5, y: -8.5}
+        - {x: -77.5, y: -5.5}
+        - {x: -80.5, y: -4.5}
+        - {x: -82.5, y: -6.5}
+      - - {x: 80.5, y: 2.5}
+        - {x: 83.5, y: 3.5}
+        - {x: 83.5, y: 6.5}
+        - {x: 80.5, y: 7.5}
+        - {x: 78.5, y: 5.5}
+      - - {x: 86.5, y: 19.5}
+        - {x: 85.5, y: 16.5}
+        - {x: 85.5, y: 9.5}
+        - {x: 89.5, y: 7.5}
+        - {x: 92.5, y: 7.5}
+        - {x: 94.5, y: 8.5}
+        - {x: 94.5, y: 11.5}
+        - {x: 89.5, y: 19.5}
+      - - {x: -81.5, y: 13.5}
+        - {x: -78.5, y: 9.5}
+        - {x: -75.5, y: 11.5}
+        - {x: -76.5, y: 15.5}
+        - {x: -78.5, y: 17.5}
+        - {x: -81.5, y: 16.5}
+      - - {x: -77.5, y: 28.5}
+        - {x: -74.5, y: 29.5}
+        - {x: -74.5, y: 32.5}
+        - {x: -77.5, y: 33.5}
+        - {x: -79.5, y: 31.5}
+      - - {x: -71.5, y: 30.5}
+        - {x: -68.5, y: 31.5}
+        - {x: -68.5, y: 34.5}
+        - {x: -71.5, y: 35.5}
+        - {x: -73.5, y: 33.5}
+      - - {x: 91.5, y: 41.5}
+        - {x: 86.5, y: 38.5}
+        - {x: 86.5, y: 36.5}
+        - {x: 88.5, y: 34.5}
+        - {x: 92.5, y: 35.5}
+        - {x: 95.5, y: 38.5}
+        - {x: 95.5, y: 40.5}
+        - {x: 93.5, y: 41.5}
+      - - {x: 46.5, y: 69.5}
+        - {x: 48.5, y: 67.5}
+        - {x: 51.5, y: 68.5}
+        - {x: 51.5, y: 71.5}
+        - {x: 49.5, y: 73.5}
+        - {x: 46.5, y: 72.5}
+      - - {x: 53.5, y: 68.5}
+        - {x: 56.5, y: 69.5}
+        - {x: 56.5, y: 72.5}
+        - {x: 53.5, y: 73.5}
+        - {x: 51.5, y: 71.5}
+      - - {x: -11.5, y: 72.5}
+        - {x: -8.5, y: 73.5}
+        - {x: -8.5, y: 76.5}
+        - {x: -11.5, y: 77.5}
+        - {x: -13.5, y: 75.5}
+    - name: smell_sprite_48
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 7
+        width: 255
+        height: 255
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 39.5, y: -84.5}
+        - {x: 40.5, y: -80.5}
+        - {x: 42.5, y: -81.5}
+        - {x: 91.5, y: -63.5}
+        - {x: 91.5, y: 55.5}
+        - {x: 36.5, y: 85.5}
+        - {x: -22.5, y: 85.5}
+        - {x: -37.5, y: 73.5}
+        - {x: -28.5, y: 59.5}
+        - {x: -25.5, y: 58.5}
+        - {x: -23.5, y: 61.5}
+        - {x: -24.5, y: 58.5}
+        - {x: -28.5, y: 58.5}
+        - {x: -37.5, y: 64.5}
+        - {x: -58.5, y: 51.5}
+        - {x: -76.5, y: 35.5}
+        - {x: -77.5, y: 4.5}
+        - {x: -73.5, y: 3.5}
+        - {x: -65.5, y: 2.5}
+        - {x: -72.5, y: 2.5}
+        - {x: -84.5, y: 0.5}
+        - {x: -84.5, y: -35.5}
+        - {x: -83.5, y: -45.5}
+        - {x: -77.5, y: -47.5}
+        - {x: -54.5, y: -46.5}
+        - {x: -53.5, y: -43.5}
+        - {x: -54.5, y: -46.5}
+        - {x: -56.5, y: -46.5}
+        - {x: -58.5, y: -48.5}
+        - {x: -66.5, y: -58.5}
+        - {x: -28.5, y: -92.5}
+        - {x: 18.5, y: -102.5}
+        - {x: 42.5, y: -102.5}
+        - {x: 42.5, y: -87.5}
+        - {x: 40.5, y: -85.5}
+        - {x: 37.5, y: -86.5}
+      - - {x: -16.5, y: -86.5}
+        - {x: -13.5, y: -85.5}
+        - {x: -13.5, y: -82.5}
+        - {x: -16.5, y: -81.5}
+        - {x: -18.5, y: -83.5}
+      - - {x: -69.5, y: -62.5}
+        - {x: -77.5, y: -66.5}
+        - {x: -77.5, y: -72.5}
+        - {x: -72.5, y: -75.5}
+        - {x: -66.5, y: -75.5}
+        - {x: -64.5, y: -72.5}
+        - {x: -63.5, y: -66.5}
+        - {x: -65.5, y: -63.5}
+      - - {x: -78.5, y: -44.5}
+        - {x: -78.5, y: -51.5}
+        - {x: -73.5, y: -53.5}
+        - {x: -69.5, y: -53.5}
+        - {x: -65.5, y: -47.5}
+        - {x: -65.5, y: -44.5}
+      - - {x: -94.5, y: -13.5}
+        - {x: -91.5, y: -12.5}
+        - {x: -91.5, y: -9.5}
+        - {x: -94.5, y: -8.5}
+        - {x: -96.5, y: -10.5}
+      - - {x: 74.5, y: 7.5}
+        - {x: 77.5, y: 8.5}
+        - {x: 77.5, y: 11.5}
+        - {x: 74.5, y: 12.5}
+        - {x: 72.5, y: 10.5}
+      - - {x: 79.5, y: 9.5}
+        - {x: 81.5, y: 7.5}
+        - {x: 84.5, y: 8.5}
+        - {x: 84.5, y: 12.5}
+        - {x: 82.5, y: 14.5}
+        - {x: 79.5, y: 13.5}
+      - - {x: -88.5, y: 13.5}
+        - {x: -85.5, y: 8.5}
+        - {x: -82.5, y: 10.5}
+        - {x: -83.5, y: 14.5}
+        - {x: -85.5, y: 16.5}
+        - {x: -87.5, y: 16.5}
+      - - {x: -84.5, y: 27.5}
+        - {x: -81.5, y: 28.5}
+        - {x: -81.5, y: 31.5}
+        - {x: -84.5, y: 32.5}
+        - {x: -86.5, y: 30.5}
+      - - {x: 82.5, y: 37.5}
+        - {x: 82.5, y: 36.5}
+        - {x: 84.5, y: 34.5}
+        - {x: 85.5, y: 34.5}
+        - {x: 88.5, y: 37.5}
+        - {x: 88.5, y: 39.5}
+        - {x: 85.5, y: 40.5}
+      - - {x: 39.5, y: 68.5}
+        - {x: 41.5, y: 66.5}
+        - {x: 44.5, y: 67.5}
+        - {x: 44.5, y: 70.5}
+        - {x: 42.5, y: 72.5}
+        - {x: 39.5, y: 71.5}
+      - - {x: 46.5, y: 67.5}
+        - {x: 49.5, y: 68.5}
+        - {x: 49.5, y: 71.5}
+        - {x: 46.5, y: 72.5}
+        - {x: 44.5, y: 70.5}
+    - name: smell_sprite_49
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 7
+        width: 255
+        height: 255
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 31.5, y: -91.5}
+        - {x: 29.5, y: -92.5}
+        - {x: 29.5, y: -93.5}
+        - {x: 31.5, y: -96.5}
+        - {x: 35.5, y: -97.5}
+        - {x: 38.5, y: -96.5}
+        - {x: 38.5, y: -92.5}
+        - {x: 36.5, y: -91.5}
+      - - {x: 39.5, y: -93.5}
+        - {x: 42.5, y: -92.5}
+        - {x: 42.5, y: -89.5}
+        - {x: 39.5, y: -88.5}
+        - {x: 37.5, y: -90.5}
+      - - {x: 58.5, y: 33.5}
+        - {x: 53.5, y: 26.5}
+        - {x: 48.5, y: 29.5}
+        - {x: 53.5, y: 28.5}
+        - {x: 58.5, y: 32.5}
+        - {x: 55.5, y: 61.5}
+        - {x: 47.5, y: 64.5}
+        - {x: 42.5, y: 57.5}
+        - {x: 42.5, y: 55.5}
+        - {x: 37.5, y: 61.5}
+        - {x: 28.5, y: 56.5}
+        - {x: 26.5, y: 54.5}
+        - {x: 21.5, y: 54.5}
+        - {x: 18.5, y: 57.5}
+        - {x: 17.5, y: 57.5}
+        - {x: 17.5, y: 58.5}
+        - {x: 21.5, y: 55.5}
+        - {x: 25.5, y: 54.5}
+        - {x: 34.5, y: 64.5}
+        - {x: 25.5, y: 81.5}
+        - {x: 10.5, y: 84.5}
+        - {x: -12.5, y: 84.5}
+        - {x: -42.5, y: 64.5}
+        - {x: -49.5, y: 47.5}
+        - {x: -41.5, y: 41.5}
+        - {x: -33.5, y: 38.5}
+        - {x: -46.5, y: 42.5}
+        - {x: -58.5, y: 43.5}
+        - {x: -68.5, y: 35.5}
+        - {x: -77.5, y: 9.5}
+        - {x: -77.5, y: -20.5}
+        - {x: -74.5, y: -24.5}
+        - {x: -71.5, y: -26.5}
+        - {x: -61.5, y: -29.5}
+        - {x: -55.5, y: -25.5}
+        - {x: -58.5, y: -28.5}
+        - {x: -65.5, y: -30.5}
+        - {x: -70.5, y: -34.5}
+        - {x: -70.5, y: -50.5}
+        - {x: -31.5, y: -89.5}
+        - {x: -21.5, y: -79.5}
+        - {x: -24.5, y: -70.5}
+        - {x: -26.5, y: -66.5}
+        - {x: -31.5, y: -65.5}
+        - {x: -34.5, y: -66.5}
+        - {x: -27.5, y: -66.5}
+        - {x: -23.5, y: -65.5}
+        - {x: -15.5, y: -65.5}
+        - {x: -10.5, y: -67.5}
+        - {x: -14.5, y: -66.5}
+        - {x: -19.5, y: -67.5}
+        - {x: -20.5, y: -81.5}
+        - {x: 6.5, y: -90.5}
+        - {x: 39.5, y: -90.5}
+        - {x: 87.5, y: -44.5}
+        - {x: 92.5, y: -20.5}
+        - {x: 92.5, y: 0.5}
+        - {x: 74.5, y: 43.5}
+      - - {x: -71.5, y: -63.5}
+        - {x: -74.5, y: -70.5}
+        - {x: -74.5, y: -72.5}
+        - {x: -70.5, y: -75.5}
+        - {x: -64.5, y: -74.5}
+        - {x: -64.5, y: -64.5}
+        - {x: -67.5, y: -62.5}
+      - - {x: 49.5, y: -67.5}
+        - {x: 52.5, y: -66.5}
+        - {x: 52.5, y: -63.5}
+        - {x: 49.5, y: -62.5}
+        - {x: 47.5, y: -64.5}
+      - - {x: -73.5, y: -50.5}
+        - {x: -70.5, y: -49.5}
+        - {x: -70.5, y: -46.5}
+        - {x: -73.5, y: -45.5}
+        - {x: -75.5, y: -47.5}
+      - - {x: -82.5, y: -40.5}
+        - {x: -81.5, y: -43.5}
+        - {x: -74.5, y: -43.5}
+        - {x: -71.5, y: -40.5}
+        - {x: -71.5, y: -34.5}
+        - {x: -72.5, y: -33.5}
+        - {x: -76.5, y: -32.5}
+        - {x: -78.5, y: -32.5}
+        - {x: -82.5, y: -37.5}
+      - - {x: -74.5, y: -7.5}
+        - {x: -71.5, y: -6.5}
+        - {x: -71.5, y: -3.5}
+        - {x: -74.5, y: -2.5}
+        - {x: -76.5, y: -4.5}
+      - - {x: 74.5, y: 17.5}
+        - {x: 77.5, y: 18.5}
+        - {x: 77.5, y: 21.5}
+        - {x: 74.5, y: 22.5}
+        - {x: 72.5, y: 20.5}
+      - - {x: -74.5, y: 28.5}
+        - {x: -74.5, y: 25.5}
+        - {x: -71.5, y: 20.5}
+        - {x: -69.5, y: 20.5}
+        - {x: -67.5, y: 21.5}
+        - {x: -66.5, y: 25.5}
+        - {x: -71.5, y: 29.5}
+        - {x: -72.5, y: 29.5}
+      - - {x: -11.5, y: 63.5}
+        - {x: -8.5, y: 64.5}
+        - {x: -8.5, y: 67.5}
+        - {x: -11.5, y: 68.5}
+        - {x: -13.5, y: 66.5}
+      - - {x: 40.5, y: 68.5}
+        - {x: 42.5, y: 66.5}
+        - {x: 45.5, y: 67.5}
+        - {x: 45.5, y: 70.5}
+        - {x: 43.5, y: 72.5}
+        - {x: 40.5, y: 71.5}
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -16,6 +16,8 @@ public class Moose : Herbivorous
     
         RayCasting();
 
+        //GetWater();
+
         Animator.SetInteger("Animation_Rotation_State", (int)transform.rotation.eulerAngles.z);
         Animator.SetBool("Animation_Mov_State", isMoving_flag);
         ControlledMov();
