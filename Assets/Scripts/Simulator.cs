@@ -87,7 +87,7 @@ public class Simulator : MonoBehaviour {
         moose1.GetComponent<Wolf>().SetAge(SENIOR_AGE);
 
     }
-
+      
 
 
     void SetAnimals()
