@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System.Collections;
+using System.Linq;
 using UnityEngine;
 
 public class Simulator : MonoBehaviour {
@@ -8,11 +9,14 @@ public class Simulator : MonoBehaviour {
     public GameObject moosePrefab;
     public GameObject dearPrefab;
 
+    public GameObject map;
+
 
     private readonly string SENIOR_AGE = "Senior";
     private readonly string JUNIOR_AGE = "Junior";
 
     private GameObject[] animals;
+
     void Start() {
         
     }
@@ -69,7 +73,6 @@ public class Simulator : MonoBehaviour {
     void Update ()
     {
         SetPosition();
-        //GetComponent<Pack>().Update();
     }
 
     void SetFirstAnimals()
@@ -87,7 +90,7 @@ public class Simulator : MonoBehaviour {
         moose1.GetComponent<Wolf>().SetAge(SENIOR_AGE);
 
     }
-      
+       
 
 
     void SetAnimals()
@@ -151,4 +154,14 @@ public class Simulator : MonoBehaviour {
         }
         return mutation;
     }
+/*
+    IEnumerator GenerationTimer()
+    {
+        yield return new WaitForSeconds(300);
+        foreach (var animal in _pack)
+        {
+            animal.GetComponent<Wolf>().Prey = null;
+            animal.GetComponent<Wolf>().StopAction();
+        }
+    }*/
 }

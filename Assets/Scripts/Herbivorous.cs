@@ -27,7 +27,7 @@ public class Herbivorous : Animal
         { 
             SetRules();
         }
-        rule_flag = !MakeRule();
+        //rule_flag = !MakeRule();
     }
 
     protected new void OnCollisionEnter2D(Collision2D other)
@@ -134,15 +134,19 @@ public class Herbivorous : Animal
         switch (_ruleNo)
         {
             case 1:
-                if (UTurnMove())
+                if (UTurnMove()) { 
+                    Debug.Log("Runnign away");
                     return (BigMoveForward());
-
+                }
                 return false;
             case 2:
+                Debug.Log("Getting water");
                 return GetWater();
             case 3:
+                Debug.Log("Getting food");
                 return GetFood();
             default:
+                Debug.Log("Random movements");
                 RandomMov();
                 return true;
         }
