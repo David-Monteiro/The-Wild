@@ -54,12 +54,12 @@ TextureImporter:
     21300094: smell_sprite01_47
     21300096: smell_sprite01_48
     21300098: smell_sprite01_49
-  serializedVersion: 4
+  serializedVersion: 2
   mipmaps:
     mipMapMode: 0
     enableMipMap: 1
-    sRGBTexture: 1
     linearTexture: 0
+    correctGamma: 0
     fadeOut: 0
     borderMipMap: 0
     mipMapFadeDistanceStart: 1
@@ -71,8 +71,10 @@ TextureImporter:
     normalMapFilter: 0
   isReadable: 0
   grayScaleToAlpha: 0
-  generateCubemap: 6
+  generateCubemap: 0
   cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
   seamlessCubemap: 0
   textureFormat: -1
   maxTextureSize: 2048
@@ -83,7 +85,9 @@ TextureImporter:
     wrapMode: 1
   nPOTScale: 0
   lightmap: 0
+  rGBM: 0
   compressionQuality: 50
+  allowsAlphaSplitting: 0
   spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
@@ -91,28 +95,12 @@ TextureImporter:
   spritePivot: {x: 0.5, y: 0.5}
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spritePixelsToUnits: 100
-  alphaUsage: 1
   alphaIsTransparency: 1
-  spriteTessellationDetail: -1
   textureType: 8
-  textureShape: 1
-  maxTextureSizeSet: 0
-  compressionQualitySet: 0
-  textureFormatSet: 0
-  platformSettings:
-  - buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
+  buildTargetSettings: []
   spriteSheet:
-    serializedVersion: 2
     sprites:
-    - serializedVersion: 2
-      name: smell_sprite01_0
+    - name: smell_sprite01_0
       rect:
         serializedVersion: 2
         x: 0
@@ -122,10 +110,15 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: -1
-    - serializedVersion: 2
-      name: smell_sprite01_1
+      outline:
+      - - {x: -2, y: 0}
+        - {x: -1, y: -3}
+        - {x: 5, y: -3}
+        - {x: 5, y: 1}
+        - {x: 3, y: 5}
+        - {x: 0, y: 5}
+        - {x: -2, y: 3}
+    - name: smell_sprite01_1
       rect:
         serializedVersion: 2
         x: 138
@@ -135,10 +128,17 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: -1
-    - serializedVersion: 2
-      name: smell_sprite01_2
+      outline:
+      - - {x: 9, y: 19}
+        - {x: -12, y: 19}
+        - {x: -22, y: 13}
+        - {x: -22, y: -6}
+        - {x: -19, y: -19}
+        - {x: 14, y: -19}
+        - {x: 23, y: -9}
+        - {x: 23, y: 4}
+        - {x: 16, y: 18}
+    - name: smell_sprite01_2
       rect:
         serializedVersion: 2
         x: 276
@@ -148,10 +148,17 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: -1
-    - serializedVersion: 2
-      name: smell_sprite01_3
+      outline:
+      - - {x: -1, y: 29}
+        - {x: -17, y: 29}
+        - {x: -30, y: 11}
+        - {x: -30, y: -5}
+        - {x: -14, y: -33}
+        - {x: 21, y: -33}
+        - {x: 32, y: -15}
+        - {x: 32, y: 18}
+        - {x: 31, y: 23}
+    - name: smell_sprite01_3
       rect:
         serializedVersion: 2
         x: 414
@@ -161,10 +168,38 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: -1
-    - serializedVersion: 2
-      name: smell_sprite01_4
+      outline:
+      - - {x: 38, y: 28}
+        - {x: 34, y: 29}
+        - {x: 29, y: 26}
+        - {x: 28, y: 22}
+        - {x: 29, y: 27}
+        - {x: 26, y: 35}
+        - {x: 19, y: 36}
+        - {x: -6, y: 36}
+        - {x: -33, y: 19}
+        - {x: -33, y: -15}
+        - {x: -28, y: -37}
+        - {x: 19, y: -37}
+        - {x: 21, y: -35}
+        - {x: 40, y: -12}
+        - {x: 40, y: 4}
+      - - {x: 35, y: 18}
+        - {x: 33, y: 16}
+        - {x: 32, y: 14}
+        - {x: 32, y: 9}
+        - {x: 35, y: 8}
+        - {x: 42, y: 8}
+        - {x: 42, y: 13}
+        - {x: 40, y: 18}
+      - - {x: -20, y: 39}
+        - {x: -22, y: 36}
+        - {x: -22, y: 32}
+        - {x: -18, y: 30}
+        - {x: -13, y: 30}
+        - {x: -13, y: 35}
+        - {x: -14, y: 38}
+    - name: smell_sprite01_4
       rect:
         serializedVersion: 2
         x: 552
@@ -174,10 +209,30 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: -1
-    - serializedVersion: 2
-      name: smell_sprite01_5
+      outline:
+      - - {x: 45, y: 5}
+        - {x: 41, y: 24}
+        - {x: 36, y: 29}
+        - {x: 33, y: 29}
+        - {x: 13, y: 41}
+        - {x: -9, y: 41}
+        - {x: -35, y: 21}
+        - {x: -35, y: -14}
+        - {x: -32, y: -28}
+        - {x: -20, y: -36}
+        - {x: -12, y: -39}
+        - {x: 25, y: -39}
+        - {x: 41, y: -17}
+        - {x: 45, y: -7}
+      - - {x: -17, y: 40}
+        - {x: -20, y: 40}
+        - {x: -21, y: 38}
+        - {x: -22, y: 34}
+        - {x: -19, y: 29}
+        - {x: -15, y: 30}
+        - {x: -13, y: 32}
+        - {x: -13, y: 38}
+    - name: smell_sprite01_5
       rect:
         serializedVersion: 2
         x: 690
@@ -187,10 +242,33 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: -1
-    - serializedVersion: 2
-      name: smell_sprite01_6
+      outline:
+      - - {x: 34, y: 42}
+        - {x: -21, y: 42}
+        - {x: -36, y: 25}
+        - {x: -36, y: -43}
+        - {x: -30, y: -53}
+        - {x: 11, y: -53}
+        - {x: 43, y: -40}
+        - {x: 52, y: -21}
+        - {x: 52, y: 12}
+        - {x: 42, y: 36}
+      - - {x: -20, y: 40}
+        - {x: -20, y: 31}
+        - {x: -19, y: 30}
+        - {x: -13, y: 30}
+        - {x: -11, y: 31}
+        - {x: -11, y: 39}
+        - {x: -13, y: 40}
+      - - {x: 13, y: 49}
+        - {x: 13, y: 44}
+        - {x: 14, y: 42}
+        - {x: 17, y: 42}
+        - {x: 20, y: 43}
+        - {x: 20, y: 48}
+        - {x: 17, y: 51}
+        - {x: 15, y: 51}
+    - name: smell_sprite01_6
       rect:
         serializedVersion: 2
         x: 828
@@ -200,10 +278,22 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: -1
-    - serializedVersion: 2
-      name: smell_sprite01_7
+      outline:
+      - - {x: 27, y: 39}
+        - {x: 23, y: 39}
+        - {x: 23, y: 47}
+        - {x: 18, y: 51}
+        - {x: 12, y: 51}
+        - {x: -19, y: 43}
+        - {x: -35, y: 30}
+        - {x: -35, y: -31}
+        - {x: -21, y: -53}
+        - {x: 21, y: -53}
+        - {x: 31, y: -52}
+        - {x: 53, y: -18}
+        - {x: 53, y: 15}
+        - {x: 51, y: 20}
+    - name: smell_sprite01_7
       rect:
         serializedVersion: 2
         x: 966
@@ -213,10 +303,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: -1
-    - serializedVersion: 2
-      name: smell_sprite01_8
+      outline:
+      - - {x: 23, y: 39}
+        - {x: 22, y: 51}
+        - {x: 4, y: 51}
+        - {x: -36, y: 38}
+        - {x: -36, y: -50}
+        - {x: -35, y: -55}
+        - {x: 5, y: -55}
+        - {x: 55, y: -33}
+        - {x: 55, y: 25}
+        - {x: 29, y: 38}
+    - name: smell_sprite01_8
       rect:
         serializedVersion: 2
         x: 0
@@ -226,10 +324,25 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: -1
-    - serializedVersion: 2
-      name: smell_sprite01_9
+      outline:
+      - - {x: 23, y: 50}
+        - {x: -8, y: 50}
+        - {x: -42, y: 32}
+        - {x: -42, y: -13}
+        - {x: -38, y: -34}
+        - {x: -24, y: -56}
+        - {x: 18, y: -56}
+        - {x: 47, y: -36}
+        - {x: 50, y: -28}
+        - {x: 50, y: 30}
+      - - {x: -19, y: 48}
+        - {x: -19, y: 41}
+        - {x: -18, y: 39}
+        - {x: -13, y: 39}
+        - {x: -11, y: 43}
+        - {x: -11, y: 46}
+        - {x: -13, y: 48}
+    - name: smell_sprite01_9
       rect:
         serializedVersion: 2
         x: 138
@@ -239,10 +352,26 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: -1
-    - serializedVersion: 2
-      name: smell_sprite01_10
+      outline:
+      - - {x: 45, y: -31}
+        - {x: 52, y: -26}
+        - {x: 53, y: -19}
+        - {x: 53, y: 29}
+        - {x: 20, y: 50}
+        - {x: 7, y: 50}
+        - {x: -11, y: 39}
+        - {x: -13, y: 37}
+        - {x: -10, y: 42}
+        - {x: -10, y: 50}
+        - {x: -46, y: 50}
+        - {x: -46, y: -55}
+        - {x: -45, y: -56}
+        - {x: 16, y: -56}
+        - {x: 41, y: -48}
+        - {x: 35, y: -25}
+        - {x: 32, y: -22}
+        - {x: 41, y: -29}
+    - name: smell_sprite01_10
       rect:
         serializedVersion: 2
         x: 276
@@ -252,10 +381,17 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: -1
-    - serializedVersion: 2
-      name: smell_sprite01_11
+      outline:
+      - - {x: -16, y: 50}
+        - {x: -38, y: 38}
+        - {x: -45, y: 29}
+        - {x: -45, y: -42}
+        - {x: -34, y: -56}
+        - {x: 16, y: -56}
+        - {x: 54, y: -34}
+        - {x: 54, y: 37}
+        - {x: 38, y: 50}
+    - name: smell_sprite01_11
       rect:
         serializedVersion: 2
         x: 414
@@ -265,10 +401,15 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: -1
-    - serializedVersion: 2
-      name: smell_sprite01_12
+      outline:
+      - - {x: -44, y: -44}
+        - {x: -36, y: -56}
+        - {x: 29, y: -56}
+        - {x: 54, y: -37}
+        - {x: 54, y: 50}
+        - {x: -21, y: 50}
+        - {x: -44, y: 17}
+    - name: smell_sprite01_12
       rect:
         serializedVersion: 2
         x: 552
@@ -278,10 +419,33 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: -1
-    - serializedVersion: 2
-      name: smell_sprite01_13
+      outline:
+      - - {x: 41, y: 5}
+        - {x: 41, y: 4}
+        - {x: 43, y: 5}
+        - {x: 52, y: 2}
+        - {x: 55, y: 13}
+        - {x: 55, y: 40}
+        - {x: 39, y: 50}
+        - {x: -34, y: 50}
+        - {x: -41, y: 48}
+        - {x: -43, y: 36}
+        - {x: -43, y: -54}
+        - {x: -39, y: -56}
+        - {x: 8, y: -56}
+        - {x: 55, y: -32}
+        - {x: 55, y: -19}
+        - {x: 50, y: 1}
+        - {x: 43, y: 4}
+      - - {x: 36, y: 51}
+        - {x: 34, y: 47}
+        - {x: 34, y: 43}
+        - {x: 36, y: 42}
+        - {x: 42, y: 42}
+        - {x: 44, y: 46}
+        - {x: 44, y: 50}
+        - {x: 41, y: 51}
+    - name: smell_sprite01_13
       rect:
         serializedVersion: 2
         x: 690
@@ -291,10 +455,38 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: -1
-    - serializedVersion: 2
-      name: smell_sprite01_14
+      outline:
+      - - {x: 56, y: -28}
+        - {x: 56, y: -24}
+        - {x: 51, y: -17}
+        - {x: 48, y: -17}
+        - {x: 44, y: -20}
+        - {x: 44, y: -22}
+        - {x: 42, y: -22}
+        - {x: 45, y: -18}
+        - {x: 45, y: -16}
+        - {x: 42, y: -12}
+        - {x: 40, y: -12}
+        - {x: 48, y: -12}
+        - {x: 54, y: -6}
+        - {x: 54, y: 0}
+        - {x: 52, y: 2}
+        - {x: 45, y: 5}
+        - {x: 42, y: 5}
+        - {x: 43, y: 5}
+        - {x: 49, y: 8}
+        - {x: 56, y: 15}
+        - {x: 56, y: 41}
+        - {x: 49, y: 52}
+        - {x: -18, y: 52}
+        - {x: -42, y: 32}
+        - {x: -42, y: -45}
+        - {x: -16, y: -56}
+        - {x: -1, y: -56}
+        - {x: 21, y: -46}
+        - {x: 24, y: -42}
+        - {x: 48, y: -36}
+    - name: smell_sprite01_14
       rect:
         serializedVersion: 2
         x: 828
@@ -304,10 +496,24 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: -1
-    - serializedVersion: 2
-      name: smell_sprite01_15
+      outline:
+      - - {x: 43, y: -12}
+        - {x: 41, y: -12}
+        - {x: 44, y: -12}
+        - {x: 49, y: -14}
+        - {x: 57, y: -3}
+        - {x: 57, y: 25}
+        - {x: 54, y: 27}
+        - {x: 48, y: 25}
+        - {x: 52, y: 52}
+        - {x: -36, y: 52}
+        - {x: -41, y: 24}
+        - {x: -41, y: -57}
+        - {x: 46, y: -57}
+        - {x: 57, y: -33}
+        - {x: 57, y: -20}
+        - {x: 52, y: -17}
+    - name: smell_sprite01_15
       rect:
         serializedVersion: 2
         x: 966
@@ -317,10 +523,31 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: -1
-    - serializedVersion: 2
-      name: smell_sprite01_16
+      outline:
+      - - {x: 33, y: 55}
+        - {x: 26, y: 37}
+        - {x: 24, y: 37}
+        - {x: 26, y: 37}
+        - {x: 27, y: 40}
+        - {x: 26, y: 47}
+        - {x: 24, y: 55}
+        - {x: -28, y: 55}
+        - {x: -42, y: 31}
+        - {x: -42, y: -45}
+        - {x: -32, y: -56}
+        - {x: 31, y: -56}
+        - {x: 57, y: -44}
+        - {x: 57, y: 40}
+        - {x: 43, y: 55}
+      - - {x: 52, y: 25}
+        - {x: 50, y: 24}
+        - {x: 50, y: 21}
+        - {x: 54, y: 16}
+        - {x: 57, y: 16}
+        - {x: 58, y: 18}
+        - {x: 58, y: 22}
+        - {x: 54, y: 25}
+    - name: smell_sprite01_16
       rect:
         serializedVersion: 2
         x: 0
@@ -330,10 +557,43 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: -1
-    - serializedVersion: 2
-      name: smell_sprite01_17
+      outline:
+      - - {x: 40, y: -15}
+        - {x: 40, y: -16}
+        - {x: 42, y: -15}
+        - {x: 51, y: -13}
+        - {x: 51, y: 33}
+        - {x: 47, y: 54}
+        - {x: -28, y: 54}
+        - {x: -50, y: 30}
+        - {x: -50, y: -22}
+        - {x: -43, y: -55}
+        - {x: -26, y: -57}
+        - {x: 32, y: -57}
+        - {x: 46, y: -45}
+        - {x: 45, y: -32}
+        - {x: 44, y: -18}
+      - - {x: 3, y: -52}
+        - {x: 4, y: -55}
+        - {x: 10, y: -55}
+        - {x: 10, y: -51}
+        - {x: 8, y: -47}
+        - {x: 5, y: -47}
+        - {x: 3, y: -49}
+      - - {x: 43, y: -27}
+        - {x: 46, y: -29}
+        - {x: 49, y: -29}
+        - {x: 51, y: -28}
+        - {x: 51, y: -26}
+        - {x: 49, y: -22}
+        - {x: 44, y: -22}
+        - {x: 43, y: -23}
+      - - {x: 46, y: 19}
+        - {x: 49, y: 20}
+        - {x: 49, y: 23}
+        - {x: 46, y: 24}
+        - {x: 44, y: 22}
+    - name: smell_sprite01_17
       rect:
         serializedVersion: 2
         x: 138
@@ -343,10 +603,50 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: -1
-    - serializedVersion: 2
-      name: smell_sprite01_18
+      outline:
+      - - {x: -17, y: -51}
+        - {x: -17, y: -57}
+        - {x: -12, y: -57}
+        - {x: -11, y: -55}
+        - {x: -11, y: -53}
+        - {x: -13, y: -51}
+      - - {x: 47, y: -14}
+        - {x: 42, y: -15}
+        - {x: 37, y: -14}
+        - {x: 42, y: -15}
+        - {x: 51, y: -12}
+        - {x: 51, y: 16}
+        - {x: 42, y: 46}
+        - {x: 26, y: 54}
+        - {x: 7, y: 54}
+        - {x: 6, y: 50}
+        - {x: -5, y: 54}
+        - {x: -48, y: 54}
+        - {x: -49, y: 50}
+        - {x: -49, y: -41}
+        - {x: -46, y: -44}
+        - {x: -35, y: -50}
+        - {x: -12, y: -54}
+        - {x: 27, y: -54}
+        - {x: 30, y: -50}
+        - {x: 51, y: -39}
+        - {x: 51, y: -26}
+      - - {x: 47, y: 25}
+        - {x: 44, y: 22}
+        - {x: 44, y: 21}
+        - {x: 46, y: 19}
+        - {x: 48, y: 19}
+        - {x: 50, y: 21}
+        - {x: 50, y: 23}
+        - {x: 48, y: 25}
+      - - {x: 33, y: 51}
+        - {x: 31, y: 47}
+        - {x: 31, y: 44}
+        - {x: 35, y: 41}
+        - {x: 40, y: 43}
+        - {x: 40, y: 49}
+        - {x: 38, y: 51}
+    - name: smell_sprite01_18
       rect:
         serializedVersion: 2
         x: 276
@@ -356,10 +656,22 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: -1
-    - serializedVersion: 2
-      name: smell_sprite01_19
+      outline:
+      - - {x: -16, y: -51}
+        - {x: -17, y: -53}
+        - {x: -17, y: -56}
+        - {x: -15, y: -57}
+        - {x: -12, y: -57}
+        - {x: -11, y: -56}
+        - {x: -11, y: -51}
+      - - {x: -40, y: 54}
+        - {x: -48, y: 44}
+        - {x: -48, y: -55}
+        - {x: 46, y: -55}
+        - {x: 52, y: -53}
+        - {x: 52, y: 51}
+        - {x: 42, y: 54}
+    - name: smell_sprite01_19
       rect:
         serializedVersion: 2
         x: 414
@@ -369,10 +681,29 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: -1
-    - serializedVersion: 2
-      name: smell_sprite01_20
+      outline:
+      - - {x: 40, y: -15}
+        - {x: 44, y: -15}
+        - {x: 53, y: -9}
+        - {x: 53, y: 43}
+        - {x: 40, y: 55}
+        - {x: -22, y: 55}
+        - {x: -49, y: 38}
+        - {x: -49, y: -27}
+        - {x: -42, y: -49}
+        - {x: -13, y: -55}
+        - {x: 42, y: -55}
+        - {x: 51, y: -47}
+        - {x: 48, y: -17}
+        - {x: 42, y: -15}
+      - - {x: 34, y: 49}
+        - {x: 34, y: 45}
+        - {x: 35, y: 43}
+        - {x: 38, y: 43}
+        - {x: 43, y: 46}
+        - {x: 41, y: 51}
+        - {x: 38, y: 51}
+    - name: smell_sprite01_20
       rect:
         serializedVersion: 2
         x: 552
@@ -382,10 +713,33 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: -1
-    - serializedVersion: 2
-      name: smell_sprite01_21
+      outline:
+      - - {x: 48, y: 9}
+        - {x: 51, y: 9}
+        - {x: 54, y: 11}
+        - {x: 54, y: 25}
+        - {x: 43, y: 44}
+        - {x: 21, y: 55}
+        - {x: -5, y: 55}
+        - {x: -24, y: 51}
+        - {x: -48, y: 21}
+        - {x: -48, y: -31}
+        - {x: -37, y: -48}
+        - {x: -21, y: -44}
+        - {x: -18, y: -53}
+        - {x: -15, y: -55}
+        - {x: 32, y: -55}
+        - {x: 52, y: -47}
+        - {x: 54, y: -21}
+        - {x: 54, y: 9}
+      - - {x: 37, y: 51}
+        - {x: 37, y: 45}
+        - {x: 38, y: 44}
+        - {x: 43, y: 44}
+        - {x: 44, y: 45}
+        - {x: 44, y: 48}
+        - {x: 40, y: 51}
+    - name: smell_sprite01_21
       rect:
         serializedVersion: 2
         x: 690
@@ -395,10 +749,51 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: -1
-    - serializedVersion: 2
-      name: smell_sprite01_22
+      outline:
+      - - {x: 49, y: 9}
+        - {x: 52, y: 9}
+        - {x: 57, y: 11}
+        - {x: 57, y: 25}
+        - {x: 37, y: 55}
+        - {x: -28, y: 55}
+        - {x: -47, y: 38}
+        - {x: -47, y: 12}
+        - {x: -44, y: 10}
+        - {x: -37, y: 8}
+        - {x: -33, y: 8}
+        - {x: -38, y: 8}
+        - {x: -42, y: 5}
+        - {x: -44, y: 0}
+        - {x: -41, y: -6}
+        - {x: -43, y: -21}
+        - {x: -41, y: -30}
+        - {x: -34, y: -45}
+        - {x: -20, y: -44}
+        - {x: -19, y: -42}
+        - {x: -19, y: -45}
+        - {x: -16, y: -52}
+        - {x: -10, y: -52}
+        - {x: -7, y: -55}
+        - {x: 29, y: -55}
+        - {x: 32, y: -50}
+        - {x: 57, y: -11}
+        - {x: 57, y: 9}
+      - - {x: 41, y: -27}
+        - {x: 38, y: -31}
+        - {x: 38, y: -37}
+        - {x: 43, y: -39}
+        - {x: 47, y: -39}
+        - {x: 49, y: -36}
+        - {x: 49, y: -32}
+        - {x: 46, y: -27}
+      - - {x: 37, y: 46}
+        - {x: 39, y: 44}
+        - {x: 43, y: 44}
+        - {x: 46, y: 46}
+        - {x: 46, y: 49}
+        - {x: 45, y: 51}
+        - {x: 37, y: 51}
+    - name: smell_sprite01_22
       rect:
         serializedVersion: 2
         x: 828
@@ -408,10 +803,30 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: -1
-    - serializedVersion: 2
-      name: smell_sprite01_23
+      outline:
+      - - {x: 45, y: -15}
+        - {x: 51, y: -15}
+        - {x: 58, y: -8}
+        - {x: 58, y: 28}
+        - {x: 38, y: 55}
+        - {x: -21, y: 55}
+        - {x: -32, y: 49}
+        - {x: -46, y: 29}
+        - {x: -46, y: -34}
+        - {x: -45, y: -46}
+        - {x: -13, y: -55}
+        - {x: 44, y: -55}
+        - {x: 53, y: -46}
+        - {x: 55, y: -24}
+        - {x: 48, y: -15}
+      - - {x: 38, y: 46}
+        - {x: 40, y: 44}
+        - {x: 44, y: 44}
+        - {x: 47, y: 46}
+        - {x: 47, y: 49}
+        - {x: 46, y: 51}
+        - {x: 38, y: 51}
+    - name: smell_sprite01_23
       rect:
         serializedVersion: 2
         x: 966
@@ -421,10 +836,34 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: -1
-    - serializedVersion: 2
-      name: smell_sprite01_24
+      outline:
+      - - {x: 51, y: -27}
+        - {x: 57, y: -25}
+        - {x: 59, y: -9}
+        - {x: 59, y: 27}
+        - {x: 42, y: 55}
+        - {x: -37, y: 55}
+        - {x: -45, y: 27}
+        - {x: -45, y: -4}
+        - {x: -40, y: -46}
+        - {x: -19, y: -46}
+        - {x: -18, y: -42}
+        - {x: -18, y: -38}
+        - {x: -18, y: -44}
+        - {x: -19, y: -47}
+        - {x: -16, y: -55}
+        - {x: 41, y: -55}
+        - {x: 56, y: -29}
+        - {x: 47, y: -27}
+        - {x: 44, y: -27}
+      - - {x: 39, y: 51}
+        - {x: 39, y: 47}
+        - {x: 40, y: 45}
+        - {x: 46, y: 45}
+        - {x: 48, y: 46}
+        - {x: 48, y: 49}
+        - {x: 47, y: 51}
+    - name: smell_sprite01_24
       rect:
         serializedVersion: 2
         x: 0
@@ -434,10 +873,36 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: -1
-    - serializedVersion: 2
-      name: smell_sprite01_25
+      outline:
+      - - {x: -28, y: 53}
+        - {x: -52, y: 23}
+        - {x: -52, y: 2}
+        - {x: -48, y: -21}
+        - {x: -45, y: -28}
+        - {x: -40, y: -28}
+        - {x: -38, y: -45}
+        - {x: -17, y: -58}
+        - {x: 40, y: -58}
+        - {x: 53, y: -49}
+        - {x: 53, y: 38}
+        - {x: 47, y: 53}
+      - - {x: 52, y: -11}
+        - {x: 49, y: -11}
+        - {x: 48, y: -13}
+        - {x: 47, y: -17}
+        - {x: 49, y: -19}
+        - {x: 51, y: -19}
+        - {x: 55, y: -16}
+        - {x: 55, y: -12}
+      - - {x: 33, y: 46}
+        - {x: 34, y: 44}
+        - {x: 40, y: 44}
+        - {x: 42, y: 45}
+        - {x: 42, y: 48}
+        - {x: 41, y: 50}
+        - {x: 35, y: 50}
+        - {x: 33, y: 49}
+    - name: smell_sprite01_25
       rect:
         serializedVersion: 2
         x: 138
@@ -447,10 +912,48 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: -1
-    - serializedVersion: 2
-      name: smell_sprite01_26
+      outline:
+      - - {x: 40, y: 1}
+        - {x: 44, y: 0}
+        - {x: 47, y: 0}
+        - {x: 49, y: 2}
+        - {x: 49, y: 5}
+        - {x: 47, y: 7}
+        - {x: 54, y: 12}
+        - {x: 54, y: 20}
+        - {x: 15, y: 53}
+        - {x: -20, y: 53}
+        - {x: -51, y: 31}
+        - {x: -51, y: -15}
+        - {x: -42, y: -39}
+        - {x: -31, y: -58}
+        - {x: 50, y: -58}
+        - {x: 54, y: -57}
+        - {x: 54, y: -8}
+        - {x: 50, y: -1}
+        - {x: 47, y: -2}
+      - - {x: -44, y: -17}
+        - {x: -46, y: -18}
+        - {x: -46, y: -21}
+        - {x: -44, y: -26}
+        - {x: -39, y: -26}
+        - {x: -39, y: -19}
+        - {x: -42, y: -17}
+      - - {x: 51, y: -11}
+        - {x: 48, y: -14}
+        - {x: 49, y: -18}
+        - {x: 52, y: -20}
+        - {x: 55, y: -19}
+        - {x: 56, y: -16}
+        - {x: 56, y: -12}
+        - {x: 54, y: -11}
+      - - {x: 28, y: 39}
+        - {x: 29, y: 36}
+        - {x: 32, y: 36}
+        - {x: 34, y: 38}
+        - {x: 33, y: 41}
+        - {x: 30, y: 41}
+    - name: smell_sprite01_26
       rect:
         serializedVersion: 2
         x: 276
@@ -460,10 +963,51 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: -1
-    - serializedVersion: 2
-      name: smell_sprite01_27
+      outline:
+      - - {x: 55, y: -4}
+        - {x: 51, y: -1}
+        - {x: 43, y: -1}
+        - {x: 48, y: 0}
+        - {x: 55, y: 5}
+        - {x: 55, y: 25}
+        - {x: 39, y: 53}
+        - {x: -28, y: 53}
+        - {x: -31, y: 29}
+        - {x: -29, y: 24}
+        - {x: -30, y: 25}
+        - {x: -36, y: 28}
+        - {x: -48, y: 21}
+        - {x: -48, y: -21}
+        - {x: -24, y: -58}
+        - {x: -12, y: -58}
+        - {x: -7, y: -49}
+        - {x: -7, y: -47}
+        - {x: -7, y: -50}
+        - {x: -8, y: -54}
+        - {x: -6, y: -58}
+        - {x: -2, y: -58}
+        - {x: 5, y: -55}
+        - {x: 16, y: -58}
+        - {x: 29, y: -58}
+        - {x: 52, y: -29}
+        - {x: 55, y: -16}
+      - - {x: -44, y: -17}
+        - {x: -45, y: -19}
+        - {x: -45, y: -23}
+        - {x: -42, y: -25}
+        - {x: -40, y: -25}
+        - {x: -38, y: -24}
+        - {x: -38, y: -21}
+        - {x: -39, y: -17}
+      - - {x: 51, y: -20}
+        - {x: 55, y: -20}
+        - {x: 58, y: -18}
+        - {x: 58, y: -14}
+        - {x: 56, y: -11}
+        - {x: 51, y: -11}
+        - {x: 49, y: -12}
+        - {x: 49, y: -18}
+    - name: smell_sprite01_27
       rect:
         serializedVersion: 2
         x: 414
@@ -473,10 +1017,44 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: -1
-    - serializedVersion: 2
-      name: smell_sprite01_28
+      outline:
+      - - {x: 40, y: 1}
+        - {x: 45, y: 1}
+        - {x: 48, y: 2}
+        - {x: 55, y: 10}
+        - {x: 55, y: 28}
+        - {x: 31, y: 55}
+        - {x: -31, y: 55}
+        - {x: -35, y: 54}
+        - {x: -30, y: 28}
+        - {x: -27, y: 25}
+        - {x: -33, y: 25}
+        - {x: -36, y: 27}
+        - {x: -44, y: 31}
+        - {x: -49, y: 23}
+        - {x: -49, y: 5}
+        - {x: -38, y: -58}
+        - {x: 37, y: -58}
+        - {x: 55, y: -37}
+        - {x: 55, y: -3}
+        - {x: 43, y: 1}
+      - - {x: -41, y: -19}
+        - {x: -43, y: -21}
+        - {x: -44, y: -25}
+        - {x: -42, y: -27}
+        - {x: -41, y: -27}
+        - {x: -37, y: -23}
+        - {x: -37, y: -21}
+        - {x: -39, y: -19}
+      - - {x: 51, y: -17}
+        - {x: 52, y: -19}
+        - {x: 56, y: -19}
+        - {x: 58, y: -18}
+        - {x: 58, y: -14}
+        - {x: 57, y: -12}
+        - {x: 53, y: -12}
+        - {x: 51, y: -14}
+    - name: smell_sprite01_28
       rect:
         serializedVersion: 2
         x: 552
@@ -486,10 +1064,37 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: -1
-    - serializedVersion: 2
-      name: smell_sprite01_29
+      outline:
+      - - {x: -23, y: 55}
+        - {x: -48, y: 45}
+        - {x: -48, y: -57}
+        - {x: -44, y: -58}
+        - {x: 22, y: -58}
+        - {x: 56, y: -34}
+        - {x: 56, y: 28}
+        - {x: 20, y: 55}
+      - - {x: 21, y: -51}
+        - {x: 22, y: -54}
+        - {x: 25, y: -54}
+        - {x: 27, y: -52}
+        - {x: 26, y: -49}
+        - {x: 23, y: -49}
+      - - {x: 52, y: -17}
+        - {x: 53, y: -19}
+        - {x: 57, y: -19}
+        - {x: 59, y: -18}
+        - {x: 59, y: -14}
+        - {x: 58, y: -12}
+        - {x: 54, y: -12}
+        - {x: 52, y: -14}
+      - - {x: -58, y: 23}
+        - {x: -57, y: 22}
+        - {x: -52, y: 22}
+        - {x: -48, y: 23}
+        - {x: -48, y: 34}
+        - {x: -55, y: 34}
+        - {x: -58, y: 28}
+    - name: smell_sprite01_29
       rect:
         serializedVersion: 2
         x: 690
@@ -499,10 +1104,46 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: -1
-    - serializedVersion: 2
-      name: smell_sprite01_30
+      outline:
+      - - {x: 26, y: 48}
+        - {x: 16, y: 51}
+        - {x: 12, y: 44}
+        - {x: 12, y: 43}
+        - {x: 12, y: 46}
+        - {x: 9, y: 55}
+        - {x: -2, y: 55}
+        - {x: -23, y: 47}
+        - {x: -26, y: 36}
+        - {x: -28, y: 27}
+        - {x: -42, y: 31}
+        - {x: -47, y: 31}
+        - {x: -47, y: -42}
+        - {x: -24, y: -59}
+        - {x: 40, y: -59}
+        - {x: 52, y: -52}
+        - {x: 57, y: -32}
+        - {x: 57, y: 24}
+        - {x: 56, y: 24}
+      - - {x: 23, y: -40}
+        - {x: 22, y: -42}
+        - {x: 22, y: -48}
+        - {x: 28, y: -48}
+        - {x: 28, y: -41}
+        - {x: 26, y: -40}
+      - - {x: 53, y: -17}
+        - {x: 55, y: -19}
+        - {x: 57, y: -19}
+        - {x: 59, y: -17}
+        - {x: 56, y: -12}
+        - {x: 53, y: -13}
+      - - {x: -54, y: 36}
+        - {x: -57, y: 31}
+        - {x: -57, y: 23}
+        - {x: -50, y: 23}
+        - {x: -48, y: 24}
+        - {x: -48, y: 35}
+        - {x: -51, y: 36}
+    - name: smell_sprite01_30
       rect:
         serializedVersion: 2
         x: 828
@@ -512,10 +1153,38 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: -1
-    - serializedVersion: 2
-      name: smell_sprite01_31
+      outline:
+      - - {x: 21, y: 55}
+        - {x: -4, y: 55}
+        - {x: -47, y: 30}
+        - {x: -47, y: 9}
+        - {x: -45, y: -5}
+        - {x: -39, y: -13}
+        - {x: -33, y: -16}
+        - {x: -31, y: -16}
+        - {x: -33, y: -16}
+        - {x: -44, y: -14}
+        - {x: -40, y: -58}
+        - {x: 18, y: -58}
+        - {x: 52, y: -48}
+        - {x: 58, y: 2}
+        - {x: 58, y: 28}
+        - {x: 29, y: 51}
+      - - {x: 54, y: -16}
+        - {x: 55, y: -19}
+        - {x: 58, y: -19}
+        - {x: 60, y: -17}
+        - {x: 59, y: -14}
+        - {x: 56, y: -14}
+      - - {x: -56, y: 31}
+        - {x: -56, y: 24}
+        - {x: -53, y: 22}
+        - {x: -50, y: 22}
+        - {x: -46, y: 24}
+        - {x: -46, y: 30}
+        - {x: -50, y: 34}
+        - {x: -53, y: 34}
+    - name: smell_sprite01_31
       rect:
         serializedVersion: 2
         x: 966
@@ -525,10 +1194,39 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: -1
-    - serializedVersion: 2
-      name: smell_sprite01_32
+      outline:
+      - - {x: 48, y: 28}
+        - {x: 29, y: 50}
+        - {x: 18, y: 52}
+        - {x: 14, y: 46}
+        - {x: 14, y: 43}
+        - {x: 14, y: 52}
+        - {x: 11, y: 55}
+        - {x: -11, y: 55}
+        - {x: -45, y: 36}
+        - {x: -45, y: -16}
+        - {x: -40, y: -47}
+        - {x: -24, y: -58}
+        - {x: 20, y: -58}
+        - {x: 40, y: -53}
+        - {x: 60, y: -18}
+        - {x: 60, y: 20}
+        - {x: 57, y: 28}
+      - - {x: 56, y: -19}
+        - {x: 61, y: -19}
+        - {x: 61, y: -13}
+        - {x: 57, y: -13}
+        - {x: 55, y: -15}
+        - {x: 55, y: -17}
+      - - {x: -53, y: 34}
+        - {x: -56, y: 29}
+        - {x: -56, y: 23}
+        - {x: -54, y: 22}
+        - {x: -49, y: 22}
+        - {x: -47, y: 23}
+        - {x: -46, y: 30}
+        - {x: -49, y: 34}
+    - name: smell_sprite01_32
       rect:
         serializedVersion: 2
         x: 0
@@ -538,10 +1236,39 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: -1
-    - serializedVersion: 2
-      name: smell_sprite01_33
+      outline:
+      - - {x: -16, y: 54}
+        - {x: -51, y: 34}
+        - {x: -51, y: -3}
+        - {x: -43, y: -34}
+        - {x: -37, y: -51}
+        - {x: -30, y: -50}
+        - {x: -27, y: -48}
+        - {x: -24, y: -44}
+        - {x: -26, y: -47}
+        - {x: -27, y: -50}
+        - {x: -19, y: -59}
+        - {x: 36, y: -59}
+        - {x: 55, y: -36}
+        - {x: 55, y: 33}
+        - {x: 20, y: 54}
+      - - {x: 51, y: -14}
+        - {x: 49, y: -16}
+        - {x: 49, y: -18}
+        - {x: 51, y: -20}
+        - {x: 53, y: -20}
+        - {x: 55, y: -18}
+        - {x: 55, y: -16}
+        - {x: 53, y: -14}
+      - - {x: -56, y: 34}
+        - {x: -61, y: 32}
+        - {x: -62, y: 25}
+        - {x: -59, y: 22}
+        - {x: -55, y: 22}
+        - {x: -53, y: 24}
+        - {x: -52, y: 28}
+        - {x: -53, y: 31}
+    - name: smell_sprite01_33
       rect:
         serializedVersion: 2
         x: 138
@@ -551,10 +1278,42 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: -1
-    - serializedVersion: 2
-      name: smell_sprite01_34
+      outline:
+      - - {x: 22, y: -57}
+        - {x: 55, y: -29}
+        - {x: 55, y: 29}
+        - {x: 21, y: 54}
+        - {x: -23, y: 54}
+        - {x: -50, y: 42}
+        - {x: -50, y: -41}
+        - {x: -35, y: -52}
+        - {x: -28, y: -48}
+        - {x: -22, y: -43}
+        - {x: -20, y: -38}
+        - {x: -20, y: -37}
+        - {x: -20, y: -42}
+        - {x: -25, y: -47}
+        - {x: -28, y: -53}
+        - {x: -12, y: -58}
+        - {x: -3, y: -59}
+        - {x: 1, y: -59}
+        - {x: 8, y: -46}
+        - {x: 8, y: -44}
+        - {x: 7, y: -42}
+      - - {x: 50, y: -18}
+        - {x: 52, y: -20}
+        - {x: 55, y: -19}
+        - {x: 55, y: -16}
+        - {x: 53, y: -14}
+        - {x: 50, y: -15}
+      - - {x: -59, y: 33}
+        - {x: -62, y: 30}
+        - {x: -61, y: 22}
+        - {x: -55, y: 22}
+        - {x: -52, y: 24}
+        - {x: -52, y: 31}
+        - {x: -56, y: 33}
+    - name: smell_sprite01_34
       rect:
         serializedVersion: 2
         x: 276
@@ -564,10 +1323,48 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: -1
-    - serializedVersion: 2
-      name: smell_sprite01_35
+      outline:
+      - - {x: -12, y: 55}
+        - {x: -24, y: 41}
+        - {x: -23, y: 37}
+        - {x: -21, y: 35}
+        - {x: -27, y: 33}
+        - {x: -31, y: 28}
+        - {x: -32, y: 26}
+        - {x: -41, y: 29}
+        - {x: -46, y: 29}
+        - {x: -49, y: 22}
+        - {x: -49, y: -34}
+        - {x: -34, y: -58}
+        - {x: -32, y: -58}
+        - {x: -25, y: -46}
+        - {x: -22, y: -44}
+        - {x: -20, y: -39}
+        - {x: -21, y: -42}
+        - {x: -24, y: -46}
+        - {x: -26, y: -51}
+        - {x: -19, y: -58}
+        - {x: 9, y: -58}
+        - {x: 48, y: -46}
+        - {x: 57, y: -20}
+        - {x: 57, y: 37}
+        - {x: 16, y: 55}
+      - - {x: -57, y: 33}
+        - {x: -62, y: 31}
+        - {x: -62, y: 28}
+        - {x: -61, y: 23}
+        - {x: -58, y: 22}
+        - {x: -52, y: 22}
+        - {x: -52, y: 32}
+        - {x: -53, y: 33}
+      - - {x: 13, y: 45}
+        - {x: 13, y: 42}
+        - {x: 15, y: 41}
+        - {x: 18, y: 41}
+        - {x: 19, y: 43}
+        - {x: 20, y: 47}
+        - {x: 17, y: 49}
+    - name: smell_sprite01_35
       rect:
         serializedVersion: 2
         x: 414
@@ -577,10 +1374,46 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: -1
-    - serializedVersion: 2
-      name: smell_sprite01_36
+      outline:
+      - - {x: 29, y: -39}
+        - {x: 31, y: -44}
+        - {x: 34, y: -45}
+        - {x: 58, y: -45}
+        - {x: 58, y: 49}
+        - {x: 41, y: 56}
+        - {x: -14, y: 56}
+        - {x: -49, y: 36}
+        - {x: -49, y: -10}
+        - {x: -46, y: -36}
+        - {x: -30, y: -56}
+        - {x: -25, y: -47}
+        - {x: -20, y: -42}
+        - {x: -19, y: -42}
+        - {x: -24, y: -46}
+        - {x: -22, y: -52}
+        - {x: -16, y: -53}
+        - {x: -6, y: -58}
+        - {x: 6, y: -58}
+        - {x: 28, y: -48}
+        - {x: 30, y: -44}
+        - {x: 30, y: -41}
+      - - {x: -60, y: 32}
+        - {x: -61, y: 30}
+        - {x: -61, y: 26}
+        - {x: -56, y: 22}
+        - {x: -55, y: 22}
+        - {x: -51, y: 24}
+        - {x: -51, y: 30}
+        - {x: -52, y: 32}
+      - - {x: 17, y: 49}
+        - {x: 15, y: 47}
+        - {x: 15, y: 45}
+        - {x: 17, y: 43}
+        - {x: 19, y: 43}
+        - {x: 21, y: 45}
+        - {x: 21, y: 47}
+        - {x: 19, y: 49}
+    - name: smell_sprite01_36
       rect:
         serializedVersion: 2
         x: 552
@@ -590,10 +1423,47 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: -1
-    - serializedVersion: 2
-      name: smell_sprite01_37
+      outline:
+      - - {x: -4, y: -51}
+        - {x: -4, y: -57}
+        - {x: -2, y: -58}
+        - {x: 2, y: -58}
+        - {x: 4, y: -56}
+        - {x: 4, y: -51}
+      - - {x: -8, y: 55}
+        - {x: -47, y: 48}
+        - {x: -47, y: 18}
+        - {x: -44, y: 14}
+        - {x: -42, y: 12}
+        - {x: -40, y: 12}
+        - {x: -47, y: 1}
+        - {x: -47, y: -13}
+        - {x: -44, y: -27}
+        - {x: -32, y: -51}
+        - {x: -26, y: -48}
+        - {x: -19, y: -44}
+        - {x: -20, y: -45}
+        - {x: -17, y: -53}
+        - {x: 29, y: -53}
+        - {x: 61, y: -38}
+        - {x: 61, y: 55}
+      - - {x: -54, y: 33}
+        - {x: -57, y: 32}
+        - {x: -57, y: 25}
+        - {x: -54, y: 22}
+        - {x: -53, y: 22}
+        - {x: -50, y: 24}
+        - {x: -50, y: 28}
+        - {x: -51, y: 32}
+      - - {x: 18, y: 49}
+        - {x: 16, y: 47}
+        - {x: 16, y: 45}
+        - {x: 18, y: 43}
+        - {x: 20, y: 43}
+        - {x: 22, y: 45}
+        - {x: 22, y: 46}
+        - {x: 19, y: 49}
+    - name: smell_sprite01_37
       rect:
         serializedVersion: 2
         x: 690
@@ -603,10 +1473,54 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: -1
-    - serializedVersion: 2
-      name: smell_sprite01_38
+      outline:
+      - - {x: -1, y: -51}
+        - {x: -1, y: -57}
+        - {x: 4, y: -57}
+        - {x: 5, y: -56}
+        - {x: 5, y: -51}
+      - - {x: -4, y: -54}
+        - {x: 43, y: -54}
+        - {x: 54, y: -32}
+        - {x: 54, y: 27}
+        - {x: 45, y: 35}
+        - {x: 24, y: 55}
+        - {x: -18, y: 55}
+        - {x: -47, y: 38}
+        - {x: -52, y: 3}
+        - {x: -52, y: -11}
+        - {x: -40, y: -17}
+        - {x: -38, y: -17}
+        - {x: -43, y: -20}
+        - {x: -41, y: -27}
+        - {x: -33, y: -52}
+        - {x: -23, y: -54}
+        - {x: -8, y: -54}
+        - {x: -8, y: -49}
+      - - {x: 46, y: 24}
+        - {x: 46, y: 11}
+        - {x: 57, y: 11}
+        - {x: 59, y: 12}
+        - {x: 59, y: 19}
+        - {x: 55, y: 28}
+        - {x: 53, y: 28}
+        - {x: 49, y: 26}
+      - - {x: -59, y: 30}
+        - {x: -58, y: 27}
+        - {x: -54, y: 26}
+        - {x: -51, y: 27}
+        - {x: -51, y: 30}
+        - {x: -53, y: 32}
+        - {x: -57, y: 32}
+      - - {x: 19, y: 49}
+        - {x: 17, y: 47}
+        - {x: 17, y: 45}
+        - {x: 19, y: 43}
+        - {x: 21, y: 43}
+        - {x: 23, y: 45}
+        - {x: 23, y: 46}
+        - {x: 20, y: 49}
+    - name: smell_sprite01_38
       rect:
         serializedVersion: 2
         x: 828
@@ -616,10 +1530,37 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: -1
-    - serializedVersion: 2
-      name: smell_sprite01_39
+      outline:
+      - - {x: 0, y: -55}
+        - {x: 2, y: -57}
+        - {x: 5, y: -56}
+        - {x: 5, y: -53}
+        - {x: 3, y: -51}
+        - {x: 0, y: -52}
+      - - {x: 48, y: 11}
+        - {x: 45, y: 9}
+        - {x: 44, y: 10}
+        - {x: 46, y: 11}
+        - {x: 56, y: 11}
+        - {x: 59, y: 14}
+        - {x: 59, y: 27}
+        - {x: 58, y: 32}
+        - {x: 28, y: 55}
+        - {x: -15, y: 55}
+        - {x: -52, y: 35}
+        - {x: -52, y: -24}
+        - {x: -40, y: -54}
+        - {x: 33, y: -54}
+        - {x: 57, y: -30}
+        - {x: 54, y: 9}
+        - {x: 50, y: 11}
+      - - {x: -58, y: 30}
+        - {x: -57, y: 27}
+        - {x: -54, y: 27}
+        - {x: -52, y: 29}
+        - {x: -53, y: 32}
+        - {x: -56, y: 32}
+    - name: smell_sprite01_39
       rect:
         serializedVersion: 2
         x: 966
@@ -629,10 +1570,44 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: -1
-    - serializedVersion: 2
-      name: smell_sprite01_40
+      outline:
+      - - {x: 51, y: -18}
+        - {x: 54, y: -15}
+        - {x: 61, y: 5}
+        - {x: 61, y: 8}
+        - {x: 53, y: 11}
+        - {x: 49, y: 11}
+        - {x: 55, y: 11}
+        - {x: 59, y: 12}
+        - {x: 61, y: 13}
+        - {x: 61, y: 35}
+        - {x: 38, y: 54}
+        - {x: -24, y: 54}
+        - {x: -43, y: 33}
+        - {x: -45, y: 20}
+        - {x: -44, y: 17}
+        - {x: -43, y: 13}
+        - {x: -44, y: 10}
+        - {x: -44, y: 6}
+        - {x: -51, y: -7}
+        - {x: -49, y: -13}
+        - {x: -39, y: -17}
+        - {x: -36, y: -17}
+        - {x: -37, y: -17}
+        - {x: -43, y: -18}
+        - {x: -34, y: -54}
+        - {x: 31, y: -54}
+        - {x: 59, y: -30}
+        - {x: 56, y: -23}
+        - {x: 52, y: -18}
+        - {x: 50, y: -18}
+      - - {x: -57, y: 30}
+        - {x: -56, y: 27}
+        - {x: -53, y: 27}
+        - {x: -51, y: 29}
+        - {x: -52, y: 32}
+        - {x: -55, y: 32}
+    - name: smell_sprite01_40
       rect:
         serializedVersion: 2
         x: 0
@@ -642,10 +1617,41 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: -1
-    - serializedVersion: 2
-      name: smell_sprite01_41
+      outline:
+      - - {x: 24, y: -34}
+        - {x: 28, y: -38}
+        - {x: 32, y: -38}
+        - {x: 50, y: -29}
+        - {x: 52, y: -23}
+        - {x: 53, y: -1}
+        - {x: 53, y: 7}
+        - {x: 46, y: 10}
+        - {x: 43, y: 10}
+        - {x: 43, y: 11}
+        - {x: 44, y: 14}
+        - {x: 50, y: 9}
+        - {x: 53, y: 11}
+        - {x: 53, y: 28}
+        - {x: 20, y: 53}
+        - {x: -19, y: 53}
+        - {x: -52, y: 34}
+        - {x: -57, y: 16}
+        - {x: -57, y: -22}
+        - {x: -34, y: -52}
+        - {x: -16, y: -56}
+        - {x: 22, y: -56}
+        - {x: 27, y: -45}
+        - {x: 28, y: -40}
+        - {x: 26, y: -36}
+      - - {x: -62, y: 32}
+        - {x: -63, y: 30}
+        - {x: -63, y: 27}
+        - {x: -61, y: 26}
+        - {x: -58, y: 26}
+        - {x: -57, y: 28}
+        - {x: -57, y: 30}
+        - {x: -60, y: 32}
+    - name: smell_sprite01_41
       rect:
         serializedVersion: 2
         x: 138
@@ -655,10 +1661,36 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: -1
-    - serializedVersion: 2
-      name: smell_sprite01_42
+      outline:
+      - - {x: 49, y: 10}
+        - {x: 44, y: 11}
+        - {x: 41, y: 7}
+        - {x: 44, y: 12}
+        - {x: 52, y: 12}
+        - {x: 54, y: 14}
+        - {x: 54, y: 31}
+        - {x: 36, y: 43}
+        - {x: -31, y: 43}
+        - {x: -56, y: 7}
+        - {x: -56, y: -26}
+        - {x: -42, y: -49}
+        - {x: -21, y: -55}
+        - {x: 37, y: -55}
+        - {x: 54, y: -38}
+        - {x: 54, y: 7}
+      - - {x: -62, y: 29}
+        - {x: -61, y: 26}
+        - {x: -58, y: 26}
+        - {x: -56, y: 28}
+        - {x: -57, y: 31}
+        - {x: -60, y: 31}
+      - - {x: -3, y: 47}
+        - {x: -1, y: 45}
+        - {x: 2, y: 46}
+        - {x: 3, y: 51}
+        - {x: 1, y: 53}
+        - {x: -2, y: 52}
+    - name: smell_sprite01_42
       rect:
         serializedVersion: 2
         x: 276
@@ -668,10 +1700,28 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: -1
-    - serializedVersion: 2
-      name: smell_sprite01_43
+      outline:
+      - - {x: 54, y: 32}
+        - {x: 46, y: 25}
+        - {x: 42, y: 21}
+        - {x: 40, y: 43}
+        - {x: -28, y: 43}
+        - {x: -54, y: 34}
+        - {x: -54, y: -15}
+        - {x: -35, y: -51}
+        - {x: 4, y: -58}
+        - {x: 26, y: -58}
+        - {x: 50, y: -33}
+        - {x: 55, y: -20}
+        - {x: 55, y: 30}
+      - - {x: -3, y: 49}
+        - {x: -3, y: 48}
+        - {x: 0, y: 45}
+        - {x: 3, y: 46}
+        - {x: 3, y: 49}
+        - {x: 1, y: 51}
+        - {x: -1, y: 51}
+    - name: smell_sprite01_43
       rect:
         serializedVersion: 2
         x: 414
@@ -681,10 +1731,17 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: -1
-    - serializedVersion: 2
-      name: smell_sprite01_44
+      outline:
+      - - {x: -46, y: 46}
+        - {x: -53, y: 44}
+        - {x: -53, y: -39}
+        - {x: -51, y: -44}
+        - {x: -28, y: -58}
+        - {x: 37, y: -58}
+        - {x: 56, y: -25}
+        - {x: 56, y: 30}
+        - {x: 48, y: 46}
+    - name: smell_sprite01_44
       rect:
         serializedVersion: 2
         x: 552
@@ -694,10 +1751,20 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: -1
-    - serializedVersion: 2
-      name: smell_sprite01_45
+      outline:
+      - - {x: 37, y: 41}
+        - {x: 19, y: 47}
+        - {x: -7, y: 47}
+        - {x: -49, y: 19}
+        - {x: -52, y: 9}
+        - {x: -52, y: -25}
+        - {x: -34, y: -56}
+        - {x: -17, y: -57}
+        - {x: 31, y: -57}
+        - {x: 55, y: -31}
+        - {x: 55, y: 22}
+        - {x: 51, y: 25}
+    - name: smell_sprite01_45
       rect:
         serializedVersion: 2
         x: 690
@@ -707,10 +1774,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: -1
-    - serializedVersion: 2
-      name: smell_sprite01_46
+      outline:
+      - - {x: -9, y: 47}
+        - {x: -44, y: 17}
+        - {x: -44, y: 14}
+        - {x: -49, y: 13}
+        - {x: -49, y: -29}
+        - {x: -42, y: -58}
+        - {x: 27, y: -58}
+        - {x: 56, y: -33}
+        - {x: 56, y: 28}
+        - {x: 20, y: 47}
+    - name: smell_sprite01_46
       rect:
         serializedVersion: 2
         x: 828
@@ -720,10 +1795,32 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: -1
-    - serializedVersion: 2
-      name: smell_sprite01_47
+      outline:
+      - - {x: 48, y: 10}
+        - {x: 46, y: 8}
+        - {x: 48, y: 10}
+        - {x: 55, y: 14}
+        - {x: 55, y: 23}
+        - {x: 33, y: 42}
+        - {x: 14, y: 46}
+        - {x: -4, y: 46}
+        - {x: -48, y: 26}
+        - {x: -48, y: -22}
+        - {x: -46, y: -37}
+        - {x: -5, y: -55}
+        - {x: 1, y: -58}
+        - {x: 37, y: -58}
+        - {x: 55, y: -28}
+        - {x: 55, y: 10}
+        - {x: 53, y: 12}
+      - - {x: -32, y: -34}
+        - {x: -37, y: -39}
+        - {x: -35, y: -44}
+        - {x: -32, y: -44}
+        - {x: -28, y: -41}
+        - {x: -28, y: -36}
+        - {x: -30, y: -34}
+    - name: smell_sprite01_47
       rect:
         serializedVersion: 2
         x: 966
@@ -733,10 +1830,42 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: -1
-    - serializedVersion: 2
-      name: smell_sprite01_48
+      outline:
+      - - {x: 33, y: 43}
+        - {x: 20, y: 47}
+        - {x: 3, y: 47}
+        - {x: -25, y: 29}
+        - {x: -24, y: 25}
+        - {x: -22, y: 23}
+        - {x: -21, y: 23}
+        - {x: -27, y: 24}
+        - {x: -41, y: 25}
+        - {x: -48, y: 5}
+        - {x: -48, y: -20}
+        - {x: -36, y: -34}
+        - {x: -13, y: -54}
+        - {x: -2, y: -58}
+        - {x: 33, y: -58}
+        - {x: 57, y: -37}
+        - {x: 57, y: 21}
+        - {x: 55, y: 23}
+      - - {x: -32, y: -34}
+        - {x: -36, y: -38}
+        - {x: -36, y: -40}
+        - {x: -33, y: -43}
+        - {x: -30, y: -43}
+        - {x: -28, y: -41}
+        - {x: -27, y: -37}
+        - {x: -30, y: -34}
+      - - {x: -41, y: 9}
+        - {x: -43, y: 7}
+        - {x: -43, y: 4}
+        - {x: -41, y: 2}
+        - {x: -39, y: 2}
+        - {x: -37, y: 4}
+        - {x: -37, y: 7}
+        - {x: -39, y: 9}
+    - name: smell_sprite01_48
       rect:
         serializedVersion: 2
         x: 0
@@ -746,10 +1875,53 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: -1
-    - serializedVersion: 2
-      name: smell_sprite01_49
+      outline:
+      - - {x: -8, y: 46}
+        - {x: -37, y: 39}
+        - {x: -45, y: 20}
+        - {x: -47, y: 7}
+        - {x: -47, y: -33}
+        - {x: -19, y: -57}
+        - {x: -3, y: -59}
+        - {x: 24, y: -59}
+        - {x: 51, y: -34}
+        - {x: 51, y: 24}
+        - {x: 33, y: 46}
+      - - {x: -43, y: -40}
+        - {x: -39, y: -45}
+        - {x: -34, y: -43}
+        - {x: -33, y: -37}
+        - {x: -38, y: -34}
+        - {x: -43, y: -38}
+      - - {x: -54, y: -8}
+        - {x: -51, y: -11}
+        - {x: -48, y: -10}
+        - {x: -48, y: -7}
+        - {x: -49, y: -5}
+        - {x: -52, y: -5}
+        - {x: -54, y: -6}
+      - - {x: -49, y: 7}
+        - {x: -49, y: 3}
+        - {x: -47, y: 1}
+        - {x: -45, y: 1}
+        - {x: -43, y: 3}
+        - {x: -43, y: 5}
+        - {x: -46, y: 8}
+      - - {x: -48, y: 16}
+        - {x: -48, y: 13}
+        - {x: -47, y: 11}
+        - {x: -45, y: 11}
+        - {x: -42, y: 14}
+        - {x: -43, y: 17}
+        - {x: -46, y: 17}
+      - - {x: 44, y: 19}
+        - {x: 44, y: 17}
+        - {x: 46, y: 15}
+        - {x: 47, y: 15}
+        - {x: 50, y: 18}
+        - {x: 49, y: 21}
+        - {x: 46, y: 21}
+    - name: smell_sprite01_49
       rect:
         serializedVersion: 2
         x: 138
@@ -759,8 +1931,44 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: -1
+      outline:
+      - - {x: 33, y: 45}
+        - {x: -11, y: 45}
+        - {x: -29, y: 32}
+        - {x: -45, y: 12}
+        - {x: -46, y: -14}
+        - {x: -39, y: -17}
+        - {x: -38, y: -17}
+        - {x: -42, y: -17}
+        - {x: -46, y: -22}
+        - {x: -46, y: -26}
+        - {x: -43, y: -30}
+        - {x: -37, y: -32}
+        - {x: -36, y: -29}
+        - {x: -36, y: -27}
+        - {x: -34, y: -35}
+        - {x: -23, y: -53}
+        - {x: -9, y: -56}
+        - {x: 33, y: -56}
+        - {x: 52, y: -40}
+        - {x: 52, y: 11}
+        - {x: 43, y: 44}
+      - - {x: -41, y: -43}
+        - {x: -40, y: -45}
+        - {x: -37, y: -45}
+        - {x: -33, y: -42}
+        - {x: -33, y: -37}
+        - {x: -35, y: -34}
+        - {x: -37, y: -34}
+        - {x: -41, y: -37}
+      - - {x: 23, y: 39}
+        - {x: 21, y: 37}
+        - {x: 21, y: 35}
+        - {x: 23, y: 33}
+        - {x: 25, y: 33}
+        - {x: 27, y: 35}
+        - {x: 27, y: 37}
+        - {x: 25, y: 39}
     outline: []
   spritePackingTag: 
   userData: 

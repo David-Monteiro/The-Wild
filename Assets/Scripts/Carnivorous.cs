@@ -357,5 +357,4 @@ public class Carnivorous : Animal
         }
 
     }
-
 }

@@ -23,19 +23,11 @@ public class Herbivorous : Animal
 
     public new void Update()
     {
-        if (!rule_flag)
+        if (rule_flag)
         { 
             SetRules();
         }
-<<<<<<< HEAD
-<<<<<<< HEAD
-        //rule_flag = !MakeRule();
-=======
-       // rule_flag = !MakeRule();
->>>>>>> parent of 6beaad9... The Wild
-=======
-       // rule_flag = !MakeRule();
->>>>>>> parent of 6beaad9... The Wild
+        rule_flag = !MakeRule();
     }
 
     protected new void OnCollisionEnter2D(Collision2D other)
@@ -54,6 +46,23 @@ public class Herbivorous : Animal
         foreach (var animal in Carnivorous.Where(animal => other.gameObject.tag.Equals(animal)))
         {
             attr.CurrentHealth -= Time.deltaTime * (50f - (attr.GetDefenceStats() / 400000));
+        }
+
+    }
+
+    public void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.tag == "Collectible")
+        {
+            //currentScore++;
+            Destroy(other.gameObject);
+        }
+
+
+        if (other.tag.Equals(HAY))
+        {
+            attr.CurrentHunger -= Time.deltaTime * 50f;
+
         }
 
     }
@@ -125,19 +134,15 @@ public class Herbivorous : Animal
         switch (_ruleNo)
         {
             case 1:
-                if (UTurnMove()) { 
-                    Debug.Log("Runnign away");
+                if (UTurnMove())
                     return (BigMoveForward());
-                }
+
                 return false;
             case 2:
-                Debug.Log("Getting water");
                 return GetWater();
             case 3:
-                Debug.Log("Getting food");
                 return GetFood();
             default:
-                Debug.Log("Random movements");
                 RandomMov();
                 return true;
         }

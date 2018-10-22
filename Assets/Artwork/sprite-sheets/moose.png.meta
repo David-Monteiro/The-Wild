@@ -20,12 +20,12 @@ TextureImporter:
     21300026: moose_13
     21300028: moose_14
     21300030: moose_15
-  serializedVersion: 4
+  serializedVersion: 2
   mipmaps:
     mipMapMode: 0
     enableMipMap: 1
-    sRGBTexture: 1
     linearTexture: 0
+    correctGamma: 0
     fadeOut: 0
     borderMipMap: 0
     mipMapFadeDistanceStart: 1
@@ -37,8 +37,10 @@ TextureImporter:
     normalMapFilter: 0
   isReadable: 0
   grayScaleToAlpha: 0
-  generateCubemap: 6
+  generateCubemap: 0
   cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
   seamlessCubemap: 0
   textureFormat: -1
   maxTextureSize: 2048
@@ -49,7 +51,9 @@ TextureImporter:
     wrapMode: 1
   nPOTScale: 0
   lightmap: 0
+  rGBM: 0
   compressionQuality: 50
+  allowsAlphaSplitting: 0
   spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
@@ -57,28 +61,12 @@ TextureImporter:
   spritePivot: {x: 0.5, y: 0.5}
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spritePixelsToUnits: 100
-  alphaUsage: 1
   alphaIsTransparency: 1
-  spriteTessellationDetail: -1
   textureType: 8
-  textureShape: 1
-  maxTextureSizeSet: 0
-  compressionQualitySet: 0
-  textureFormatSet: 0
-  platformSettings:
-  - buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
+  buildTargetSettings: []
   spriteSheet:
-    serializedVersion: 2
     sprites:
-    - serializedVersion: 2
-      name: moose_0
+    - name: moose_0
       rect:
         serializedVersion: 2
         x: 0
@@ -88,10 +76,16 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: -1
-    - serializedVersion: 2
-      name: moose_1
+      outline:
+      - - {x: -16, y: 27}
+        - {x: -19, y: 25}
+        - {x: -19, y: -43}
+        - {x: -17, y: -44}
+        - {x: 10, y: -44}
+        - {x: 12, y: -40}
+        - {x: 12, y: 20}
+        - {x: 9, y: 27}
+    - name: moose_1
       rect:
         serializedVersion: 2
         x: 80
@@ -101,10 +95,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: -1
-    - serializedVersion: 2
-      name: moose_2
+      outline:
+      - - {x: -18, y: 26}
+        - {x: -19, y: 25}
+        - {x: -19, y: -33}
+        - {x: -17, y: -42}
+        - {x: -11, y: -45}
+        - {x: 6, y: -45}
+        - {x: 10, y: -43}
+        - {x: 12, y: -26}
+        - {x: 12, y: 16}
+        - {x: 8, y: 26}
+    - name: moose_2
       rect:
         serializedVersion: 2
         x: 160
@@ -114,10 +116,16 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: -1
-    - serializedVersion: 2
-      name: moose_3
+      outline:
+      - - {x: -16, y: 27}
+        - {x: -19, y: 25}
+        - {x: -19, y: -43}
+        - {x: -17, y: -44}
+        - {x: 10, y: -44}
+        - {x: 12, y: -40}
+        - {x: 12, y: 20}
+        - {x: 9, y: 27}
+    - name: moose_3
       rect:
         serializedVersion: 2
         x: 240
@@ -127,10 +135,14 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: -1
-    - serializedVersion: 2
-      name: moose_4
+      outline:
+      - - {x: -15, y: 26}
+        - {x: -19, y: 23}
+        - {x: -19, y: -40}
+        - {x: -14, y: -45}
+        - {x: 12, y: -45}
+        - {x: 12, y: 26}
+    - name: moose_4
       rect:
         serializedVersion: 2
         x: 0
@@ -140,10 +152,22 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: -1
-    - serializedVersion: 2
-      name: moose_5
+      outline:
+      - - {x: 30, y: 4}
+        - {x: 12, y: 6}
+        - {x: -10, y: 25}
+        - {x: -23, y: 25}
+        - {x: -40, y: 11}
+        - {x: -40, y: -45}
+        - {x: 37, y: -45}
+        - {x: 38, y: -44}
+        - {x: 38, y: -24}
+      - - {x: 37, y: 6}
+        - {x: 39, y: 4}
+        - {x: 40, y: 4}
+        - {x: 40, y: 9}
+        - {x: 38, y: 9}
+    - name: moose_5
       rect:
         serializedVersion: 2
         x: 80
@@ -153,10 +177,22 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: -1
-    - serializedVersion: 2
-      name: moose_6
+      outline:
+      - - {x: -9, y: 26}
+        - {x: -24, y: 26}
+        - {x: -40, y: 12}
+        - {x: -40, y: -11}
+        - {x: -37, y: -14}
+        - {x: -33, y: -14}
+        - {x: -29, y: -25}
+        - {x: -11, y: -39}
+        - {x: -7, y: -39}
+        - {x: -1, y: -33}
+        - {x: 14, y: -45}
+        - {x: 25, y: -45}
+        - {x: 32, y: -38}
+        - {x: 32, y: 5}
+    - name: moose_6
       rect:
         serializedVersion: 2
         x: 160
@@ -166,10 +202,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: -1
-    - serializedVersion: 2
-      name: moose_7
+      outline:
+      - - {x: -25, y: 25}
+        - {x: -40, y: 11}
+        - {x: -40, y: -13}
+        - {x: -36, y: -15}
+        - {x: -32, y: -15}
+        - {x: -27, y: -45}
+        - {x: 24, y: -45}
+        - {x: 40, y: -40}
+        - {x: 40, y: 12}
+        - {x: 17, y: 25}
+    - name: moose_7
       rect:
         serializedVersion: 2
         x: 240
@@ -179,10 +223,16 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: -1
-    - serializedVersion: 2
-      name: moose_8
+      outline:
+      - - {x: -9, y: 27}
+        - {x: -33, y: 27}
+        - {x: -40, y: 15}
+        - {x: -40, y: -31}
+        - {x: -26, y: -45}
+        - {x: 26, y: -45}
+        - {x: 32, y: -41}
+        - {x: 32, y: 5}
+    - name: moose_8
       rect:
         serializedVersion: 2
         x: 0
@@ -192,10 +242,21 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: -1
-    - serializedVersion: 2
-      name: moose_9
+      outline:
+      - - {x: -4, y: -36}
+        - {x: -3, y: -43}
+        - {x: 1, y: -45}
+        - {x: 25, y: -45}
+        - {x: 40, y: -33}
+        - {x: 40, y: 26}
+        - {x: -15, y: 26}
+        - {x: -38, y: 17}
+        - {x: -38, y: -44}
+        - {x: -37, y: -45}
+        - {x: -20, y: -45}
+        - {x: -4, y: -39}
+        - {x: -4, y: -29}
+    - name: moose_9
       rect:
         serializedVersion: 2
         x: 80
@@ -205,10 +266,17 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: -1
-    - serializedVersion: 2
-      name: moose_10
+      outline:
+      - - {x: 23, y: 27}
+        - {x: 3, y: 27}
+        - {x: -34, y: 7}
+        - {x: -34, y: -40}
+        - {x: -27, y: -45}
+        - {x: 3, y: -45}
+        - {x: 32, y: -25}
+        - {x: 40, y: -13}
+        - {x: 40, y: 9}
+    - name: moose_10
       rect:
         serializedVersion: 2
         x: 160
@@ -218,10 +286,16 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: -1
-    - serializedVersion: 2
-      name: moose_11
+      outline:
+      - - {x: 3, y: 26}
+        - {x: -37, y: -1}
+        - {x: -40, y: -25}
+        - {x: -40, y: -37}
+        - {x: -31, y: -45}
+        - {x: 40, y: -45}
+        - {x: 40, y: 23}
+        - {x: 29, y: 26}
+    - name: moose_11
       rect:
         serializedVersion: 2
         x: 240
@@ -231,10 +305,17 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: -1
-    - serializedVersion: 2
-      name: moose_12
+      outline:
+      - - {x: 24, y: 28}
+        - {x: 12, y: 28}
+        - {x: 9, y: 26}
+        - {x: -32, y: 7}
+        - {x: -32, y: -37}
+        - {x: -26, y: -45}
+        - {x: 29, y: -45}
+        - {x: 40, y: -16}
+        - {x: 40, y: 16}
+    - name: moose_12
       rect:
         serializedVersion: 2
         x: 0
@@ -244,10 +325,14 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: -1
-    - serializedVersion: 2
-      name: moose_13
+      outline:
+      - - {x: -19, y: 45}
+        - {x: -19, y: -37}
+        - {x: -17, y: -44}
+        - {x: 12, y: -44}
+        - {x: 12, y: 44}
+        - {x: 11, y: 45}
+    - name: moose_13
       rect:
         serializedVersion: 2
         x: 80
@@ -257,10 +342,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: -1
-    - serializedVersion: 2
-      name: moose_14
+      outline:
+      - - {x: 5, y: 44}
+        - {x: -14, y: 44}
+        - {x: -17, y: 41}
+        - {x: -18, y: 27}
+        - {x: -18, y: -39}
+        - {x: -3, y: -45}
+        - {x: 8, y: -45}
+        - {x: 12, y: -32}
+        - {x: 12, y: 28}
+        - {x: 11, y: 42}
+    - name: moose_14
       rect:
         serializedVersion: 2
         x: 160
@@ -270,10 +363,14 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: -1
-    - serializedVersion: 2
-      name: moose_15
+      outline:
+      - - {x: -19, y: 45}
+        - {x: -19, y: -37}
+        - {x: -17, y: -44}
+        - {x: 12, y: -44}
+        - {x: 12, y: 44}
+        - {x: 11, y: 45}
+    - name: moose_15
       rect:
         serializedVersion: 2
         x: 240
@@ -283,8 +380,15 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: -1
+      outline:
+      - - {x: -13, y: 44}
+        - {x: -19, y: 28}
+        - {x: -19, y: -43}
+        - {x: -18, y: -45}
+        - {x: -2, y: -45}
+        - {x: 11, y: -36}
+        - {x: 11, y: 42}
+        - {x: 7, y: 44}
     outline: []
   spritePackingTag: 
   userData: 
