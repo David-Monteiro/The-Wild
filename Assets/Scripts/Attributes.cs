@@ -102,6 +102,7 @@ public class Attributes
             CurrentHealth = Random.Range(50, 100);
         }
     }
+
     
     public void SetAttributes(string animal, string age)
     {
@@ -216,6 +217,5 @@ public class Attributes
     {
         return GetFitness() * DefenceSpeed;
     }
-
 
 }

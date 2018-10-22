@@ -300,7 +300,31 @@ public class Animal : BasicMovements
         return attr.GetAttributes();
     }
 
-   
+
+    /*public void OnTriggerEnter2D(Collider2D other)
+    {
+        Debug.Log("test1");
+        if (other.tag == "Collectible")
+        {
+            //currentScore++;
+            Destroy(other.gameObject);
+        }
+
+        if (other.tag.Equals("water"))
+        {
+            //ScoreAndHealthSystem sh = (Player)ScoreAndHealthSystem.GetComponent("ScoreAndHealthSystem");
+            currentThirst += Time.deltaTime*5;
+            Debug.Log("test2");
+
+        }
+
+        if (other.tag == "Meat" || other.tag == "Grass")
+        {
+            //ScoreAndHealthSystem sh = (Player)ScoreAndHealthSystem.GetComponent("ScoreAndHealthSystem");
+
+        }
+
+    }*/
 
     public void OnCollisionEnter2D(Collision2D other)
     {
@@ -475,11 +499,11 @@ public class Animal : BasicMovements
 
     }
 
-    protected void DieNow()
+    /*protected void DieNow()
     {
         Instantiate(deadBody, transform.position, Quaternion.identity);
-        Destroy(gameObject);
-    }
+        Destroy(gameObject, 30f);
+    }*/
 
     protected void HealthHandler()
     {
@@ -510,6 +534,12 @@ public class Animal : BasicMovements
         {
             DieNow();
         }
+    }
+
+    public void DieNow()
+    {
+        Destroy(gameObject);
+        Instantiate(deadBody, transform.position, Quaternion.identity);
     }
 
 
