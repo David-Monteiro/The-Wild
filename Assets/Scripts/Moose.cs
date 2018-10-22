@@ -17,8 +17,11 @@ public class Moose : Herbivorous
         RayCasting();
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         GetWater();
 
+=======
+>>>>>>> parent of 6beaad9... The Wild
 =======
 >>>>>>> parent of 6beaad9... The Wild
         Animator.SetInteger("Animation_Rotation_State", (int)transform.rotation.eulerAngles.z);

@@ -28,7 +28,11 @@ public class Herbivorous : Animal
             SetRules();
         }
 <<<<<<< HEAD
+<<<<<<< HEAD
         //rule_flag = !MakeRule();
+=======
+       // rule_flag = !MakeRule();
+>>>>>>> parent of 6beaad9... The Wild
 =======
        // rule_flag = !MakeRule();
 >>>>>>> parent of 6beaad9... The Wild
